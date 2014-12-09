@@ -10,6 +10,8 @@ public interface I_Warehouse {
 	 *            name - The name of the tool int quantity - The quantity of the
 	 *            tool
 	 * 
+	 * @return The RepairTool from the Warehouse
+	 * 
 	 * **/
 	I_RepairTool takeRepairTool(String name, int quantity);
 
@@ -20,6 +22,8 @@ public interface I_Warehouse {
 	 * @param String
 	 *            name - The name of the tool int quantity - The quantity of the
 	 *            tool
+	 * 
+	 * @return The RepairMaterial from the Warehouse
 	 * 
 	 * **/
 	I_RepairMaterial takeRepairMaterial(String name, int quantity);
@@ -33,6 +37,17 @@ public interface I_Warehouse {
 	 *            tool
 	 * 
 	 * **/
-	void putToolBack(I_RepairMaterial tool);
+	void putToolBack(I_RepairTool repairTool);
+
+	/**
+	 * Return the sum of all <name> tools in the Warehouse
+	 * 
+	 * @param String
+	 *            name - The name of the tool
+	 * 
+	 * @return The number of <name> in the Warehouse
+	 * 
+	 * **/
+	int countToolInWarehouse(String name);
 
 }
