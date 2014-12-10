@@ -60,4 +60,18 @@ public class WarehouseImpl implements Warehouse {
 		return 0;
 	}
 
+
+	@Override
+	public void addTool(String name, int quantity) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void addMaterial(String name, int quantity) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

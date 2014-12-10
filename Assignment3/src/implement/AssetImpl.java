@@ -1,8 +1,8 @@
 package implement;
 
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 import consts.AssetStatus;
 import interfaces.Asset;
 import interfaces.AssetContent;
@@ -29,8 +29,7 @@ public class AssetImpl implements Asset {
 		this.fName = name;
 		this.fType = type;
 		this.fLocation = location;
-		this.fAssetContent = Collections
-				.synchronizedMap(new HashMap<String, AssetContent>());
+		this.fAssetContent = new ConcurrentHashMap<String, AssetContent>();
 		this.fStatus = status;
 		this.fCostPerNight = costPerNight;
 		this.fSize = size;
@@ -43,8 +42,7 @@ public class AssetImpl implements Asset {
 
 	@Override
 	public AssetStatus getStatus() {
-		// TODO Auto-generated method stub
-		return null;
+		return fStatus;
 	}
 
 	@Override
@@ -71,5 +69,4 @@ public class AssetImpl implements Asset {
 	public void addAssetContent(AssetContent assetContent) {
 		fAssetContent.put(assetContent.getName(), assetContent);
 	}
-
 }
