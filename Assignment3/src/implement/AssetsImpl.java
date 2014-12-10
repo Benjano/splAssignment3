@@ -47,4 +47,18 @@ public class AssetsImpl implements Assets {
 		fAssets.add(asset);
 	}
 
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Assets includes: ");
+		
+		for (Asset asset : fAssets) {
+			builder.append("\n").append(asset).append("\n");
+		}
+		
+		return builder.toString();
+	}
+	
+	
+
 }
