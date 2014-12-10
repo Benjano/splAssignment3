@@ -34,6 +34,11 @@ public interface Asset {
 	 * @return The number of people the asset can fit in
 	 */
 	int getSize();
+	
+	/**
+	 * @return True if the asset is damaged
+	 */
+	boolean isDamaged();
 
 	/**
 	 * @param assetContent

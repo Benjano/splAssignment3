@@ -12,10 +12,15 @@ public interface AssetContent {
 	 * 
 	 * @param int health;
 	 */
-	void setHealth(int health);
+	void setHealth(double health);
 
 	/**
 	 * @return The name of the asset
 	 */
 	String getName();
+
+	/**
+	 * @return The health of the AssetContent
+	 */
+	double getHealth();
 }

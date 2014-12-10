@@ -10,6 +10,8 @@ import interfaces.Asset;
 import interfaces.AssetContent;
 
 public class AssetImpl implements Asset {
+	
+	private final double ASSET_DAMAGED_HEALTH = 65;
 
 	private String fName, fType;
 	private Location fLocation;
@@ -66,6 +68,20 @@ public class AssetImpl implements Asset {
 	public int getSize() {
 		return fSize;
 	}
+	
+	@Override
+	public boolean isDamaged() {
+		Iterator<Entry<String, AssetContent>> i = fAssetContent.entrySet()
+				.iterator();
+		
+		while (i.hasNext()) {
+			Map.Entry<String, AssetContent> pairs = i.next();
+			if (pairs.getValue().getHealth() < ASSET_DAMAGED_HEALTH)
+				return true;
+		}
+		
+		return false;
+	}
 
 	@Override
 	public void addAssetContent(AssetContent assetContent) {
@@ -107,4 +123,6 @@ public class AssetImpl implements Asset {
 
 		return builder.toString();
 	}
+
+	
 }

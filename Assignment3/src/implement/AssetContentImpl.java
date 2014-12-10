@@ -1,12 +1,12 @@
 package implement;
 
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicReference;
 
 import interfaces.AssetContent;
 
 public class AssetContentImpl implements AssetContent {
 	private String fName;
-	private AtomicInteger fHealth;
+	private AtomicReference<Double> fHealth;
 	private float fRepairCostMultiplier;
 
 	/**
@@ -14,10 +14,11 @@ public class AssetContentImpl implements AssetContent {
 	 * @param fHealth
 	 * @param fRepairCostMultiplier
 	 */
-	public AssetContentImpl(String name, int health, float repairCostMultiplier) {
+	public AssetContentImpl(String name, double health,
+			float repairCostMultiplier) {
 		super();
 		this.fName = name;
-		this.fHealth = new AtomicInteger(health);
+		this.fHealth = new AtomicReference<Double>(health);
 		this.fRepairCostMultiplier = repairCostMultiplier;
 	}
 
@@ -27,8 +28,13 @@ public class AssetContentImpl implements AssetContent {
 	}
 
 	@Override
-	public void setHealth(int health) {
+	public void setHealth(double health) {
 		fHealth.set(health);
+	}
+
+	@Override
+	public double getHealth() {
+		return fHealth.get();
 	}
 
 	@Override
