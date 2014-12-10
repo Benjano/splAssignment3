@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class WarehouseImpl implements Warehouse {
+
 	private Map<String, RepairTool> fRepairTools;
 	private Map<String, RepairMaterial> fRepairMaterials;
 
@@ -46,40 +47,49 @@ public class WarehouseImpl implements Warehouse {
 		RepairTool tempRepairTool = fRepairTools.get(repairTool.getName());
 		tempRepairTool.IncreaseTool(repairTool.getQuantity());
 		fRepairTools.put(repairTool.getName(), tempRepairTool);
-
 	}
 
 	@Override
-	public void addTool(String name, int quantity) {
-		if (fRepairTools.containsKey(name)) {
-			RepairTool tempRepairTool = fRepairTools.get(name);
-			tempRepairTool.IncreaseTool(quantity);
+	public void addTool(RepairTool repairTool) {
+		String repairToolName = repairTool.getName();
+		if (fRepairTools.containsKey(repairToolName)) {
+			RepairTool tempRepairTool = fRepairTools.get(repairToolName);
+			tempRepairTool.IncreaseTool(repairTool.getQuantity());
 		} else {
-			fRepairTools.put(name, new RepairToolImpl(name, quantity));
+			fRepairTools.put(repairToolName, repairTool);
 		}
 	}
 
 	@Override
-	public void addMaterial(String name, int quantity) {
-		if (fRepairMaterials.containsKey(name)) {
-			RepairMaterial tempRepairMaterial = fRepairMaterials.get(name);
-			tempRepairMaterial.IncreaseMaterial(quantity);
+	public void addMaterial(RepairMaterial repairMaterial) {
+		String repairToolName = repairMaterial.getName();
+		if (fRepairMaterials.containsKey(repairToolName)) {
+			RepairMaterial tempRepairMaterial = fRepairMaterials
+					.get(repairToolName);
+			tempRepairMaterial.IncreaseMaterial(repairMaterial.getQuantity());
 		} else {
-			fRepairMaterials.put(name, new RepairMaterialImpl(name, quantity));
+			fRepairMaterials.put(repairToolName, repairMaterial);
 		}
 
 	}
 
 	@Override
 	public int countRepairToolInWarehouse(String name) {
-		// TODO Auto-generated method stub
-		return 0;
+
+		if (fRepairTools.containsKey(name)) {
+			return (fRepairTools.get(name)).getQuantity();
+		} else {
+			return 0;
+		}
 	}
 
 	@Override
 	public int countRepairMaterialInWarehouse(String name) {
-		// TODO Auto-generated method stub
-		return 0;
+		if (fRepairMaterials.containsKey(name)) {
+			return (fRepairMaterials.get(name)).getQuantity();
+		} else {
+			return 0;
+		}
 	}
 
 }
