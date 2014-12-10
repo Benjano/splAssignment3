@@ -34,6 +34,10 @@ public class RepairMaterialImpl implements RepairMaterial {
 		return builder.toString();
 	}
 
+	public int getQuantity() {
+		return fQuantity;
+	}
+
 	
 
 }

@@ -9,6 +9,8 @@ public interface RepairTool {
 	
 	public String getName();
 	
+	public int getQuantity();
+	
 	public void ReduceTool(int quantity);
 	
 	public void IncreaseTool(int quantity);
