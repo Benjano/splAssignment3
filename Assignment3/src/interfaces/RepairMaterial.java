@@ -9,6 +9,9 @@ public interface RepairMaterial {
 	
 	public String getName();
 	
+	public int getQuantity();
 	
 	public void ReduceMaterial(int quantity);
+	
+	public void IncreaseMaterial(int quantity);
 }

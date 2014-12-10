@@ -15,6 +15,10 @@ public class RepairToolImpl implements RepairTool {
 	public String getName() {
 		return fName;
 	}
+	
+	public int getQuantity() {
+		return fQuantity;
+	}
 
 	public void ReduceTool(int quantity) {
 		if (this.fQuantity >= quantity) {
