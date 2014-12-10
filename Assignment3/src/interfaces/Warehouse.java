@@ -8,9 +8,8 @@ public interface Warehouse {
 	 * Return the repair tool and reduce the amount of the <name> RepairTool in
 	 * the warehouse by the asked quantity
 	 * 
-	 * @param string
-	 *            name - The name of the tool
-	 * @param int quantity - The quantity of the tool
+	 * @param name
+	 * @param quantity
 	 * 
 	 * @return The RepairTool from the Warehouse
 	 * 
@@ -21,9 +20,8 @@ public interface Warehouse {
 	 * Return the repair material and reduce the amount of the <name>
 	 * RepairMaterial in the warehouse by the asked quantity
 	 * 
-	 * @param String
-	 *            name - The name of the tool
-	 * @param int quantity - The quantity of the tool
+	 * @param name
+	 * @param quantity
 	 * 
 	 * @return The RepairMaterial from the Warehouse
 	 * 
@@ -34,9 +32,7 @@ public interface Warehouse {
 	 * Put a tool back to the Warehouse. Increase the amount of the <name>
 	 * RepairTool in the Warehouse by the taken quantity.
 	 * 
-	 * @param String
-	 *            name - The name of the tool
-	 * @param int quantity - The quantity of the tool
+	 * @param repairTool
 	 * 
 	 * **/
 	void putToolBack(RepairTool repairTool);
@@ -44,12 +40,27 @@ public interface Warehouse {
 	/**
 	 * Return the sum of all <name> tools in the Warehouse
 	 * 
-	 * @param String
-	 *            name - The name of the tool
+	 * @param name
 	 * 
 	 * @return The number of <name> in the Warehouse
 	 * 
 	 * **/
 	int countToolInWarehouse(String name);
+
+	/**
+	 * Adds a new Repair Tool to the the Warehouse
+	 * 
+	 * @param name
+	 * @param quantity
+	 */
+	void addTool(String name, int quantity);
+
+	/**
+	 * Add a new Repair Material to the Warehouse
+	 * 
+	 * @param name
+	 * @param quantity
+	 */
+	void addMaterial(String name, int quantity);
 
 }
