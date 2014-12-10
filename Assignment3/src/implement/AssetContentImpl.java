@@ -30,7 +30,7 @@ public class AssetContentImpl implements AssetContent {
 	public void setHealth(int health) {
 		fHealth.set(health);
 	}
-	
+
 	@Override
 	public String getName() {
 		return fName;
@@ -39,15 +39,11 @@ public class AssetContentImpl implements AssetContent {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Asset content name: ");
-		builder.append(fName);
-		builder.append(" Health: ");
-		builder.append(fHealth);
-		builder.append("% Repair cost multiplier: ");
-		builder.append(fRepairCostMultiplier);
+		builder.append("Asset content name: ").append(fName)
+				.append("\nHealth: ").append(fHealth)
+				.append("% \nRepair cost multiplier: ")
+				.append(fRepairCostMultiplier);
 		return builder.toString();
 	}
-
-	
 
 }

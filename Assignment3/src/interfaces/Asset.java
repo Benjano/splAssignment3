@@ -19,7 +19,7 @@ public interface Asset {
 	 * @return The status of the asset
 	 */
 	AssetStatus getStatus();
-	
+
 	/**
 	 * @return The type of the asset
 	 */
@@ -36,9 +36,14 @@ public interface Asset {
 	int getSize();
 
 	/**
-	 * @param The
-	 *            assetContent to be added to assetContent collection
+	 * @param assetContent
 	 */
 	void addAssetContent(AssetContent assetContent);
+	
+	/**
+	 * @param name
+	 * @return Array of assetContent
+	 */
+	AssetContent[] getAllAssetContent();
 
 }
