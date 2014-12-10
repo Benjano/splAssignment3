@@ -22,7 +22,6 @@ public class AssetContentTesting {
 
 	@After
 	public void tearDown() throws Exception {
-		setUp();
 	}
 
 	@Test

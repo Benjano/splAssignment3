@@ -26,7 +26,6 @@ public class CustomerTesting {
 
 	@After
 	public void tearDown() throws Exception {
-		setUp();
 	}
 
 	@Test
@@ -39,7 +38,6 @@ public class CustomerTesting {
 		assertTrue("Customer " + customer1.getName()
 				+ " damage percentage is out of bounds",
 				customer1DamagePercentage <= 0.5);
-		System.out.println(customer1DamagePercentage);
 
 		assertEquals("Customer " + customer2.getName()
 				+ " damage percentage is wrong",

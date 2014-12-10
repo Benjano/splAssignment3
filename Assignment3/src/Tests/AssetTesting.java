@@ -36,7 +36,6 @@ public class AssetTesting {
 		asset.addAssetContent(content1);
 		asset.addAssetContent(content2);
 		asset.addAssetContent(content3);
-		System.out.println(asset);
 
 		assertEquals("Length of the content is not ok",
 				asset.getAllAssetContent().length, 3);
