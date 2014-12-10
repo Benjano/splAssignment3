@@ -13,4 +13,9 @@ public interface AssetContent {
 	 * @param int health;
 	 */
 	void setHealth(int health);
+
+	/**
+	 * @return The name of the asset
+	 */
+	String getName();
 }

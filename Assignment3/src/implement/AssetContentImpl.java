@@ -6,7 +6,7 @@ import interfaces.AssetContent;
 
 public class AssetContentImpl implements AssetContent {
 	private String fName;
-	AtomicInteger fHealth;
+	private AtomicInteger fHealth;
 	private float fRepairCostMultiplier;
 
 	/**
@@ -30,6 +30,11 @@ public class AssetContentImpl implements AssetContent {
 	public void setHealth(int health) {
 		fHealth.set(health);
 	}
+	
+	@Override
+	public String getName() {
+		return fName;
+	}
 
 	@Override
 	public String toString() {
@@ -42,5 +47,7 @@ public class AssetContentImpl implements AssetContent {
 		builder.append(fRepairCostMultiplier);
 		return builder.toString();
 	}
+
+	
 
 }
