@@ -4,8 +4,36 @@ import interfaces.RepairMaterial;
 
 public class RepairMaterialImpl implements RepairMaterial {
 
+	private String fName;
+	private int fQuantity;
+	
+	
+	
 	public RepairMaterialImpl(String name, int quantity) {
-		// TODO Auto-generated constructor stub
+		this.fName=name;
+		this.fQuantity=quantity;
 	}
+	
+	public String getName() {
+		return fName;
+	}
+	
+	public void ReduceMaterial(int quantity){
+		if (this.fQuantity >= quantity){
+		this.fQuantity = this.fQuantity-quantity;
+		}
+	}
+	
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Material Name: ");
+		builder.append(fName);
+		builder.append(" Material Quantity ");
+		builder.append(fQuantity);
+		return builder.toString();
+	}
+
+	
 
 }
