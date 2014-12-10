@@ -37,7 +37,6 @@ public interface Warehouse {
 	 * **/
 	void putToolBack(RepairTool repairTool);
 
-
 	/**
 	 * Adds a new Repair Tool to the the Warehouse
 	 * 

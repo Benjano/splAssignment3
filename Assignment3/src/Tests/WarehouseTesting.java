@@ -20,7 +20,7 @@ public class WarehouseTesting {
 
 	@Before
 	public void setUp() throws Exception {
-		warehouse = new WarehouseImpl(null, null);
+		warehouse = new WarehouseImpl();
 	}
 	
 	@After
