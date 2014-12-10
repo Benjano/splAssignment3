@@ -42,12 +42,6 @@ public class WarehouseImpl implements Warehouse {
 		}
 	}
 
-	@Override
-	public void putToolBack(RepairTool repairTool) {
-		RepairTool tempRepairTool = fRepairTools.get(repairTool.getName());
-		tempRepairTool.IncreaseTool(repairTool.getQuantity());
-		fRepairTools.put(repairTool.getName(), tempRepairTool);
-	}
 
 	@Override
 	public void addTool(RepairTool repairTool) {
