@@ -1,6 +1,8 @@
-package Main;
+package interfaces;
 
-public interface I_Warehouse {
+import interfaces.RepairMaterial;
+
+public interface Warehouse {
 
 	/**
 	 * Return the repair tool and reduce the amount of the <name> RepairTool in
@@ -13,7 +15,7 @@ public interface I_Warehouse {
 	 * @return The RepairTool from the Warehouse
 	 * 
 	 * **/
-	I_RepairTool takeRepairTool(String name, int quantity);
+	RepairTool takeRepairTool(String name, int quantity);
 
 	/**
 	 * Return the repair material and reduce the amount of the <name>
@@ -26,7 +28,7 @@ public interface I_Warehouse {
 	 * @return The RepairMaterial from the Warehouse
 	 * 
 	 * **/
-	I_RepairMaterial takeRepairMaterial(String name, int quantity);
+	RepairMaterial takeRepairMaterial(String name, int quantity);
 
 	/**
 	 * Put a tool back to the Warehouse. Increase the amount of the <name>
@@ -37,7 +39,7 @@ public interface I_Warehouse {
 	 * @param int quantity - The quantity of the tool
 	 * 
 	 * **/
-	void putToolBack(I_RepairTool repairTool);
+	void putToolBack(RepairTool repairTool);
 
 	/**
 	 * Return the sum of all <name> tools in the Warehouse
