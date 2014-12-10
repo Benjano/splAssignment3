@@ -22,12 +22,12 @@ public class WarehouseTesting {
 	public void setUp() throws Exception {
 		warehouse = new WarehouseImpl();
 	}
-	
+
 	@After
 	public void tearDown() throws Exception {
 		setUp();
 	}
-	
+
 	@Test
 	public void testTakeRepairTool() {
 		RepairTool repairTool = warehouse.takeRepairTool("Hummer", 5);
@@ -36,8 +36,8 @@ public class WarehouseTesting {
 
 	@Test
 	public void testTakeRepairMaterial() {
-		RepairMaterial repairMaterial = warehouse.takeRepairMaterial("Nail",
-				10);
+		RepairMaterial repairMaterial = warehouse
+				.takeRepairMaterial("Nail", 10);
 		assertEquals(repairMaterial, new RepairMaterialImpl("Nail", 10));
 	}
 

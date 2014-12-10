@@ -53,4 +53,24 @@ public interface Warehouse {
 	 */
 	void addMaterial(String name, int quantity);
 
+	/**
+	 * Return the sum of all <name> tools in the Warehouse
+	 * 
+	 * @param name
+	 * 
+	 * @return The number of <name> in the Warehouse
+	 * 
+	 * **/
+	int countRepairToolInWarehouse(String name);
+
+	/**
+	 * Return the sum of all <name> materials in the Warehouse
+	 * 
+	 * @param name
+	 * 
+	 * @return The number of <name> in the Warehouse
+	 * 
+	 * **/
+	int countRepairMaterialInWarehouse(String name);
+
 }
