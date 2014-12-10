@@ -6,9 +6,9 @@ public interface I_Warehouse {
 	 * Return the repair tool and reduce the amount of the <name> RepairTool in
 	 * the warehouse by the asked quantity
 	 * 
-	 * @param String
-	 *            name - The name of the tool int quantity - The quantity of the
-	 *            tool
+	 * @param string
+	 *            name - The name of the tool
+	 * @param int quantity - The quantity of the tool
 	 * 
 	 * @return The RepairTool from the Warehouse
 	 * 
@@ -20,8 +20,8 @@ public interface I_Warehouse {
 	 * RepairMaterial in the warehouse by the asked quantity
 	 * 
 	 * @param String
-	 *            name - The name of the tool int quantity - The quantity of the
-	 *            tool
+	 *            name - The name of the tool
+	 * @param int quantity - The quantity of the tool
 	 * 
 	 * @return The RepairMaterial from the Warehouse
 	 * 
@@ -33,8 +33,8 @@ public interface I_Warehouse {
 	 * RepairTool in the Warehouse by the taken quantity.
 	 * 
 	 * @param String
-	 *            name - The name of the tool int quantity - The quantity of the
-	 *            tool
+	 *            name - The name of the tool
+	 * @param int quantity - The quantity of the tool
 	 * 
 	 * **/
 	void putToolBack(I_RepairTool repairTool);

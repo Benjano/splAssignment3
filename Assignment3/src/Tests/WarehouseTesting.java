@@ -15,7 +15,7 @@ import Main.RepairMaterial;
 import Main.RepairTool;
 import Main.Warehouse;
 
-public class TestWarehouse {
+public class WarehouseTesting {
 
 	I_Warehouse warehouse;
 
@@ -43,7 +43,7 @@ public class TestWarehouse {
 	}
 
 	@Test
-	public void putToolBack() {
+	public void testPutToolsBack() {
 		int sumToolsBegin = warehouse.countToolInWarehouse("Hummer");
 		I_RepairTool repairTool = new RepairTool("Hummer", 2);
 		warehouse.putToolBack(repairTool);
