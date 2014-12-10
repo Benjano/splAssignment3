@@ -8,8 +8,6 @@ import interfaces.RepairMaterial;
 import interfaces.RepairTool;
 import interfaces.Warehouse;
 
-import java.util.concurrent.atomic.AtomicReferenceArray;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -43,10 +41,10 @@ public class WarehouseTesting {
 
 	@Test
 	public void testPutToolsBack() {
-		int sumToolsBegin = warehouse.countToolInWarehouse("Hummer");
+		int sumToolsBegin = warehouse.countRepairToolInWarehouse("Hummer");
 		RepairTool repairTool = new RepairToolImpl("Hummer", 2);
 		warehouse.putToolBack(repairTool);
-		int sumToolsAfter = warehouse.countToolInWarehouse("Hummer");
+		int sumToolsAfter = warehouse.countRepairToolInWarehouse("Hummer");
 		assertEquals(sumToolsBegin, sumToolsAfter);
 	}
 

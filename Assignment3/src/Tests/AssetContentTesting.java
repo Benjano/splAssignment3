@@ -2,7 +2,6 @@ package Tests;
 
 import static org.junit.Assert.assertEquals;
 import implement.AssetContentImpl;
-import implement.Location;
 import interfaces.AssetContent;
 
 import org.junit.After;

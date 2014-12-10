@@ -29,9 +29,9 @@ public class AssetTesting {
 
 	@Test
 	public void testCalculateRepairTime() {
-		AssetContentImpl content1 = new AssetContentImpl("Table", 100, 1.5f);
-		AssetContentImpl content2 = new AssetContentImpl("Chairs", 90, 1.5f);
-		AssetContentImpl content3 = new AssetContentImpl("Bed", 100, 1.5f);
+		AssetContent content1 = new AssetContentImpl("Table", 100, 1.5f);
+		AssetContent content2 = new AssetContentImpl("Chairs", 90, 1.5f);
+		AssetContent content3 = new AssetContentImpl("Bed", 100, 1.5f);
 
 		asset.addAssetContent(content1);
 		asset.addAssetContent(content2);

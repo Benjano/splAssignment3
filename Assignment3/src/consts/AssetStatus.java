@@ -1,8 +1,5 @@
 package consts;
 
 public enum AssetStatus {
-	Available,
-	Booked,
-	Occupied,
-	Unavailable
+	Available, Booked, Occupied, Unavailable
 }
