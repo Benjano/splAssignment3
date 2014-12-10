@@ -4,6 +4,7 @@ import interfaces.RepairTool;
 
 public class RepairToolImpl implements RepairTool {
 
+
 	private String fName;
 	private int fQuantity;
 

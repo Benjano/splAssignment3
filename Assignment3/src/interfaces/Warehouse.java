@@ -43,7 +43,7 @@ public interface Warehouse {
 	 * @param name
 	 * @param quantity
 	 */
-	void addTool(String name, int quantity);
+	void addTool(RepairTool repairTool);
 
 	/**
 	 * Add a new Repair Material to the Warehouse
@@ -51,7 +51,7 @@ public interface Warehouse {
 	 * @param name
 	 * @param quantity
 	 */
-	void addMaterial(String name, int quantity);
+	void addMaterial(RepairMaterial repairMaterial);
 
 	/**
 	 * Return the sum of all <name> tools in the Warehouse
