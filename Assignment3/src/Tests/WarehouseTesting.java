@@ -50,15 +50,6 @@ public class WarehouseTesting {
 	}
 
 	@Test
-	public void testPutToolsBack() {
-		int sumToolsBegin = warehouse.countRepairToolInWarehouse("Hummer");
-		RepairTool repairTool = new RepairToolImpl("Hummer", 2);
-		warehouse.putToolBack(repairTool);
-		int sumToolsAfter = warehouse.countRepairToolInWarehouse("Hummer");
-		assertEquals(sumToolsBegin, sumToolsAfter);
-	}
-
-	@Test
 	public void testAddTool() {
 		RepairTool addRepairTool = new RepairToolImpl("Screwdriver", 3);
 		warehouse.addTool(addRepairTool);
