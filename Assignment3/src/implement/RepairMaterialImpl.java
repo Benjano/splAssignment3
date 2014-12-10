@@ -24,6 +24,10 @@ public class RepairMaterialImpl implements RepairMaterial {
 		}
 	}
 	
+	public void IncreaseMaterial(int quantity) {
+		this.fQuantity = this.fQuantity + quantity;
+	}
+	
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();

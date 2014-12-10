@@ -37,15 +37,6 @@ public interface Warehouse {
 	 * **/
 	void putToolBack(RepairTool repairTool);
 
-	/**
-	 * Return the sum of all <name> tools in the Warehouse
-	 * 
-	 * @param name
-	 * 
-	 * @return The number of <name> in the Warehouse
-	 * 
-	 * **/
-	int countToolInWarehouse(String name);
 
 	/**
 	 * Adds a new Repair Tool to the the Warehouse
