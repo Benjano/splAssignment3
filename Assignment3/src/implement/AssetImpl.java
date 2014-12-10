@@ -1,6 +1,8 @@
 package implement;
 
+import java.util.Iterator;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
 import consts.AssetStatus;
@@ -68,5 +70,41 @@ public class AssetImpl implements Asset {
 	@Override
 	public void addAssetContent(AssetContent assetContent) {
 		fAssetContent.put(assetContent.getName(), assetContent);
+	}
+
+	@Override
+	public AssetContent[] getAllAssetContent() {
+		AssetContent[] assetContents = new AssetContent[fAssetContent.size()];
+		int k = 0;
+		Iterator<Entry<String, AssetContent>> i = fAssetContent.entrySet()
+				.iterator();
+
+		while (i.hasNext()) {
+			Map.Entry<String, AssetContent> pairs = i.next();
+			assetContents[k] = pairs.getValue();
+			k++;
+		}
+		return assetContents;
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Asset: ").append(fName).append("\nType: ")
+				.append(fType).append("\n").append(fLocation)
+				.append("\nSize: ").append(fSize).append("\nCost per night: ")
+				.append(fCostPerNight);
+
+		Iterator<Entry<String, AssetContent>> i = fAssetContent.entrySet()
+				.iterator();
+
+		while (i.hasNext()) {
+			Map.Entry<String, AssetContent> pairs = i.next();
+			builder.append("\n").append(pairs.getValue());
+		}
+
+		builder.append(" \nStatus: ").append(fStatus);
+
+		return builder.toString();
 	}
 }
