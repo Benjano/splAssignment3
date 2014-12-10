@@ -35,7 +35,7 @@ public class WarehouseTesting {
 		RepairTool repairTool = warehouse.takeRepairTool("Hummer", 3);
 		assertEquals("Wrong RepairTool quantity", 2,
 				warehouse.countRepairToolInWarehouse("Hummer"));
-		warehouse.putToolBack(repairTool);
+		warehouse.addTool(repairTool);
 		assertEquals("Wrong RepairTool quantity", 5,
 				warehouse.countRepairToolInWarehouse("Hummer"));
 	}
@@ -53,7 +53,7 @@ public class WarehouseTesting {
 	public void testPutToolsBack() {
 		int sumToolsBegin = warehouse.countRepairToolInWarehouse("Hummer");
 		RepairTool repairTool = new RepairToolImpl("Hummer", 2);
-		warehouse.putToolBack(repairTool);
+		warehouse.addTool(repairTool);
 		int sumToolsAfter = warehouse.countRepairToolInWarehouse("Hummer");
 		assertEquals(sumToolsBegin, sumToolsAfter);
 	}

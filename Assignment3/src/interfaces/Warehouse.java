@@ -28,14 +28,6 @@ public interface Warehouse {
 	 * **/
 	RepairMaterial takeRepairMaterial(String name, int quantity);
 
-	/**
-	 * Put a tool back to the Warehouse. Increase the amount of the <name>
-	 * RepairTool in the Warehouse by the taken quantity.
-	 * 
-	 * @param repairTool
-	 * 
-	 * **/
-	void putToolBack(RepairTool repairTool);
 
 	/**
 	 * Adds a new Repair Tool to the the Warehouse
