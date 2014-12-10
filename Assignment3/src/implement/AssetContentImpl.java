@@ -1,0 +1,46 @@
+package implement;
+
+import java.util.concurrent.atomic.AtomicInteger;
+
+import interfaces.AssetContent;
+
+public class AssetContentImpl implements AssetContent {
+	private String fName;
+	AtomicInteger fHealth;
+	private float fRepairCostMultiplier;
+
+	/**
+	 * @param fName
+	 * @param fHealth
+	 * @param fRepairCostMultiplier
+	 */
+	public AssetContentImpl(String name, int health, float repairCostMultiplier) {
+		super();
+		this.fName = name;
+		this.fHealth = new AtomicInteger(health);
+		this.fRepairCostMultiplier = repairCostMultiplier;
+	}
+
+	@Override
+	public double calculateRepairTime() {
+		return ((100 - fHealth.get()) * fRepairCostMultiplier);
+	}
+
+	@Override
+	public void setHealth(int health) {
+		fHealth.set(health);
+	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Asset content name: ");
+		builder.append(fName);
+		builder.append(" Health: ");
+		builder.append(fHealth);
+		builder.append("% Repair cost multiplier: ");
+		builder.append(fRepairCostMultiplier);
+		return builder.toString();
+	}
+
+}
