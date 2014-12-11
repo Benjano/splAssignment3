@@ -1,6 +1,9 @@
 package implement;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
@@ -10,14 +13,14 @@ import interfaces.Asset;
 import interfaces.AssetContent;
 
 public class AssetImpl implements Asset {
-	
+
 	private final double ASSET_DAMAGED_HEALTH = 65;
 
 	private String fName, fType;
 	private Location fLocation;
 	private int fSize;
 	private double fCostPerNight;
-	private Map<String, AssetContent> fAssetContent;
+	private List<AssetContent> fAssetContent;
 	private AssetStatus fStatus;
 
 	/**
@@ -33,7 +36,8 @@ public class AssetImpl implements Asset {
 		this.fName = name;
 		this.fType = type;
 		this.fLocation = location;
-		this.fAssetContent = new ConcurrentHashMap<String, AssetContent>();
+		this.fAssetContent = Collections
+				.synchronizedList(new ArrayList<AssetContent>());
 		this.fStatus = status;
 		this.fCostPerNight = costPerNight;
 		this.fSize = size;
@@ -68,37 +72,28 @@ public class AssetImpl implements Asset {
 	public int getSize() {
 		return fSize;
 	}
-	
+
 	@Override
 	public boolean isDamaged() {
-		Iterator<Entry<String, AssetContent>> i = fAssetContent.entrySet()
-				.iterator();
-		
-		while (i.hasNext()) {
-			Map.Entry<String, AssetContent> pairs = i.next();
-			if (pairs.getValue().getHealth() < ASSET_DAMAGED_HEALTH)
+		for (AssetContent assetContent : fAssetContent) {
+			if (assetContent.getHealth() < ASSET_DAMAGED_HEALTH)
 				return true;
 		}
-		
+
 		return false;
 	}
 
 	@Override
 	public void addAssetContent(AssetContent assetContent) {
-		fAssetContent.put(assetContent.getName(), assetContent);
+		fAssetContent.add(assetContent);
 	}
 
 	@Override
 	public AssetContent[] getAllAssetContent() {
 		AssetContent[] assetContents = new AssetContent[fAssetContent.size()];
 		int k = 0;
-		Iterator<Entry<String, AssetContent>> i = fAssetContent.entrySet()
-				.iterator();
-
-		while (i.hasNext()) {
-			Map.Entry<String, AssetContent> pairs = i.next();
-			assetContents[k] = pairs.getValue();
-			k++;
+		for (AssetContent assetContent : fAssetContent) {
+			assetContents[k] = assetContent;
 		}
 		return assetContents;
 	}
@@ -111,12 +106,8 @@ public class AssetImpl implements Asset {
 				.append("\nSize: ").append(fSize).append("\nCost per night: ")
 				.append(fCostPerNight);
 
-		Iterator<Entry<String, AssetContent>> i = fAssetContent.entrySet()
-				.iterator();
-
-		while (i.hasNext()) {
-			Map.Entry<String, AssetContent> pairs = i.next();
-			builder.append("\n").append(pairs.getValue());
+		for (AssetContent assetContent : fAssetContent) {
+			builder.append("\n").append(assetContent);
 		}
 
 		builder.append(" \nStatus: ").append(fStatus);
@@ -124,5 +115,4 @@ public class AssetImpl implements Asset {
 		return builder.toString();
 	}
 
-	
 }
