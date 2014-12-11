@@ -26,10 +26,10 @@ public class Driver {
 		fManagment = new ManagmentImpl();
 		builderFactory = DocumentBuilderFactory.newInstance();
 
-		readXmlAssetsContentRepairDetails(assetContentRepairDetailsSource);
-		readXmlAssets(assetsSource);
+		// readXmlAssetsContentRepairDetails(assetContentRepairDetailsSource);
+		// readXmlAssets(assetsSource);
 		// readXmlCustomerGroup(customersGroupsSource);
-		// readXmlInitialData(initialDataSource);
+		readXmlInitialData(initialDataSource);
 
 	}
 
@@ -38,7 +38,7 @@ public class Driver {
 				"Assets.xml", "AssetContentsRepairDetails.xml");
 		System.out.println("Driver Working");
 
-		 System.out.println(fManagment);
+		System.out.println(fManagment);
 
 	}
 
@@ -140,8 +140,9 @@ public class Driver {
 							.item(0).getTextContent();
 					String type = assetElement.getElementsByTagName("Type")
 							.item(0).getTextContent();
-					int size = Integer.parseInt(assetElement.getElementsByTagName("Size")
-							.item(0).getTextContent());
+					int size = Integer.parseInt(assetElement
+							.getElementsByTagName("Size").item(0)
+							.getTextContent());
 					int x = Integer
 							.parseInt(assetElement
 									.getElementsByTagName("Location").item(0)
@@ -153,35 +154,16 @@ public class Driver {
 									.getAttributes().getNamedItem("y")
 									.getTextContent());
 					Location location = new Location(x, y);
-					int costPerNight = Integer.parseInt(assetElement.getElementsByTagName("CostPerNight")
-							.item(0).getTextContent());
-					
-					Asset asset = new AssetImpl(name, type, location, AssetStatus.Available, costPerNight, size);
+					int costPerNight = Integer.parseInt(assetElement
+							.getElementsByTagName("CostPerNight").item(0)
+							.getTextContent());
 
-//					System.out.println("Name : "
-//							+ assetElement.getElementsByTagName("Name").item(0)
-//									.getTextContent());
-//					System.out.println("Type : "
-//							+ assetElement.getElementsByTagName("Type").item(0)
-//									.getTextContent());
-//					System.out.println("Size : "
-//							+ assetElement.getElementsByTagName("Size").item(0)
-//									.getTextContent());
-//					System.out.println("Location : "
-//							+ assetElement.getElementsByTagName("Location")
-//									.item(0).getAttributes().getNamedItem("x")
-//									.getTextContent()
-//							+ ","
-//							+ assetElement.getElementsByTagName("Location")
-//									.item(0).getAttributes().getNamedItem("y")
-//									.getTextContent());
-//					System.out.println("CostPerNight : "
-//							+ assetElement.getElementsByTagName("CostPerNight")
-//									.item(0).getTextContent());
+					Asset asset = new AssetImpl(name, type, location,
+							AssetStatus.Available, costPerNight, size);
 
-					readAssetContent(asset, assetElement
-							.getElementsByTagName("AssetContent"));
-					
+					readAssetContent(asset,
+							assetElement.getElementsByTagName("AssetContent"));
+
 					fManagment.addAsset(asset);
 
 				}
@@ -197,21 +179,15 @@ public class Driver {
 
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
 				Element element = (Element) node;
-				
+
 				String name = element.getElementsByTagName("Name").item(0)
 						.getTextContent();
 				double repairCostMultiplier = Double.parseDouble(element
 						.getElementsByTagName("RepairMultiplier").item(0)
 						.getTextContent());
-				
-				asset.addAssetContent(new AssetContentImpl(name, repairCostMultiplier));
-				
-//				System.out.print(element.getElementsByTagName("Name").item(0)
-//						.getTextContent());
-//				System.out.println(element
-//						.getElementsByTagName("RepairMultiplier").item(0)
-//						.getTextContent());
 
+				asset.addAssetContent(new AssetContentImpl(name,
+						repairCostMultiplier));
 			}
 		}
 	}
@@ -287,16 +263,16 @@ public class Driver {
 
 			document.getDocumentElement().normalize();
 
-			// readTools(document.getElementsByTagName("Tool"));
-			// readMaterials(document.getElementsByTagName("Material"));
 			readClerks(document.getElementsByTagName("Clerk"));
+			readTools(document.getElementsByTagName("Tool"));
+			readMaterials(document.getElementsByTagName("Material"));
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	public void readTools(String assetContentName, NodeList tools) {
+	public void readTools(NodeList tools) {
 
 		for (int i = 0; i < tools.getLength(); i++) {
 			Node node = tools.item(i);
@@ -308,13 +284,13 @@ public class Driver {
 				int quantity = Integer.parseInt(element
 						.getElementsByTagName("Quantity").item(0)
 						.getTextContent());
-				fManagment.addRepairToolInformation(assetContentName,
-						new RepairToolInformationImpl(name, quantity));
+				fManagment
+						.addItemRepairTool(new RepairToolImpl(name, quantity));
 			}
 		}
 	}
 
-	public void readMaterials(String assetContentName, NodeList materials) {
+	public void readMaterials(NodeList materials) {
 		for (int i = 0; i < materials.getLength(); i++) {
 			Node node = materials.item(i);
 
@@ -325,8 +301,8 @@ public class Driver {
 				int quantity = Integer.parseInt(element
 						.getElementsByTagName("Quantity").item(0)
 						.getTextContent());
-				fManagment.addRepairMaterialInformation(assetContentName,
-						new RepairMaterialInformationImpl(name, quantity));
+				fManagment.addItemRepairMaterial(new RepairMaterialImpl(name,
+						quantity));
 			}
 		}
 	}
@@ -337,16 +313,19 @@ public class Driver {
 
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
 				Element element = (Element) node;
-				System.out.println(element.getElementsByTagName("Name").item(0)
-						.getTextContent());
-				System.out.println("Location : "
-						+ element.getElementsByTagName("Location").item(0)
-								.getAttributes().getNamedItem("x")
-								.getTextContent()
-						+ ","
-						+ element.getElementsByTagName("Location").item(0)
-								.getAttributes().getNamedItem("y")
-								.getTextContent());
+
+				String name = element.getElementsByTagName("Name").item(0)
+						.getTextContent();
+
+				int x = Integer.parseInt(element
+						.getElementsByTagName("Location").item(0)
+						.getAttributes().getNamedItem("x").getTextContent());
+				int y = Integer.parseInt(element
+						.getElementsByTagName("Location").item(0)
+						.getAttributes().getNamedItem("y").getTextContent());
+				Location location = new Location(x, y);
+
+				fManagment.addClerk(new ClerkDetailsImpl(name, location));
 			}
 		}
 	}

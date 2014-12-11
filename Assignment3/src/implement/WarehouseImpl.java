@@ -92,13 +92,13 @@ public class WarehouseImpl implements Warehouse {
 		builder.append("Tools In Warehouse: ");
 		
 		for (Map.Entry<String, RepairTool> repairTool : fRepairTools.entrySet()) {
-			builder.append("\n").append(repairTool.getValue()).append("\n");
+			builder.append("\n").append(repairTool.getValue());
 		}
 		
 		builder.append("Materials In Warehouse: ");
 		
 		for (Map.Entry<String, RepairMaterial> materialTool : fRepairMaterials.entrySet()) {
-			builder.append("\n").append(materialTool.getValue()).append("\n");
+			builder.append("\n").append(materialTool.getValue());
 		}
 		return builder.toString();
 		

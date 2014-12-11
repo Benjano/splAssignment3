@@ -33,7 +33,7 @@ public class RepairMaterialImpl implements RepairMaterial {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Material Name: ");
 		builder.append(fName);
-		builder.append(". Material Quantity: ");
+		builder.append(". Quantity: ");
 		builder.append(fQuantity);
 		return builder.toString();
 	}

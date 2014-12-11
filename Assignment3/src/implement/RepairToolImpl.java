@@ -36,7 +36,7 @@ public class RepairToolImpl implements RepairTool {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Tool Name: ");
 		builder.append(fName);
-		builder.append(". Tool Quantity: ");
+		builder.append(". Quantity: ");
 		builder.append(fQuantity);
 		return builder.toString();
 	}

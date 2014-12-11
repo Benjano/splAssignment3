@@ -97,28 +97,28 @@ public class ManagmentImpl implements Managment {
 		builder.append("Clerk Details: ");
 
 		for (ClerkDetails clerkDetails : fClerksDetails) {
-			builder.append("\n").append(clerkDetails).append("\n");
+			builder.append("\n").append(clerkDetails);
 		}
 		
-		builder.append("\nCustomer Group Details: ");
+		builder.append("\n\nCustomer Group Details: ");
 
 		for (CustomerGroupDetails customerGroupDetails : fCustomerGroupDetails) {
-			builder.append("\n").append(customerGroupDetails).append("\n");
+			builder.append("\n").append(customerGroupDetails);
 		}
 		
-		builder.append("\nAssets: ");
+		builder.append("\n\nAssets: ");
 		builder.append(fAssets);
 		
-		builder.append("\nWarehouse: ");
+		builder.append("\n\nWarehouse: ");
 		builder.append(fWarehouse);
 		
-		builder.append("\nRepair Tool Informations: ");
+		builder.append("\n\nRepair Tool Informations: ");
 		
 		for (Map.Entry<String, List<RepairToolInformation>> repairToolInformations : fRepairToolInformations.entrySet()) {
 			builder.append("\n").append(repairToolInformations.getKey()).append(": ").append(repairToolInformations.getValue());
 		}
 		
-		builder.append("\nRepair Material Informations: ");
+		builder.append("\n\nRepair Material Informations: ");
 		
 		for (Map.Entry<String, List<RepairMaterialInformation>> repairMaterialInformations : fRepairMaterialInformations.entrySet()) {
 			builder.append("\n").append(repairMaterialInformations.getKey()).append(": ").append(repairMaterialInformations.getValue());
