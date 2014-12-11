@@ -3,10 +3,6 @@ package implement;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-<<<<<<< HEAD
-
-=======
->>>>>>> branch 'master' of https://github.com/Benjano/splAssignment3.git
 import consts.AssetStatus;
 import interfaces.Asset;
 import interfaces.AssetContent;
