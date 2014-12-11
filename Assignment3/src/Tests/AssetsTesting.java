@@ -30,7 +30,7 @@ public class AssetsTesting {
 		asset3 = new AssetImpl("Yarden's House", "Loft", new Location(10, 15),
 				AssetStatus.Available, 100, 3);
 		asset4 = new AssetImpl("Gal's House", "Loft", new Location(10, 15),
-				AssetStatus.Available, 100, 3);
+				AssetStatus.Available, 100, 6);
 
 		AssetContent content1 = new AssetContentImpl("Table", 100, 1.5f);
 		AssetContent content2 = new AssetContentImpl("Chairs", 90, 1.5f);
@@ -73,7 +73,7 @@ public class AssetsTesting {
 				assets.findAssetByTypeAndSize("Hut", 2).size());
 		assertEquals("Should find 1", 1,
 				assets.findAssetByTypeAndSize("Appartment", 2).size());
-		assertEquals("Should find 1 ", 2,
+		assertEquals("Should find 2 ", 2,
 				assets.findAssetByTypeAndSize("Loft", 3).size());
 	}
 }
