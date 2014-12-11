@@ -1,6 +1,5 @@
 package implement;
 
-import interfaces.Asset;
 import interfaces.RepairMaterial;
 import interfaces.RepairTool;
 import interfaces.Warehouse;
@@ -20,7 +19,7 @@ public class WarehouseImpl implements Warehouse {
 	}
 
 	@Override
-	public RepairMaterial takeRepairMaterial(String name, int quantity) {
+	public synchronized RepairMaterial takeRepairMaterial(String name, int quantity) {
 		RepairMaterial tempRepairMaterial = fRepairMaterials.get(name);
 		if (tempRepairMaterial.getQuantity() >= quantity) {
 			tempRepairMaterial.ReduceMaterial(quantity);
@@ -32,7 +31,7 @@ public class WarehouseImpl implements Warehouse {
 	}
 
 	@Override
-	public RepairTool takeRepairTool(String name, int quantity) {
+	public synchronized RepairTool takeRepairTool(String name, int quantity) {
 		RepairTool tempRepairTool = fRepairTools.get(name);
 		if (tempRepairTool.getQuantity() >= quantity) {
 			tempRepairTool.ReduceTool(quantity);
@@ -45,7 +44,7 @@ public class WarehouseImpl implements Warehouse {
 
 
 	@Override
-	public void addTool(RepairTool repairTool) {
+	public synchronized void addTool(RepairTool repairTool) {
 		String repairToolName = repairTool.getName();
 		if (fRepairTools.containsKey(repairToolName)) {
 			RepairTool tempRepairTool = fRepairTools.get(repairToolName);
@@ -56,7 +55,7 @@ public class WarehouseImpl implements Warehouse {
 	}
 
 	@Override
-	public void addMaterial(RepairMaterial repairMaterial) {
+	public synchronized void addMaterial(RepairMaterial repairMaterial) {
 		String repairToolName = repairMaterial.getName();
 		if (fRepairMaterials.containsKey(repairToolName)) {
 			RepairMaterial tempRepairMaterial = fRepairMaterials

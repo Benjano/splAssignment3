@@ -1,5 +1,7 @@
 package implement;
 
+import interfaces.Managment;
+
 import java.io.File;
 import java.util.logging.Logger;
 
@@ -13,16 +15,19 @@ import org.w3c.dom.NodeList;
 
 public class Driver {
 
-	DocumentBuilderFactory builderFactory;
+	private DocumentBuilderFactory builderFactory;
+	private static Managment fManagment;
 
 	public Driver(String initialDataSource, String customersGroupsSource,
 			String assetsSource, String assetContentRepairDetailsSource) {
+
+		fManagment = new ManagmentImpl();
 		builderFactory = DocumentBuilderFactory.newInstance();
 
 		readXmlAssetsContentRepairDetails(assetContentRepairDetailsSource);
-		readXmlAssets(assetsSource);
-		readXmlCustomerGroup(customersGroupsSource);
-		readXmlInitialData(initialDataSource);
+		// readXmlAssets(assetsSource);
+		// readXmlCustomerGroup(customersGroupsSource);
+		// readXmlInitialData(initialDataSource);
 
 	}
 
@@ -30,6 +35,8 @@ public class Driver {
 		Driver driver = new Driver("InitialData.xml", "CustomersGroups.xml",
 				"Assets.xml", "AssetContentsRepairDetails.xml");
 		System.out.println("Driver Working");
+		
+		System.out.println(fManagment);
 
 	}
 
@@ -53,52 +60,59 @@ public class Driver {
 
 					Element assetContentElement = (Element) nNode;
 
-					System.out.println("Name : "
-							+ assetContentElement.getElementsByTagName("Name")
-									.item(0).getTextContent());
+					String assetContentName = assetContentElement
+							.getElementsByTagName("Name").item(0)
+							.getTextContent();
 
-					readTools(assetContentElement.getElementsByTagName("Tool"));
-					readMaterials(assetContentElement
-							.getElementsByTagName("Material"));
+					readToolsInformation(assetContentName,
+							assetContentElement.getElementsByTagName("Tool"));
+					readMaterialsInformation(assetContentName,
+							assetContentElement
+									.getElementsByTagName("Material"));
 
 				}
-				System.out.println();
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-
-	public void readTools(NodeList tools) {
+	
+	public void readToolsInformation(String assetContentName, NodeList tools) {
 
 		for (int i = 0; i < tools.getLength(); i++) {
 			Node node = tools.item(i);
 
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
 				Element element = (Element) node;
-				System.out.print(element.getElementsByTagName("Name").item(0)
+				String name = element.getElementsByTagName("Name").item(0)
+						.getTextContent();
+				int quantity = Integer.parseInt(element
+						.getElementsByTagName("Quantity").item(0)
 						.getTextContent());
-				System.out.println(element.getElementsByTagName("Quantity")
-						.item(0).getTextContent());
-
+				fManagment.addRepairToolInformation(assetContentName,
+						new RepairToolInformationImpl(name, quantity));
 			}
 		}
 	}
-
-	public void readMaterials(NodeList materials) {
+	
+	public void readMaterialsInformation(String assetContentName, NodeList materials) {
 		for (int i = 0; i < materials.getLength(); i++) {
 			Node node = materials.item(i);
 
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
 				Element element = (Element) node;
-				System.out.print(element.getElementsByTagName("Name").item(0)
+				String name = element.getElementsByTagName("Name").item(0)
+						.getTextContent();
+				int quantity = Integer.parseInt(element
+						.getElementsByTagName("Quantity").item(0)
 						.getTextContent());
-				System.out.println(element.getElementsByTagName("Quantity")
-						.item(0).getTextContent());
-
+				fManagment.addRepairMaterialInformation(assetContentName,
+						new RepairMaterialInformationImpl(name, quantity));
 			}
 		}
 	}
+
+	
 
 	public void readXmlAssets(String fileLocation) {
 		try {
@@ -236,8 +250,8 @@ public class Driver {
 
 			document.getDocumentElement().normalize();
 
-			readTools(document.getElementsByTagName("Tool"));
-			readMaterials(document.getElementsByTagName("Material"));
+//			readTools(document.getElementsByTagName("Tool"));
+//			readMaterials(document.getElementsByTagName("Material"));
 			readClerks(document.getElementsByTagName("Clerk"));
 
 		} catch (Exception e) {
@@ -245,6 +259,41 @@ public class Driver {
 		}
 	}
 
+	public void readTools(String assetContentName, NodeList tools) {
+
+		for (int i = 0; i < tools.getLength(); i++) {
+			Node node = tools.item(i);
+
+			if (node.getNodeType() == Node.ELEMENT_NODE) {
+				Element element = (Element) node;
+				String name = element.getElementsByTagName("Name").item(0)
+						.getTextContent();
+				int quantity = Integer.parseInt(element
+						.getElementsByTagName("Quantity").item(0)
+						.getTextContent());
+				fManagment.addRepairToolInformation(assetContentName,
+						new RepairToolInformationImpl(name, quantity));
+			}
+		}
+	}
+
+	public void readMaterials(String assetContentName, NodeList materials) {
+		for (int i = 0; i < materials.getLength(); i++) {
+			Node node = materials.item(i);
+
+			if (node.getNodeType() == Node.ELEMENT_NODE) {
+				Element element = (Element) node;
+				String name = element.getElementsByTagName("Name").item(0)
+						.getTextContent();
+				int quantity = Integer.parseInt(element
+						.getElementsByTagName("Quantity").item(0)
+						.getTextContent());
+				fManagment.addRepairMaterialInformation(assetContentName,
+						new RepairMaterialInformationImpl(name, quantity));
+			}
+		}
+	}
+	
 	private void readClerks(NodeList clerks) throws Exception {
 		for (int i = 0; i < clerks.getLength(); i++) {
 			Node node = clerks.item(i);
