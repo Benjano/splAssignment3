@@ -29,7 +29,7 @@ public class RepairMaterialInformationImpl implements RepairMaterialInformation 
 		StringBuilder builder = new StringBuilder();
 		builder.append("Material Name: ");
 		builder.append(fName);
-		builder.append(" Material Quantity ");
+		builder.append(". Material Quantity: ");
 		builder.append(fQuantity);
 		return builder.toString();
 	}

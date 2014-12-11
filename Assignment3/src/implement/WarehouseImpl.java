@@ -1,5 +1,6 @@
 package implement;
 
+import interfaces.Asset;
 import interfaces.RepairMaterial;
 import interfaces.RepairTool;
 import interfaces.Warehouse;
@@ -85,5 +86,25 @@ public class WarehouseImpl implements Warehouse {
 			return 0;
 		}
 	}
+	
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Tools In Warehouse: ");
+		
+		for (Map.Entry<String, RepairTool> repairTool : fRepairTools.entrySet()) {
+			builder.append("\n").append(repairTool.getValue()).append("\n");
+		}
+		
+		builder.append("Materials In Warehouse: ");
+		
+		for (Map.Entry<String, RepairMaterial> materialTool : fRepairMaterials.entrySet()) {
+			builder.append("\n").append(materialTool.getValue()).append("\n");
+		}
+		return builder.toString();
+		
+		
+	}
+	
 
 }

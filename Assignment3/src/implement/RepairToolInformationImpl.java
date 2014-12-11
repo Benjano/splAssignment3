@@ -25,7 +25,7 @@ public class RepairToolInformationImpl implements RepairToolInformation {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Tool Name: ");
 		builder.append(fName);
-		builder.append(" Tool Quantity ");
+		builder.append(". Tool Quantity: ");
 		builder.append(fQuantity);
 		return builder.toString();
 	}

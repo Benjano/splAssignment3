@@ -38,6 +38,8 @@ public class WarehouseTesting {
 		warehouse.addTool(repairTool);
 		assertEquals("Wrong RepairTool quantity", 5,
 				warehouse.countRepairToolInWarehouse("Hummer"));
+		System.out.println(warehouse);
+
 	}
 
 	@Test
