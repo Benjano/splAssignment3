@@ -19,14 +19,16 @@ public class Driver {
 			String assetsSource, String assetContentRepairDetailsSource) {
 		builderFactory = DocumentBuilderFactory.newInstance();
 
-//		readXmlAssetsContentRepairDetails(assetContentRepairDetailsSource);
+		readXmlAssetsContentRepairDetails(assetContentRepairDetailsSource);
 		readXmlAssets(assetsSource);
+		readXmlCustomerGroup(customersGroupsSource);
+		readXmlInitialData(initialDataSource);
 
 	}
 
 	public static void main(String[] args) {
-		Driver driver = new Driver("src1", "src1", "Assets.xml",
-				"AssetContentsRepairDetails.xml");
+		Driver driver = new Driver("InitialData.xml", "CustomersGroups.xml",
+				"Assets.xml", "AssetContentsRepairDetails.xml");
 		System.out.println("Driver Working");
 
 	}
@@ -55,8 +57,9 @@ public class Driver {
 							+ assetContentElement.getElementsByTagName("Name")
 									.item(0).getTextContent());
 
-					readTools(assetContentElement);
-					readMaterials(assetContentElement);
+					readTools(assetContentElement.getElementsByTagName("Tool"));
+					readMaterials(assetContentElement
+							.getElementsByTagName("Material"));
 
 				}
 				System.out.println();
@@ -66,12 +69,10 @@ public class Driver {
 		}
 	}
 
-	public void readTools(Element tools) {
+	public void readTools(NodeList tools) {
 
-		NodeList toolsList = tools.getElementsByTagName("Tool");
-
-		for (int i = 0; i < toolsList.getLength(); i++) {
-			Node node = toolsList.item(i);
+		for (int i = 0; i < tools.getLength(); i++) {
+			Node node = tools.item(i);
 
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
 				Element element = (Element) node;
@@ -84,12 +85,9 @@ public class Driver {
 		}
 	}
 
-	public void readMaterials(Element materials) {
-
-		NodeList toolsList = materials.getElementsByTagName("Material");
-
-		for (int i = 0; i < toolsList.getLength(); i++) {
-			Node node = toolsList.item(i);
+	public void readMaterials(NodeList materials) {
+		for (int i = 0; i < materials.getLength(); i++) {
+			Node node = materials.item(i);
 
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
 				Element element = (Element) node;
@@ -111,8 +109,7 @@ public class Driver {
 
 			document.getDocumentElement().normalize();
 
-			NodeList assetContentList = document
-					.getElementsByTagName("Asset");
+			NodeList assetContentList = document.getElementsByTagName("Asset");
 
 			for (int i = 0; i < assetContentList.getLength(); i++) {
 
@@ -120,21 +117,31 @@ public class Driver {
 
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 
-					Element assetContentElement = (Element) nNode;
+					Element assetElement = (Element) nNode;
 
 					System.out.println("Name : "
-							+ assetContentElement.getElementsByTagName("Name")
-									.item(0).getTextContent());
+							+ assetElement.getElementsByTagName("Name").item(0)
+									.getTextContent());
 					System.out.println("Type : "
-							+ assetContentElement.getElementsByTagName("Type")
-									.item(0).getTextContent());
+							+ assetElement.getElementsByTagName("Type").item(0)
+									.getTextContent());
 					System.out.println("Size : "
-							+ assetContentElement.getElementsByTagName("Size")
-									.item(0).getTextContent());
+							+ assetElement.getElementsByTagName("Size").item(0)
+									.getTextContent());
 					System.out.println("Location : "
-							+ assetContentElement.getElementsByTagName("Location")
+							+ assetElement.getElementsByTagName("Location")
+									.item(0).getAttributes().getNamedItem("x")
+									.getTextContent()
+							+ ","
+							+ assetElement.getElementsByTagName("Location")
+									.item(0).getAttributes().getNamedItem("y")
+									.getTextContent());
+					System.out.println("CostPerNight : "
+							+ assetElement.getElementsByTagName("CostPerNight")
 									.item(0).getTextContent());
 
+					readAssetContent(assetElement
+							.getElementsByTagName("AssetContent"));
 
 				}
 				System.out.println();
@@ -144,11 +151,117 @@ public class Driver {
 		}
 	}
 
-	public void ReadXmlCustomerGroup() {
+	private void readAssetContent(NodeList assetContent) {
+		for (int i = 0; i < assetContent.getLength(); i++) {
+			Node node = assetContent.item(i);
 
+			if (node.getNodeType() == Node.ELEMENT_NODE) {
+				Element element = (Element) node;
+				System.out.print(element.getElementsByTagName("Name").item(0)
+						.getTextContent());
+				System.out.println(element
+						.getElementsByTagName("RepairMultiplier").item(0)
+						.getTextContent());
+
+			}
+		}
 	}
 
-	public void ReadXmlInitialData() {
+	public void readXmlCustomerGroup(String fileLocation) {
+		try {
+			File xmlFile = new File(fileLocation);
+			DocumentBuilder documentBuilder = builderFactory
+					.newDocumentBuilder();
+			Document document = documentBuilder.parse(xmlFile);
 
+			document.getDocumentElement().normalize();
+
+			NodeList customerGroupDetailsList = document
+					.getElementsByTagName("CustomerGroupDetails");
+
+			for (int i = 0; i < customerGroupDetailsList.getLength(); i++) {
+
+				Node nNode = customerGroupDetailsList.item(i);
+
+				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+
+					Element customerGroupDetailsElement = (Element) nNode;
+
+					System.out.println("Group Manager Name : "
+							+ customerGroupDetailsElement
+									.getElementsByTagName("GroupManagerName")
+									.item(0).getTextContent());
+
+					readCustomers(customerGroupDetailsElement
+							.getElementsByTagName("Customer"));
+
+				}
+				System.out.println();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	private void readCustomers(NodeList customers) {
+
+		for (int i = 0; i < customers.getLength(); i++) {
+			Node node = customers.item(i);
+
+			if (node.getNodeType() == Node.ELEMENT_NODE) {
+				Element element = (Element) node;
+				System.out.println("Customer name : "
+						+ element.getElementsByTagName("Name").item(0)
+								.getTextContent());
+				System.out.println("Vandalism type : "
+						+ element.getElementsByTagName("Vandalism").item(0)
+								.getTextContent());
+				System.out.println("Min damage : "
+						+ element.getElementsByTagName("MinimumDamage").item(0)
+								.getTextContent());
+				System.out.println("Max damage : "
+						+ element.getElementsByTagName("MaximumDamage").item(0)
+								.getTextContent());
+
+			}
+		}
+	}
+
+	public void readXmlInitialData(String fileLocation) {
+		try {
+			File xmlFile = new File(fileLocation);
+			DocumentBuilder documentBuilder = builderFactory
+					.newDocumentBuilder();
+			Document document = documentBuilder.parse(xmlFile);
+
+			document.getDocumentElement().normalize();
+
+			readTools(document.getElementsByTagName("Tool"));
+			readMaterials(document.getElementsByTagName("Material"));
+			readClerks(document.getElementsByTagName("Clerk"));
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	private void readClerks(NodeList clerks) throws Exception {
+		for (int i = 0; i < clerks.getLength(); i++) {
+			Node node = clerks.item(i);
+
+			if (node.getNodeType() == Node.ELEMENT_NODE) {
+				Element element = (Element) node;
+				System.out.println(element.getElementsByTagName("Name").item(0)
+						.getTextContent());
+				System.out.println("Location : "
+						+ element.getElementsByTagName("Location").item(0)
+								.getAttributes().getNamedItem("x")
+								.getTextContent()
+						+ ","
+						+ element.getElementsByTagName("Location").item(0)
+								.getAttributes().getNamedItem("y")
+								.getTextContent());
+			}
+		}
 	}
 }

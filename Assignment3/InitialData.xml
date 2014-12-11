@@ -6,113 +6,113 @@
 	<Warehouse>
 		<Tools>
 			<Tool>
-				<name>Vacuum Cleaner</name>
-				<quantity>3</quantity>
+				<Name>Vacuum Cleaner</Name>
+				<Quantity>3</Quantity>
 			</Tool>
 			<Tool>
-				<name>Hammer</name>
-				<quantity>5</quantity>
+				<Name>Hammer</Name>
+				<Quantity>5</Quantity>
 			</Tool>
 			<Tool>
-				<name>Jackhammer</name>
-				<quantity>2</quantity>
+				<Name>Jackhammer</Name>
+				<Quantity>2</Quantity>
 			</Tool>
 			<Tool>
-				<name>Jacksaw</name>
-				<quantity>4</quantity>
+				<Name>Jacksaw</Name>
+				<Quantity>4</Quantity>
 			</Tool>
 			<Tool>
-				<name>Drill</name>
-				<quantity>7</quantity>
+				<Name>Drill</Name>
+				<Quantity>7</Quantity>
 			</Tool>
 			<Tool>
-				<name>Screw Driver</name>
-				<quantity>5</quantity>
+				<Name>Screw Driver</Name>
+				<Quantity>5</Quantity>
 			</Tool>
 			<Tool>
-				<name>Adjustable Spanner</name>
-				<quantity>5</quantity>
+				<Name>Adjustable Spanner</Name>
+				<Quantity>5</Quantity>
 			</Tool>
 			<Tool>
-				<name>Knife</name>
-				<quantity>5</quantity>
+				<Name>Knife</Name>
+				<Quantity>5</Quantity>
 			</Tool>
 			<Tool>
-				<name>Pliers</name>
-				<quantity>5</quantity>
+				<Name>Pliers</Name>
+				<Quantity>5</Quantity>
 			</Tool>
 		</Tools>
 		<Materials>
 			<Material>
-				<name>Nails</name>
-				<quantity>5000</quantity>
+				<Name>Nails</Name>
+				<Quantity>5000</Quantity>
 			</Material>
 			<Material>
-				<name>Carpet Cleaner</name>
-				<quantity>5000</quantity>
+				<Name>Carpet Cleaner</Name>
+				<Quantity>5000</Quantity>
 			</Material>
 			<Material>
-				<name>Screws</name>
-				<quantity>5000</quantity>
+				<Name>Screws</Name>
+				<Quantity>5000</Quantity>
 			</Material>
 			<Material>
-				<name>Kitchen Cleaner</name>
-				<quantity>2000</quantity>
+				<Name>Kitchen Cleaner</Name>
+				<Quantity>2000</Quantity>
 			</Material>
 			<Material>
-				<name>Glass Cleaner</name>
-				<quantity>1500</quantity>
+				<Name>Glass Cleaner</Name>
+				<Quantity>1500</Quantity>
 			</Material>
 			<Material>
-				<name>Disinfectant</name>
-				<quantity>1500</quantity>
+				<Name>Disinfectant</Name>
+				<Quantity>1500</Quantity>
 			</Material>
 			<Material>
-				<name>Floor Cleaner</name>
-				<quantity>1500</quantity>
+				<Name>Floor Cleaner</Name>
+				<Quantity>1500</Quantity>
 			</Material>
 			<Material>
-				<name>Trash Bag</name>
-				<quantity>2500</quantity>
+				<Name>Trash Bag</Name>
+				<Quantity>2500</Quantity>
 			</Material>
 			<Material>
-				<name>Paper Towel</name>
-				<quantity>1500</quantity>
+				<Name>Paper Towel</Name>
+				<Quantity>1500</Quantity>
 			</Material>
 			<Material>
-				<name>Bathroom Cleaner</name>
-				<quantity>150</quantity>
+				<Name>Bathroom Cleaner</Name>
+				<Quantity>150</Quantity>
 			</Material>
 			<Material>
-				<name>Laundry Cleaner</name>
-				<quantity>2500</quantity>
+				<Name>Laundry Cleaner</Name>
+				<Quantity>2500</Quantity>
 			</Material>
 			<Material>
-				<name>Cleaning Pads</name>
-				<quantity>2500</quantity>
+				<Name>Cleaning Pads</Name>
+				<Quantity>2500</Quantity>
 			</Material>
 			<Material>
-				<name>Sand Cloth</name>
-				<quantity>2500</quantity>
+				<Name>Sand Cloth</Name>
+				<Quantity>2500</Quantity>
 			</Material>
 		</Materials>
 	</Warehouse>
 	<Staff>
 		<Clerks>
 			<Clerk>
-				<name>Ken Harush</name>
+				<Name>Ken Harush</Name>
 				<Location x="3" y = "3"/>
 			</Clerk>
 			<Clerk>
-				<name>Paula Bitton</name>
+				<Name>Paula Bitton</Name>
 				<Location x="3" y = "3"/>
 			</Clerk>
 			<Clerk>
-				<name>Wolfgang Eisenkott</name>
+				<Name>Wolfgang Eisenkott</Name>
 				<Location x="3" y = "3"/>
 			</Clerk>
 			<Clerk>
-				<name>Paula Die</name>
+				<Name>Paula Die</Name>
 				<Location x="3" y = "3"/>
 			</Clerk>
 		</Clerks>
