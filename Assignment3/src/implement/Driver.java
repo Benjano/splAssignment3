@@ -1,6 +1,8 @@
 package implement;
 
 import interfaces.Asset;
+import interfaces.Customer;
+import interfaces.CustomerGroupDetails;
 import interfaces.Managment;
 
 import java.io.File;
@@ -14,6 +16,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import consts.AssetStatus;
+import consts.VandalismType;
 
 public class Driver {
 
@@ -206,6 +209,7 @@ public class Driver {
 				
 				asset.addAssetContent(new AssetContentImpl(name, repairCostMultiplier));
 				
+				
 //				System.out.print(element.getElementsByTagName("Name").item(0)
 //						.getTextContent());
 //				System.out.println(element
@@ -237,41 +241,35 @@ public class Driver {
 
 					Element customerGroupDetailsElement = (Element) nNode;
 
-					System.out.println("Group Manager Name : "
-							+ customerGroupDetailsElement
-									.getElementsByTagName("GroupManagerName")
-									.item(0).getTextContent());
+					String name = customerGroupDetailsElement.getElementsByTagName("GroupManagerName").item(0)
+							.getTextContent();
 
-					readCustomers(customerGroupDetailsElement
+					CustomerGroupDetails customerGroupDetails= new CustomerGroupDetailsImpl(name);
+					
+					readCustomers(customerGroupDetails, customerGroupDetailsElement
 							.getElementsByTagName("Customer"));
 
 				}
-				System.out.println();
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	private void readCustomers(NodeList customers) {
+	private void readCustomers(CustomerGroupDetails customerGroupDetails, NodeList customers) {
 
 		for (int i = 0; i < customers.getLength(); i++) {
 			Node node = customers.item(i);
 
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
 				Element element = (Element) node;
-				System.out.println("Customer name : "
-						+ element.getElementsByTagName("Name").item(0)
-								.getTextContent());
-				System.out.println("Vandalism type : "
-						+ element.getElementsByTagName("Vandalism").item(0)
-								.getTextContent());
-				System.out.println("Min damage : "
-						+ element.getElementsByTagName("MinimumDamage").item(0)
-								.getTextContent());
-				System.out.println("Max damage : "
-						+ element.getElementsByTagName("MaximumDamage").item(0)
-								.getTextContent());
+				
+				String customerName = element.getElementsByTagName("Name").item(0).getTextContent();
+				VandalismType vandalismType = element.getElementsByTagName("Vandalism").item(0).getTextContent();
+				double minDamage = Double.parseDouble(element.getElementsByTagName("MinimumDamage").item(0).getTextContent());
+				double maxDamage = Double.parseDouble(element.getElementsByTagName("MaximumDamage").item(0).getTextContent());
+				
+				customerGroupDetails.addCustomer(new CustomerImpl(customerName, vandalismType, minDamage, maxDamage));
 
 			}
 		}
