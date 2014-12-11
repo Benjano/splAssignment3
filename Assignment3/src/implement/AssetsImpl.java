@@ -34,7 +34,7 @@ public class AssetsImpl implements Assets {
 				.synchronizedList(new ArrayList<Asset>());
 
 		for (Asset asset : fAssets) {
-			if (asset.getType() == type & asset.getSize() == size) {
+			if (asset.getType() == type & asset.getSize() >= size) {
 				result.add(asset);
 			}
 		}
