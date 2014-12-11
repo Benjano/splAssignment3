@@ -17,7 +17,7 @@ public class AssetContentTesting {
 
 	@Before
 	public void setUp() throws Exception {
-		assetContent = new AssetContentImpl("Table", fHealth, fRepairMultiplier);
+		assetContent = new AssetContentImpl("Table", fRepairMultiplier);
 	}
 
 	@After

@@ -1,8 +1,10 @@
 package implement;
 
+import interfaces.Asset;
 import interfaces.Managment;
 
 import java.io.File;
+
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
@@ -10,6 +12,8 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+
+import consts.AssetStatus;
 
 public class Driver {
 
@@ -23,7 +27,7 @@ public class Driver {
 		builderFactory = DocumentBuilderFactory.newInstance();
 
 		readXmlAssetsContentRepairDetails(assetContentRepairDetailsSource);
-		// readXmlAssets(assetsSource);
+		readXmlAssets(assetsSource);
 		// readXmlCustomerGroup(customersGroupsSource);
 		// readXmlInitialData(initialDataSource);
 
@@ -33,11 +37,12 @@ public class Driver {
 		Driver driver = new Driver("InitialData.xml", "CustomersGroups.xml",
 				"Assets.xml", "AssetContentsRepairDetails.xml");
 		System.out.println("Driver Working");
-		
-		System.out.println(fManagment);
+
+		 System.out.println(fManagment);
 
 	}
 
+	// ******** Read assets content repair details ********
 	public void readXmlAssetsContentRepairDetails(String fileLocation) {
 		try {
 			File xmlFile = new File(fileLocation);
@@ -74,7 +79,7 @@ public class Driver {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void readToolsInformation(String assetContentName, NodeList tools) {
 
 		for (int i = 0; i < tools.getLength(); i++) {
@@ -92,8 +97,9 @@ public class Driver {
 			}
 		}
 	}
-	
-	public void readMaterialsInformation(String assetContentName, NodeList materials) {
+
+	public void readMaterialsInformation(String assetContentName,
+			NodeList materials) {
 		for (int i = 0; i < materials.getLength(); i++) {
 			Node node = materials.item(i);
 
@@ -110,8 +116,7 @@ public class Driver {
 		}
 	}
 
-	
-
+	// **************** Read assets details ***************
 	public void readXmlAssets(String fileLocation) {
 		try {
 			File xmlFile = new File(fileLocation);
@@ -131,54 +136,87 @@ public class Driver {
 
 					Element assetElement = (Element) nNode;
 
-					System.out.println("Name : "
-							+ assetElement.getElementsByTagName("Name").item(0)
+					String name = assetElement.getElementsByTagName("Name")
+							.item(0).getTextContent();
+					String type = assetElement.getElementsByTagName("Type")
+							.item(0).getTextContent();
+					int size = Integer.parseInt(assetElement.getElementsByTagName("Size")
+							.item(0).getTextContent());
+					int x = Integer
+							.parseInt(assetElement
+									.getElementsByTagName("Location").item(0)
+									.getAttributes().getNamedItem("x")
 									.getTextContent());
-					System.out.println("Type : "
-							+ assetElement.getElementsByTagName("Type").item(0)
+					int y = Integer
+							.parseInt(assetElement
+									.getElementsByTagName("Location").item(0)
+									.getAttributes().getNamedItem("y")
 									.getTextContent());
-					System.out.println("Size : "
-							+ assetElement.getElementsByTagName("Size").item(0)
-									.getTextContent());
-					System.out.println("Location : "
-							+ assetElement.getElementsByTagName("Location")
-									.item(0).getAttributes().getNamedItem("x")
-									.getTextContent()
-							+ ","
-							+ assetElement.getElementsByTagName("Location")
-									.item(0).getAttributes().getNamedItem("y")
-									.getTextContent());
-					System.out.println("CostPerNight : "
-							+ assetElement.getElementsByTagName("CostPerNight")
-									.item(0).getTextContent());
+					Location location = new Location(x, y);
+					int costPerNight = Integer.parseInt(assetElement.getElementsByTagName("CostPerNight")
+							.item(0).getTextContent());
+					
+					Asset asset = new AssetImpl(name, type, location, AssetStatus.Available, costPerNight, size);
 
-					readAssetContent(assetElement
+//					System.out.println("Name : "
+//							+ assetElement.getElementsByTagName("Name").item(0)
+//									.getTextContent());
+//					System.out.println("Type : "
+//							+ assetElement.getElementsByTagName("Type").item(0)
+//									.getTextContent());
+//					System.out.println("Size : "
+//							+ assetElement.getElementsByTagName("Size").item(0)
+//									.getTextContent());
+//					System.out.println("Location : "
+//							+ assetElement.getElementsByTagName("Location")
+//									.item(0).getAttributes().getNamedItem("x")
+//									.getTextContent()
+//							+ ","
+//							+ assetElement.getElementsByTagName("Location")
+//									.item(0).getAttributes().getNamedItem("y")
+//									.getTextContent());
+//					System.out.println("CostPerNight : "
+//							+ assetElement.getElementsByTagName("CostPerNight")
+//									.item(0).getTextContent());
+
+					readAssetContent(asset, assetElement
 							.getElementsByTagName("AssetContent"));
+					
+					fManagment.addAsset(asset);
 
 				}
-				System.out.println();
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	private void readAssetContent(NodeList assetContent) {
+	private void readAssetContent(Asset asset, NodeList assetContent) {
 		for (int i = 0; i < assetContent.getLength(); i++) {
 			Node node = assetContent.item(i);
 
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
 				Element element = (Element) node;
-				System.out.print(element.getElementsByTagName("Name").item(0)
-						.getTextContent());
-				System.out.println(element
+				
+				String name = element.getElementsByTagName("Name").item(0)
+						.getTextContent();
+				double repairCostMultiplier = Double.parseDouble(element
 						.getElementsByTagName("RepairMultiplier").item(0)
 						.getTextContent());
+				
+				asset.addAssetContent(new AssetContentImpl(name, repairCostMultiplier));
+				
+//				System.out.print(element.getElementsByTagName("Name").item(0)
+//						.getTextContent());
+//				System.out.println(element
+//						.getElementsByTagName("RepairMultiplier").item(0)
+//						.getTextContent());
 
 			}
 		}
 	}
 
+	// **************** Read customer group ***************
 	public void readXmlCustomerGroup(String fileLocation) {
 		try {
 			File xmlFile = new File(fileLocation);
@@ -239,6 +277,7 @@ public class Driver {
 		}
 	}
 
+	// ***************** Read initial data ****************
 	public void readXmlInitialData(String fileLocation) {
 		try {
 			File xmlFile = new File(fileLocation);
@@ -248,8 +287,8 @@ public class Driver {
 
 			document.getDocumentElement().normalize();
 
-//			readTools(document.getElementsByTagName("Tool"));
-//			readMaterials(document.getElementsByTagName("Material"));
+			// readTools(document.getElementsByTagName("Tool"));
+			// readMaterials(document.getElementsByTagName("Material"));
 			readClerks(document.getElementsByTagName("Clerk"));
 
 		} catch (Exception e) {
@@ -291,7 +330,7 @@ public class Driver {
 			}
 		}
 	}
-	
+
 	private void readClerks(NodeList clerks) throws Exception {
 		for (int i = 0; i < clerks.getLength(); i++) {
 			Node node = clerks.item(i);

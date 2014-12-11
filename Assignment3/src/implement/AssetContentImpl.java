@@ -7,18 +7,18 @@ import interfaces.AssetContent;
 public class AssetContentImpl implements AssetContent {
 	private String fName;
 	private AtomicReference<Double> fHealth;
-	private float fRepairCostMultiplier;
+	private double fRepairCostMultiplier;
 
 	/**
 	 * @param fName
 	 * @param fHealth
 	 * @param fRepairCostMultiplier
 	 */
-	public AssetContentImpl(String name, double health,
-			float repairCostMultiplier) {
+	public AssetContentImpl(String name,
+			double repairCostMultiplier) {
 		super();
 		this.fName = name;
-		this.fHealth = new AtomicReference<Double>(health);
+		this.fHealth = new AtomicReference<Double>(100d);
 		this.fRepairCostMultiplier = repairCostMultiplier;
 	}
 

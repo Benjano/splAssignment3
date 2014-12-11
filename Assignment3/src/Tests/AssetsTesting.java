@@ -32,9 +32,10 @@ public class AssetsTesting {
 		asset4 = new AssetImpl("Gal's House", "Loft", new Location(10, 15),
 				AssetStatus.Available, 100, 6);
 
-		AssetContent content1 = new AssetContentImpl("Table", 100, 1.5f);
-		AssetContent content2 = new AssetContentImpl("Chairs", 90, 1.5f);
-		AssetContent content3 = new AssetContentImpl("Bed", 100, 1.5f);
+		AssetContent content1 = new AssetContentImpl("Table", 1.5f);
+		AssetContent content2 = new AssetContentImpl("Chairs", 1.5f);
+		content2.setHealth(90);
+		AssetContent content3 = new AssetContentImpl("Bed", 1.5f);
 
 		asset1.addAssetContent(content1);
 		asset1.addAssetContent(content2);
@@ -56,8 +57,9 @@ public class AssetsTesting {
 		assertEquals("Should be no damaged assets", 0, assets
 				.getDamagedAssets().size());
 
-		AssetContent content1 = new AssetContentImpl("Table", 100, 1.5f);
-		AssetContent content2 = new AssetContentImpl("Chairs", 64, 1.5f);
+		AssetContent content1 = new AssetContentImpl("Table", 1.5f);
+		AssetContent content2 = new AssetContentImpl("Chairs", 1.5f);
+		content2.setHealth(64);
 
 		asset2.addAssetContent(content1);
 		asset2.addAssetContent(content2);
