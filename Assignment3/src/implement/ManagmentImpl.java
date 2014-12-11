@@ -91,12 +91,43 @@ public class ManagmentImpl implements Managment {
 
 	@Override
 	public String toString() {
-		return "ManagmentImpl [fClerksDetails=" + fClerksDetails
-				+ ", \nfCustomerGroupDetails=" + fCustomerGroupDetails
-				+ ", \nfAssets=" + fAssets + ", \nfWarehouse=" + fWarehouse
-				+ ", \nfRepairToolInformations=" + fRepairToolInformations
-				+ ", \nfRepairMaterialInformations="
-				+ fRepairMaterialInformations + "]";
+		
+		StringBuilder builder = new StringBuilder();
+		
+		builder.append("Clerk Details: ");
+
+		for (ClerkDetails clerkDetails : fClerksDetails) {
+			builder.append("\n").append(clerkDetails).append("\n");
+		}
+		
+		builder.append("\nCustomer Group Details: ");
+
+		for (CustomerGroupDetails customerGroupDetails : fCustomerGroupDetails) {
+			builder.append("\n").append(customerGroupDetails).append("\n");
+		}
+		
+		builder.append("\nAssets: ");
+		builder.append(fAssets);
+		
+		builder.append("\nWarehouse: ");
+		builder.append(fWarehouse);
+		
+		builder.append("\nRepair Tool Informations: ");
+		
+		for (Map.Entry<String, List<RepairToolInformation>> repairToolInformations : fRepairToolInformations.entrySet()) {
+			builder.append("\n").append(repairToolInformations.getKey()).append(": ").append(repairToolInformations.getValue());
+		}
+		
+		builder.append("\nRepair Material Informations: ");
+		
+		for (Map.Entry<String, List<RepairMaterialInformation>> repairMaterialInformations : fRepairMaterialInformations.entrySet()) {
+			builder.append("\n").append(repairMaterialInformations.getKey()).append(": ").append(repairMaterialInformations.getValue());
+		}
+		
+		return builder.toString();
+		
+		
+		
 	}
 	
 	
