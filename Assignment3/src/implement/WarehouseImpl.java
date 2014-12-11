@@ -1,6 +1,5 @@
 package implement;
 
-import interfaces.Asset;
 import interfaces.RepairMaterial;
 import interfaces.RepairTool;
 import interfaces.Warehouse;
@@ -102,7 +101,6 @@ public class WarehouseImpl implements Warehouse {
 			builder.append("\n").append(materialTool.getValue()).append("\n");
 		}
 		return builder.toString();
-		
 		
 	}
 	

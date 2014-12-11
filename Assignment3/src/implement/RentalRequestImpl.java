@@ -39,5 +39,23 @@ public class RentalRequestImpl implements RentalRequest {
 	public int getDurationOfStay() {
 		return fDurationOfStay;
 	}
+	
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Rental Request: ");
+		builder.append("\n");
+		builder.append("Id: ");
+		builder.append(fId);
+		builder.append(", Asset Type: ");
+		builder.append(fAssetType);
+		builder.append(", Size: ");
+		builder.append(fSize);
+		builder.append(", Duration Of Stay: ");
+		builder.append(fDurationOfStay);
+		builder.append(", Status: ");
+		builder.append(fStatus);
+		return builder.toString();
+	}
 
 }
