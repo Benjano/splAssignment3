@@ -3,8 +3,6 @@ package implement;
 import interfaces.Managment;
 
 import java.io.File;
-import java.util.logging.Logger;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
