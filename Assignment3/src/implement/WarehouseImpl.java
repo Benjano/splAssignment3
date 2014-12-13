@@ -19,11 +19,10 @@ public class WarehouseImpl implements Warehouse {
 	}
 
 	@Override
-	public synchronized RepairMaterial takeRepairMaterial(String name, int quantity) {
-		RepairMaterial tempRepairMaterial = fRepairMaterials.get(name);
-		if (tempRepairMaterial.getQuantity() >= quantity) {
-			tempRepairMaterial.ReduceMaterial(quantity);
-			fRepairMaterials.put(name, tempRepairMaterial);
+	public synchronized RepairMaterial takeRepairMaterial(String name,
+			int quantity) {
+		if (isRepairMaterialEnough(name, quantity)) {
+			removeRepairMaterial(name, quantity);
 			return new RepairMaterialImpl(name, quantity);
 		} else {
 			return null;
@@ -31,17 +30,38 @@ public class WarehouseImpl implements Warehouse {
 	}
 
 	@Override
+	public boolean isRepairMaterialEnough(String name, int quantity) {
+		RepairMaterial repairMaterial = fRepairMaterials.get(name);
+		if (repairMaterial == null)
+			return false;
+		return repairMaterial.getQuantity() >= quantity;
+	}
+
+	private void removeRepairMaterial(String name, int quantity) {
+		fRepairMaterials.get(name).ReduceMaterial(quantity);
+	}
+
+	@Override
 	public synchronized RepairTool takeRepairTool(String name, int quantity) {
-		RepairTool tempRepairTool = fRepairTools.get(name);
-		if (tempRepairTool.getQuantity() >= quantity) {
-			tempRepairTool.ReduceTool(quantity);
-			fRepairTools.put(name, tempRepairTool);
+		if (isRepairToolEnough(name, quantity)) {
+			removeRepairTool(name, quantity);
 			return new RepairToolImpl(name, quantity);
 		} else {
 			return null;
 		}
 	}
 
+	@Override
+	public boolean isRepairToolEnough(String name, int quantity) {
+		RepairTool repairTool = fRepairTools.get(name);
+		if (repairTool == null)
+			return false;
+		return repairTool.getQuantity() >= quantity;
+	}
+
+	private void removeRepairTool(String name, int quantity) {
+		fRepairTools.get(name).ReduceTool(quantity);
+	}
 
 	@Override
 	public synchronized void addTool(RepairTool repairTool) {
@@ -85,24 +105,24 @@ public class WarehouseImpl implements Warehouse {
 			return 0;
 		}
 	}
-	
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Tools In Warehouse: ");
-		
+
 		for (Map.Entry<String, RepairTool> repairTool : fRepairTools.entrySet()) {
 			builder.append("\n").append(repairTool.getValue());
 		}
-		
+
 		builder.append("Materials In Warehouse: ");
-		
-		for (Map.Entry<String, RepairMaterial> materialTool : fRepairMaterials.entrySet()) {
+
+		for (Map.Entry<String, RepairMaterial> materialTool : fRepairMaterials
+				.entrySet()) {
 			builder.append("\n").append(materialTool.getValue());
 		}
 		return builder.toString();
-		
+
 	}
-	
 
 }

@@ -249,9 +249,9 @@ public class Driver {
 
 				String customerName = element.getElementsByTagName("Name")
 						.item(0).getTextContent();
-				VandalismType vandalismType = element
+				VandalismType vandalismType = VandalismType.valueOf(element
 						.getElementsByTagName("Vandalism").item(0)
-						.getTextContent();
+						.getTextContent());
 				double minDamage = Double.parseDouble(element
 						.getElementsByTagName("MinimumDamage").item(0)
 						.getTextContent());

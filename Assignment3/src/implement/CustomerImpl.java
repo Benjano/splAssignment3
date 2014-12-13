@@ -6,10 +6,10 @@ import interfaces.Customer;
 public class CustomerImpl implements Customer {
 	private String fName;
 	private VandalismType fVandalismType;
-	private int fMinDamage, fMaxDamage;
+	private double fMinDamage, fMaxDamage;
 
 	public CustomerImpl(String name, VandalismType vandalismType,
-			int minDamage, int maxDamage) {
+			double minDamage, double maxDamage) {
 		this.fName = name;
 		this.fVandalismType = vandalismType;
 		this.fMinDamage = minDamage;

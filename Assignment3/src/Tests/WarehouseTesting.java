@@ -30,8 +30,9 @@ public class WarehouseTesting {
 		setUp();
 	}
 
+	
 	@Test
-	public void testTakeAndPutRepairTool() {
+	public void testTakeRepairTool() {
 		RepairTool repairTool = warehouse.takeRepairTool("Hummer", 3);
 		assertEquals("Wrong RepairTool quantity", 2,
 				warehouse.countRepairToolInWarehouse("Hummer"));
