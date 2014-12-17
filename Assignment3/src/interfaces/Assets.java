@@ -1,13 +1,13 @@
 package interfaces;
 
-import java.util.List;
+import java.util.Vector;
 
 public interface Assets {
 
 	/**
 	 * @return ArrayList of damaged assets
 	 */
-	List<Asset> getDamagedAssets();
+	Vector<Asset> getDamagedAssets();
 
 	/**
 	 * Find asset by type and size
@@ -16,7 +16,7 @@ public interface Assets {
 	 * @param size
 	 * @return Assets that match the search
 	 */
-	List<Asset> findAssetByTypeAndSize(String type, int size);
+	Vector<Asset> findAssetByTypeAndSize(String type, int size);
 
 	/**
 	 * Adds a new Asset to the collection

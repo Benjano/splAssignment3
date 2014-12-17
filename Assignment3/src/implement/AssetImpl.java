@@ -3,6 +3,7 @@ package implement;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
 import consts.AssetStatus;
 import interfaces.Asset;
 import interfaces.AssetContent;
@@ -95,6 +96,7 @@ public class AssetImpl implements Asset {
 
 	@Override
 	public String toString() {
+
 		StringBuilder builder = new StringBuilder();
 		builder.append("Asset: ").append(fName).append("\nType: ")
 				.append(fType).append("\n").append(fLocation)
@@ -108,6 +110,12 @@ public class AssetImpl implements Asset {
 		builder.append(" \nStatus: ").append(fStatus);
 
 		return builder.toString();
+	}
+	
+
+	@Override
+	public void setStatus(AssetStatus status) {
+		fStatus = status;
 	}
 
 }

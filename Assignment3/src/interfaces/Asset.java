@@ -24,6 +24,12 @@ public interface Asset {
 	 * @return The type of the asset
 	 */
 	String getType();
+	
+	/**
+	 * Change the status of the asset
+	 * @param status
+	 */
+	void setStatus(AssetStatus status);
 
 	/**
 	 * @return The cost per night

@@ -35,6 +35,24 @@ public class RentalRequestImpl implements RentalRequest {
 
 
 
+	public String getAssetType() {
+		return fAssetType;
+	}
+
+
+
+	public int getSize() {
+		return fSize;
+	}
+
+
+
+	public RequestStatus getStatus() {
+		return fStatus;
+	}
+
+
+
 	@Override
 	public int getDurationOfStay() {
 		return fDurationOfStay;

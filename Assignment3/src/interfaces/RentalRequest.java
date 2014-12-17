@@ -15,4 +15,15 @@ public interface RentalRequest {
 	 * @return durationOfStay
 	 */
 	public int getDurationOfStay();
+	
+
+	public String getAssetType();
+
+
+
+	public int getSize();
+
+
+
+	public RequestStatus getStatus();
 }

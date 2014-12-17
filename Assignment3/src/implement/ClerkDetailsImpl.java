@@ -25,4 +25,9 @@ public class ClerkDetailsImpl implements ClerkDetails {
 		builder.append(fLocation);
 		return builder.toString();
 	}
+
+	@Override
+	public Location getLocation() {
+		return fLocation;
+	}
 }
