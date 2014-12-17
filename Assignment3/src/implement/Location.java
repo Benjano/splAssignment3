@@ -2,13 +2,13 @@ package implement;
 
 public class Location {
 
-	private int x, y;
+	private double x, y;
 
 	/**
 	 * @param x
 	 * @param y
 	 */
-	public Location(int x, int y) {
+	public Location(double x, double y) {
 		this.x = x;
 		this.y = y;
 	}

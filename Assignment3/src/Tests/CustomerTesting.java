@@ -41,7 +41,7 @@ public class CustomerTesting {
 
 		assertEquals("Customer " + customer2.getName()
 				+ " damage percentage is wrong",
-				customer2.calculateDamagePercentage(), (20 + 50) / 2 / 100, DELTA);
+				customer2.calculateDamagePercentage(), (20d + 50d) / 2d / 100d, DELTA);
 		
 		assertEquals("Customer " + customer3.getName()
 				+ " damage percentage is wrong",
