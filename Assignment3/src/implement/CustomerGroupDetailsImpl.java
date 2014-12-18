@@ -11,8 +11,8 @@ import interfaces.RentalRequest;
 public class CustomerGroupDetailsImpl implements CustomerGroupDetails {
 
 	private String fGroupManagerName;
-	List<Customer> fCustomers;
-	List<RentalRequest> fRentalRequests;
+	private List<Customer> fCustomers;
+	private List<RentalRequest> fRentalRequests;
 
 	public CustomerGroupDetailsImpl(String groupManagerName) {
 		this.fGroupManagerName = groupManagerName;
@@ -35,19 +35,28 @@ public class CustomerGroupDetailsImpl implements CustomerGroupDetails {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Group manager name: ").append(fGroupManagerName).append(" \nCustomers in Group:");
-		
-		for(Customer customer: fCustomers) {
+		builder.append("Group manager name: ").append(fGroupManagerName)
+				.append(" \nCustomers in Group:");
+
+		for (Customer customer : fCustomers) {
 			builder.append("\n").append(customer);
 		}
 		builder.append("\nRental requests:");
-		for(RentalRequest request: fRentalRequests) {
+		for (RentalRequest request : fRentalRequests) {
 			builder.append("\n").append(request);
 		}
-		
+
 		return builder.toString();
 	}
-	
-	
+
+	@Override
+	public RentalRequest getRentalRequest(int i) {
+		return fRentalRequests.get(i);
+	}
+
+	@Override
+	public Customer getCustomer(int i) {
+		return fCustomers.get(i);
+	}
 
 }

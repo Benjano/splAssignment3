@@ -15,7 +15,6 @@ public class DamageReportImpl implements DamageReport {
 
 	@Override
 	public Asset getAsset() {
-		
 		return fAsset;
 	}
 

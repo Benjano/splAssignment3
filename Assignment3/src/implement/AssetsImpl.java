@@ -12,9 +12,9 @@ import interfaces.Assets;
 public class AssetsImpl implements Assets {
 
 	List<Asset> fAssets;
-	
+
 	Comparator<Asset> fCompareAsset = new Comparator<Asset>() {
-		
+
 		@Override
 		public int compare(Asset asset1, Asset asset2) {
 			return asset1.getSize() - asset2.getSize();
@@ -47,7 +47,7 @@ public class AssetsImpl implements Assets {
 				result.add(asset);
 			}
 		}
-		
+
 		Collections.sort(result, fCompareAsset);
 
 		return result;
@@ -62,13 +62,12 @@ public class AssetsImpl implements Assets {
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Assets includes: ");
-		
+
 		for (Asset asset : fAssets) {
 			builder.append("\n").append(asset).append("\n");
 		}
-		
+
 		return builder.toString();
 	}
-	
 
 }

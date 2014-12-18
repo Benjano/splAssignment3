@@ -16,5 +16,9 @@ public interface CustomerGroupDetails {
 	 * @param customer
 	 */
 	public void addCustomer(Customer customer);
+	
+	public Customer getCustomer(int i);
+	
+	public RentalRequest getRentalRequest(int i);
 
 }

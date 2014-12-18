@@ -10,20 +10,19 @@ public interface RentalRequest {
 	 * @param status
 	 */
 	public void setRentalRequestStatus(RequestStatus status);
-	
+
 	/**
 	 * @return durationOfStay
 	 */
 	public int getDurationOfStay();
-	
 
 	public String getAssetType();
 
-
-
 	public int getSize();
 
+	public Asset getFoundAsset();
 
-
+	public void setFoundAsset(Asset asset);
+	
 	public RequestStatus getStatus();
 }

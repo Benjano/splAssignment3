@@ -1,5 +1,7 @@
 package interfaces;
 
+import java.util.Vector;
+
 import implement.Location;
 import consts.AssetStatus;
 
@@ -52,9 +54,11 @@ public interface Asset {
 	void addAssetContent(AssetContent assetContent);
 	
 	/**
-	 * @param name
-	 * @return Array of assetContent
+	 * Damage the asset content by damage precenatage
+	 * @param damagePrecentage
 	 */
-	AssetContent[] getAllAssetContent();
+	void damageAssetContent(double damagePrecentage);
+	
+	Vector<AssetContent> getDamagedAssetContent();
 
 }

@@ -8,11 +8,16 @@ public interface AssetContent {
 	double calculateRepairTime();
 
 	/**
-	 * Set the health of the item
+	 * Damage the content
 	 * 
-	 * @param int health;
+	 * @param damagePrecentage
 	 */
-	void setHealth(double health);
+	void damageAssetContent(double damagePrecentage);
+
+	/**
+	 * Fix the asset content to health = 100;
+	 */
+	void fixAssetContent();
 
 	/**
 	 * @return The name of the asset

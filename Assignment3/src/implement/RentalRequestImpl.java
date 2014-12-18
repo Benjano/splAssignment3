@@ -1,14 +1,16 @@
 package implement;
 
+import interfaces.Asset;
 import interfaces.RentalRequest;
 import consts.RequestStatus;
 
 public class RentalRequestImpl implements RentalRequest {
-	
+
 	private String fId, fAssetType;
 	private int fSize, fDurationOfStay;
 	private RequestStatus fStatus;
-	
+	private Asset fAssetFound;
+
 	/**
 	 * @param fId
 	 * @param fAssetType
@@ -24,40 +26,31 @@ public class RentalRequestImpl implements RentalRequest {
 		this.fSize = size;
 		this.fDurationOfStay = durationOfStay;
 		this.fStatus = status;
+		this.fAssetFound = null;
 	}
-
-
 
 	@Override
 	public void setRentalRequestStatus(RequestStatus status) {
 		fStatus = status;
 	}
 
-
-
 	public String getAssetType() {
 		return fAssetType;
 	}
-
-
 
 	public int getSize() {
 		return fSize;
 	}
 
-
-
 	public RequestStatus getStatus() {
 		return fStatus;
 	}
-
-
 
 	@Override
 	public int getDurationOfStay() {
 		return fDurationOfStay;
 	}
-	
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -74,6 +67,17 @@ public class RentalRequestImpl implements RentalRequest {
 		builder.append(", Status: ");
 		builder.append(fStatus);
 		return builder.toString();
+	}
+
+	@Override
+	public Asset getFoundAsset() {
+		return fAssetFound;
+	}
+
+	@Override
+	public void setFoundAsset(Asset asset) {
+		if (fAssetFound == null)
+			this.fAssetFound = asset;
 	}
 
 }

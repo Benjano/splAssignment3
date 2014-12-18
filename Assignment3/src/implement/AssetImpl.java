@@ -3,6 +3,7 @@ package implement;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Vector;
 
 import consts.AssetStatus;
 import interfaces.Asset;
@@ -85,16 +86,6 @@ public class AssetImpl implements Asset {
 	}
 
 	@Override
-	public AssetContent[] getAllAssetContent() {
-		AssetContent[] assetContents = new AssetContent[fAssetContent.size()];
-		int k = 0;
-		for (AssetContent assetContent : fAssetContent) {
-			assetContents[k] = assetContent;
-		}
-		return assetContents;
-	}
-
-	@Override
 	public String toString() {
 
 		StringBuilder builder = new StringBuilder();
@@ -111,11 +102,28 @@ public class AssetImpl implements Asset {
 
 		return builder.toString();
 	}
-	
 
 	@Override
 	public void setStatus(AssetStatus status) {
 		fStatus = status;
+	}
+
+	@Override
+	public Vector<AssetContent> getDamagedAssetContent() {
+		Vector<AssetContent> damagedAssetContent = new Vector<AssetContent>();
+		for (AssetContent assetContent : fAssetContent) {
+			if (assetContent.getHealth() < 0.65) {
+				damagedAssetContent.add(assetContent);
+			}
+		}
+		return damagedAssetContent;
+	}
+
+	@Override
+	public void damageAssetContent(double damagePrecentage) {
+		for (AssetContent assetContent : fAssetContent) {
+			assetContent.damageAssetContent(damagePrecentage);
+		}
 	}
 
 }

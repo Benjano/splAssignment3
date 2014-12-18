@@ -14,8 +14,7 @@ public class AssetContentImpl implements AssetContent {
 	 * @param fHealth
 	 * @param fRepairCostMultiplier
 	 */
-	public AssetContentImpl(String name,
-			double repairCostMultiplier) {
+	public AssetContentImpl(String name, double repairCostMultiplier) {
 		super();
 		this.fName = name;
 		this.fHealth = new AtomicReference<Double>(100d);
@@ -25,11 +24,6 @@ public class AssetContentImpl implements AssetContent {
 	@Override
 	public double calculateRepairTime() {
 		return ((100 - fHealth.get()) * fRepairCostMultiplier);
-	}
-
-	@Override
-	public void setHealth(double health) {
-		fHealth.set(health);
 	}
 
 	@Override
@@ -50,6 +44,16 @@ public class AssetContentImpl implements AssetContent {
 				.append("% \nRepair cost multiplier: ")
 				.append(fRepairCostMultiplier);
 		return builder.toString();
+	}
+
+	@Override
+	public void damageAssetContent(double damagePrecentage) {
+		fHealth.set(fHealth.get() * damagePrecentage);
+	}
+
+	@Override
+	public void fixAssetContent() {
+		fHealth.set(100d);
 	}
 
 }
