@@ -34,7 +34,6 @@ public class AssetsTesting {
 
 		AssetContent content1 = new AssetContentImpl("Table", 1.5f);
 		AssetContent content2 = new AssetContentImpl("Chairs", 1.5f);
-		content2.setHealth(90);
 		AssetContent content3 = new AssetContentImpl("Bed", 1.5f);
 
 		asset1.addAssetContent(content1);
@@ -59,7 +58,6 @@ public class AssetsTesting {
 
 		AssetContent content1 = new AssetContentImpl("Table", 1.5f);
 		AssetContent content2 = new AssetContentImpl("Chairs", 1.5f);
-		content2.setHealth(64);
 
 		asset2.addAssetContent(content1);
 		asset2.addAssetContent(content2);

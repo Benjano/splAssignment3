@@ -2,80 +2,119 @@ package runnable;
 
 import interfaces.Customer;
 import interfaces.CustomerGroupDetails;
+import interfaces.Managment;
 import interfaces.RentalRequest;
+import interfaces.Statistics;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
-import consts.AssetStatus;
 import consts.RequestStatus;
 
 public class RunnableCustomerGroupManager implements Runnable {
 
 	private CustomerGroupDetails fCustomerGroupDetails;
-	private BlockingQueue<RentalRequest> fSharedRentalRequests;
+	private Managment fManagment;
+	private Statistics fStatistics;
+	private CyclicBarrier fCyclicBarrier;
+	private CustomerClerkMessenger fCustomerClerkMessenger;
+
+	public RunnableCustomerGroupManager() {
+	}
 
 	public RunnableCustomerGroupManager(
-			CustomerGroupDetails customerGroupDetails,
-			BlockingQueue<RentalRequest> sharedRentalRequests) {
+			CustomerGroupDetails customerGroupDetails, Managment managment,
+			Statistics statistics, CyclicBarrier cyclicBarrier, CustomerClerkMessenger customerClerkMessenger) {
 		this.fCustomerGroupDetails = customerGroupDetails;
-		this.fSharedRentalRequests = sharedRentalRequests;
+		this.fManagment = managment;
+		this.fStatistics = statistics;
+		this.fCyclicBarrier = cyclicBarrier;
+		this.fCustomerClerkMessenger = customerClerkMessenger;
 	}
 
 	@Override
 	public void run() {
+		try {
+			fCyclicBarrier.await();
+		} catch (InterruptedException | BrokenBarrierException e1) {
+			e1.printStackTrace();
+		}
+
 		int i = 0;
 		RentalRequest rentalRequest = fCustomerGroupDetails.getRentalRequest(i);
 		while (rentalRequest != null) {
-			try {
-				fSharedRentalRequests.put(rentalRequest);
-			} catch (InterruptedException e1) {
-				e1.printStackTrace();
+
+			fManagment.submitRentalRequest(rentalRequest);
+			fStatistics.addRentalRequest(rentalRequest);
+
+			while (rentalRequest.getStatus() != RequestStatus.Fulfilled) {
+				System.out.println("Group is waiting for asset");
+				waitNow();
 			}
-			while (rentalRequest.getStatus() != RequestStatus.Fulfilled)
-				try {
-					wait();
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
+			System.out.println("Group is done waiting for asset");
+
 			// Customer stay in asset
 			rentalRequest.setRentalRequestStatus(RequestStatus.InProgress);
-			rentalRequest.getFoundAsset().setStatus(AssetStatus.Occupied);
+			rentalRequest.assetOcupied();
 
-			ExecutorService executorService = Executors.newCachedThreadPool();
-			int j = 0;
-			Customer customer = fCustomerGroupDetails.getCustomer(j);
-			while (customer != null) {
-				CallableSimulateStayInAsset callableSimulateStayInAsset = new CallableSimulateStayInAsset(
-						customer, rentalRequest.getDurationOfStay());
-				executorService.submit(callableSimulateStayInAsset);
-				j++;
-				customer = fCustomerGroupDetails.getCustomer(j);
-			}
+			double damagePercentage = simulateStayInAsset(rentalRequest);
 
-			// TODO: Until all CallableSimulateStayInAsset are done
-			try {
-				wait();
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-
-			double damagePrecentage = 0;
+			fManagment.submitDamageReport(rentalRequest
+					.releaseAsset(damagePercentage));
 
 			// Customer done staying in asset
 			rentalRequest.setRentalRequestStatus(RequestStatus.Complete);
 
-			// Calculate total damage precentage and update asset content
-			rentalRequest.getFoundAsset().damageAssetContent(damagePrecentage);
-
-			// TODO: FIX?
-			rentalRequest.getFoundAsset().setStatus(AssetStatus.Available);
-
 			i++;
 			rentalRequest = fCustomerGroupDetails.getRentalRequest(i);
 		}
+	}
+
+	private void waitNow() {
+		synchronized (fCustomerClerkMessenger) {
+			try {
+				fCustomerClerkMessenger.wait();
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
+
+	private double simulateStayInAsset(RentalRequest rentalRequest) {
+		ExecutorService executorService = Executors.newCachedThreadPool();
+		List<Future<Double>> futureList = new ArrayList<Future<Double>>();
+		int j = 0;
+		Customer customer = fCustomerGroupDetails.getCustomer(j);
+		while (customer != null) {
+			CallableSimulateStayInAsset callableSimulateStayInAsset = new CallableSimulateStayInAsset(
+					customer, rentalRequest.getDurationOfStay(),
+					rentalRequest.getCostPerNight(), fStatistics);
+			Future<Double> future = executorService
+					.submit(callableSimulateStayInAsset);
+			futureList.add(future);
+			j++;
+			customer = fCustomerGroupDetails.getCustomer(j);
+		}
+
+		double damagePercentage = 0;
+		for (Future<Double> future : futureList) {
+			try {
+				damagePercentage += future.get();
+			} catch (InterruptedException | ExecutionException e) {
+				e.printStackTrace();
+			}
+		}
+
+		executorService.shutdown();
+		return damagePercentage;
 	}
 }

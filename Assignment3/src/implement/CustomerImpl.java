@@ -30,14 +30,14 @@ public class CustomerImpl implements Customer {
 	public double calculateDamagePercentage() {
 		double percentage = 0;
 		switch (fVandalismType) {
-		case Arbitary:
-			percentage = (Math.random() * (fMaxDamage - fMinDamage) + fMinDamage)/100;
+		case Arbitrary:
+			percentage = (Math.random() * (fMaxDamage - fMinDamage) + fMinDamage) / 100;
 			break;
 		case Fixed:
 			percentage = (fMaxDamage + fMinDamage) / 2 / 100;
 			break;
 		case None:
-			percentage = 0.05;
+			percentage = 0.005;
 			break;
 
 		default:
@@ -45,4 +45,15 @@ public class CustomerImpl implements Customer {
 		}
 		return percentage;
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		builder.append("Customer name: ").append(fName)
+				.append("\nVandalism Type: ").append(fVandalismType)
+				.append("\nMinDamage: ").append(fMinDamage)
+				.append("\nMaxDamage: ").append(fMaxDamage);
+		return builder.toString();
+	}
+
 }

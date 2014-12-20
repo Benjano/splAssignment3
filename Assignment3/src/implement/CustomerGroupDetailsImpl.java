@@ -33,6 +33,20 @@ public class CustomerGroupDetailsImpl implements CustomerGroupDetails {
 	}
 
 	@Override
+	public RentalRequest getRentalRequest(int i) {
+		if (i < fRentalRequests.size())
+			return fRentalRequests.get(i);
+		return null;
+	}
+
+	@Override
+	public Customer getCustomer(int i) {
+		if (i < fCustomers.size())
+			return fCustomers.get(i);
+		return null;
+	}
+
+	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Group manager name: ").append(fGroupManagerName)
@@ -50,13 +64,7 @@ public class CustomerGroupDetailsImpl implements CustomerGroupDetails {
 	}
 
 	@Override
-	public RentalRequest getRentalRequest(int i) {
-		return fRentalRequests.get(i);
+	public int getNumberOfRentalRequests() {
+		return fRentalRequests.size();
 	}
-
-	@Override
-	public Customer getCustomer(int i) {
-		return fCustomers.get(i);
-	}
-
 }

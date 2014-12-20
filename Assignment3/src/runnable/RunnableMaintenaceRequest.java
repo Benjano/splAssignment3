@@ -6,6 +6,7 @@ import interfaces.RepairMaterial;
 import interfaces.RepairMaterialInformation;
 import interfaces.RepairTool;
 import interfaces.RepairToolInformation;
+import interfaces.Statistics;
 import interfaces.Warehouse;
 
 import java.util.HashMap;
@@ -15,12 +16,13 @@ import java.util.Vector;
 
 import consts.AssetStatus;
 
-public class RunnableMaintennceRequest implements Runnable {
+public class RunnableMaintenaceRequest implements Runnable {
 
-	Map<String, List<RepairToolInformation>> fRepairToolsInformation;
-	Map<String, List<RepairMaterialInformation>> fRepairMaterialsInformation;
-	Asset fAsset;
-	Warehouse fWarehouse;
+	private Map<String, List<RepairToolInformation>> fRepairToolsInformation;
+	private Map<String, List<RepairMaterialInformation>> fRepairMaterialsInformation;
+	private Asset fAsset;
+	private Warehouse fWarehouse;
+	private Statistics fStatistics;
 
 	/**
 	 * @param fRepairToolsInformation
@@ -28,14 +30,15 @@ public class RunnableMaintennceRequest implements Runnable {
 	 * @param fAsset
 	 * @param fWarehouse
 	 */
-	public RunnableMaintennceRequest(
+	public RunnableMaintenaceRequest(
 			Map<String, List<RepairToolInformation>> repairToolsInformation,
 			Map<String, List<RepairMaterialInformation>> repairMaterialsInformation,
-			Asset asset, Warehouse warehouse) {
+			Asset asset, Warehouse warehouse, Statistics statistics) {
 		this.fRepairToolsInformation = repairToolsInformation;
 		this.fRepairMaterialsInformation = repairMaterialsInformation;
 		this.fAsset = asset;
 		this.fWarehouse = warehouse;
+		this.fStatistics = statistics;
 	}
 
 	@Override
@@ -45,12 +48,13 @@ public class RunnableMaintennceRequest implements Runnable {
 
 		Map<String, Integer> neededTools = getNeededToolsInformation(damagedContent);
 		Vector<RepairTool> repairTools = takeToolsFromWarehouse(neededTools);
+
 		Map<String, Integer> neededMaterials = getNeededMaterialsInformation(damagedContent);
 		takeMaterialsFromWarehouse(neededMaterials);
 
 		for (AssetContent assetContent : damagedContent) {
 			try {
-				Thread.sleep((long) assetContent.calculateRepairTime() * 1000);
+				Thread.sleep((long) assetContent.calculateRepairTime() * 1);
 				assetContent.fixAssetContent();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
@@ -60,9 +64,12 @@ public class RunnableMaintennceRequest implements Runnable {
 		// return the tools to the warehouse
 		for (RepairTool repairTool : repairTools) {
 			fWarehouse.addTool(repairTool);
+			fStatistics.releaseTool(repairTool);
+			notifyAll();
 		}
 
 		fAsset.setStatus(AssetStatus.Available);
+
 	}
 
 	private Vector<RepairTool> takeToolsFromWarehouse(
@@ -81,6 +88,7 @@ public class RunnableMaintennceRequest implements Runnable {
 				}
 			}
 			repairTools.add(repairTool);
+			fStatistics.addToolInProcess(repairTool);
 		}
 		return repairTools;
 	}
@@ -101,6 +109,7 @@ public class RunnableMaintennceRequest implements Runnable {
 				}
 			}
 			repairMaterials.add(repairMaterial);
+			fStatistics.consumeMaterial(repairMaterial);
 		}
 		return repairMaterials;
 	}

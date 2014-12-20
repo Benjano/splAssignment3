@@ -2,6 +2,7 @@ package implement;
 
 import interfaces.Asset;
 import interfaces.RentalRequest;
+import consts.AssetStatus;
 import consts.RequestStatus;
 
 public class RentalRequestImpl implements RentalRequest {
@@ -19,13 +20,13 @@ public class RentalRequestImpl implements RentalRequest {
 	 * @param fStatus
 	 */
 	public RentalRequestImpl(String id, String type, int size,
-			int durationOfStay, RequestStatus status) {
+			int durationOfStay) {
 		super();
 		this.fId = id;
 		this.fAssetType = type;
 		this.fSize = size;
 		this.fDurationOfStay = durationOfStay;
-		this.fStatus = status;
+		this.fStatus = RequestStatus.Incomplete;
 		this.fAssetFound = null;
 	}
 
@@ -52,6 +53,39 @@ public class RentalRequestImpl implements RentalRequest {
 	}
 
 	@Override
+	public synchronized void setFoundAsset(Asset asset) {
+		if (fAssetFound == null) {
+			this.fAssetFound = asset;
+		}
+	}
+
+	@Override
+	public synchronized DamageReportImpl releaseAsset(double damagePercentage) {
+		if (fStatus == RequestStatus.InProgress) {
+			this.fAssetFound.damageAssetContent(damagePercentage);
+			fStatus = RequestStatus.Complete;
+			if (fAssetFound.isDamaged()) {
+				fAssetFound.setStatus(AssetStatus.Unavailable);
+			} else
+				fAssetFound.setStatus(AssetStatus.Available);
+		}
+		return new DamageReportImpl(fAssetFound, damagePercentage);
+	}
+
+	@Override
+	public void assetOcupied() {
+		this.fAssetFound.setStatus(AssetStatus.Occupied);
+	}
+
+	@Override
+	public double getCostPerNight() {
+		if (fAssetFound != null)
+			return fAssetFound.getCostPerNight();
+		else
+			return 0;
+	}
+
+	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Rental Request: ");
@@ -67,17 +101,6 @@ public class RentalRequestImpl implements RentalRequest {
 		builder.append(", Status: ");
 		builder.append(fStatus);
 		return builder.toString();
-	}
-
-	@Override
-	public Asset getFoundAsset() {
-		return fAssetFound;
-	}
-
-	@Override
-	public void setFoundAsset(Asset asset) {
-		if (fAssetFound == null)
-			this.fAssetFound = asset;
 	}
 
 }

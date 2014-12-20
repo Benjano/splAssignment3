@@ -43,7 +43,7 @@ public class AssetsImpl implements Assets {
 		Vector<Asset> result = new Vector<Asset>();
 
 		for (Asset asset : fAssets) {
-			if (asset.getType() == type & asset.getSize() >= size) {
+			if (asset.getType().equals(type) & asset.getSize() >= size) {
 				result.add(asset);
 			}
 		}

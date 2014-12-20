@@ -54,4 +54,20 @@ public interface Managment {
 	 * @param asset
 	 */
 	void addAsset(Asset asset);
+
+	/**
+	 * Adds a new damageReport to collection
+	 * 
+	 * @param damageReport
+	 */
+	void submitDamageReport(DamageReport damageReport);
+
+	/**
+	 * Adds a new rental request for clerks to handle
+	 * 
+	 * @param rentalRequest
+	 */
+	void submitRentalRequest(RentalRequest rentalRequest);
+	
+	void start();
 }

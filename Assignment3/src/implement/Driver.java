@@ -1,9 +1,10 @@
 package implement;
 
 import interfaces.Asset;
-import interfaces.Customer;
 import interfaces.CustomerGroupDetails;
+import interfaces.DamageReport;
 import interfaces.Managment;
+import interfaces.RentalRequest;
 
 import java.io.File;
 
@@ -16,6 +17,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import consts.AssetStatus;
+import consts.RequestStatus;
 import consts.VandalismType;
 
 public class Driver {
@@ -29,19 +31,20 @@ public class Driver {
 		fManagment = new ManagmentImpl();
 		builderFactory = DocumentBuilderFactory.newInstance();
 
-		// readXmlAssetsContentRepairDetails(assetContentRepairDetailsSource);
-		// readXmlAssets(assetsSource);
-		// readXmlCustomerGroup(customersGroupsSource);
+		readXmlAssetsContentRepairDetails(assetContentRepairDetailsSource);
+		readXmlAssets(assetsSource);
+		readXmlCustomerGroup(customersGroupsSource);
 		readXmlInitialData(initialDataSource);
 
 	}
 
 	public static void main(String[] args) {
-		Driver driver = new Driver("InitialData.xml", "CustomersGroups.xml",
-				"Assets.xml", "AssetContentsRepairDetails.xml");
+		new Driver("InitialData.xml", "CustomersGroups.xml", "Assets.xml",
+				"AssetContentsRepairDetails.xml");
 		System.out.println("Driver Working");
-
-		System.out.println(fManagment);
+//		System.out.println(fManagment);
+		fManagment.start();
+		System.out.println("Driver Done");
 
 	}
 
@@ -229,6 +232,9 @@ public class Driver {
 					readCustomers(customerGroupDetails,
 							customerGroupDetailsElement
 									.getElementsByTagName("Customer"));
+					readRentalRequests(customerGroupDetails,
+							customerGroupDetailsElement
+									.getElementsByTagName("Request"));
 					fManagment.addCustomerGroup(customerGroupDetails);
 
 				}
@@ -261,6 +267,32 @@ public class Driver {
 
 				customerGroupDetails.addCustomer(new CustomerImpl(customerName,
 						vandalismType, minDamage, maxDamage));
+
+			}
+		}
+	}
+
+	private void readRentalRequests(CustomerGroupDetails customerGroupDetails,
+			NodeList rentalRequests) {
+
+		for (int i = 0; i < rentalRequests.getLength(); i++) {
+			Node node = rentalRequests.item(i);
+
+			if (node.getNodeType() == Node.ELEMENT_NODE) {
+				Element element = (Element) node;
+
+				String id = element.getAttribute("id");
+				String type = element.getElementsByTagName("Type").item(0)
+						.getTextContent();
+
+				int size = Integer.parseInt(element
+						.getElementsByTagName("Size").item(0).getTextContent());
+				int duration = Integer.parseInt(element
+						.getElementsByTagName("Duration").item(0)
+						.getTextContent());
+
+				customerGroupDetails.addRentalRequest(new RentalRequestImpl(id,
+						type, size, duration));
 
 			}
 		}

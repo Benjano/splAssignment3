@@ -48,7 +48,7 @@ public class AssetContentImpl implements AssetContent {
 
 	@Override
 	public void damageAssetContent(double damagePrecentage) {
-		fHealth.set(fHealth.get() * damagePrecentage);
+		fHealth.set(fHealth.get() - fHealth.get() * damagePrecentage);
 	}
 
 	@Override
