@@ -9,6 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import consts.AssetStatus;
 import consts.RequestStatus;
+import implement.RentalRequestImpl;
 import interfaces.Asset;
 import interfaces.Assets;
 import interfaces.ClerkDetails;
@@ -53,14 +54,16 @@ public class RunnebleClerk implements Runnable {
 			e1.printStackTrace();
 		}
 
-		while (fNumberOfRentalRequests.get() > 0) {
-			while (fWorkedTime < 8) {
-				RentalRequest rentalRequest = null;
-				try {
-					rentalRequest = fRentalRequest.take();
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
+		while (fWorkedTime < 8 & fNumberOfRentalRequests.get() > 0) {
+			RentalRequest rentalRequest = null;
+			try {
+				System.out.println(fClerkDetails.getName() +" is waiting for request");
+				rentalRequest = fRentalRequest.take();
+				System.out.println(fClerkDetails.getName() +" done waiting for request");
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			if (rentalRequest != null && rentalRequest.getID() !=null) {
 				Asset matchingAsset = findMatchingAsset(rentalRequest);
 				fWorkedTime += matchingAsset.getLocation().calculateDistance(
 						fClerkDetails.getLocation()) * 2;
@@ -72,15 +75,28 @@ public class RunnebleClerk implements Runnable {
 				rentalRequest.setFoundAsset(matchingAsset);
 				rentalRequest.setRentalRequestStatus(RequestStatus.Fulfilled);
 				notifyCustomerGroup();
-
 			}
-			try {
-				fCyclicBarrierShift.await();
-			} catch (InterruptedException | BrokenBarrierException e) {
-				e.printStackTrace();
+			System.out.println(fNumberOfRentalRequests.get());
+//			notifyNow();
+			if (fNumberOfRentalRequests.get() ==0) {
+				try {
+					synchronized (fRentalRequest) {
+						fRentalRequest.put(new RentalRequestImpl());
+					}
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
 			}
+		}
+		waitForNextShift();
 
-			fWorkedTime = 0;
+		fWorkedTime = 0;
+	}
+
+	private synchronized void waitForNextShift() {
+		try {
+			fCyclicBarrierShift.await();
+		} catch (InterruptedException | BrokenBarrierException e) {
 		}
 	}
 
@@ -108,7 +124,7 @@ public class RunnebleClerk implements Runnable {
 		try {
 			wait();
 		} catch (InterruptedException e) {
-			e.printStackTrace();
+			System.out.println("New shift started");
 		}
 	}
 
@@ -116,6 +132,10 @@ public class RunnebleClerk implements Runnable {
 		synchronized (fCustomerClerkMessenger) {
 			fCustomerClerkMessenger.notify();
 		}
+	}
+
+	private synchronized void notifyNow() {
+		notifyAll();
 	}
 
 	private Asset checkAsset(Asset asset) {

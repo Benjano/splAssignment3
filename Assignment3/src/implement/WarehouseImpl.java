@@ -19,10 +19,9 @@ public class WarehouseImpl implements Warehouse {
 	}
 
 	@Override
-	public synchronized RepairMaterial takeRepairMaterial(String name,
-			int quantity) {
+	public RepairMaterial takeRepairMaterial(String name, int quantity) {
 		if (isRepairMaterialEnough(name, quantity)) {
-			removeRepairMaterial(name, quantity);
+			aquireRepairMaterial(name, quantity);
 			return new RepairMaterialImpl(name, quantity);
 		} else {
 			return null;
@@ -37,12 +36,12 @@ public class WarehouseImpl implements Warehouse {
 		return repairMaterial.getQuantity() >= quantity;
 	}
 
-	private void removeRepairMaterial(String name, int quantity) {
-		fRepairMaterials.get(name).ReduceMaterial(quantity);
+	private void aquireRepairMaterial(String name, int quantity) {
+		fRepairMaterials.get(name).Aquire(quantity);
 	}
 
 	@Override
-	public synchronized RepairTool takeRepairTool(String name, int quantity) {
+	public RepairTool takeRepairTool(String name, int quantity) {
 		if (isRepairToolEnough(name, quantity)) {
 			removeRepairTool(name, quantity);
 			return new RepairToolImpl(name, quantity);
@@ -60,15 +59,14 @@ public class WarehouseImpl implements Warehouse {
 	}
 
 	private void removeRepairTool(String name, int quantity) {
-		fRepairTools.get(name).ReduceTool(quantity);
+		fRepairTools.get(name).Acquire(quantity);
 	}
 
 	@Override
-	public synchronized void addTool(RepairTool repairTool) {
+	public void addTool(RepairTool repairTool) {
 		String repairToolName = repairTool.getName();
 		if (fRepairTools.containsKey(repairToolName)) {
-			RepairTool tempRepairTool = fRepairTools.get(repairToolName);
-			tempRepairTool.IncreaseTool(repairTool.getQuantity());
+			fRepairTools.get(repairToolName).Release(repairTool.getQuantity());
 		} else {
 			fRepairTools.put(repairToolName, repairTool);
 		}
@@ -78,9 +76,9 @@ public class WarehouseImpl implements Warehouse {
 	public synchronized void addMaterial(RepairMaterial repairMaterial) {
 		String repairToolName = repairMaterial.getName();
 		if (fRepairMaterials.containsKey(repairToolName)) {
-			RepairMaterial tempRepairMaterial = fRepairMaterials
-					.get(repairToolName);
-			tempRepairMaterial.IncreaseMaterial(repairMaterial.getQuantity());
+			fRepairMaterials.get(repairToolName).Release(
+					repairMaterial.getQuantity());
+			;
 		} else {
 			fRepairMaterials.put(repairToolName, repairMaterial);
 		}

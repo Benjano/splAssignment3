@@ -1,33 +1,44 @@
 package implement;
 
+import java.util.concurrent.Semaphore;
+
 import interfaces.RepairMaterial;
 
 public class RepairMaterialImpl implements RepairMaterial {
 
 	private String fName;
-	private int fQuantity;
-	
-	
-	
+	private Semaphore fQuantity;
+
 	public RepairMaterialImpl(String name, int quantity) {
-		this.fName=name;
-		this.fQuantity=quantity;
+		this.fName = name;
+		this.fQuantity = new Semaphore(quantity);
 	}
-	
+
 	public String getName() {
 		return fName;
 	}
-	
-	public void ReduceMaterial(int quantity){
-		if (this.fQuantity >= quantity){
-		this.fQuantity = this.fQuantity-quantity;
+
+	public int getQuantity() {
+		return fQuantity.availablePermits();
+	}
+
+	public void Aquire(int quantity) {
+		// if (this.fQuantity >= quantity) {
+		// this.fQuantity = this.fQuantity - quantity;
+		// }
+		try {
+			fQuantity.acquire(quantity);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
-	
-	public void IncreaseMaterial(int quantity) {
-		this.fQuantity = this.fQuantity + quantity;
+
+	public void Release(int quantity) {
+		// this.fQuantity = this.fQuantity + quantity;
+		fQuantity.release(quantity);
 	}
-	
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -37,11 +48,5 @@ public class RepairMaterialImpl implements RepairMaterial {
 		builder.append(fQuantity);
 		return builder.toString();
 	}
-
-	public int getQuantity() {
-		return fQuantity;
-	}
-
-	
 
 }

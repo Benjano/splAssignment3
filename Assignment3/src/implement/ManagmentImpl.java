@@ -134,23 +134,22 @@ public class ManagmentImpl implements Managment {
 		ArrayList<Thread> clerks = createRunnableClerks(numberOfRentalRequests,
 				cyclicBarrierShift, messenger);
 
-		new Thread(new Runnable() {
-
-			@Override
-			public void run() {
-				while (true) {
-					try {
-						Thread.sleep(1000);
-					} catch (InterruptedException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					System.out.println("********"
-							+ numberOfRentalRequests.get());
-				}
-			}
-		}).start();
-		;
+//		new Thread(new Runnable() {
+//
+//			@Override
+//			public void run() {
+//				while (true) {
+//					try {
+//						Thread.sleep(1000);
+//					} catch (InterruptedException e) {
+//						// TODO Auto-generated catch block
+//						e.printStackTrace();
+//					}
+//					System.out.println("********"
+//							+ numberOfRentalRequests.get());
+//				}
+//			}
+//		}).start();
 
 		while (numberOfRentalRequests.get() > 0) {
 			waitForClerksToFinishShift(cyclicBarrierShift);
@@ -158,7 +157,7 @@ public class ManagmentImpl implements Managment {
 			waitForMentenanceToFinish(clerks, maintenance);
 			cyclicBarrierShift.reset();
 		}
-		
+
 		System.out.println("DONE");
 
 	}
@@ -210,6 +209,8 @@ public class ManagmentImpl implements Managment {
 		while (cyclicBarrierShift.getNumberWaiting() < fClerksDetails.size()) {
 			try {
 				// System.out.println(cyclicBarrierShift.getNumberWaiting());
+				System.out.println("Clerks waiting at the end "
+						+ cyclicBarrierShift.getNumberWaiting());
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();

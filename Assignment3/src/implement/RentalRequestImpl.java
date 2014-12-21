@@ -12,6 +12,11 @@ public class RentalRequestImpl implements RentalRequest {
 	private RequestStatus fStatus;
 	private Asset fAssetFound;
 
+	public RentalRequestImpl() {
+		this.fId = null;
+
+	}
+
 	/**
 	 * @param fId
 	 * @param fAssetType
@@ -21,7 +26,6 @@ public class RentalRequestImpl implements RentalRequest {
 	 */
 	public RentalRequestImpl(String id, String type, int size,
 			int durationOfStay) {
-		super();
 		this.fId = id;
 		this.fAssetType = type;
 		this.fSize = size;
@@ -101,6 +105,12 @@ public class RentalRequestImpl implements RentalRequest {
 		builder.append(", Status: ");
 		builder.append(fStatus);
 		return builder.toString();
+	}
+
+	@Override
+	public String getID() {
+		// TODO Auto-generated method stub
+		return fId;
 	}
 
 }

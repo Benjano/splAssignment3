@@ -82,21 +82,21 @@
 				</Customer>
 			</Customers>
 			<RentalRequests>
-				<Request id="5">
+			<!-- 	<Request id="5">
 					<Type>Hut</Type>
 					<Size>4</Size>
 					<Duration>5</Duration>
-				</Request>
-				<Request id="6">
+				</Request> -->
+			<!-- 	<Request id="6">
 					<Type>Apartment</Type>
 					<Size>4</Size>
 					<Duration>10</Duration>
-				</Request>
-				<Request id="7">
+				</Request> -->
+			<!-- 	<Request id="7">
 					<Type>Apartment</Type>
 					<Size>4</Size>
 					<Duration>6</Duration>
-				</Request>
+				</Request> -->
 			</RentalRequests>
 		</CustomerGroupDetails>
 	</CustomerGroups>

@@ -35,7 +35,7 @@ public interface RentalRequest {
 	 * Update asset content damage
 	 * 
 	 * @param damagePercentage
-	 * @return 
+	 * @return
 	 * @pre rentalRequest status = InProgress
 	 * @post rentalRequest status = Complete
 	 * @post asset status = Available
@@ -55,4 +55,6 @@ public interface RentalRequest {
 	public RequestStatus getStatus();
 
 	public double getCostPerNight();
+
+	public String getID();
 }

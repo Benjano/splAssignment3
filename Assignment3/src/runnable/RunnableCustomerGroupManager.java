@@ -32,7 +32,8 @@ public class RunnableCustomerGroupManager implements Runnable {
 
 	public RunnableCustomerGroupManager(
 			CustomerGroupDetails customerGroupDetails, Managment managment,
-			Statistics statistics, CyclicBarrier cyclicBarrier, CustomerClerkMessenger customerClerkMessenger) {
+			Statistics statistics, CyclicBarrier cyclicBarrier,
+			CustomerClerkMessenger customerClerkMessenger) {
 		this.fCustomerGroupDetails = customerGroupDetails;
 		this.fManagment = managment;
 		this.fStatistics = statistics;
@@ -73,6 +74,9 @@ public class RunnableCustomerGroupManager implements Runnable {
 			// Customer done staying in asset
 			rentalRequest.setRentalRequestStatus(RequestStatus.Complete);
 
+			System.out.println("Request left "
+					+ (fCustomerGroupDetails.getNumberOfRentalRequests() - i));
+
 			i++;
 			rentalRequest = fCustomerGroupDetails.getRentalRequest(i);
 		}
@@ -86,7 +90,7 @@ public class RunnableCustomerGroupManager implements Runnable {
 				e.printStackTrace();
 			}
 		}
-		
+
 	}
 
 	private double simulateStayInAsset(RentalRequest rentalRequest) {
