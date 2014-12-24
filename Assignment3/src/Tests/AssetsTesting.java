@@ -1,11 +1,9 @@
 package Tests;
 
 import static org.junit.Assert.assertEquals;
-import implement.AssetContentImpl;
 import implement.AssetImpl;
 import implement.Location;
 import interfaces.Asset;
-import interfaces.AssetContent;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

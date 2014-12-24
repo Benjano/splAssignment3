@@ -117,4 +117,11 @@ public class RentalRequestImpl implements RentalRequest {
 		return fId;
 	}
 
+	@Override
+	public boolean equals(Object other) {
+		if (other instanceof RentalRequest)
+			return ((RentalRequestImpl) other).fId.equals(fId) & ((RentalRequestImpl) other).fAssetType.equals(fAssetType) &
+					((RentalRequestImpl) other).fSize== fSize & ((RentalRequestImpl) other).fDurationOfStay== fDurationOfStay;
+		return false;
+	}
 }
