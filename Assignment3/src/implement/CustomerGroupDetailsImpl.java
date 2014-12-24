@@ -48,6 +48,11 @@ public class CustomerGroupDetailsImpl implements CustomerGroupDetails {
 			return fCustomers.get(i);
 		return null;
 	}
+	
+	@Override
+	public int getNumberOfRentalRequests() {
+		return fRentalRequests.size();
+	}
 
 	@Override
 	public String toString() {
@@ -66,8 +71,5 @@ public class CustomerGroupDetailsImpl implements CustomerGroupDetails {
 		return builder.toString();
 	}
 
-	@Override
-	public int getNumberOfRentalRequests() {
-		return fRentalRequests.size();
-	}
+	
 }

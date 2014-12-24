@@ -3,16 +3,12 @@ package Tests;
 import static org.junit.Assert.assertEquals;
 import implement.AssetContentImpl;
 import implement.AssetImpl;
-import implement.AssetsImpl;
 import implement.Location;
 import interfaces.Asset;
 import interfaces.AssetContent;
-import interfaces.Assets;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
 import consts.AssetStatus;
 
 public class AssetsTesting {

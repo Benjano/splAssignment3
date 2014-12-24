@@ -22,7 +22,7 @@ public class LocationTesting {
 	}
 
 	@Test
-	public void testTakeRepairTool() {
+	public void testcalculateDistance() {
 		Location loc1 = new Location(1, 6);
 		Location loc2 = new Location(3, 2);
 		Location loc3 = new Location(0, 0);

@@ -27,7 +27,17 @@ public class CustomerTesting {
 	@After
 	public void tearDown() throws Exception {
 	}
-
+	
+	
+	
+	@Test
+	public void testGetVandalismType() {
+		assertEquals("Customer " + customer1.getVandalismType() ,VandalismType.Arbitrary, customer1.getVandalismType() );
+	}
+	
+	
+	
+	
 	@Test
 	public void testCalculateDamagePercentage() {
 		double customer1DamagePercentage = customer1
@@ -38,13 +48,12 @@ public class CustomerTesting {
 		assertTrue("Customer " + customer1.getName()
 				+ " damage percentage is out of bounds",
 				customer1DamagePercentage <= 0.5);
-
 		assertEquals("Customer " + customer2.getName()
 				+ " damage percentage is wrong",
 				customer2.calculateDamagePercentage(), (20d + 50d) / 2d / 100d, DELTA);
 		
 		assertEquals("Customer " + customer3.getName()
 				+ " damage percentage is wrong",
-				customer3.calculateDamagePercentage(), 0.05, DELTA);
+				customer3.calculateDamagePercentage(), 0.005, DELTA);
 	}
 }

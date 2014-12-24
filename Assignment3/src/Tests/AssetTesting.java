@@ -2,12 +2,8 @@ package Tests;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.Vector;
-
 import implement.AssetContentImpl;
-import implement.AssetImpl;
 import implement.Location;
-import interfaces.Asset;
 import interfaces.AssetContent;
 
 import org.junit.After;

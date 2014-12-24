@@ -1,7 +1,6 @@
 package implement;
 
 import java.util.logging.Logger;
-
 import consts.VandalismType;
 import interfaces.Customer;
 
