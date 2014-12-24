@@ -20,19 +20,15 @@ public class AssetTesting {
 	private AssetTest asset;
 	private final double DELTA = 0.001;
 
-	private AssetContent content1, content2, content3;
 
 	@Before
 	public void setUp() throws Exception {
 		asset = new AssetTest("Aviv House", "appartment", new Location(10, 15),
 				AssetStatus.Available, 100, 2);
-		content1 = new AssetContentImpl("Table", 1.5f);
-		content2 = new AssetContentImpl("Chairs", 1.5f);
-		content3 = new AssetContentImpl("Bed", 1.5f);
 
-		asset.addAssetContent(content1);
-		asset.addAssetContent(content2);
-		asset.addAssetContent(content3);
+		asset.addAssetContent("Table", 1.5f);
+		asset.addAssetContent("Chairs", 1.5f);
+		asset.addAssetContent("Bed", 1.5f);
 	}
 
 	@After
@@ -43,7 +39,7 @@ public class AssetTesting {
 	@Test
 	public void testCalculateRepairTime() {
 
-		content2.damageAssetContent(20);
+		asset.getAssetContent(1).damageAssetContent(20);
 
 		assertEquals("Length of the content is not ok",
 				asset.getNumberOfAssetContent(), 3);
@@ -125,13 +121,13 @@ public class AssetTesting {
 
 		assertEquals("No damaged content ", 0, asset.getDamagedAssetContent()
 				.size());
-		content1.damageAssetContent(80);
+		asset.getAssetContent(0).damageAssetContent(80);
 		assertEquals("No damaged content ", 1, asset.getDamagedAssetContent()
 				.size());
-		content2.damageAssetContent(90);
+		asset.getAssetContent(1).damageAssetContent(90);
 		assertEquals("No damaged content ", 2, asset.getDamagedAssetContent()
 				.size());
-		content3.damageAssetContent(100);
+		asset.getAssetContent(2).damageAssetContent(100);
 		assertEquals("No damaged content ", 3, asset.getDamagedAssetContent()
 				.size());
 	}

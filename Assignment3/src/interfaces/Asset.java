@@ -53,7 +53,7 @@ public interface Asset {
 	/**
 	 * @param assetContent
 	 */
-	void addAssetContent(AssetContent assetContent);
+	void addAssetContent(String name, double repairCostMultiplier);
 
 	/**
 	 * Damage the asset content by damage precenatage 0-100

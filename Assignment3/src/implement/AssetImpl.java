@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Vector;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import consts.AssetStatus;
@@ -79,13 +80,15 @@ public class AssetImpl implements Asset {
 			if (assetContent.getHealth() < ASSET_DAMAGED_HEALTH)
 				return true;
 		}
-
 		return false;
 	}
 
 	@Override
-	public void addAssetContent(AssetContent assetContent) {
-		fAssetContent.add(assetContent);
+	public void addAssetContent(String name, double repairCostMultiplier) {
+		fAssetContent.add(new AssetContentImpl(name, repairCostMultiplier));
+		fLogger.log(Level.FINE, new StringBuilder().append("Asset content ")
+				.append(name).append(" is added to Asset ")
+				.append(fName).toString());
 	}
 
 	@Override

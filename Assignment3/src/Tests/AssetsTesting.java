@@ -31,13 +31,9 @@ public class AssetsTesting {
 		asset4 = new AssetImpl("Gal's House", "Loft", new Location(10, 15),
 				AssetStatus.Available, 100, 6);
 
-		AssetContent content1 = new AssetContentImpl("Table", 1.5f);
-		AssetContent content2 = new AssetContentImpl("Chairs", 1.5f);
-		AssetContent content3 = new AssetContentImpl("Bed", 1.5f);
-
-		asset1.addAssetContent(content1);
-		asset1.addAssetContent(content2);
-		asset1.addAssetContent(content3);
+		asset1.addAssetContent("Table", 1.5f);
+		asset1.addAssetContent("Chairs", 1.5f);
+		asset1.addAssetContent("Bed", 1.5f);
 
 		assets.addAsset(asset1);
 		assets.addAsset(asset2);

@@ -21,11 +21,6 @@ public class CustomerImpl implements Customer {
 	}
 
 	@Override
-	public String getName() {
-		return fName;
-	}
-
-	@Override
 	public VandalismType getVandalismType() {
 		return fVandalismType;
 	}

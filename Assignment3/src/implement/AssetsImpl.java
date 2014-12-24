@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Vector;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import interfaces.Asset;
@@ -37,12 +38,20 @@ public class AssetsImpl implements Assets {
 			}
 		}
 		Collections.sort(result, fCompareAsset);
+		fLogger.log(Level.FINE,
+				new StringBuilder().append("For search: type = ").append(type)
+						.append(" size >= ").append(size).append(" found ")
+						.append(result.size()).append(" matching assets")
+						.toString());
 		return result;
 	}
 
 	@Override
 	public void addAsset(Asset asset) {
 		fAssets.add(asset);
+		fLogger.log(Level.FINE,
+				new StringBuilder().append("New asset added to assets : ")
+						.append(asset.getName()).toString());
 	}
 
 	@Override
