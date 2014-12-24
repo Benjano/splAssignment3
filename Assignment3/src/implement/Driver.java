@@ -23,7 +23,7 @@ public class Driver {
 	private DocumentBuilderFactory builderFactory;
 	private static Managment fManagment;
 	private Logger fLogger;
-	
+
 	public Driver(String initialDataSource, String customersGroupsSource,
 			String assetsSource, String assetContentRepairDetailsSource) {
 		fLogger = Logger.getLogger(this.getClass().getSimpleName());
@@ -41,7 +41,7 @@ public class Driver {
 		new Driver("InitialData.xml", "CustomersGroups.xml", "Assets.xml",
 				"AssetContentsRepairDetails.xml");
 		System.out.println("Driver Working");
-//		System.out.println(fManagment);
+		// System.out.println(fManagment);
 		fManagment.start();
 		System.out.println("Driver Done");
 
@@ -191,11 +191,7 @@ public class Driver {
 						.getElementsByTagName("RepairMultiplier").item(0)
 						.getTextContent());
 
-				asset.addAssetContent(new AssetContentImpl(name,
-						repairCostMultiplier));
-
-				asset.addAssetContent(new AssetContentImpl(name,
-						repairCostMultiplier));
+				asset.addAssetContent(name, repairCostMultiplier);
 			}
 		}
 	}

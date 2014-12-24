@@ -3,6 +3,7 @@ package Tests;
 import consts.AssetStatus;
 import implement.AssetImpl;
 import implement.Location;
+import interfaces.AssetContent;
 
 public class AssetTest extends AssetImpl {
 
@@ -18,6 +19,16 @@ public class AssetTest extends AssetImpl {
 	 */
 	public int getNumberOfAssetContent() {
 		return this.fAssetContent.size();
+	}
+
+	/**
+	 * @return The asset content at i
+	 */
+	public AssetContent getAssetContent(int i) {
+		if (i >= 0 & i < fAssetContent.size()) {
+			return fAssetContent.get(i);
+		}
+		return null;
 	}
 
 }

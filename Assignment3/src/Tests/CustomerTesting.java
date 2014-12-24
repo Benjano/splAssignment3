@@ -42,12 +42,11 @@ public class CustomerTesting {
 	public void testCalculateDamagePercentage() {
 		double customer1DamagePercentage = customer1
 				.calculateDamagePercentage();
-		assertTrue("Customer " + customer1.getName()
-				+ " damage percentage is out of bounds",
+		assertTrue("Damage percentage is out of bounds",
 				customer1DamagePercentage >= 0.2);
-		assertTrue("Customer " + customer1.getName()
-				+ " damage percentage is out of bounds",
+		assertTrue("Damage percentage is out of bounds",
 				customer1DamagePercentage <= 0.5);
+<<<<<<< HEAD
 		assertEquals("Customer " + customer2.getName()
 				+ " damage percentage is wrong",
 				customer2.calculateDamagePercentage(), (20d + 50d) / 2d / 100d, DELTA);
@@ -55,5 +54,14 @@ public class CustomerTesting {
 		assertEquals("Customer " + customer3.getName()
 				+ " damage percentage is wrong",
 				customer3.calculateDamagePercentage(), 0.005, DELTA);
+=======
+
+		assertEquals("Damage percentage is wrong",
+				customer2.calculateDamagePercentage(), (20d + 50d) / 2d / 100d,
+				DELTA);
+
+		assertEquals("Damage percentage is wrong",
+				customer3.calculateDamagePercentage(), 0.05, DELTA);
+>>>>>>> branch 'master' of https://github.com/Benjano/splAssignment3.git
 	}
 }

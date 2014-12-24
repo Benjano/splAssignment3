@@ -1,6 +1,7 @@
 package implement;
 
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import interfaces.AssetContent;
@@ -26,11 +27,6 @@ public class AssetContentImpl implements AssetContent {
 	}
 
 	@Override
-	public double calculateRepairTime() {
-		return ((100 - fHealth.get()) * fRepairCostMultiplier);
-	}
-
-	@Override
 	public double getHealth() {
 		return fHealth.get();
 	}
@@ -41,6 +37,44 @@ public class AssetContentImpl implements AssetContent {
 	}
 
 	@Override
+	public void damageAssetContent(double damagePrecentage) {
+		double oldHealth = fHealth.get();
+		if (damagePrecentage >= 0) {
+			double newHealth = fHealth.get() - fHealth.get() * damagePrecentage
+					/ 100;
+			if (newHealth < 0) {
+				fHealth.set(0d);
+			} else {
+				fHealth.set(newHealth);
+			}
+			fLogger.log(Level.FINE,
+					new StringBuilder().append("Damageing the asset from ")
+							.append(oldHealth).append("% to ")
+							.append(newHealth).append("%").toString());
+		}
+		fLogger.log(
+				Level.WARNING,
+				new StringBuilder().append(
+						"Cannot damage the asset by nagative number")
+						.toString());
+	}
+
+	@Override
+	public void fixAssetContent() {
+		fHealth.set(100d);
+		fLogger.log(Level.FINE, new StringBuilder().append("AssetContent ")
+				.append(fName).append(" health is 100%").toString());
+	}
+
+	@Override
+	public double calculateRepairTime() {
+		double result = (100 - fHealth.get()) * fRepairCostMultiplier;
+		fLogger.log(Level.FINE, "Calculating the repair time for " + fName
+				+ " which is " + result);
+		return result;
+	}
+
+	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Asset content name: ").append(fName)
@@ -48,23 +82,6 @@ public class AssetContentImpl implements AssetContent {
 				.append("% \nRepair cost multiplier: ")
 				.append(fRepairCostMultiplier);
 		return builder.toString();
-	}
-
-	@Override
-	public void damageAssetContent(double damagePrecentage) {
-		if (damagePrecentage >= 0) {
-			double newHealth = fHealth.get() - fHealth.get() * damagePrecentage/100;
-			if (newHealth < 0) {
-				fHealth.set(0d);
-			} else {
-				fHealth.set(newHealth);
-			}
-		}
-	}
-
-	@Override
-	public void fixAssetContent() {
-		fHealth.set(100d);
 	}
 
 }

@@ -3,6 +3,7 @@ package implement;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import interfaces.Customer;
@@ -28,11 +29,21 @@ public class CustomerGroupDetailsImpl implements CustomerGroupDetails {
 	@Override
 	public void addRentalRequest(RentalRequest request) {
 		fRentalRequests.add(request);
+		fLogger.log(
+				Level.FINE,
+				new StringBuilder().append("New rental request")
+						.append(request)
+						.append(" is added to the customer group running by ")
+						.append(fGroupManagerName).toString());
 	}
 
 	@Override
 	public void addCustomer(Customer customer) {
 		fCustomers.add(customer);
+		fLogger.log(Level.FINE,
+				new StringBuilder().append("New customer").append(customer)
+						.append(" is added to the customer group running by ")
+						.append(fGroupManagerName).toString());
 	}
 
 	@Override
@@ -44,15 +55,16 @@ public class CustomerGroupDetailsImpl implements CustomerGroupDetails {
 
 	@Override
 	public Customer getCustomer(int i) {
-		if (i < fCustomers.size())
+		if (i >= 0 & i < fCustomers.size())
 			return fCustomers.get(i);
 		return null;
 	}
-	
+
 	@Override
 	public int getNumberOfRentalRequests() {
 		return fRentalRequests.size();
 	}
+	
 
 	@Override
 	public String toString() {
@@ -70,6 +82,4 @@ public class CustomerGroupDetailsImpl implements CustomerGroupDetails {
 
 		return builder.toString();
 	}
-
-	
 }
