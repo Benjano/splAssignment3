@@ -1,6 +1,5 @@
 package implement;
 
-import java.util.logging.Logger;
 import consts.VandalismType;
 import interfaces.Customer;
 
@@ -8,7 +7,6 @@ public class CustomerImpl implements Customer {
 	private String fName;
 	private VandalismType fVandalismType;
 	private double fMinDamage, fMaxDamage, fDamagePercentage;
-	private Logger fLogger;
 
 	public CustomerImpl(String name, VandalismType vandalismType,
 			double minDamage, double maxDamage) {
@@ -18,7 +16,6 @@ public class CustomerImpl implements Customer {
 		this.fMaxDamage = maxDamage;
 		this.fDamagePercentage = 0;
 		calculateDamagePercentage();
-		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
 	}
 
 	@Override
@@ -26,6 +23,7 @@ public class CustomerImpl implements Customer {
 		return fVandalismType;
 	}
 
+	// Calculate the damage percentage
 	private void calculateDamagePercentage() {
 		switch (fVandalismType) {
 		case Arbitrary:
