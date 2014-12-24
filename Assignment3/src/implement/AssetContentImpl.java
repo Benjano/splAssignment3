@@ -1,10 +1,13 @@
 package implement;
 
 import java.util.concurrent.atomic.AtomicReference;
+import java.util.logging.Logger;
 
 import interfaces.AssetContent;
 
 public class AssetContentImpl implements AssetContent {
+	
+	private Logger fLogger;
 	private String fName;
 	private AtomicReference<Double> fHealth;
 	private double fRepairCostMultiplier;
@@ -19,6 +22,7 @@ public class AssetContentImpl implements AssetContent {
 		this.fName = name;
 		this.fHealth = new AtomicReference<Double>(100d);
 		this.fRepairCostMultiplier = repairCostMultiplier;
+		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
 	}
 
 	@Override
