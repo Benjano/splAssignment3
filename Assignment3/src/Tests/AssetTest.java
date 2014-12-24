@@ -8,8 +8,8 @@ import interfaces.AssetContent;
 public class AssetTest extends AssetImpl {
 
 	public AssetTest(String name, String type, Location location,
-			AssetStatus status, double costPerNight, int size) {
-		super(name, type, location, status, costPerNight, size);
+			double costPerNight, int size) {
+		super(name, type, location, costPerNight, size);
 		// TODO Auto-generated constructor stub
 	}
 

@@ -5,6 +5,7 @@ import interfaces.CustomerGroupDetails;
 import interfaces.Managment;
 
 import java.io.File;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -49,35 +50,36 @@ public class Driver {
 
 	// ******** Read assets content repair details ********
 	public void readXmlAssetsContentRepairDetails(String fileLocation) {
+		fLogger.log(
+				Level.FINEST,
+				new StringBuilder()
+						.append("Reading asset content repair detials from \"")
+						.append(fileLocation).append("\"").toString());
 		try {
 			File xmlFile = new File(fileLocation);
 			DocumentBuilder documentBuilder = builderFactory
 					.newDocumentBuilder();
 			Document document = documentBuilder.parse(xmlFile);
-
 			document.getDocumentElement().normalize();
-
 			NodeList assetContentList = document
 					.getElementsByTagName("AssetContent");
-
 			for (int i = 0; i < assetContentList.getLength(); i++) {
-
 				Node nNode = assetContentList.item(i);
-
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-
 					Element assetContentElement = (Element) nNode;
-
 					String assetContentName = assetContentElement
 							.getElementsByTagName("Name").item(0)
 							.getTextContent();
-
+					fLogger.log(
+							Level.FINEST,
+							new StringBuilder()
+									.append("Current asset content ")
+									.append(assetContentName).toString());
 					readToolsInformation(assetContentName,
 							assetContentElement.getElementsByTagName("Tool"));
 					readMaterialsInformation(assetContentName,
 							assetContentElement
 									.getElementsByTagName("Material"));
-
 				}
 			}
 		} catch (Exception e) {
@@ -86,10 +88,8 @@ public class Driver {
 	}
 
 	public void readToolsInformation(String assetContentName, NodeList tools) {
-
 		for (int i = 0; i < tools.getLength(); i++) {
 			Node node = tools.item(i);
-
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
 				Element element = (Element) node;
 				String name = element.getElementsByTagName("Name").item(0)
@@ -99,6 +99,11 @@ public class Driver {
 						.getTextContent());
 				fManagment.addRepairToolInformation(assetContentName,
 						new RepairToolInformationImpl(name, quantity));
+				fLogger.log(
+						Level.FINEST,
+						new StringBuilder().append(assetContentName)
+								.append(" needs ").append(quantity).append(" ")
+								.append(name).append("s").toString());
 			}
 		}
 	}
@@ -107,7 +112,6 @@ public class Driver {
 			NodeList materials) {
 		for (int i = 0; i < materials.getLength(); i++) {
 			Node node = materials.item(i);
-
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
 				Element element = (Element) node;
 				String name = element.getElementsByTagName("Name").item(0)
@@ -117,12 +121,22 @@ public class Driver {
 						.getTextContent());
 				fManagment.addRepairMaterialInformation(assetContentName,
 						new RepairMaterialInformationImpl(name, quantity));
+				fLogger.log(
+						Level.FINEST,
+						new StringBuilder().append(assetContentName)
+								.append(" needs ").append(quantity).append(" ")
+								.append(name).append("s").toString());
 			}
 		}
 	}
 
 	// **************** Read assets details ***************
 	public void readXmlAssets(String fileLocation) {
+		fLogger.log(
+				Level.FINEST,
+				new StringBuilder()
+						.append("Reading asset content repair detials from \"")
+						.append(fileLocation).append("\"").toString());
 		try {
 			File xmlFile = new File(fileLocation);
 			DocumentBuilder documentBuilder = builderFactory
@@ -134,13 +148,9 @@ public class Driver {
 			NodeList assetContentList = document.getElementsByTagName("Asset");
 
 			for (int i = 0; i < assetContentList.getLength(); i++) {
-
 				Node nNode = assetContentList.item(i);
-
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-
 					Element assetElement = (Element) nNode;
-
 					String name = assetElement.getElementsByTagName("Name")
 							.item(0).getTextContent();
 					String type = assetElement.getElementsByTagName("Type")
@@ -162,15 +172,11 @@ public class Driver {
 					int costPerNight = Integer.parseInt(assetElement
 							.getElementsByTagName("CostPerNight").item(0)
 							.getTextContent());
-
 					Asset asset = new AssetImpl(name, type, location,
-							AssetStatus.Available, costPerNight, size);
-
+							costPerNight, size);
 					readAssetContent(asset,
 							assetElement.getElementsByTagName("AssetContent"));
-
 					fManagment.addAsset(asset);
-
 				}
 			}
 		} catch (Exception e) {
@@ -181,17 +187,20 @@ public class Driver {
 	private void readAssetContent(Asset asset, NodeList assetContent) {
 		for (int i = 0; i < assetContent.getLength(); i++) {
 			Node node = assetContent.item(i);
-
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
 				Element element = (Element) node;
-
 				String name = element.getElementsByTagName("Name").item(0)
 						.getTextContent();
 				double repairCostMultiplier = Double.parseDouble(element
 						.getElementsByTagName("RepairMultiplier").item(0)
 						.getTextContent());
-
 				asset.addAssetContent(name, repairCostMultiplier);
+				fLogger.log(
+						Level.FINEST,
+						new StringBuilder().append("Adding asset content ")
+								.append(name)
+								.append(" repair cost multiplier ")
+								.append(repairCostMultiplier).toString());
 			}
 		}
 	}
