@@ -30,11 +30,25 @@ public class AssetContentTesting {
 				assetContent.calculateRepairTime(), (100 - fHealth)
 						* fRepairMultiplier, DELTA);
 
+		assetContent.damageAssetContent(0.3);
 		int newHealth = 70;
-		assetContent.setHealth(newHealth);
 		assertEquals("The repair time is wrong",
 				assetContent.calculateRepairTime(), (100 - newHealth)
 						* fRepairMultiplier, DELTA);
 
+	}
+
+	@Test
+	public void testFixAsset() {
+		assetContent.damageAssetContent(0.3);
+		assetContent.fixAssetContent();
+
+		assertEquals("The assetcontent should be fixed", assetContent.getHealth(), 100,
+				DELTA);
+	}
+	
+	@Test
+	public void testGetName() {
+		assertEquals(assetContent.getName(), "Table");
 	}
 }
