@@ -126,7 +126,7 @@ public class ManagmentImpl implements Managment {
 				fCustomerGroupDetails.size());
 		CustomerClerkMessenger messenger = new CustomerClerkMessenger();
 
-		final AtomicInteger numberOfRentalRequests = countTotalRentalRequests();
+		AtomicInteger numberOfRentalRequests = countTotalRentalRequests();
 		CyclicBarrier cyclicBarrierShift = new CyclicBarrier(
 				fClerksDetails.size() + 1);
 
@@ -194,15 +194,12 @@ public class ManagmentImpl implements Managment {
 	}
 
 	private void createRunnableCustomerGroups(CustomerClerkMessenger messenger) {
-		ArrayList<Thread> customerGroups = new ArrayList<Thread>();
 		CyclicBarrier cyclicBarrierCustomerGroup = new CyclicBarrier(
 				fCustomerGroupDetails.size());
 		for (CustomerGroupDetails customerGroupDetails : fCustomerGroupDetails) {
-			Thread thread = new Thread(new RunnableCustomerGroupManager(
+			 new Thread(new RunnableCustomerGroupManager(
 					customerGroupDetails, this, fStatistics,
-					cyclicBarrierCustomerGroup, messenger));
-			thread.start();
-			customerGroups.add(thread);
+					cyclicBarrierCustomerGroup, messenger)).start();
 		}
 	}
 
