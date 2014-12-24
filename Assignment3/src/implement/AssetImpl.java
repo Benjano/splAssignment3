@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Vector;
+import java.util.logging.Logger;
 
 import consts.AssetStatus;
 import interfaces.Asset;
@@ -19,6 +20,7 @@ public class AssetImpl implements Asset {
 	private double fCostPerNight;
 	private List<AssetContent> fAssetContent;
 	private AssetStatus fStatus;
+	private Logger fLogger;
 
 	/**
 	 * @param fName
@@ -38,6 +40,7 @@ public class AssetImpl implements Asset {
 		this.fStatus = status;
 		this.fCostPerNight = costPerNight;
 		this.fSize = size;
+		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
 	}
 
 	@Override

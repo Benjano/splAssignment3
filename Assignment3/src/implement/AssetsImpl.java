@@ -5,24 +5,26 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Vector;
+import java.util.logging.Logger;
 
 import interfaces.Asset;
 import interfaces.Assets;
 
 public class AssetsImpl implements Assets {
 
-	List<Asset> fAssets;
-
-	Comparator<Asset> fCompareAsset = new Comparator<Asset>() {
-
+	private List<Asset> fAssets;
+	private Logger fLogger;
+	private Comparator<Asset> fCompareAsset = new Comparator<Asset>() {
 		@Override
 		public int compare(Asset asset1, Asset asset2) {
 			return asset1.getSize() - asset2.getSize();
 		}
 	};
 
+
 	public AssetsImpl() {
-		fAssets = Collections.synchronizedList(new ArrayList<Asset>());
+		this.fAssets = Collections.synchronizedList(new ArrayList<Asset>());
+		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
 	}
 
 	@Override

@@ -1,6 +1,7 @@
 package implement;
 
 import java.util.concurrent.Semaphore;
+import java.util.logging.Logger;
 
 import interfaces.RepairTool;
 
@@ -8,10 +9,12 @@ public class RepairToolImpl implements RepairTool {
 
 	private String fName;
 	private Semaphore fQuantity;
+	private Logger fLogger;
 
 	public RepairToolImpl(String name, int quantity) {
 		this.fName = name;
 		this.fQuantity = new Semaphore(quantity);
+		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
 	}
 
 	public String getName() {

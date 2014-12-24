@@ -6,15 +6,18 @@ import interfaces.Warehouse;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.logging.Logger;
 
 public class WarehouseImpl implements Warehouse {
 
 	private Map<String, RepairTool> fRepairTools;
 	private Map<String, RepairMaterial> fRepairMaterials;
+	private Logger fLogger;
 
 	public WarehouseImpl() {
 		this.fRepairTools = new ConcurrentHashMap<String, RepairTool>();
 		this.fRepairMaterials = new ConcurrentHashMap<String, RepairMaterial>();
+		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
 
 	}
 

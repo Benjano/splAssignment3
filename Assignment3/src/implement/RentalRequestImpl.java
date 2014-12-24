@@ -1,5 +1,7 @@
 package implement;
 
+import java.util.logging.Logger;
+
 import interfaces.Asset;
 import interfaces.RentalRequest;
 import consts.AssetStatus;
@@ -11,6 +13,7 @@ public class RentalRequestImpl implements RentalRequest {
 	private int fSize, fDurationOfStay;
 	private RequestStatus fStatus;
 	private Asset fAssetFound;
+	private Logger fLogger;
 
 	public RentalRequestImpl() {
 		this.fId = null;
@@ -32,6 +35,7 @@ public class RentalRequestImpl implements RentalRequest {
 		this.fDurationOfStay = durationOfStay;
 		this.fStatus = RequestStatus.Incomplete;
 		this.fAssetFound = null;
+		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
 	}
 
 	@Override

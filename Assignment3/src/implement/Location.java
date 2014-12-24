@@ -1,8 +1,11 @@
 package implement;
 
+import java.util.logging.Logger;
+
 public class Location {
 
 	private double x, y;
+	private Logger fLogger;
 
 	/**
 	 * @param x
@@ -11,6 +14,7 @@ public class Location {
 	public Location(double x, double y) {
 		this.x = x;
 		this.y = y;
+		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
 	}
 
 	public double calculateDistance(Location other) {
