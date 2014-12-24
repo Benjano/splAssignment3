@@ -16,13 +16,12 @@ import org.junit.Test;
 import consts.AssetStatus;
 
 public class AssetsTesting {
-	private Assets assets;
+	private AssetsTest assets;
 	private Asset asset1, asset2, asset3, asset4;
 
 	@Before
 	public void setUp() throws Exception {
-		assets = new AssetsImpl();
-
+		assets = new AssetsTest();
 		asset1 = new AssetImpl("Aviv's House", "Appartment", new Location(10,
 				15), AssetStatus.Available, 100, 2);
 		asset2 = new AssetImpl("Nir's House", "Appartment",
@@ -50,18 +49,24 @@ public class AssetsTesting {
 	public void tearDown() throws Exception {
 	}
 
-
 	@Test
 	public void testFindByTypeAndSize() {
-
-		assertEquals("Should find 0", 0,
-				assets.findAssetByTypeAndSize("Hut", 2).size());
+		assertEquals("Should find 0", 0, assets
+				.findAssetByTypeAndSize("Hut", 2).size());
 		assertEquals("Should find 1", 1,
 				assets.findAssetByTypeAndSize("Appartment", 2).size());
 		assertEquals("Should find 2 ", 2,
 				assets.findAssetByTypeAndSize("Loft", 3).size());
 	}
-	
-	
-	
+
+	@Test
+	public void testAddAsset() {
+
+		assets.addAsset(new AssetImpl("Test House", "House", new Location(1.5,
+				9), AssetStatus.Available, 2000, 5));
+
+		assertEquals("Size should be 5", assets.getNumberOfAssets(), 5);
+
+	}
+
 }

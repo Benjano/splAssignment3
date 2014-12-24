@@ -1,7 +1,6 @@
 package interfaces;
 
 import java.util.List;
-import java.util.Vector;
 
 public interface Assets {
 

@@ -19,7 +19,7 @@ public class CustomerTesting {
 
 	@Before
 	public void setUp() throws Exception {
-		customer1 = new CustomerImpl("Nir", VandalismType.Arbitary, 20, 50);
+		customer1 = new CustomerImpl("Nir", VandalismType.Arbitrary, 20, 50);
 		customer2 = new CustomerImpl("Aviv", VandalismType.Fixed, 20, 50);
 		customer3 = new CustomerImpl("David", VandalismType.None, 20, 50);
 	}

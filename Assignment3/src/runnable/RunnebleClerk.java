@@ -1,5 +1,6 @@
 package runnable;
 
+import java.util.List;
 import java.util.Vector;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.BrokenBarrierException;
@@ -102,7 +103,7 @@ public class RunnebleClerk implements Runnable {
 
 	private Asset findMatchingAsset(RentalRequest rentalRequest) {
 		Asset matchingAsset = null;
-		Vector<Asset> searchResualt = fAssets.findAssetByTypeAndSize(
+		List<Asset> searchResualt = fAssets.findAssetByTypeAndSize(
 				rentalRequest.getAssetType(), rentalRequest.getSize());
 		while (matchingAsset == null) {
 			for (Asset asset : searchResualt) {

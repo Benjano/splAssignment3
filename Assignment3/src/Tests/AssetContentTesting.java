@@ -37,6 +37,26 @@ public class AssetContentTesting {
 						* fRepairMultiplier, DELTA);
 
 	}
+	
+	@Test
+	public void testDamageAssetContent(){
+		assetContent.damageAssetContent(0.4);
+		int newHealth = 60;
+		assertEquals("The health is wrong",
+				 newHealth,assetContent.getHealth()
+						, DELTA);
+		
+
+		assetContent.damageAssetContent(-0.4);
+		assertEquals("The health is wrong",
+				 newHealth,assetContent.getHealth()
+						, DELTA);
+		
+		assetContent.damageAssetContent(6);
+		assertEquals("The health is wrong",
+				 0,assetContent.getHealth()
+						, DELTA);
+	}
 
 	@Test
 	public void testFixAsset() {

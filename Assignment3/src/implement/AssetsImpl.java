@@ -12,7 +12,7 @@ import interfaces.Assets;
 
 public class AssetsImpl implements Assets {
 
-	private List<Asset> fAssets;
+	protected List<Asset> fAssets;
 	private Logger fLogger;
 	private Comparator<Asset> fCompareAsset = new Comparator<Asset>() {
 		@Override

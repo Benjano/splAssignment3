@@ -25,6 +25,8 @@ public interface AssetContent {
 	String getName();
 
 	/**
+	 * Health is a value 0-100;
+	 * 
 	 * @return The health of the AssetContent
 	 */
 	double getHealth();

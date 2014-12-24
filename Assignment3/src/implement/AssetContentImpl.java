@@ -6,7 +6,7 @@ import java.util.logging.Logger;
 import interfaces.AssetContent;
 
 public class AssetContentImpl implements AssetContent {
-	
+
 	private Logger fLogger;
 	private String fName;
 	private AtomicReference<Double> fHealth;
@@ -52,7 +52,15 @@ public class AssetContentImpl implements AssetContent {
 
 	@Override
 	public void damageAssetContent(double damagePrecentage) {
-		fHealth.set(fHealth.get() - fHealth.get() * damagePrecentage);
+		if (damagePrecentage >= 0) {
+			double newHealth = fHealth.get() - fHealth.get() * damagePrecentage;
+			if (newHealth < 0){
+				fHealth.set(0d);
+			}
+			else {
+				fHealth.set(newHealth);
+			}
+		}
 	}
 
 	@Override

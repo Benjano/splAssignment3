@@ -17,14 +17,17 @@ public class RepairToolImpl implements RepairTool {
 		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
 	}
 
+	@Override
 	public String getName() {
 		return fName;
 	}
 
+	@Override
 	public int getQuantity() {
 		return fQuantity.availablePermits();
 	}
 
+	@Override
 	public void Acquire(int quantity) {
 		// if (this.fQuantity >= quantity) {
 		// this.fQuantity = this.fQuantity - quantity;
@@ -37,6 +40,8 @@ public class RepairToolImpl implements RepairTool {
 		}
 	}
 
+
+	@Override
 	public void Release(int quantity) {
 		this.fQuantity.release(quantity);
 	}
