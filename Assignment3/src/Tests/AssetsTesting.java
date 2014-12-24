@@ -50,21 +50,6 @@ public class AssetsTesting {
 	public void tearDown() throws Exception {
 	}
 
-	@Test
-	public void testGetDamagedAssets() {
-
-		assertEquals("Should be no damaged assets", 0, assets
-				.getDamagedAssets().size());
-
-		AssetContent content1 = new AssetContentImpl("Table", 1.5f);
-		AssetContent content2 = new AssetContentImpl("Chairs", 1.5f);
-
-		asset2.addAssetContent(content1);
-		asset2.addAssetContent(content2);
-
-		assertEquals("Should be 1 damaged assets", 1, assets.getDamagedAssets()
-				.size());
-	}
 
 	@Test
 	public void testFindByTypeAndSize() {
@@ -76,4 +61,7 @@ public class AssetsTesting {
 		assertEquals("Should find 2 ", 2,
 				assets.findAssetByTypeAndSize("Loft", 3).size());
 	}
+	
+	
+	
 }

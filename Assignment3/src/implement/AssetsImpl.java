@@ -21,28 +21,14 @@ public class AssetsImpl implements Assets {
 		}
 	};
 
-
 	public AssetsImpl() {
 		this.fAssets = Collections.synchronizedList(new ArrayList<Asset>());
 		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
 	}
 
 	@Override
-	public Vector<Asset> getDamagedAssets() {
-		Vector<Asset> result = new Vector<Asset>();
-
-		for (Asset asset : fAssets) {
-			if (asset.isDamaged()) {
-				result.add(asset);
-			}
-		}
-
-		return result;
-	}
-
-	@Override
-	public Vector<Asset> findAssetByTypeAndSize(String type, int size) {
-		Vector<Asset> result = new Vector<Asset>();
+	public List<Asset> findAssetByTypeAndSize(String type, int size) {
+		List<Asset> result = new Vector<Asset>();
 
 		for (Asset asset : fAssets) {
 			if (asset.getType().equals(type) & asset.getSize() >= size) {
