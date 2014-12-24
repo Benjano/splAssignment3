@@ -1,15 +1,19 @@
 package implement;
 
+import java.util.logging.Logger;
+
 import interfaces.RepairToolInformation;
 
 public class RepairToolInformationImpl implements RepairToolInformation {
 
 	private String fName;
 	private int fQuantity;
+	private Logger fLogger;
 	
 	public RepairToolInformationImpl(String name, int quantity){
 		this.fName = name;
 		this.fQuantity = quantity;
+		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
 	}
 	
 	public String getName() {

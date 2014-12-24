@@ -1,5 +1,7 @@
 package implement;
 
+import java.util.logging.Logger;
+
 import consts.VandalismType;
 import interfaces.Customer;
 
@@ -7,6 +9,7 @@ public class CustomerImpl implements Customer {
 	private String fName;
 	private VandalismType fVandalismType;
 	private double fMinDamage, fMaxDamage;
+	private Logger fLogger;
 
 	public CustomerImpl(String name, VandalismType vandalismType,
 			double minDamage, double maxDamage) {
@@ -14,6 +17,7 @@ public class CustomerImpl implements Customer {
 		this.fVandalismType = vandalismType;
 		this.fMinDamage = minDamage;
 		this.fMaxDamage = maxDamage;
+		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
 	}
 
 	@Override

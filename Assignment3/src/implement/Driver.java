@@ -2,11 +2,10 @@ package implement;
 
 import interfaces.Asset;
 import interfaces.CustomerGroupDetails;
-import interfaces.DamageReport;
 import interfaces.Managment;
-import interfaces.RentalRequest;
 
 import java.io.File;
+import java.util.logging.Logger;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -17,17 +16,17 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import consts.AssetStatus;
-import consts.RequestStatus;
 import consts.VandalismType;
 
 public class Driver {
 
 	private DocumentBuilderFactory builderFactory;
 	private static Managment fManagment;
-
+	private Logger fLogger;
+	
 	public Driver(String initialDataSource, String customersGroupsSource,
 			String assetsSource, String assetContentRepairDetailsSource) {
-
+		fLogger = Logger.getLogger(this.getClass().getSimpleName());
 		fManagment = new ManagmentImpl();
 		builderFactory = DocumentBuilderFactory.newInstance();
 

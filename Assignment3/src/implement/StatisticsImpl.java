@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Vector;
+import java.util.logging.Logger;
 
 import interfaces.RentalRequest;
 import interfaces.RepairMaterial;
@@ -18,6 +18,7 @@ public class StatisticsImpl implements Statistics {
 	private List<RentalRequest> fRentalRequests;
 	private Map<String, Integer> fRepairTools;
 	private Map<String, Integer> fRepairMaterials;
+	private Logger fLogger;
 
 	public StatisticsImpl() {
 		fMoneyGained = 0;
@@ -25,6 +26,7 @@ public class StatisticsImpl implements Statistics {
 				.synchronizedList(new ArrayList<RentalRequest>());
 		fRepairTools = new HashMap<String, Integer>();
 		fRepairMaterials = new HashMap<String, Integer>();
+		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
 	}
 
 	@Override

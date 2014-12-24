@@ -3,6 +3,7 @@ package implement;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.logging.Logger;
 
 import interfaces.Customer;
 import interfaces.CustomerGroupDetails;
@@ -13,6 +14,7 @@ public class CustomerGroupDetailsImpl implements CustomerGroupDetails {
 	private String fGroupManagerName;
 	private List<Customer> fCustomers;
 	private List<RentalRequest> fRentalRequests;
+	private Logger fLogger;
 
 	public CustomerGroupDetailsImpl(String groupManagerName) {
 		this.fGroupManagerName = groupManagerName;
@@ -20,6 +22,7 @@ public class CustomerGroupDetailsImpl implements CustomerGroupDetails {
 				.synchronizedList(new ArrayList<Customer>());
 		this.fRentalRequests = Collections
 				.synchronizedList(new ArrayList<RentalRequest>());
+		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
 	}
 
 	@Override

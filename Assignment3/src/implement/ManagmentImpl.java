@@ -9,8 +9,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.atomic.AtomicInteger;
-
-import javax.swing.plaf.SliderUI;
+import java.util.logging.Logger;
 
 import runnable.CustomerClerkMessenger;
 import runnable.RunnableCustomerGroupManager;
@@ -41,6 +40,7 @@ public class ManagmentImpl implements Managment {
 	private Map<String, List<RepairToolInformation>> fRepairToolInformations;
 	private Map<String, List<RepairMaterialInformation>> fRepairMaterialInformations;
 	private Statistics fStatistics;
+	private Logger fLogger;
 
 	public ManagmentImpl() {
 		this.fClerksDetails = new Vector<ClerkDetails>();
@@ -51,6 +51,7 @@ public class ManagmentImpl implements Managment {
 		this.fRepairToolInformations = new ConcurrentHashMap<String, List<RepairToolInformation>>();
 		this.fRepairMaterialInformations = new ConcurrentHashMap<String, List<RepairMaterialInformation>>();
 		this.fStatistics = new StatisticsImpl();
+		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
 	}
 
 	@Override
