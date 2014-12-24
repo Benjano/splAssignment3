@@ -14,6 +14,8 @@ public class AssetsImpl implements Assets {
 
 	protected List<Asset> fAssets;
 	private Logger fLogger;
+
+	// compare asset by size
 	private Comparator<Asset> fCompareAsset = new Comparator<Asset>() {
 		@Override
 		public int compare(Asset asset1, Asset asset2) {
@@ -29,15 +31,12 @@ public class AssetsImpl implements Assets {
 	@Override
 	public List<Asset> findAssetByTypeAndSize(String type, int size) {
 		List<Asset> result = new Vector<Asset>();
-
 		for (Asset asset : fAssets) {
 			if (asset.getType().equals(type) & asset.getSize() >= size) {
 				result.add(asset);
 			}
 		}
-
 		Collections.sort(result, fCompareAsset);
-
 		return result;
 	}
 

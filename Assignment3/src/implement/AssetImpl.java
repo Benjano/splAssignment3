@@ -18,7 +18,7 @@ public class AssetImpl implements Asset {
 	private Location fLocation;
 	private int fSize;
 	private double fCostPerNight;
-	private List<AssetContent> fAssetContent;
+	protected List<AssetContent> fAssetContent;
 	private AssetStatus fStatus;
 	private Logger fLogger;
 
@@ -89,6 +89,31 @@ public class AssetImpl implements Asset {
 	}
 
 	@Override
+	public void setStatus(AssetStatus status) {
+		fStatus = status;
+	}
+
+	@Override
+	public Vector<AssetContent> getDamagedAssetContent() {
+		Vector<AssetContent> damagedAssetContent = new Vector<AssetContent>();
+		for (AssetContent assetContent : fAssetContent) {
+			if (assetContent.getHealth() < ASSET_DAMAGED_HEALTH) {
+				damagedAssetContent.add(assetContent);
+			}
+		}
+		return damagedAssetContent;
+	}
+
+	@Override
+	public void damageAssetContent(double damagePrecentage) {
+		if (damagePrecentage >= 0) {
+			for (AssetContent assetContent : fAssetContent) {
+				assetContent.damageAssetContent(damagePrecentage);
+			}
+		}
+	}
+
+	@Override
 	public String toString() {
 
 		StringBuilder builder = new StringBuilder();
@@ -104,29 +129,6 @@ public class AssetImpl implements Asset {
 		builder.append(" \nStatus: ").append(fStatus);
 
 		return builder.toString();
-	}
-
-	@Override
-	public void setStatus(AssetStatus status) {
-		fStatus = status;
-	}
-
-	@Override
-	public Vector<AssetContent> getDamagedAssetContent() {
-		Vector<AssetContent> damagedAssetContent = new Vector<AssetContent>();
-		for (AssetContent assetContent : fAssetContent) {
-			if (assetContent.getHealth() < 0.65) {
-				damagedAssetContent.add(assetContent);
-			}
-		}
-		return damagedAssetContent;
-	}
-
-	@Override
-	public void damageAssetContent(double damagePrecentage) {
-		for (AssetContent assetContent : fAssetContent) {
-			assetContent.damageAssetContent(damagePrecentage);
-		}
 	}
 
 }

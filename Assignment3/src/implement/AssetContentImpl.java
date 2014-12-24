@@ -53,11 +53,10 @@ public class AssetContentImpl implements AssetContent {
 	@Override
 	public void damageAssetContent(double damagePrecentage) {
 		if (damagePrecentage >= 0) {
-			double newHealth = fHealth.get() - fHealth.get() * damagePrecentage;
-			if (newHealth < 0){
+			double newHealth = fHealth.get() - fHealth.get() * damagePrecentage/100;
+			if (newHealth < 0) {
 				fHealth.set(0d);
-			}
-			else {
+			} else {
 				fHealth.set(newHealth);
 			}
 		}
