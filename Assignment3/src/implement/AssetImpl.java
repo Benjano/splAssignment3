@@ -31,14 +31,14 @@ public class AssetImpl implements Asset {
 	 * @param fCostPerNight
 	 */
 	public AssetImpl(String name, String type, Location location,
-			AssetStatus status, double costPerNight, int size) {
+			double costPerNight, int size) {
 		super();
 		this.fName = name;
 		this.fType = type;
 		this.fLocation = location;
 		this.fAssetContent = Collections
 				.synchronizedList(new ArrayList<AssetContent>());
-		this.fStatus = status;
+		this.fStatus = AssetStatus.Available;
 		this.fCostPerNight = costPerNight;
 		this.fSize = size;
 		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
@@ -87,8 +87,8 @@ public class AssetImpl implements Asset {
 	public void addAssetContent(String name, double repairCostMultiplier) {
 		fAssetContent.add(new AssetContentImpl(name, repairCostMultiplier));
 		fLogger.log(Level.FINE, new StringBuilder().append("Asset content ")
-				.append(name).append(" is added to Asset ")
-				.append(fName).toString());
+				.append(name).append(" is added to Asset ").append(fName)
+				.toString());
 	}
 
 	@Override

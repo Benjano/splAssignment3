@@ -12,11 +12,10 @@ public class AssetTesting {
 	private AssetTest asset;
 	private final double DELTA = 0.001;
 
-
 	@Before
 	public void setUp() throws Exception {
 		asset = new AssetTest("Aviv House", "appartment", new Location(10, 15),
-				AssetStatus.Available, 100, 2);
+				100, 2);
 
 		asset.addAssetContent("Table", 1.5f);
 		asset.addAssetContent("Chairs", 1.5f);
