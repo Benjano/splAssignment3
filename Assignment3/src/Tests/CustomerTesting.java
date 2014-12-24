@@ -27,41 +27,36 @@ public class CustomerTesting {
 	@After
 	public void tearDown() throws Exception {
 	}
-	
-	
-	
+
 	@Test
 	public void testGetVandalismType() {
-		assertEquals("Customer " + customer1.getVandalismType() ,VandalismType.Arbitrary, customer1.getVandalismType() );
+		assertEquals("Customer " + customer1.getVandalismType(),
+				VandalismType.Arbitrary, customer1.getVandalismType());
 	}
-	
-	
-	
-	
+
 	@Test
 	public void testCalculateDamagePercentage() {
 		double customer1DamagePercentage = customer1
-				.calculateDamagePercentage();
+				.getDamagePercentage();
 		assertTrue("Damage percentage is out of bounds",
 				customer1DamagePercentage >= 0.2);
 		assertTrue("Damage percentage is out of bounds",
 				customer1DamagePercentage <= 0.5);
-<<<<<<< HEAD
+
 		assertEquals("Customer " + customer2.getName()
 				+ " damage percentage is wrong",
-				customer2.calculateDamagePercentage(), (20d + 50d) / 2d / 100d, DELTA);
-		
+				customer2.getDamagePercentage(), (20d + 50d) / 2d / 100d,
+				DELTA);
+
 		assertEquals("Customer " + customer3.getName()
 				+ " damage percentage is wrong",
-				customer3.calculateDamagePercentage(), 0.005, DELTA);
-=======
+				customer3.getDamagePercentage(), 0.005, DELTA);
 
 		assertEquals("Damage percentage is wrong",
-				customer2.calculateDamagePercentage(), (20d + 50d) / 2d / 100d,
+				customer2.getDamagePercentage(), (20d + 50d) / 2d / 100d,
 				DELTA);
 
 		assertEquals("Damage percentage is wrong",
-				customer3.calculateDamagePercentage(), 0.05, DELTA);
->>>>>>> branch 'master' of https://github.com/Benjano/splAssignment3.git
+				customer3.getDamagePercentage(), 0.05, DELTA);
 	}
 }

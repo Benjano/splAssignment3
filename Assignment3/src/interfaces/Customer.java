@@ -12,6 +12,6 @@ public interface Customer {
 	/**
 	 * @return The calculate damage percentage
 	 */
-	double calculateDamagePercentage();
+	double getDamagePercentage();
 
 }

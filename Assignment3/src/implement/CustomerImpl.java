@@ -7,7 +7,7 @@ import interfaces.Customer;
 public class CustomerImpl implements Customer {
 	private String fName;
 	private VandalismType fVandalismType;
-	private double fMinDamage, fMaxDamage;
+	private double fMinDamage, fMaxDamage, fDamagePercentage;
 	private Logger fLogger;
 
 	public CustomerImpl(String name, VandalismType vandalismType,
@@ -16,6 +16,8 @@ public class CustomerImpl implements Customer {
 		this.fVandalismType = vandalismType;
 		this.fMinDamage = minDamage;
 		this.fMaxDamage = maxDamage;
+		this.fDamagePercentage = 0;
+		calculateDamagePercentage();
 		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
 	}
 
@@ -24,24 +26,26 @@ public class CustomerImpl implements Customer {
 		return fVandalismType;
 	}
 
-	@Override
-	public double calculateDamagePercentage() {
-		double percentage = 0;
+	private void calculateDamagePercentage() {
 		switch (fVandalismType) {
 		case Arbitrary:
-			percentage = (Math.random() * (fMaxDamage - fMinDamage) + fMinDamage) / 100;
+			fDamagePercentage = (Math.random() * (fMaxDamage - fMinDamage) + fMinDamage) / 100;
 			break;
 		case Fixed:
-			percentage = (fMaxDamage + fMinDamage) / 2 / 100;
+			fDamagePercentage = (fMaxDamage + fMinDamage) / 2 / 100;
 			break;
 		case None:
-			percentage = 0.005;
+			fDamagePercentage = 0.005;
 			break;
 
 		default:
 			break;
 		}
-		return percentage;
+	}
+
+	@Override
+	public double getDamagePercentage() {
+		return fDamagePercentage;
 	}
 
 	@Override

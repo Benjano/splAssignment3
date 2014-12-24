@@ -34,7 +34,7 @@ public class CallableSimulateStayInAsset implements Callable<Double> {
 			daysLeft--;
 		}
 
-		return fCustomer.calculateDamagePercentage();
+		return fCustomer.getDamagePercentage();
 	}
 
 }
