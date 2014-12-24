@@ -46,15 +46,13 @@ public class CustomerTesting {
 				customer1DamagePercentage >= 0.2);
 		assertTrue("Damage percentage is out of bounds",
 				customer1DamagePercentage <= 0.5);
-<<<<<<< HEAD
-		assertEquals("Customer " + customer2.getName()
-				+ " damage percentage is wrong",
+
+		assertEquals("Customer name: Aviv damage percentage is wrong",
 				customer2.calculateDamagePercentage(), (20d + 50d) / 2d / 100d, DELTA);
 		
-		assertEquals("Customer " + customer3.getName()
-				+ " damage percentage is wrong",
+		assertEquals("Customer name: David damage percentage is wrong",
 				customer3.calculateDamagePercentage(), 0.005, DELTA);
-=======
+
 
 		assertEquals("Damage percentage is wrong",
 				customer2.calculateDamagePercentage(), (20d + 50d) / 2d / 100d,
@@ -62,6 +60,6 @@ public class CustomerTesting {
 
 		assertEquals("Damage percentage is wrong",
 				customer3.calculateDamagePercentage(), 0.05, DELTA);
->>>>>>> branch 'master' of https://github.com/Benjano/splAssignment3.git
+
 	}
 }
