@@ -21,8 +21,11 @@ public class Location {
 	public double calculateDistance(Location other) {
 		double result = Math.sqrt(Math.pow(fX - other.fX, 2)
 				+ Math.pow(fY - other.fY, 2));
-		fLogger.log(Level.FINE, "Calculating the distance between " + this
-				+ " to " + other + " which is " + result);
+		fLogger.log(
+				Level.FINE,
+				new StringBuilder().append("Calculating the distance between ")
+						.append(this).append(" to ").append(other)
+						.append(" which is ").append(result).toString());
 		return result;
 	}
 

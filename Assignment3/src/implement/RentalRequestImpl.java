@@ -113,7 +113,6 @@ public class RentalRequestImpl implements RentalRequest {
 
 	@Override
 	public String getID() {
-		// TODO Auto-generated method stub
 		return fId;
 	}
 

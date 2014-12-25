@@ -29,9 +29,6 @@ public class RepairToolImpl implements RepairTool {
 
 	@Override
 	public void Acquire(int quantity) {
-		// if (this.fQuantity >= quantity) {
-		// this.fQuantity = this.fQuantity - quantity;
-		// }
 		try {
 			fQuantity.acquire(quantity);
 		} catch (InterruptedException e) {
@@ -39,7 +36,6 @@ public class RepairToolImpl implements RepairTool {
 			e.printStackTrace();
 		}
 	}
-
 
 	@Override
 	public void Release(int quantity) {
