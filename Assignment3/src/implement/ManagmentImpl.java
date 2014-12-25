@@ -51,7 +51,7 @@ public class ManagmentImpl implements Managment {
 		this.fRepairToolInformations = new ConcurrentHashMap<String, List<RepairToolInformation>>();
 		this.fRepairMaterialInformations = new ConcurrentHashMap<String, List<RepairMaterialInformation>>();
 		this.fStatistics = new StatisticsImpl();
-		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
+		this.fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
 
 	@Override
@@ -207,8 +207,8 @@ public class ManagmentImpl implements Managment {
 		while (cyclicBarrierShift.getNumberWaiting() < fClerksDetails.size()) {
 			try {
 				// System.out.println(cyclicBarrierShift.getNumberWaiting());
-				System.out.println("Clerks waiting at the end "
-						+ cyclicBarrierShift.getNumberWaiting());
+//				System.out.println("Clerks waiting at the end "
+//						+ cyclicBarrierShift.getNumberWaiting());
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();

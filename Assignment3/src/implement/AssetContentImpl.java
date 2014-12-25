@@ -23,7 +23,7 @@ public class AssetContentImpl implements AssetContent {
 		this.fName = name;
 		this.fHealth = new AtomicReference<Double>(100d);
 		this.fRepairCostMultiplier = repairCostMultiplier;
-		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
+		this.fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
 
 	@Override
@@ -48,9 +48,10 @@ public class AssetContentImpl implements AssetContent {
 				fHealth.set(newHealth);
 			}
 			fLogger.log(Level.FINE,
-					new StringBuilder().append("Damageing the asset from ")
-							.append(oldHealth).append("% to ")
-							.append(newHealth).append("%").toString());
+					new StringBuilder().append("Damageing the asset content ")
+							.append(fName).append(" from ").append(oldHealth)
+							.append("% to ").append(newHealth).append("%")
+							.toString());
 		} else {
 			fLogger.log(
 					Level.WARNING,

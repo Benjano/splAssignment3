@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <REIT>
-	<!-- <REIT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="InitialData.xsd"> -->
+<!--  <REIT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="InitialData.xsd">
+-->
 	<Warehouse>
 		<Tools>
 			<Tool>
@@ -99,22 +101,26 @@
 		<Clerks>
 			<Clerk>
 				<Name>Ken Harush</Name>
-				<Location x="3" y="3" />
+				<Location x="3" y = "3"/>
 			</Clerk>
 			<Clerk>
 				<Name>Paula Bitton</Name>
-				<Location x="3" y="3" />
+				<Location x="3" y = "3"/>
 			</Clerk>
 			<Clerk>
 				<Name>Wolfgang Eisenkott</Name>
-				<Location x="3" y="3" />
+				<Location x="3" y = "3"/>
 			</Clerk>
 			<Clerk>
 				<Name>Paula Die</Name>
-				<Location x="3" y="3" />
+				<Location x="3" y = "3"/>
+			</Clerk>
+			<Clerk>
+				<Name>Leonidas I</Name>
+				<Location x="3" y = "3"/>
 			</Clerk>
 		</Clerks>
 		<NumberOfMaintenancePersons>3</NumberOfMaintenancePersons>
-		<TotalNumberOfRentalRequests>7</TotalNumberOfRentalRequests>
+		<TotalNumberOfRentalRequests>15</TotalNumberOfRentalRequests>
 	</Staff>
 </REIT>

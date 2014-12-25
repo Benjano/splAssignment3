@@ -14,7 +14,7 @@ public class RepairMaterialImpl implements RepairMaterial {
 	public RepairMaterialImpl(String name, int quantity) {
 		this.fName = name;
 		this.fQuantity = new Semaphore(quantity);
-		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
+		this.fLogger =Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
 
 	public String getName() {

@@ -23,7 +23,7 @@ public class CustomerGroupDetailsImpl implements CustomerGroupDetails {
 				.synchronizedList(new ArrayList<Customer>());
 		this.fRentalRequests = Collections
 				.synchronizedList(new ArrayList<RentalRequest>());
-		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
+		this.fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
 
 	@Override

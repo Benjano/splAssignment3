@@ -13,7 +13,7 @@ public class RepairToolInformationImpl implements RepairToolInformation {
 	public RepairToolInformationImpl(String name, int quantity){
 		this.fName = name;
 		this.fQuantity = quantity;
-		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
+		this.fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
 	
 	public String getName() {

@@ -41,7 +41,7 @@ public class AssetImpl implements Asset {
 		this.fStatus = AssetStatus.Available;
 		this.fCostPerNight = costPerNight;
 		this.fSize = size;
-		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
+		this.fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
 
 	@Override

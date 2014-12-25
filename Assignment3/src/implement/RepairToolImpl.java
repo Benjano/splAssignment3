@@ -14,7 +14,7 @@ public class RepairToolImpl implements RepairTool {
 	public RepairToolImpl(String name, int quantity) {
 		this.fName = name;
 		this.fQuantity = new Semaphore(quantity);
-		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
+		this.fLogger =Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
 
 	@Override

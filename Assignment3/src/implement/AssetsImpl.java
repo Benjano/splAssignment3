@@ -26,7 +26,7 @@ public class AssetsImpl implements Assets {
 
 	public AssetsImpl() {
 		this.fAssets = Collections.synchronizedList(new ArrayList<Asset>());
-		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
+		this.fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
 
 	@Override

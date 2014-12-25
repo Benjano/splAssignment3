@@ -14,7 +14,7 @@ public class RepairMaterialInformationImpl implements RepairMaterialInformation 
 	public RepairMaterialInformationImpl(String name, int quantity){
 		this.fName = name;
 		this.fQuantity = quantity;
-		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
+		this.fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
 	
 	

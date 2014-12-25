@@ -34,7 +34,7 @@ public class RentalRequestImpl implements RentalRequest {
 		this.fDurationOfStay = durationOfStay;
 		this.fStatus = RequestStatus.Incomplete;
 		this.fAssetFound = null;
-		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
+		this.fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
 
 	@Override

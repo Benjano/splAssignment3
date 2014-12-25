@@ -15,7 +15,7 @@ public class Location {
 	public Location(double x, double y) {
 		this.fX = x;
 		this.fY = y;
-		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
+		this.fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
 
 	public double calculateDistance(Location other) {

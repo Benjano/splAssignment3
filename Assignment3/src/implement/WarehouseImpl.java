@@ -17,7 +17,7 @@ public class WarehouseImpl implements Warehouse {
 	public WarehouseImpl() {
 		this.fRepairTools = new ConcurrentHashMap<String, RepairTool>();
 		this.fRepairMaterials = new ConcurrentHashMap<String, RepairMaterial>();
-		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
+		this.fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 
 	}
 

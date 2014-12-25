@@ -26,7 +26,7 @@ public class StatisticsImpl implements Statistics {
 				.synchronizedList(new ArrayList<RentalRequest>());
 		fRepairTools = new HashMap<String, Integer>();
 		fRepairMaterials = new HashMap<String, Integer>();
-		this.fLogger = Logger.getLogger(this.getClass().getSimpleName());
+		this.fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
 
 	@Override

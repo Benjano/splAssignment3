@@ -32,27 +32,29 @@ public class Driver {
 
 	public Driver(String initialDataSource, String customersGroupsSource,
 			String assetsSource, String assetContentRepairDetailsSource) {
+		
+//		fLogger = Logger.getLogger(this.getClass().getSimpleName());
 		fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-		fLogger.setLevel(Level.ALL);
-		
-		FileHandler fh;
-
-		try {
-
-			// This block configure the logger with handler and formatter
-			fh = new FileHandler("MyLogFile.txt");
-			fLogger.addHandler(fh);
-			SimpleFormatter formatter = new SimpleFormatter();
-			fh.setFormatter(formatter);
-
-
-		} catch (SecurityException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-
-		
+//		fLogger.setLevel(Level.ALL);
+//		
+//		FileHandler fh;
+//
+//		try {
+//
+//			// This block configure the logger with handler and formatter
+//			fh = new FileHandler("MyLogFile.txt");
+//			fLogger.addHandler(fh);
+//			SimpleFormatter formatter = new SimpleFormatter();
+//			fh.setFormatter(formatter);
+//
+//
+//		} catch (SecurityException e) {
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//
+//		
 		
 		fManagment = new ManagmentImpl();
 		builderFactory = DocumentBuilderFactory.newInstance();
@@ -67,7 +69,11 @@ public class Driver {
 	}
 
 	public static void main(String[] args) {
-
+		try {
+			MyLogger.setup();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 		new Driver("InitialData.xml", "CustomersGroups.xml", "Assets.xml",
 				"AssetContentsRepairDetails.xml");
