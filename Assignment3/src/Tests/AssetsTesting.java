@@ -7,7 +7,6 @@ import interfaces.Asset;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import consts.AssetStatus;
 
 public class AssetsTesting {
 	private AssetsTest assets;

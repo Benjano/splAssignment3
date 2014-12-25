@@ -1,8 +1,6 @@
 package interfaces;
 
 import java.util.List;
-import java.util.Vector;
-
 import implement.Location;
 import consts.AssetStatus;
 

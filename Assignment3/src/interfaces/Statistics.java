@@ -1,6 +1,5 @@
 package interfaces;
 
-import java.util.Vector;
 
 public interface Statistics {
 

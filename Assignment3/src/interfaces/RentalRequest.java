@@ -5,13 +5,6 @@ import consts.RequestStatus;
 public interface RentalRequest {
 
 	/**
-	 * Update the Status of the rental request
-	 * 
-	 * @param status
-	 */
-	public void setRentalRequestStatus(RequestStatus status);
-
-	/**
 	 * @return durationOfStay
 	 */
 	public int getDurationOfStay();
@@ -19,6 +12,25 @@ public interface RentalRequest {
 	public String getAssetType();
 
 	public int getSize();
+	
+	public double getCostPerNight();
+
+	public String getID();
+	
+	/**
+	 * 
+	 * @return the status of the asset
+	 */
+	public RequestStatus getStatus();
+
+	
+	/**
+	 * Update the Status of the rental request
+	 * 
+	 * @param status
+	 */
+	public void setRentalRequestStatus(RequestStatus status);
+
 
 	/**
 	 * Set the asset of the request to the found asset by the clerk. (can happen
@@ -48,13 +60,6 @@ public interface RentalRequest {
 	 */
 	public void assetOcupied();
 
-	/**
-	 * 
-	 * @return the status of the asset
-	 */
-	public RequestStatus getStatus();
 
-	public double getCostPerNight();
 
-	public String getID();
 }

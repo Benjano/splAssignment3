@@ -29,13 +29,9 @@ public class RepairToolImpl implements RepairTool {
 
 	@Override
 	public void Acquire(int quantity) {
-		// if (this.fQuantity >= quantity) {
-		// this.fQuantity = this.fQuantity - quantity;
-		// }
 		try {
 			fQuantity.acquire(quantity);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

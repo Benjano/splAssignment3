@@ -12,7 +12,7 @@ public interface RepairMaterial {
 
 	public int getQuantity();
 
-	public void Aquire(int quantity);
+	public void Acquire(int quantity);
 
 	public void Release(int quantity);
 }

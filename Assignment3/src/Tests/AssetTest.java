@@ -1,6 +1,5 @@
 package Tests;
 
-import consts.AssetStatus;
 import implement.AssetImpl;
 import implement.Location;
 import interfaces.AssetContent;

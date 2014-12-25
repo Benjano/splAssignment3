@@ -17,9 +17,8 @@ public class RentalRequestImpl implements RentalRequest {
 
 	public RentalRequestImpl() {
 		this.fId = null;
-
 	}
-
+	
 	/**
 	 * @param fId
 	 * @param fAssetType
@@ -27,8 +26,7 @@ public class RentalRequestImpl implements RentalRequest {
 	 * @param fDurationOfStay
 	 * @param fStatus
 	 */
-	public RentalRequestImpl(String id, String type, int size,
-			int durationOfStay) {
+	public RentalRequestImpl(String id, String type, int size, int durationOfStay) {
 		this.fId = id;
 		this.fAssetType = type;
 		this.fSize = size;
@@ -39,27 +37,43 @@ public class RentalRequestImpl implements RentalRequest {
 	}
 
 	@Override
-	public void setRentalRequestStatus(RequestStatus status) {
-		fStatus = status;
+	public int getDurationOfStay() {
+		return fDurationOfStay;
 	}
-
+	
+	@Override
 	public String getAssetType() {
 		return fAssetType;
 	}
-
+	
+	@Override
 	public int getSize() {
 		return fSize;
 	}
+	
+	@Override
+	public double getCostPerNight() {
+		if (fAssetFound != null)
+			return fAssetFound.getCostPerNight();
+		else
+			return 0;
+	}
+	
+	@Override
+	public String getID() {
+		return fId;
+	}
 
+	@Override
 	public RequestStatus getStatus() {
 		return fStatus;
 	}
 
 	@Override
-	public int getDurationOfStay() {
-		return fDurationOfStay;
+	public void setRentalRequestStatus(RequestStatus status) {
+		fStatus = status;
 	}
-
+	
 	@Override
 	public synchronized void setFoundAsset(Asset asset) {
 		if (fAssetFound == null) {
@@ -86,14 +100,6 @@ public class RentalRequestImpl implements RentalRequest {
 	}
 
 	@Override
-	public double getCostPerNight() {
-		if (fAssetFound != null)
-			return fAssetFound.getCostPerNight();
-		else
-			return 0;
-	}
-
-	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Rental Request: ");
@@ -109,12 +115,6 @@ public class RentalRequestImpl implements RentalRequest {
 		builder.append(", Status: ");
 		builder.append(fStatus);
 		return builder.toString();
-	}
-
-	@Override
-	public String getID() {
-		// TODO Auto-generated method stub
-		return fId;
 	}
 
 	@Override
