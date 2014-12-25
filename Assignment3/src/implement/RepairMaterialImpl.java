@@ -25,20 +25,15 @@ public class RepairMaterialImpl implements RepairMaterial {
 		return fQuantity.availablePermits();
 	}
 
-	public void Aquire(int quantity) {
-		// if (this.fQuantity >= quantity) {
-		// this.fQuantity = this.fQuantity - quantity;
-		// }
+	public void Acquire(int quantity) { 
 		try {
 			fQuantity.acquire(quantity);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
 	public void Release(int quantity) {
-		// this.fQuantity = this.fQuantity + quantity;
 		fQuantity.release(quantity);
 	}
 

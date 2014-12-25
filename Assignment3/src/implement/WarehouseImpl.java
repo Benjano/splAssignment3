@@ -40,7 +40,7 @@ public class WarehouseImpl implements Warehouse {
 	}
 
 	private void aquireRepairMaterial(String name, int quantity) {
-		fRepairMaterials.get(name).Aquire(quantity);
+		fRepairMaterials.get(name).Acquire(quantity);
 	}
 
 	@Override

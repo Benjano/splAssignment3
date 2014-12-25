@@ -32,7 +32,6 @@ public class RepairToolImpl implements RepairTool {
 		try {
 			fQuantity.acquire(quantity);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

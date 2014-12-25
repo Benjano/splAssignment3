@@ -55,5 +55,14 @@ public class CustomerImpl implements Customer {
 				.append("\nMaxDamage: ").append(fMaxDamage);
 		return builder.toString();
 	}
+	
+	@Override
+	public boolean equals(Object other) {
+		if (other instanceof Customer)
+			return ((CustomerImpl) other).fName.equals(fName) & ((CustomerImpl) other).fVandalismType.equals(fVandalismType) &
+					((CustomerImpl) other).fMinDamage== fMinDamage & ((CustomerImpl) other).fMaxDamage== fMaxDamage;
+		return false;
+	}
+	
 
 }
