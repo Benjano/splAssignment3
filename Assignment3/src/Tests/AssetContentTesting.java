@@ -33,29 +33,24 @@ public class AssetContentTesting {
 		assetContent.damageAssetContent(0.3);
 		int newHealth = 70;
 		assertEquals("The repair time is wrong",
-				assetContent.calculateRepairTime(), (100 - newHealth)
+				assetContent.calculateRepairTime(), ((100d - newHealth)/100d)
 						* fRepairMultiplier, DELTA);
 
 	}
-	
+
 	@Test
-	public void testDamageAssetContent(){
-		assetContent.damageAssetContent(0.4);
+	public void testDamageAssetContent() {
+		assetContent.damageAssetContent(40);
 		int newHealth = 60;
-		assertEquals("The health is wrong",
-				 newHealth,assetContent.getHealth()
-						, DELTA);
-		
+		assertEquals("The health is wrong", newHealth,
+				assetContent.getHealth(), DELTA);
 
 		assetContent.damageAssetContent(-0.4);
-		assertEquals("The health is wrong",
-				 newHealth,assetContent.getHealth()
-						, DELTA);
-		
-		assetContent.damageAssetContent(6);
-		assertEquals("The health is wrong",
-				 0,assetContent.getHealth()
-						, DELTA);
+		assertEquals("The health is wrong", newHealth,
+				assetContent.getHealth(), DELTA);
+
+		assetContent.damageAssetContent(100);
+		assertEquals("The health is wrong", 0, assetContent.getHealth(), DELTA);
 	}
 
 	@Test
@@ -63,10 +58,10 @@ public class AssetContentTesting {
 		assetContent.damageAssetContent(0.3);
 		assetContent.fixAssetContent();
 
-		assertEquals("The assetcontent should be fixed", assetContent.getHealth(), 100,
-				DELTA);
+		assertEquals("The assetcontent should be fixed",
+				assetContent.getHealth(), 100, DELTA);
 	}
-	
+
 	@Test
 	public void testGetName() {
 		assertEquals(assetContent.getName(), "Table");

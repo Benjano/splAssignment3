@@ -5,8 +5,14 @@ import interfaces.CustomerGroupDetails;
 import interfaces.Managment;
 
 import java.io.File;
+import java.io.IOException;
+import java.util.logging.FileHandler;
+import java.util.logging.Handler;
 import java.util.logging.Level;
+import java.util.logging.LogRecord;
 import java.util.logging.Logger;
+import java.util.logging.SimpleFormatter;
+
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -16,7 +22,6 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import consts.AssetStatus;
 import consts.VandalismType;
 
 public class Driver {
@@ -27,7 +32,28 @@ public class Driver {
 
 	public Driver(String initialDataSource, String customersGroupsSource,
 			String assetsSource, String assetContentRepairDetailsSource) {
-		fLogger = Logger.getLogger(this.getClass().getSimpleName());
+		fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+		fLogger.setLevel(Level.ALL);
+		
+		FileHandler fh;
+
+		try {
+
+			// This block configure the logger with handler and formatter
+			fh = new FileHandler("MyLogFile.txt");
+			fLogger.addHandler(fh);
+			SimpleFormatter formatter = new SimpleFormatter();
+			fh.setFormatter(formatter);
+
+
+		} catch (SecurityException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		
+		
 		fManagment = new ManagmentImpl();
 		builderFactory = DocumentBuilderFactory.newInstance();
 
@@ -36,14 +62,20 @@ public class Driver {
 		readXmlCustomerGroup(customersGroupsSource);
 		readXmlInitialData(initialDataSource);
 
+		
+
 	}
 
 	public static void main(String[] args) {
+
+
 		new Driver("InitialData.xml", "CustomersGroups.xml", "Assets.xml",
 				"AssetContentsRepairDetails.xml");
+
 		System.out.println("Driver Working");
 		// System.out.println(fManagment);
-		fManagment.start();
+		 fManagment.start();
+		// System.out.println(Driver.class.getClassLoader().getResource("logging.properties"));
 		System.out.println("Driver Done");
 
 	}

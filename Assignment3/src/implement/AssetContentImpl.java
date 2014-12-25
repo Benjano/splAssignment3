@@ -51,12 +51,13 @@ public class AssetContentImpl implements AssetContent {
 					new StringBuilder().append("Damageing the asset from ")
 							.append(oldHealth).append("% to ")
 							.append(newHealth).append("%").toString());
+		} else {
+			fLogger.log(
+					Level.WARNING,
+					new StringBuilder().append(
+							"Cannot damage the asset by nagative number")
+							.toString());
 		}
-		fLogger.log(
-				Level.WARNING,
-				new StringBuilder().append(
-						"Cannot damage the asset by nagative number")
-						.toString());
 	}
 
 	@Override

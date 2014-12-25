@@ -28,12 +28,8 @@ public class RepairToolImpl implements RepairTool {
 	}
 
 	@Override
-	public void Acquire(int quantity) {
-		try {
-			fQuantity.acquire(quantity);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+	public boolean Acquire(int quantity) {
+		return fQuantity.tryAcquire(quantity);
 	}
 
 	@Override

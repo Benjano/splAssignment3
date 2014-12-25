@@ -45,13 +45,13 @@ public class WarehouseImpl implements Warehouse {
 
 	@Override
 	public RepairTool takeRepairTool(String name, int quantity) {
-		if (isRepairToolEnough(name, quantity)) {
-			removeRepairTool(name, quantity);
+		if (fRepairTools.get(name).Acquire(quantity)) {
 			return new RepairToolImpl(name, quantity);
 		} else {
 			return null;
 		}
 	}
+
 
 	@Override
 	public boolean isRepairToolEnough(String name, int quantity) {
@@ -59,10 +59,6 @@ public class WarehouseImpl implements Warehouse {
 		if (repairTool == null)
 			return false;
 		return repairTool.getQuantity() >= quantity;
-	}
-
-	private void removeRepairTool(String name, int quantity) {
-		fRepairTools.get(name).Acquire(quantity);
 	}
 
 	@Override

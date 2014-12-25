@@ -11,7 +11,7 @@ public interface RepairTool {
 	
 	public int getQuantity();
 	
-	public void Acquire(int quantity);
+	public boolean Acquire(int quantity);
 	
 	public void Release(int quantity);
 	

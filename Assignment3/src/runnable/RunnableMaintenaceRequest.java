@@ -61,15 +61,24 @@ public class RunnableMaintenaceRequest implements Runnable {
 			}
 		}
 
-		// return the tools to the warehouse
+		returnTools(repairTools);
+
+		notifyAllMaintenance();
+
+		fAsset.setStatus(AssetStatus.Available);
+	}
+
+	// return the tools to the warehouse
+	private void returnTools(Vector<RepairTool> repairTools) {
 		for (RepairTool repairTool : repairTools) {
 			fWarehouse.addTool(repairTool);
 			fStatistics.releaseTool(repairTool);
-			notifyAll();
 		}
+	}
+	
+	private synchronized void notifyAllMaintenance(){
 
-		fAsset.setStatus(AssetStatus.Available);
-
+		notifyAll();
 	}
 
 	private Vector<RepairTool> takeToolsFromWarehouse(
@@ -78,11 +87,11 @@ public class RunnableMaintenaceRequest implements Runnable {
 		for (Map.Entry<String, Integer> neededTool : neededTools.entrySet()) {
 			RepairTool repairTool = fWarehouse.takeRepairTool(
 					neededTool.getKey(), neededTool.getValue());
-			while (repairTool == null) {
+			if (repairTool == null) {
 				try {
+					returnTools(repairTools);
 					wait();
-					repairTool = fWarehouse.takeRepairTool(neededTool.getKey(),
-							neededTool.getValue());
+					return takeToolsFromWarehouse(neededTools);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}

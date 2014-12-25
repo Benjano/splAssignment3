@@ -52,7 +52,7 @@ public class CustomerTesting {
 				customer2.getDamagePercentage(), (20d + 50d) / 2d / 100d, DELTA);
 
 		assertEquals("Damage percentage is wrong",
-				customer3.getDamagePercentage(), 0.05, DELTA);
+				customer3.getDamagePercentage(), 0.005, DELTA);
 
 	}
 }
