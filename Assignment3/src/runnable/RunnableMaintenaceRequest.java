@@ -13,6 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Vector;
+import java.util.logging.Logger;
 
 import consts.AssetStatus;
 
@@ -23,6 +24,7 @@ public class RunnableMaintenaceRequest implements Runnable {
 	private Asset fAsset;
 	private Warehouse fWarehouse;
 	private Statistics fStatistics;
+	private Logger fLogger;
 
 	/**
 	 * @param fRepairToolsInformation
@@ -39,6 +41,7 @@ public class RunnableMaintenaceRequest implements Runnable {
 		this.fAsset = asset;
 		this.fWarehouse = warehouse;
 		this.fStatistics = statistics;
+		this.fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
 
 	@Override

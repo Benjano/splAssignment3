@@ -7,9 +7,12 @@ import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import consts.AssetStatus;
 import consts.RequestStatus;
+import consts.Timing;
 import implement.RentalRequestImpl;
 import interfaces.Asset;
 import interfaces.Assets;
@@ -24,6 +27,7 @@ public class RunnebleClerk implements Runnable {
 	private int fWorkedTime;
 	private CyclicBarrier fCyclicBarrier, fCyclicBarrierShift;
 	private CustomerClerkMessenger fCustomerClerkMessenger;
+	private Logger fLogger;
 
 	/**
 	 * @param clerkDetails
@@ -43,13 +47,19 @@ public class RunnebleClerk implements Runnable {
 		this.fCyclicBarrier = cyclicBarrier;
 		this.fCyclicBarrierShift = cyclicBarrierShift;
 		this.fCustomerClerkMessenger = customerClerkMessenger;
-		fWorkedTime = 0;
+		this.fWorkedTime = 0;
+		this.fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
 
 	@Override
 	public void run() {
-		System.out.println(fClerkDetails.getName() + " Started working");
 		try {
+			fLogger.log(
+					Level.FINE,
+					new StringBuilder().append("Clerk ")
+							.append(fClerkDetails.getName())
+							.append(" is waiting for other clerks to start")
+							.toString());
 			fCyclicBarrier.await();
 		} catch (InterruptedException | BrokenBarrierException e1) {
 			e1.printStackTrace();
@@ -58,28 +68,61 @@ public class RunnebleClerk implements Runnable {
 		while (fWorkedTime < 8 & fNumberOfRentalRequests.get() > 0) {
 			RentalRequest rentalRequest = null;
 			try {
-				System.out.println(fClerkDetails.getName() +" is waiting for request");
+				fLogger.log(
+						Level.FINE,
+						new StringBuilder()
+								.append("Clerk ")
+								.append(fClerkDetails.getName())
+								.append(" is trying to take a new rental request from queue")
+								.toString());
 				rentalRequest = fRentalRequest.take();
-				System.out.println(fClerkDetails.getName() +" done waiting for request");
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			if (rentalRequest != null && rentalRequest.getID() !=null) {
+			if (rentalRequest != null && rentalRequest.getID() != null) {
+				fLogger.log(
+						Level.FINE,
+						new StringBuilder().append("Clerk ")
+								.append(fClerkDetails.getName())
+								.append(" took rental request id: ")
+								.append(rentalRequest.getID()).toString());
+
 				Asset matchingAsset = findMatchingAsset(rentalRequest);
-				fWorkedTime += matchingAsset.getLocation().calculateDistance(
-						fClerkDetails.getLocation()) * 2;
+				fLogger.log(
+						Level.FINE,
+						new StringBuilder().append("Clerk ")
+								.append(fClerkDetails.getName())
+								.append(" took found matching asset: ")
+								.append(matchingAsset.getName()).toString());
+
+				int distanceInSeconds = (int) (matchingAsset.getLocation()
+						.calculateDistance(fClerkDetails.getLocation()) * 2);
+				fWorkedTime += distanceInSeconds;
+				fLogger.log(
+						Level.FINE,
+						new StringBuilder().append("Clerk ")
+								.append(fClerkDetails.getName())
+								.append(" is going to sleep for ")
+								.append(distanceInSeconds).append(" seconds")
+								.toString());
 				try {
-					Thread.sleep((long) (fWorkedTime * 1000));
+					Thread.sleep((long) (distanceInSeconds * Timing.SECOND));
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
+
+				fLogger.log(
+						Level.FINE,
+						new StringBuilder().append("Clerk ")
+								.append(fClerkDetails.getName())
+								.append(" woke up from sleeping ").toString());
+
 				rentalRequest.setFoundAsset(matchingAsset);
 				rentalRequest.setRentalRequestStatus(RequestStatus.Fulfilled);
 				notifyCustomerGroup();
 			}
 			System.out.println(fNumberOfRentalRequests.get());
-//			notifyNow();
-			if (fNumberOfRentalRequests.get() ==0) {
+			if (fNumberOfRentalRequests.get() == 0) {
 				try {
 					synchronized (fRentalRequest) {
 						fRentalRequest.put(new RentalRequestImpl());
@@ -96,6 +139,12 @@ public class RunnebleClerk implements Runnable {
 
 	private synchronized void waitForNextShift() {
 		try {
+			fLogger.log(
+					Level.FINE,
+					new StringBuilder().append("Clerk ")
+							.append(fClerkDetails.getName())
+							.append(" finished his shift").toString());
+			notifyAll();
 			fCyclicBarrierShift.await();
 		} catch (InterruptedException | BrokenBarrierException e) {
 		}
@@ -116,6 +165,8 @@ public class RunnebleClerk implements Runnable {
 						+ " is waiting for asset to be available");
 				System.out.println(rentalRequest);
 				waitNow();
+				searchResualt = fAssets.findAssetByTypeAndSize(
+						rentalRequest.getAssetType(), rentalRequest.getSize());
 			}
 		}
 		return matchingAsset;

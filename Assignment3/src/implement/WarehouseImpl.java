@@ -6,6 +6,7 @@ import interfaces.Warehouse;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class WarehouseImpl implements Warehouse {
@@ -48,10 +49,15 @@ public class WarehouseImpl implements Warehouse {
 		if (fRepairTools.get(name).Acquire(quantity)) {
 			return new RepairToolImpl(name, quantity);
 		} else {
+			fLogger.log(
+					Level.WARNING,
+					new StringBuilder().append("Could not take tool ")
+							.append(name).append(" quantity: ")
+							.append(quantity).append(" from warehouse")
+							.toString());
 			return null;
 		}
 	}
-
 
 	@Override
 	public boolean isRepairToolEnough(String name, int quantity) {
@@ -86,7 +92,6 @@ public class WarehouseImpl implements Warehouse {
 
 	@Override
 	public int countRepairToolInWarehouse(String name) {
-
 		if (fRepairTools.containsKey(name)) {
 			return (fRepairTools.get(name)).getQuantity();
 		} else {

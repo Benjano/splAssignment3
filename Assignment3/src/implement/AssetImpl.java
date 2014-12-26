@@ -94,6 +94,11 @@ public class AssetImpl implements Asset {
 	@Override
 	public void setStatus(AssetStatus status) {
 		fStatus = status;
+		fLogger.log(
+				Level.FINE,
+				new StringBuilder().append("Asset ").append(fName)
+						.append(" status changed to ").append(status)
+						.toString());
 	}
 
 	@Override

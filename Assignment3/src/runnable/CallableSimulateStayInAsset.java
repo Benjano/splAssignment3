@@ -4,6 +4,7 @@ import interfaces.Customer;
 import interfaces.Statistics;
 
 import java.util.concurrent.Callable;
+import java.util.logging.Logger;
 
 public class CallableSimulateStayInAsset implements Callable<Double> {
 
@@ -11,7 +12,8 @@ public class CallableSimulateStayInAsset implements Callable<Double> {
 	private int fDaysInAsset;
 	private double fCostPerNight;
 	private Statistics fStatistics;
-
+	private Logger fLogger;
+	
 	/**
 	 * @param fAsset
 	 * @param fCustomer
@@ -23,6 +25,7 @@ public class CallableSimulateStayInAsset implements Callable<Double> {
 		this.fDaysInAsset = daysInAsset;
 		this.fCostPerNight = costPerNight;
 		this.fStatistics = statistics;
+		this.fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
 
 	@Override

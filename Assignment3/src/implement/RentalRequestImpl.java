@@ -1,5 +1,6 @@
 package implement;
 
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import interfaces.Asset;
@@ -63,6 +64,18 @@ public class RentalRequestImpl implements RentalRequest {
 	public synchronized void setFoundAsset(Asset asset) {
 		if (fAssetFound == null) {
 			this.fAssetFound = asset;
+			fLogger.log(
+					Level.FINE,
+					new StringBuilder()
+							.append("Asset set to rental request id:")
+							.append(fId).append(" Asset name: ")
+							.append(asset.getName()).toString());
+		} else {
+			fLogger.log(
+					Level.WARNING,
+					new StringBuilder()
+							.append("Asset is already set to rental request id: ")
+							.append(fId).toString());
 		}
 	}
 
@@ -71,12 +84,22 @@ public class RentalRequestImpl implements RentalRequest {
 		if (fStatus == RequestStatus.InProgress) {
 			this.fAssetFound.damageAssetContent(damagePercentage);
 			fStatus = RequestStatus.Complete;
+			fLogger.log(Level.FINE,
+					new StringBuilder().append("Rental request id:")
+							.append(fId).append(" is now Complete ").toString());
 			if (fAssetFound.isDamaged()) {
 				fAssetFound.setStatus(AssetStatus.Unavailable);
 			} else
 				fAssetFound.setStatus(AssetStatus.Available);
+
+			return new DamageReportImpl(fAssetFound, damagePercentage);
 		}
-		return new DamageReportImpl(fAssetFound, damagePercentage);
+		fLogger.log(
+				Level.WARNING,
+				new StringBuilder()
+						.append("Cannot release asset from rental id: ")
+						.append(fId).toString());
+		return null;
 	}
 
 	@Override

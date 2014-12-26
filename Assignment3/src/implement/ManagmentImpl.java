@@ -9,6 +9,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import runnable.CustomerClerkMessenger;
@@ -122,11 +123,19 @@ public class ManagmentImpl implements Managment {
 	@Override
 	public void start() {
 
+		fLogger.log(Level.FINE, "Simulation Started");
+
 		fRentalRequests = new ArrayBlockingQueue<RentalRequest>(
 				fCustomerGroupDetails.size());
+
+		fLogger.log(Level.FINE,
+				new StringBuilder().append("Rental requests queue size is : ")
+						.append(fCustomerGroupDetails.size()).toString());
+
 		CustomerClerkMessenger messenger = new CustomerClerkMessenger();
 
 		AtomicInteger numberOfRentalRequests = countTotalRentalRequests();
+
 		CyclicBarrier cyclicBarrierShift = new CyclicBarrier(
 				fClerksDetails.size() + 1);
 
@@ -135,22 +144,22 @@ public class ManagmentImpl implements Managment {
 		ArrayList<Thread> clerks = createRunnableClerks(numberOfRentalRequests,
 				cyclicBarrierShift, messenger);
 
-//		new Thread(new Runnable() {
-//
-//			@Override
-//			public void run() {
-//				while (true) {
-//					try {
-//						Thread.sleep(1000);
-//					} catch (InterruptedException e) {
-//						// TODO Auto-generated catch block
-//						e.printStackTrace();
-//					}
-//					System.out.println("********"
-//							+ numberOfRentalRequests.get());
-//				}
-//			}
-//		}).start();
+		// new Thread(new Runnable() {
+		//
+		// @Override
+		// public void run() {
+		// while (true) {
+		// try {
+		// Thread.sleep(1000);
+		// } catch (InterruptedException e) {
+		// // TODO Auto-generated catch block
+		// e.printStackTrace();
+		// }
+		// System.out.println("********"
+		// + numberOfRentalRequests.get());
+		// }
+		// }
+		// }).start();
 
 		while (numberOfRentalRequests.get() > 0) {
 			waitForClerksToFinishShift(cyclicBarrierShift);
@@ -159,7 +168,7 @@ public class ManagmentImpl implements Managment {
 			cyclicBarrierShift.reset();
 		}
 
-		System.out.println("DONE");
+		fLogger.log(Level.FINE, "Simulation Ended");
 
 	}
 
@@ -197,9 +206,9 @@ public class ManagmentImpl implements Managment {
 		CyclicBarrier cyclicBarrierCustomerGroup = new CyclicBarrier(
 				fCustomerGroupDetails.size());
 		for (CustomerGroupDetails customerGroupDetails : fCustomerGroupDetails) {
-			 new Thread(new RunnableCustomerGroupManager(
-					customerGroupDetails, this, fStatistics,
-					cyclicBarrierCustomerGroup, messenger)).start();
+			new Thread(new RunnableCustomerGroupManager(customerGroupDetails,
+					this, fStatistics, cyclicBarrierCustomerGroup, messenger))
+					.start();
 		}
 	}
 
@@ -207,8 +216,8 @@ public class ManagmentImpl implements Managment {
 		while (cyclicBarrierShift.getNumberWaiting() < fClerksDetails.size()) {
 			try {
 				// System.out.println(cyclicBarrierShift.getNumberWaiting());
-//				System.out.println("Clerks waiting at the end "
-//						+ cyclicBarrierShift.getNumberWaiting());
+				// System.out.println("Clerks waiting at the end "
+				// + cyclicBarrierShift.getNumberWaiting());
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
@@ -239,6 +248,12 @@ public class ManagmentImpl implements Managment {
 			numberOfRentalRequests.addAndGet(customerGroupDetails
 					.getNumberOfRentalRequests());
 		}
+
+		fLogger.log(
+				Level.FINE,
+				new StringBuilder().append("Total rental requests : ")
+						.append(numberOfRentalRequests.get()).toString());
+
 		return numberOfRentalRequests;
 	}
 

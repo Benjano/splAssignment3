@@ -16,6 +16,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.logging.Logger;
 
 import consts.RequestStatus;
 
@@ -26,6 +27,7 @@ public class RunnableCustomerGroupManager implements Runnable {
 	private Statistics fStatistics;
 	private CyclicBarrier fCyclicBarrier;
 	private CustomerClerkMessenger fCustomerClerkMessenger;
+	private Logger fLogger;
 
 	public RunnableCustomerGroupManager() {
 	}
@@ -39,6 +41,7 @@ public class RunnableCustomerGroupManager implements Runnable {
 		this.fStatistics = statistics;
 		this.fCyclicBarrier = cyclicBarrier;
 		this.fCustomerClerkMessenger = customerClerkMessenger;
+		this.fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
 
 	@Override

@@ -9,12 +9,10 @@ public class RepairMaterialInformationImpl implements RepairMaterialInformation 
 	
 	private String fName;
 	private int fQuantity;
-	private Logger fLogger;
 	
 	public RepairMaterialInformationImpl(String name, int quantity){
 		this.fName = name;
 		this.fQuantity = quantity;
-		this.fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
 	
 	

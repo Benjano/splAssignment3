@@ -1,5 +1,6 @@
 package implement;
 
+import java.awt.print.Book;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -8,6 +9,7 @@ import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import consts.AssetStatus;
 import interfaces.Asset;
 import interfaces.Assets;
 
@@ -33,7 +35,8 @@ public class AssetsImpl implements Assets {
 	public List<Asset> findAssetByTypeAndSize(String type, int size) {
 		List<Asset> result = new Vector<Asset>();
 		for (Asset asset : fAssets) {
-			if (asset.getType().equals(type) & asset.getSize() >= size) {
+			if (asset.getType().equals(type) & asset.getSize() >= size
+					& asset.getStatus() != AssetStatus.Booked) {
 				result.add(asset);
 			}
 		}
@@ -41,7 +44,7 @@ public class AssetsImpl implements Assets {
 		fLogger.log(Level.FINE,
 				new StringBuilder().append("For search: type = ").append(type)
 						.append(" size >= ").append(size).append(" found ")
-						.append(result.size()).append(" matching assets")
+						.append(result.size()).append(" matching assets ")
 						.toString());
 		return result;
 	}
