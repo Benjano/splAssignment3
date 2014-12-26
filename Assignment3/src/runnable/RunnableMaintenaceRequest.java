@@ -84,8 +84,8 @@ public class RunnableMaintenaceRequest implements Runnable {
 		fLogger.log(
 				Level.FINE,
 				new StringBuilder().append("Maintenance for asset ")
-						.append(fAsset.getName()).append(" returning tools")
-						.toString());
+						.append(fAsset.getName())
+						.append(" is done and returning tools").toString());
 
 		synchronized (this) {
 			notifyAll();

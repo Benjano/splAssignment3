@@ -200,6 +200,11 @@ public class ManagmentImpl implements Managment {
 		AtomicInteger workingMaintenance = new AtomicInteger(
 				fNumberOfMaintenancePersons);
 		while (damageReport != null) {
+			
+			if (damageReport.getAsset().getName().equals("Asset 4")) {
+				int a = 0;
+				int b = a;
+			}
 			if (damageReport.getAsset().isDamaged()) {
 				new Thread(new RunnableMaintenaceRequest(
 						fRepairToolInformations, fRepairMaterialInformations,

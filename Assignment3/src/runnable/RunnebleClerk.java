@@ -26,7 +26,7 @@ public class RunnebleClerk implements Runnable {
 	private int fWorkedTime;
 	private CountDownLatch fCountDownLatch;
 	private CyclicBarrier fCyclicBarrierShift;
-	private Messenger fClerkMentenanceMessenger;
+	private Messenger fClerkMentenanceMessenger, fCustomerClerkMessenger;
 	private Logger fLogger;
 
 	/**
@@ -120,7 +120,11 @@ public class RunnebleClerk implements Runnable {
 
 				rentalRequest.setFoundAsset(matchingAsset);
 				rentalRequest.setRentalRequestStatus(RequestStatus.Fulfilled);
-				notifyCustomerGroup();
+
+				synchronized (rentalRequest) {
+					rentalRequest.notifyAll();
+				}
+
 			}
 			if (fNumberOfRentalRequests.get() == 0) {
 				try {
@@ -185,9 +189,9 @@ public class RunnebleClerk implements Runnable {
 				// e.printStackTrace();
 				// }
 				// }
-				synchronized (this) {
+				synchronized (fCustomerClerkMessenger) {
 					try {
-						wait();
+						fCustomerClerkMessenger.wait();
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
@@ -197,12 +201,6 @@ public class RunnebleClerk implements Runnable {
 			}
 		}
 		return matchingAsset;
-	}
-
-	private void notifyCustomerGroup() {
-		synchronized (fCustomerClerkMessenger) {
-			fCustomerClerkMessenger.notify();
-		}
 	}
 
 	private Asset checkAsset(Asset asset) {

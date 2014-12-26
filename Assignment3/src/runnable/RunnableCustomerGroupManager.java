@@ -27,8 +27,8 @@ public class RunnableCustomerGroupManager implements Runnable {
 	private Managment fManagment;
 	private Statistics fStatistics;
 	private CyclicBarrier fCyclicBarrier;
-	private Messenger fCustomerClerkMessenger;
 	private Logger fLogger;
+	private Messenger fCustomerClerkMessenger;
 
 	public RunnableCustomerGroupManager() {
 	}
@@ -68,9 +68,9 @@ public class RunnableCustomerGroupManager implements Runnable {
 								.append(" is waiting for request to be filled")
 								.toString());
 
-				synchronized (fCustomerClerkMessenger) {
+				synchronized (rentalRequest) {
 					try {
-						fCustomerClerkMessenger.wait();
+						rentalRequest.wait();
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}
@@ -104,6 +104,7 @@ public class RunnableCustomerGroupManager implements Runnable {
 			synchronized (fCustomerClerkMessenger) {
 				fCustomerClerkMessenger.notifyAll();
 			}
+
 			i++;
 			rentalRequest = fCustomerGroupDetails.getRentalRequest(i);
 		}

@@ -84,13 +84,15 @@ public class RentalRequestImpl implements RentalRequest {
 		if (fStatus == RequestStatus.InProgress) {
 			this.fAssetFound.damageAssetContent(damagePercentage);
 			fStatus = RequestStatus.Complete;
-			fLogger.log(Level.FINE,
-					new StringBuilder().append("Rental request id:")
-							.append(fId).append(" is now Complete ").toString());
+
 			if (fAssetFound.isDamaged()) {
 				fAssetFound.setStatus(AssetStatus.Unavailable);
 			} else
 				fAssetFound.setStatus(AssetStatus.Available);
+
+			fLogger.log(Level.FINE,
+					new StringBuilder().append("Rental request id:")
+							.append(fId).append(" is now Complete ").toString());
 
 			return new DamageReportImpl(fAssetFound, damagePercentage);
 		}
