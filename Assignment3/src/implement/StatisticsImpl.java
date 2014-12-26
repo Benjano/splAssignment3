@@ -45,7 +45,7 @@ public class StatisticsImpl implements Statistics {
 		if (fRepairTools.containsKey(repairTool.getName())) {
 			fRepairTools.put(
 					repairTool.getName(),
-					fRepairTools.get(repairTool.getQuantity())
+					fRepairTools.get(repairTool.getName())
 							+ repairTool.getQuantity());
 		} else {
 			fRepairTools.put(repairTool.getName(), repairTool.getQuantity());
@@ -55,20 +55,22 @@ public class StatisticsImpl implements Statistics {
 	@Override
 	public void releaseTool(RepairTool repairTool) {
 		if (fRepairTools.containsKey(repairTool.getName())) {
-			fRepairTools.put(repairTool.getName(), fRepairTools.get(repairTool.getQuantity())
-				- repairTool.getQuantity());
+			fRepairTools.put(
+					repairTool.getName(),
+					fRepairTools.get(repairTool.getName())
+							- repairTool.getQuantity());
 		}
 	}
 
 	@Override
 	public void consumeMaterial(RepairMaterial repairMaterial) {
 		if (fRepairMaterials.containsKey(repairMaterial.getName())) {
-			fRepairMaterials.put(
-					repairMaterial.getName(),
-					fRepairMaterials.get(repairMaterial.getQuantity())
+			fRepairMaterials.put(repairMaterial.getName(),
+					fRepairMaterials.get(repairMaterial.getName())
 							+ repairMaterial.getQuantity());
 		} else {
-			fRepairMaterials.put(repairMaterial.getName(), repairMaterial.getQuantity());
+			fRepairMaterials.put(repairMaterial.getName(),
+					repairMaterial.getQuantity());
 		}
 
 	}

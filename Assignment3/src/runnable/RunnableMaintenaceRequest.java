@@ -13,9 +13,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Vector;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import consts.AssetStatus;
+import consts.Timing;
 
 public class RunnableMaintenaceRequest implements Runnable {
 
@@ -25,6 +27,7 @@ public class RunnableMaintenaceRequest implements Runnable {
 	private Warehouse fWarehouse;
 	private Statistics fStatistics;
 	private Logger fLogger;
+	private Messenger fMessengerMentenance;
 
 	/**
 	 * @param fRepairToolsInformation
@@ -35,17 +38,24 @@ public class RunnableMaintenaceRequest implements Runnable {
 	public RunnableMaintenaceRequest(
 			Map<String, List<RepairToolInformation>> repairToolsInformation,
 			Map<String, List<RepairMaterialInformation>> repairMaterialsInformation,
-			Asset asset, Warehouse warehouse, Statistics statistics) {
+			Asset asset, Warehouse warehouse, Statistics statistics,
+			Messenger messengerMentenance) {
 		this.fRepairToolsInformation = repairToolsInformation;
 		this.fRepairMaterialsInformation = repairMaterialsInformation;
 		this.fAsset = asset;
 		this.fWarehouse = warehouse;
 		this.fStatistics = statistics;
+		this.fMessengerMentenance = messengerMentenance;
 		this.fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
 
 	@Override
 	public void run() {
+		fLogger.log(
+				Level.FINE,
+				new StringBuilder()
+						.append("New maintenance insinuate for asset ")
+						.append(fAsset.getName()).toString());
 		fAsset.setStatus(AssetStatus.Unavailable);
 		List<AssetContent> damagedContent = fAsset.getDamagedAssetContent();
 
@@ -55,9 +65,15 @@ public class RunnableMaintenaceRequest implements Runnable {
 		Map<String, Integer> neededMaterials = getNeededMaterialsInformation(damagedContent);
 		takeMaterialsFromWarehouse(neededMaterials);
 
+		fLogger.log(
+				Level.FINE,
+				new StringBuilder().append("Maintenance for asset ")
+						.append(fAsset.getName()).append(" started").toString());
+
 		for (AssetContent assetContent : damagedContent) {
 			try {
-				Thread.sleep((long) assetContent.calculateRepairTime() * 1);
+				Thread.sleep((long) assetContent.calculateRepairTime()
+						* Timing.SECOND);
 				assetContent.fixAssetContent();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
@@ -65,12 +81,21 @@ public class RunnableMaintenaceRequest implements Runnable {
 		}
 
 		returnTools(repairTools);
+		fLogger.log(
+				Level.FINE,
+				new StringBuilder().append("Maintenance for asset ")
+						.append(fAsset.getName()).append(" returning tools")
+						.toString());
 
 		synchronized (this) {
 			notifyAll();
 		}
 
 		fAsset.setStatus(AssetStatus.Available);
+
+		synchronized (fMessengerMentenance) {
+			fMessengerMentenance.notifyAll();
+		}
 	}
 
 	// return the tools to the warehouse
@@ -90,14 +115,24 @@ public class RunnableMaintenaceRequest implements Runnable {
 			if (repairTool == null) {
 				try {
 					returnTools(repairTools);
-					wait();
+					synchronized (this) {
+						fLogger.log(
+								Level.FINE,
+								new StringBuilder()
+										.append("Maintenance for asset ")
+										.append(fAsset.getName())
+										.append(" is waiting for tools")
+										.toString());
+						wait();
+					}
 					return takeToolsFromWarehouse(neededTools);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
+			} else {
+				repairTools.add(repairTool);
+				fStatistics.addToolInProcess(repairTool);
 			}
-			repairTools.add(repairTool);
-			fStatistics.addToolInProcess(repairTool);
 		}
 		return repairTools;
 	}
@@ -109,13 +144,8 @@ public class RunnableMaintenaceRequest implements Runnable {
 			RepairMaterial repairMaterial = fWarehouse.takeRepairMaterial(
 					neededTool.getKey(), neededTool.getValue());
 			while (repairMaterial == null) {
-				try {
-					wait();
-					repairMaterial = fWarehouse.takeRepairMaterial(
-							neededTool.getKey(), neededTool.getValue());
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
+				repairMaterial = fWarehouse.takeRepairMaterial(
+						neededTool.getKey(), neededTool.getValue());
 			}
 			repairMaterials.add(repairMaterial);
 			fStatistics.consumeMaterial(repairMaterial);

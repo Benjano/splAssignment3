@@ -6,13 +6,15 @@ import java.util.Map;
 import java.util.Vector;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import runnable.CustomerClerkMessenger;
+import runnable.Messenger;
 import runnable.RunnableCustomerGroupManager;
 import runnable.RunnableMaintenaceRequest;
 import runnable.RunnebleClerk;
@@ -42,8 +44,10 @@ public class ManagmentImpl implements Managment {
 	private Map<String, List<RepairMaterialInformation>> fRepairMaterialInformations;
 	private Statistics fStatistics;
 	private Logger fLogger;
+	private AtomicInteger fNumberOfRentalRequests;
+	private int fNumberOfMaintenancePersons;
 
-	public ManagmentImpl() {
+	public ManagmentImpl(int numberOfRentalRequests, int numberOfMententance) {
 		this.fClerksDetails = new Vector<ClerkDetails>();
 		this.fCustomerGroupDetails = new Vector<CustomerGroupDetails>();
 		this.fDamageReports = new Vector<DamageReport>();
@@ -52,6 +56,8 @@ public class ManagmentImpl implements Managment {
 		this.fRepairToolInformations = new ConcurrentHashMap<String, List<RepairToolInformation>>();
 		this.fRepairMaterialInformations = new ConcurrentHashMap<String, List<RepairMaterialInformation>>();
 		this.fStatistics = new StatisticsImpl();
+		this.fNumberOfRentalRequests = new AtomicInteger(numberOfRentalRequests);
+		this.fNumberOfMaintenancePersons = numberOfMententance;
 		this.fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
 
@@ -115,6 +121,15 @@ public class ManagmentImpl implements Managment {
 		this.fDamageReports.add(damageReport);
 	}
 
+	private DamageReport takeDamageReport() {
+		if (fDamageReports.size() != 0) {
+			DamageReport result = fDamageReports.get(0);
+			fDamageReports.remove(0);
+			return result;
+		}
+		return null;
+	}
+
 	@Override
 	public synchronized void submitRentalRequest(RentalRequest rentalRequest) {
 		this.fRentalRequests.add(rentalRequest);
@@ -132,62 +147,91 @@ public class ManagmentImpl implements Managment {
 				new StringBuilder().append("Rental requests queue size is : ")
 						.append(fCustomerGroupDetails.size()).toString());
 
-		CustomerClerkMessenger messenger = new CustomerClerkMessenger();
+		Messenger messengerClerkCustomerGroup = new Messenger();
+		Messenger messengerShift = new Messenger();
+		Messenger messengerMentenance = new Messenger();
 
-		AtomicInteger numberOfRentalRequests = countTotalRentalRequests();
-
+		CountDownLatch clerkLatch = new CountDownLatch(1);
 		CyclicBarrier cyclicBarrierShift = new CyclicBarrier(
 				fClerksDetails.size() + 1);
 
-		createRunnableCustomerGroups(messenger);
+		createRunnableCustomerGroups(messengerClerkCustomerGroup);
+		createRunnableClerks(clerkLatch, fNumberOfRentalRequests,
+				cyclicBarrierShift, messengerClerkCustomerGroup, messengerShift);
 
-		ArrayList<Thread> clerks = createRunnableClerks(numberOfRentalRequests,
-				cyclicBarrierShift, messenger);
+		// Make sure all clerks start together
+		clerkLatch.countDown();
+		while (fNumberOfRentalRequests.get() > 0) {
 
-		while (numberOfRentalRequests.get() > 0) {
-			waitForClerksToFinishShift(cyclicBarrierShift);
-			ArrayList<Thread> maintenance = createRunnableMentenance();
-			waitForMentenanceToFinish(clerks, maintenance);
-			cyclicBarrierShift.reset();
+			fLogger.log(
+					Level.FINE,
+					new StringBuilder().append(
+							"All clerks are starting a new shift").toString());
+
+			try {
+				cyclicBarrierShift.await();
+			} catch (InterruptedException | BrokenBarrierException e) {
+				e.printStackTrace();
+			}
+
+			fLogger.log(
+					Level.FINE,
+					new StringBuilder().append(
+							"All clerks finished their shift").toString());
+
+			// Repair all damaged assets and wait for maintenance guys to finish
+			repairDamagedAssets(messengerMentenance);
+
+			fLogger.log(Level.FINE,
+					new StringBuilder().append("All assets been fixed")
+							.toString());
+
+			synchronized (messengerShift) {
+				messengerShift.notifyAll();
+			}
 		}
 
 		fLogger.log(Level.FINE, "Simulation Ended");
 
 	}
 
-	private ArrayList<Thread> createRunnableMentenance() {
-		ArrayList<Thread> maintenance = new ArrayList<Thread>();
-		for (DamageReport damageReport : fDamageReports) {
+	private void repairDamagedAssets(Messenger messengerMentenance) {
+		DamageReport damageReport = takeDamageReport();
+		AtomicInteger workingMaintenance = new AtomicInteger(
+				fNumberOfMaintenancePersons);
+		while (damageReport != null) {
 			if (damageReport.getAsset().isDamaged()) {
-				Thread thread = new Thread(new RunnableMaintenaceRequest(
+				new Thread(new RunnableMaintenaceRequest(
 						fRepairToolInformations, fRepairMaterialInformations,
-						damageReport.getAsset(), fWarehouse, fStatistics));
-				thread.start();
-				maintenance.add(thread);
+						damageReport.getAsset(), fWarehouse, fStatistics,
+						messengerMentenance)).start();
 			}
-		}
-		return maintenance;
-	}
-
-	private void waitForMentenanceToFinish(ArrayList<Thread> clerks,
-			ArrayList<Thread> maintenance) {
-		int sumOfMaintenanceDone = 0;
-		while (sumOfMaintenanceDone < maintenance.size()) {
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-			sumOfMaintenanceDone = 0;
-			for (Thread thread : clerks) {
-				if (thread.isAlive()) {
-					sumOfMaintenanceDone++;
+			if (workingMaintenance.get() == 0) {
+				synchronized (messengerMentenance) {
+					try {
+						messengerMentenance.wait();
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+					workingMaintenance.incrementAndGet();
 				}
 			}
+			damageReport = takeDamageReport();
+		}
+
+		while (workingMaintenance.get() != fNumberOfMaintenancePersons) {
+			synchronized (messengerMentenance) {
+				try {
+					messengerMentenance.wait();
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				workingMaintenance.incrementAndGet();
+			}
 		}
 	}
 
-	private void createRunnableCustomerGroups(CustomerClerkMessenger messenger) {
+	private void createRunnableCustomerGroups(Messenger messenger) {
 		CyclicBarrier cyclicBarrierCustomerGroup = new CyclicBarrier(
 				fCustomerGroupDetails.size());
 		for (CustomerGroupDetails customerGroupDetails : fCustomerGroupDetails) {
@@ -197,49 +241,18 @@ public class ManagmentImpl implements Managment {
 		}
 	}
 
-	private void waitForClerksToFinishShift(CyclicBarrier cyclicBarrierShift) {
-		while (cyclicBarrierShift.getNumberWaiting() < fClerksDetails.size()) {
-			try {
-				// System.out.println(cyclicBarrierShift.getNumberWaiting());
-				// System.out.println("Clerks waiting at the end "
-				// + cyclicBarrierShift.getNumberWaiting());
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
-	}
-
-	private ArrayList<Thread> createRunnableClerks(
+	private void createRunnableClerks(CountDownLatch clerkLatch,
 			AtomicInteger numberOfRentalRequests,
-			CyclicBarrier cyclicBarrierShift, CustomerClerkMessenger messenger) {
-		ArrayList<Thread> clerks = new ArrayList<Thread>();
-		CyclicBarrier cyclicBarrierClerks = new CyclicBarrier(
-				fClerksDetails.size());
+			CyclicBarrier cyclicBarrierShift,
+			Messenger messengerClerkCustomerGroup,
+			Messenger messengerClerkMentenance) {
 
 		for (ClerkDetails clerkDetails : fClerksDetails) {
-			Thread thread = new Thread(new RunnebleClerk(clerkDetails,
-					fRentalRequests, numberOfRentalRequests, fAssets,
-					cyclicBarrierClerks, cyclicBarrierShift, messenger));
-			thread.start();
-			clerks.add(thread);
+			new Thread(new RunnebleClerk(clerkDetails, fRentalRequests,
+					numberOfRentalRequests, fAssets, clerkLatch,
+					cyclicBarrierShift, messengerClerkCustomerGroup,
+					messengerClerkMentenance)).start();
 		}
-		return clerks;
-	}
-
-	private AtomicInteger countTotalRentalRequests() {
-		AtomicInteger numberOfRentalRequests = new AtomicInteger(0);
-		for (CustomerGroupDetails customerGroupDetails : fCustomerGroupDetails) {
-			numberOfRentalRequests.addAndGet(customerGroupDetails
-					.getNumberOfRentalRequests());
-		}
-
-		fLogger.log(
-				Level.FINE,
-				new StringBuilder().append("Total rental requests : ")
-						.append(numberOfRentalRequests.get()).toString());
-
-		return numberOfRentalRequests;
 	}
 
 	@Override

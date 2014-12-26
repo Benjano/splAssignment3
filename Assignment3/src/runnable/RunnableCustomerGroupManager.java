@@ -16,6 +16,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import consts.RequestStatus;
@@ -26,7 +27,7 @@ public class RunnableCustomerGroupManager implements Runnable {
 	private Managment fManagment;
 	private Statistics fStatistics;
 	private CyclicBarrier fCyclicBarrier;
-	private CustomerClerkMessenger fCustomerClerkMessenger;
+	private Messenger fCustomerClerkMessenger;
 	private Logger fLogger;
 
 	public RunnableCustomerGroupManager() {
@@ -35,7 +36,7 @@ public class RunnableCustomerGroupManager implements Runnable {
 	public RunnableCustomerGroupManager(
 			CustomerGroupDetails customerGroupDetails, Managment managment,
 			Statistics statistics, CyclicBarrier cyclicBarrier,
-			CustomerClerkMessenger customerClerkMessenger) {
+			Messenger customerClerkMessenger) {
 		this.fCustomerGroupDetails = customerGroupDetails;
 		this.fManagment = managment;
 		this.fStatistics = statistics;
@@ -60,6 +61,13 @@ public class RunnableCustomerGroupManager implements Runnable {
 			fStatistics.addRentalRequest(rentalRequest);
 
 			while (rentalRequest.getStatus() != RequestStatus.Fulfilled) {
+				fLogger.log(
+						Level.FINE,
+						new StringBuilder().append("Group runned by ")
+								.append(fCustomerGroupDetails.getName())
+								.append(" is waiting for request to be filled")
+								.toString());
+
 				synchronized (fCustomerClerkMessenger) {
 					try {
 						fCustomerClerkMessenger.wait();
@@ -68,6 +76,12 @@ public class RunnableCustomerGroupManager implements Runnable {
 					}
 				}
 			}
+
+			fLogger.log(
+					Level.FINE,
+					new StringBuilder().append("Group runned by ")
+							.append(fCustomerGroupDetails.getName())
+							.append(" request been filled").toString());
 
 			// Customer stay in asset
 			rentalRequest.setRentalRequestStatus(RequestStatus.InProgress);
@@ -78,13 +92,18 @@ public class RunnableCustomerGroupManager implements Runnable {
 			fManagment.submitDamageReport(rentalRequest
 					.releaseAsset(damagePercentage));
 
-			synchronized (fCustomerClerkMessenger) {
-				fCustomerClerkMessenger.notifyAll();
-			}
+			fLogger.log(
+					Level.FINE,
+					new StringBuilder().append("Group runned by ")
+							.append(fCustomerGroupDetails.getName())
+							.append(" realse asset.").toString());
 
 			// Customer done staying in asset
 			rentalRequest.setRentalRequestStatus(RequestStatus.Complete);
 
+			synchronized (fCustomerClerkMessenger) {
+				fCustomerClerkMessenger.notifyAll();
+			}
 			i++;
 			rentalRequest = fCustomerGroupDetails.getRentalRequest(i);
 		}

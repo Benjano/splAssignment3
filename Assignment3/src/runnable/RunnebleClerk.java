@@ -1,7 +1,6 @@
 package runnable;
 
 import java.util.List;
-import java.util.Vector;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CountDownLatch;
@@ -25,8 +24,9 @@ public class RunnebleClerk implements Runnable {
 	private Assets fAssets;
 	private AtomicInteger fNumberOfRentalRequests;
 	private int fWorkedTime;
-	private CyclicBarrier fCyclicBarrier, fCyclicBarrierShift;
-	private CustomerClerkMessenger fCustomerClerkMessenger;
+	private CountDownLatch fCountDownLatch;
+	private CyclicBarrier fCyclicBarrierShift;
+	private Messenger fClerkMentenanceMessenger;
 	private Logger fLogger;
 
 	/**
@@ -38,15 +38,16 @@ public class RunnebleClerk implements Runnable {
 	public RunnebleClerk(ClerkDetails clerkDetails,
 			BlockingQueue<RentalRequest> rentalRequest,
 			AtomicInteger numberOfRentalRequests, Assets assets,
-			CyclicBarrier cyclicBarrier, CyclicBarrier cyclicBarrierShift,
-			CustomerClerkMessenger customerClerkMessenger) {
+			CountDownLatch countDownLatch, CyclicBarrier cyclicBarrierShift,
+			Messenger customerClerkMessenger, Messenger clerkMentenanceMessenger) {
 		this.fClerkDetails = clerkDetails;
 		this.fRentalRequest = rentalRequest;
 		this.fNumberOfRentalRequests = numberOfRentalRequests;
 		this.fAssets = assets;
-		this.fCyclicBarrier = cyclicBarrier;
+		this.fCountDownLatch = countDownLatch;
 		this.fCyclicBarrierShift = cyclicBarrierShift;
 		this.fCustomerClerkMessenger = customerClerkMessenger;
+		this.fClerkMentenanceMessenger = clerkMentenanceMessenger;
 		this.fWorkedTime = 0;
 		this.fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
@@ -60,8 +61,8 @@ public class RunnebleClerk implements Runnable {
 							.append(fClerkDetails.getName())
 							.append(" is waiting for other clerks to start")
 							.toString());
-			fCyclicBarrier.await();
-		} catch (InterruptedException | BrokenBarrierException e1) {
+			fCountDownLatch.await();
+		} catch (InterruptedException e1) {
 			e1.printStackTrace();
 		}
 
@@ -121,7 +122,6 @@ public class RunnebleClerk implements Runnable {
 				rentalRequest.setRentalRequestStatus(RequestStatus.Fulfilled);
 				notifyCustomerGroup();
 			}
-			System.out.println(fNumberOfRentalRequests.get());
 			if (fNumberOfRentalRequests.get() == 0) {
 				try {
 					synchronized (fRentalRequest) {
@@ -132,16 +132,27 @@ public class RunnebleClerk implements Runnable {
 				}
 			}
 		}
+
 		fLogger.log(
 				Level.FINE,
 				new StringBuilder().append("Clerk ")
 						.append(fClerkDetails.getName())
 						.append(" finished his shift").toString());
+
+		// Wait for other clerks to finish the shift
 		synchronized (this) {
-			notifyAll();
 			try {
 				fCyclicBarrierShift.await();
 			} catch (InterruptedException | BrokenBarrierException e) {
+				e.printStackTrace();
+			}
+		}
+
+		// Wait for mentenance to finish their work
+		synchronized (fClerkMentenanceMessenger) {
+			try {
+				fClerkMentenanceMessenger.wait();
+			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}
@@ -160,12 +171,23 @@ public class RunnebleClerk implements Runnable {
 					break;
 			}
 			if (matchingAsset == null) {
-				System.out.println(fClerkDetails.getName()
-						+ " is waiting for asset to be available");
-				System.out.println(rentalRequest);
-				synchronized (fCustomerClerkMessenger) {
+				fLogger.log(
+						Level.FINE,
+						new StringBuilder().append("Clerk ")
+								.append(fClerkDetails.getName())
+								.append(" is waiting for to be available")
+								.toString());
+
+				// synchronized (fCustomerClerkMessenger) {
+				// try {
+				// fCustomerClerkMessenger.wait();
+				// } catch (InterruptedException e) {
+				// e.printStackTrace();
+				// }
+				// }
+				synchronized (this) {
 					try {
-						fCustomerClerkMessenger.wait();
+						wait();
 					} catch (InterruptedException e) {
 						e.printStackTrace();
 					}

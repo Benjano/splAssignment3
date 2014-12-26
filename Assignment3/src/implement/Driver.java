@@ -13,7 +13,6 @@ import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
@@ -26,45 +25,20 @@ import consts.VandalismType;
 
 public class Driver {
 
-	private DocumentBuilderFactory builderFactory;
+	private DocumentBuilderFactory fBuilderFactory;
 	private static Managment fManagment;
 	private Logger fLogger;
 
 	public Driver(String initialDataSource, String customersGroupsSource,
 			String assetsSource, String assetContentRepairDetailsSource) {
-		
-//		fLogger = Logger.getLogger(this.getClass().getSimpleName());
-		fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-//		fLogger.setLevel(Level.ALL);
-//		
-//		FileHandler fh;
-//
-//		try {
-//
-//			// This block configure the logger with handler and formatter
-//			fh = new FileHandler("MyLogFile.txt");
-//			fLogger.addHandler(fh);
-//			SimpleFormatter formatter = new SimpleFormatter();
-//			fh.setFormatter(formatter);
-//
-//
-//		} catch (SecurityException e) {
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			e.printStackTrace();
-//		}
-//
-//		
-		
-		fManagment = new ManagmentImpl();
-		builderFactory = DocumentBuilderFactory.newInstance();
 
+		fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+		fBuilderFactory = DocumentBuilderFactory.newInstance();
+
+		readXmlInitialData(initialDataSource);
 		readXmlAssetsContentRepairDetails(assetContentRepairDetailsSource);
 		readXmlAssets(assetsSource);
 		readXmlCustomerGroup(customersGroupsSource);
-		readXmlInitialData(initialDataSource);
-
-		
 
 	}
 
@@ -79,9 +53,7 @@ public class Driver {
 				"AssetContentsRepairDetails.xml");
 
 		System.out.println("Driver Working");
-		// System.out.println(fManagment);
-		 fManagment.start();
-		// System.out.println(Driver.class.getClassLoader().getResource("logging.properties"));
+		fManagment.start();
 		System.out.println("Driver Done");
 
 	}
@@ -95,7 +67,7 @@ public class Driver {
 						.append(fileLocation).append("\"").toString());
 		try {
 			File xmlFile = new File(fileLocation);
-			DocumentBuilder documentBuilder = builderFactory
+			DocumentBuilder documentBuilder = fBuilderFactory
 					.newDocumentBuilder();
 			Document document = documentBuilder.parse(xmlFile);
 			document.getDocumentElement().normalize();
@@ -177,7 +149,7 @@ public class Driver {
 						.append(fileLocation).append("\"").toString());
 		try {
 			File xmlFile = new File(fileLocation);
-			DocumentBuilder documentBuilder = builderFactory
+			DocumentBuilder documentBuilder = fBuilderFactory
 					.newDocumentBuilder();
 			Document document = documentBuilder.parse(xmlFile);
 
@@ -247,7 +219,7 @@ public class Driver {
 	public void readXmlCustomerGroup(String fileLocation) {
 		try {
 			File xmlFile = new File(fileLocation);
-			DocumentBuilder documentBuilder = builderFactory
+			DocumentBuilder documentBuilder = fBuilderFactory
 					.newDocumentBuilder();
 			Document document = documentBuilder.parse(xmlFile);
 
@@ -344,11 +316,22 @@ public class Driver {
 	public void readXmlInitialData(String fileLocation) {
 		try {
 			File xmlFile = new File(fileLocation);
-			DocumentBuilder documentBuilder = builderFactory
+			DocumentBuilder documentBuilder = fBuilderFactory
 					.newDocumentBuilder();
 			Document document = documentBuilder.parse(xmlFile);
 
 			document.getDocumentElement().normalize();
+
+			int numberOfMaintenancePersons = Integer.parseInt(document
+					.getElementsByTagName("NumberOfMaintenancePersons").item(0)
+					.getTextContent());
+
+			int totalNumberOfRentalRequests = Integer.parseInt(document
+					.getElementsByTagName("TotalNumberOfRentalRequests")
+					.item(0).getTextContent());
+
+			fManagment = new ManagmentImpl(totalNumberOfRentalRequests,
+					numberOfMaintenancePersons);
 
 			readClerks(document.getElementsByTagName("Clerk"));
 			readTools(document.getElementsByTagName("Tool"));

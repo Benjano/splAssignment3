@@ -64,7 +64,11 @@ public class CustomerGroupDetailsImpl implements CustomerGroupDetails {
 	public int getNumberOfRentalRequests() {
 		return fRentalRequests.size();
 	}
-	
+
+	@Override
+	public String getName() {
+		return fGroupManagerName;
+	}
 
 	@Override
 	public String toString() {

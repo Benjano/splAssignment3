@@ -6,6 +6,8 @@ import interfaces.Statistics;
 import java.util.concurrent.Callable;
 import java.util.logging.Logger;
 
+import consts.Timing;
+
 public class CallableSimulateStayInAsset implements Callable<Double> {
 
 	private Customer fCustomer;
@@ -13,14 +15,14 @@ public class CallableSimulateStayInAsset implements Callable<Double> {
 	private double fCostPerNight;
 	private Statistics fStatistics;
 	private Logger fLogger;
-	
+
 	/**
 	 * @param fAsset
 	 * @param fCustomer
 	 * @param fdaysInAsset
 	 */
-	public CallableSimulateStayInAsset(Customer customer, int daysInAsset,double costPerNight,
-			Statistics statistics) {
+	public CallableSimulateStayInAsset(Customer customer, int daysInAsset,
+			double costPerNight, Statistics statistics) {
 		this.fCustomer = customer;
 		this.fDaysInAsset = daysInAsset;
 		this.fCostPerNight = costPerNight;
@@ -32,7 +34,7 @@ public class CallableSimulateStayInAsset implements Callable<Double> {
 	public Double call() throws Exception {
 		int daysLeft = fDaysInAsset;
 		while (daysLeft > 0) {
-			Thread.sleep(24 * 1);
+			Thread.sleep(24 * Timing.SECOND);
 			fStatistics.addIncome(fCostPerNight);
 			daysLeft--;
 		}

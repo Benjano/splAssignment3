@@ -17,6 +17,8 @@ public interface CustomerGroupDetails {
 	public void addCustomer(Customer customer);
 
 	public Customer getCustomer(int i);
+	
+	public String getName();
 
 	public RentalRequest getRentalRequest(int i);
 
