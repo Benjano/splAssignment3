@@ -1,7 +1,6 @@
 package implement;
 
 import java.util.concurrent.Semaphore;
-import java.util.logging.Logger;
 
 import interfaces.RepairMaterial;
 
@@ -9,12 +8,10 @@ public class RepairMaterialImpl implements RepairMaterial {
 
 	private String fName;
 	private Semaphore fQuantity;
-	private Logger fLogger;
 
 	public RepairMaterialImpl(String name, int quantity) {
 		this.fName = name;
 		this.fQuantity = new Semaphore(quantity);
-		this.fLogger =Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
 
 	public String getName() {
@@ -25,7 +22,7 @@ public class RepairMaterialImpl implements RepairMaterial {
 		return fQuantity.availablePermits();
 	}
 
-	public void Acquire(int quantity) { 
+	public void Acquire(int quantity) {
 		try {
 			fQuantity.acquire(quantity);
 		} catch (InterruptedException e) {

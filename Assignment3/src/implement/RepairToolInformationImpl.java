@@ -1,6 +1,5 @@
 package implement;
 
-import java.util.logging.Logger;
 
 import interfaces.RepairToolInformation;
 
@@ -8,14 +7,12 @@ public class RepairToolInformationImpl implements RepairToolInformation {
 
 	private String fName;
 	private int fQuantity;
-	private Logger fLogger;
-	
-	public RepairToolInformationImpl(String name, int quantity){
+
+	public RepairToolInformationImpl(String name, int quantity) {
 		this.fName = name;
 		this.fQuantity = quantity;
-		this.fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
-	
+
 	public String getName() {
 		return fName;
 	}

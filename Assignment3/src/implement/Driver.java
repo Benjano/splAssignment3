@@ -6,13 +6,8 @@ import interfaces.Managment;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.logging.FileHandler;
-import java.util.logging.Handler;
 import java.util.logging.Level;
-import java.util.logging.LogRecord;
 import java.util.logging.Logger;
-import java.util.logging.SimpleFormatter;
-
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
@@ -25,23 +20,6 @@ import consts.VandalismType;
 
 public class Driver {
 
-	private DocumentBuilderFactory fBuilderFactory;
-	private static Managment fManagment;
-	private Logger fLogger;
-
-	public Driver(String initialDataSource, String customersGroupsSource,
-			String assetsSource, String assetContentRepairDetailsSource) {
-
-		fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-		fBuilderFactory = DocumentBuilderFactory.newInstance();
-
-		readXmlInitialData(initialDataSource);
-		readXmlAssetsContentRepairDetails(assetContentRepairDetailsSource);
-		readXmlAssets(assetsSource);
-		readXmlCustomerGroup(customersGroupsSource);
-
-	}
-
 	public static void main(String[] args) {
 		try {
 			MyLogger.setup();
@@ -49,25 +27,142 @@ public class Driver {
 			e.printStackTrace();
 		}
 
-		new Driver("InitialData.xml", "CustomersGroups.xml", "Assets.xml",
-				"AssetContentsRepairDetails.xml");
+		Logger logger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+		DocumentBuilderFactory builderFactory = DocumentBuilderFactory
+				.newInstance();
+		Managment managment = createManagment("InitialData.xml", logger,
+				builderFactory);
+
+		readXmlInitialData("InitialData.xml", logger, builderFactory, managment);
+		readXmlAssetsContentRepairDetails("AssetContentsRepairDetails.xml",
+				logger, builderFactory, managment);
+		readXmlAssets("Assets.xml", logger, builderFactory, managment);
+		readXmlCustomerGroup("CustomersGroups.xml", logger, builderFactory,
+				managment);
 
 		System.out.println("Driver Working");
-		fManagment.start();
+		managment.start();
 		System.out.println("Driver Done");
 
 	}
 
+	// ***************** Read initial data ****************
+	private static Managment createManagment(String fileLocation,
+			Logger logger, DocumentBuilderFactory builderFactory) {
+		Managment managment = null;
+		try {
+			File xmlFile = new File(fileLocation);
+			DocumentBuilder documentBuilder = builderFactory
+					.newDocumentBuilder();
+			Document document = documentBuilder.parse(xmlFile);
+
+			document.getDocumentElement().normalize();
+
+			int numberOfMaintenancePersons = Integer.parseInt(document
+					.getElementsByTagName("NumberOfMaintenancePersons").item(0)
+					.getTextContent());
+
+			int totalNumberOfRentalRequests = Integer.parseInt(document
+					.getElementsByTagName("TotalNumberOfRentalRequests")
+					.item(0).getTextContent());
+
+			managment = new ManagmentImpl(totalNumberOfRentalRequests,
+					numberOfMaintenancePersons);
+			logger.log(Level.FINE, "Managment created");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return managment;
+	}
+
+	private static void readXmlInitialData(String fileLocation, Logger logger,
+			DocumentBuilderFactory builderFactory, Managment managment) {
+		try {
+			File xmlFile = new File(fileLocation);
+			DocumentBuilder documentBuilder = builderFactory
+					.newDocumentBuilder();
+			Document document = documentBuilder.parse(xmlFile);
+
+			document.getDocumentElement().normalize();
+
+			readClerks(document.getElementsByTagName("Clerk"), managment);
+			readTools(document.getElementsByTagName("Tool"), managment);
+			readMaterials(document.getElementsByTagName("Material"), managment);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	private static void readTools(NodeList tools, Managment managment) {
+
+		for (int i = 0; i < tools.getLength(); i++) {
+			Node node = tools.item(i);
+
+			if (node.getNodeType() == Node.ELEMENT_NODE) {
+				Element element = (Element) node;
+				String name = element.getElementsByTagName("Name").item(0)
+						.getTextContent();
+				int quantity = Integer.parseInt(element
+						.getElementsByTagName("Quantity").item(0)
+						.getTextContent());
+				managment.addItemRepairTool(new RepairToolImpl(name, quantity));
+			}
+		}
+	}
+
+	private static void readMaterials(NodeList materials, Managment managment) {
+		for (int i = 0; i < materials.getLength(); i++) {
+			Node node = materials.item(i);
+
+			if (node.getNodeType() == Node.ELEMENT_NODE) {
+				Element element = (Element) node;
+				String name = element.getElementsByTagName("Name").item(0)
+						.getTextContent();
+				int quantity = Integer.parseInt(element
+						.getElementsByTagName("Quantity").item(0)
+						.getTextContent());
+				managment.addItemRepairMaterial(new RepairMaterialImpl(name,
+						quantity));
+			}
+		}
+	}
+
+	private static void readClerks(NodeList clerks, Managment managment) {
+		for (int i = 0; i < clerks.getLength(); i++) {
+			Node node = clerks.item(i);
+
+			if (node.getNodeType() == Node.ELEMENT_NODE) {
+				Element element = (Element) node;
+
+				String name = element.getElementsByTagName("Name").item(0)
+						.getTextContent();
+
+				int x = Integer.parseInt(element
+						.getElementsByTagName("Location").item(0)
+						.getAttributes().getNamedItem("x").getTextContent());
+				int y = Integer.parseInt(element
+						.getElementsByTagName("Location").item(0)
+						.getAttributes().getNamedItem("y").getTextContent());
+				Location location = new Location(x, y);
+
+				managment.addClerk(new ClerkDetailsImpl(name, location));
+			}
+		}
+	}
+
 	// ******** Read assets content repair details ********
-	public void readXmlAssetsContentRepairDetails(String fileLocation) {
-		fLogger.log(
+	public static void readXmlAssetsContentRepairDetails(String fileLocation,
+			Logger logger, DocumentBuilderFactory builderFactory,
+			Managment managment) {
+		logger.log(
 				Level.FINEST,
 				new StringBuilder()
 						.append("Reading asset content repair detials from \"")
 						.append(fileLocation).append("\"").toString());
 		try {
 			File xmlFile = new File(fileLocation);
-			DocumentBuilder documentBuilder = fBuilderFactory
+			DocumentBuilder documentBuilder = builderFactory
 					.newDocumentBuilder();
 			Document document = documentBuilder.parse(xmlFile);
 			document.getDocumentElement().normalize();
@@ -80,16 +175,18 @@ public class Driver {
 					String assetContentName = assetContentElement
 							.getElementsByTagName("Name").item(0)
 							.getTextContent();
-					fLogger.log(
+					logger.log(
 							Level.FINEST,
 							new StringBuilder()
 									.append("Current asset content ")
 									.append(assetContentName).toString());
 					readToolsInformation(assetContentName,
-							assetContentElement.getElementsByTagName("Tool"));
+							assetContentElement.getElementsByTagName("Tool"),
+							logger, managment);
 					readMaterialsInformation(assetContentName,
 							assetContentElement
-									.getElementsByTagName("Material"));
+									.getElementsByTagName("Material"), logger,
+							managment);
 				}
 			}
 		} catch (Exception e) {
@@ -97,7 +194,8 @@ public class Driver {
 		}
 	}
 
-	public void readToolsInformation(String assetContentName, NodeList tools) {
+	public static void readToolsInformation(String assetContentName,
+			NodeList tools, Logger logger, Managment managment) {
 		for (int i = 0; i < tools.getLength(); i++) {
 			Node node = tools.item(i);
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
@@ -107,9 +205,9 @@ public class Driver {
 				int quantity = Integer.parseInt(element
 						.getElementsByTagName("Quantity").item(0)
 						.getTextContent());
-				fManagment.addRepairToolInformation(assetContentName,
+				managment.addRepairToolInformation(assetContentName,
 						new RepairToolInformationImpl(name, quantity));
-				fLogger.log(
+				logger.log(
 						Level.FINEST,
 						new StringBuilder().append(assetContentName)
 								.append(" needs ").append(quantity).append(" ")
@@ -118,8 +216,8 @@ public class Driver {
 		}
 	}
 
-	public void readMaterialsInformation(String assetContentName,
-			NodeList materials) {
+	public static void readMaterialsInformation(String assetContentName,
+			NodeList materials, Logger logger, Managment managment) {
 		for (int i = 0; i < materials.getLength(); i++) {
 			Node node = materials.item(i);
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
@@ -129,9 +227,9 @@ public class Driver {
 				int quantity = Integer.parseInt(element
 						.getElementsByTagName("Quantity").item(0)
 						.getTextContent());
-				fManagment.addRepairMaterialInformation(assetContentName,
+				managment.addRepairMaterialInformation(assetContentName,
 						new RepairMaterialInformationImpl(name, quantity));
-				fLogger.log(
+				logger.log(
 						Level.FINEST,
 						new StringBuilder().append(assetContentName)
 								.append(" needs ").append(quantity).append(" ")
@@ -141,15 +239,16 @@ public class Driver {
 	}
 
 	// **************** Read assets details ***************
-	public void readXmlAssets(String fileLocation) {
-		fLogger.log(
+	public static void readXmlAssets(String fileLocation, Logger logger,
+			DocumentBuilderFactory builderFactory, Managment managment) {
+		logger.log(
 				Level.FINEST,
 				new StringBuilder()
 						.append("Reading asset content repair detials from \"")
 						.append(fileLocation).append("\"").toString());
 		try {
 			File xmlFile = new File(fileLocation);
-			DocumentBuilder documentBuilder = fBuilderFactory
+			DocumentBuilder documentBuilder = builderFactory
 					.newDocumentBuilder();
 			Document document = documentBuilder.parse(xmlFile);
 
@@ -185,8 +284,9 @@ public class Driver {
 					Asset asset = new AssetImpl(name, type, location,
 							costPerNight, size);
 					readAssetContent(asset,
-							assetElement.getElementsByTagName("AssetContent"));
-					fManagment.addAsset(asset);
+							assetElement.getElementsByTagName("AssetContent"),
+							logger);
+					managment.addAsset(asset);
 				}
 			}
 		} catch (Exception e) {
@@ -194,7 +294,8 @@ public class Driver {
 		}
 	}
 
-	private void readAssetContent(Asset asset, NodeList assetContent) {
+	private static void readAssetContent(Asset asset, NodeList assetContent,
+			Logger logger) {
 		for (int i = 0; i < assetContent.getLength(); i++) {
 			Node node = assetContent.item(i);
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
@@ -205,7 +306,7 @@ public class Driver {
 						.getElementsByTagName("RepairMultiplier").item(0)
 						.getTextContent());
 				asset.addAssetContent(name, repairCostMultiplier);
-				fLogger.log(
+				logger.log(
 						Level.FINEST,
 						new StringBuilder().append("Adding asset content ")
 								.append(name)
@@ -216,10 +317,11 @@ public class Driver {
 	}
 
 	// **************** Read customer group ***************
-	public void readXmlCustomerGroup(String fileLocation) {
+	public static void readXmlCustomerGroup(String fileLocation, Logger logger,
+			DocumentBuilderFactory builderFactory, Managment managment) {
 		try {
 			File xmlFile = new File(fileLocation);
-			DocumentBuilder documentBuilder = fBuilderFactory
+			DocumentBuilder documentBuilder = builderFactory
 					.newDocumentBuilder();
 			Document document = documentBuilder.parse(xmlFile);
 
@@ -249,7 +351,7 @@ public class Driver {
 					readRentalRequests(customerGroupDetails,
 							customerGroupDetailsElement
 									.getElementsByTagName("Request"));
-					fManagment.addCustomerGroup(customerGroupDetails);
+					managment.addCustomerGroup(customerGroupDetails);
 
 				}
 			}
@@ -258,8 +360,8 @@ public class Driver {
 		}
 	}
 
-	private void readCustomers(CustomerGroupDetails customerGroupDetails,
-			NodeList customers) {
+	private static void readCustomers(
+			CustomerGroupDetails customerGroupDetails, NodeList customers) {
 
 		for (int i = 0; i < customers.getLength(); i++) {
 			Node node = customers.item(i);
@@ -286,8 +388,8 @@ public class Driver {
 		}
 	}
 
-	private void readRentalRequests(CustomerGroupDetails customerGroupDetails,
-			NodeList rentalRequests) {
+	private static void readRentalRequests(
+			CustomerGroupDetails customerGroupDetails, NodeList rentalRequests) {
 
 		for (int i = 0; i < rentalRequests.getLength(); i++) {
 			Node node = rentalRequests.item(i);
@@ -312,91 +414,4 @@ public class Driver {
 		}
 	}
 
-	// ***************** Read initial data ****************
-	public void readXmlInitialData(String fileLocation) {
-		try {
-			File xmlFile = new File(fileLocation);
-			DocumentBuilder documentBuilder = fBuilderFactory
-					.newDocumentBuilder();
-			Document document = documentBuilder.parse(xmlFile);
-
-			document.getDocumentElement().normalize();
-
-			int numberOfMaintenancePersons = Integer.parseInt(document
-					.getElementsByTagName("NumberOfMaintenancePersons").item(0)
-					.getTextContent());
-
-			int totalNumberOfRentalRequests = Integer.parseInt(document
-					.getElementsByTagName("TotalNumberOfRentalRequests")
-					.item(0).getTextContent());
-
-			fManagment = new ManagmentImpl(totalNumberOfRentalRequests,
-					numberOfMaintenancePersons);
-
-			readClerks(document.getElementsByTagName("Clerk"));
-			readTools(document.getElementsByTagName("Tool"));
-			readMaterials(document.getElementsByTagName("Material"));
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	public void readTools(NodeList tools) {
-
-		for (int i = 0; i < tools.getLength(); i++) {
-			Node node = tools.item(i);
-
-			if (node.getNodeType() == Node.ELEMENT_NODE) {
-				Element element = (Element) node;
-				String name = element.getElementsByTagName("Name").item(0)
-						.getTextContent();
-				int quantity = Integer.parseInt(element
-						.getElementsByTagName("Quantity").item(0)
-						.getTextContent());
-				fManagment
-						.addItemRepairTool(new RepairToolImpl(name, quantity));
-			}
-		}
-	}
-
-	public void readMaterials(NodeList materials) {
-		for (int i = 0; i < materials.getLength(); i++) {
-			Node node = materials.item(i);
-
-			if (node.getNodeType() == Node.ELEMENT_NODE) {
-				Element element = (Element) node;
-				String name = element.getElementsByTagName("Name").item(0)
-						.getTextContent();
-				int quantity = Integer.parseInt(element
-						.getElementsByTagName("Quantity").item(0)
-						.getTextContent());
-				fManagment.addItemRepairMaterial(new RepairMaterialImpl(name,
-						quantity));
-			}
-		}
-	}
-
-	private void readClerks(NodeList clerks) throws Exception {
-		for (int i = 0; i < clerks.getLength(); i++) {
-			Node node = clerks.item(i);
-
-			if (node.getNodeType() == Node.ELEMENT_NODE) {
-				Element element = (Element) node;
-
-				String name = element.getElementsByTagName("Name").item(0)
-						.getTextContent();
-
-				int x = Integer.parseInt(element
-						.getElementsByTagName("Location").item(0)
-						.getAttributes().getNamedItem("x").getTextContent());
-				int y = Integer.parseInt(element
-						.getElementsByTagName("Location").item(0)
-						.getAttributes().getNamedItem("y").getTextContent());
-				Location location = new Location(x, y);
-
-				fManagment.addClerk(new ClerkDetailsImpl(name, location));
-			}
-		}
-	}
 }

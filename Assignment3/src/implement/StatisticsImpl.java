@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import interfaces.RentalRequest;
@@ -32,16 +33,23 @@ public class StatisticsImpl implements Statistics {
 	@Override
 	public synchronized void addIncome(double fCostPerNight) {
 		fMoneyGained += fCostPerNight;
+		fLogger.log(Level.FINE, new StringBuilder()
+				.append("Statistics money: ").append(fMoneyGained).append("$")
+				.toString());
 	}
 
 	@Override
 	public synchronized void addRentalRequest(RentalRequest rentalRequest) {
 		fRentalRequests.add(rentalRequest);
+		fLogger.log(
+				Level.FINE,
+				new StringBuilder()
+						.append("Statistics new rental request added")
+						.append(rentalRequest.getID()).toString());
 	}
 
 	@Override
 	public void addToolInProcess(RepairTool repairTool) {
-
 		if (fRepairTools.containsKey(repairTool.getName())) {
 			fRepairTools.put(
 					repairTool.getName(),
@@ -50,6 +58,13 @@ public class StatisticsImpl implements Statistics {
 		} else {
 			fRepairTools.put(repairTool.getName(), repairTool.getQuantity());
 		}
+		fLogger.log(
+				Level.FINE,
+				new StringBuilder()
+						.append("Statistics added ")
+						.append(repairTool)
+						.append(" to tools in process. Current tools in process: ")
+						.append(fRepairTools).toString());
 	}
 
 	@Override
@@ -60,6 +75,13 @@ public class StatisticsImpl implements Statistics {
 					fRepairTools.get(repairTool.getName())
 							- repairTool.getQuantity());
 		}
+		fLogger.log(
+				Level.FINE,
+				new StringBuilder()
+						.append("Statistics release ")
+						.append(repairTool)
+						.append(" from tools in process. Current tools in process: ")
+						.append(fRepairTools).toString());
 	}
 
 	@Override
@@ -72,6 +94,12 @@ public class StatisticsImpl implements Statistics {
 			fRepairMaterials.put(repairMaterial.getName(),
 					repairMaterial.getQuantity());
 		}
+		fLogger.log(
+				Level.FINE,
+				new StringBuilder().append("Statistics material consumed: ")
+						.append(repairMaterial)
+						.append(". Current material consumed: ")
+						.append(fRepairMaterials).toString());
 	}
 
 	@Override
