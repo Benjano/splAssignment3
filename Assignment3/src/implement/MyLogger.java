@@ -18,12 +18,7 @@ public class MyLogger {
 
 		// get the global logger to configure it
 		Logger logger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
-//		Logger.getL
-		
-		FileHandler fh = new FileHandler("MyLogFile.txt");
-		logger.addHandler(fh);
-		SimpleFormatter formatter = new SimpleFormatter();
-		fh.setFormatter(formatter);
+		// Logger.getL
 
 		logger.setLevel(Level.ALL);
 		fileTxt = new FileHandler("Logging.txt");
