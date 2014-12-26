@@ -162,6 +162,7 @@ public class RunnebleClerk implements Runnable {
 		}
 
 		fWorkedTime = 0;
+
 	}
 
 	private Asset findMatchingAsset(RentalRequest rentalRequest) {

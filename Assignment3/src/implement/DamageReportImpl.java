@@ -22,5 +22,12 @@ public class DamageReportImpl implements DamageReport {
 	public double getDamagePercentage() {
 		return fDamagePrecentage;
 	}
+	
+	@Override
+	public boolean equals(Object other) {
+		if (other instanceof DamageReport)
+			return ((DamageReport) other).getAsset().equals(this.fAsset);
+		return false;
+	}
 
 }

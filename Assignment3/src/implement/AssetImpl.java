@@ -10,6 +10,7 @@ import java.util.logging.Logger;
 import consts.AssetStatus;
 import interfaces.Asset;
 import interfaces.AssetContent;
+import interfaces.DamageReport;
 
 public class AssetImpl implements Asset {
 
@@ -138,5 +139,6 @@ public class AssetImpl implements Asset {
 
 		return builder.toString();
 	}
+	
 
 }

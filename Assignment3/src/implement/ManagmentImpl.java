@@ -118,6 +118,11 @@ public class ManagmentImpl implements Managment {
 
 	@Override
 	public synchronized void submitDamageReport(DamageReport damageReport) {
+		for (DamageReport damageReportiter : fDamageReports) {
+			if (damageReportiter.getAsset().equals(damageReport.getAsset())) {
+				return;
+			}
+		}
 		this.fDamageReports.add(damageReport);
 	}
 
@@ -200,16 +205,15 @@ public class ManagmentImpl implements Managment {
 		AtomicInteger workingMaintenance = new AtomicInteger(
 				fNumberOfMaintenancePersons);
 		while (damageReport != null) {
-			
-			if (damageReport.getAsset().getName().equals("Asset 4")) {
-				int a = 0;
-				int b = a;
-			}
 			if (damageReport.getAsset().isDamaged()) {
-				new Thread(new RunnableMaintenaceRequest(
+				Thread thread = new Thread(new RunnableMaintenaceRequest(
 						fRepairToolInformations, fRepairMaterialInformations,
 						damageReport.getAsset(), fWarehouse, fStatistics,
-						messengerMentenance)).start();
+						messengerMentenance));
+				thread.setName("Mentenance " + workingMaintenance.get());
+				workingMaintenance.decrementAndGet();
+				thread.start();
+
 			}
 			if (workingMaintenance.get() == 0) {
 				synchronized (messengerMentenance) {
@@ -240,9 +244,11 @@ public class ManagmentImpl implements Managment {
 		CyclicBarrier cyclicBarrierCustomerGroup = new CyclicBarrier(
 				fCustomerGroupDetails.size());
 		for (CustomerGroupDetails customerGroupDetails : fCustomerGroupDetails) {
-			new Thread(new RunnableCustomerGroupManager(customerGroupDetails,
-					this, fStatistics, cyclicBarrierCustomerGroup, messenger))
-					.start();
+			Thread thread = new Thread(new RunnableCustomerGroupManager(
+					customerGroupDetails, this, fStatistics,
+					cyclicBarrierCustomerGroup, messenger));
+			thread.setName(customerGroupDetails.getName());
+			thread.start();
 		}
 	}
 
@@ -253,10 +259,12 @@ public class ManagmentImpl implements Managment {
 			Messenger messengerClerkMentenance) {
 
 		for (ClerkDetails clerkDetails : fClerksDetails) {
-			new Thread(new RunnebleClerk(clerkDetails, fRentalRequests,
+			Thread thread =new Thread(new RunnebleClerk(clerkDetails, fRentalRequests,
 					numberOfRentalRequests, fAssets, clerkLatch,
 					cyclicBarrierShift, messengerClerkCustomerGroup,
-					messengerClerkMentenance)).start();
+					messengerClerkMentenance));
+			thread.setName(clerkDetails.getName());
+			thread.start();
 		}
 	}
 
