@@ -66,7 +66,9 @@ public class RunnableMaintenaceRequest implements Runnable {
 
 		returnTools(repairTools);
 
-		notifyAllMaintenance();
+		synchronized (this) {
+			notifyAll();
+		}
 
 		fAsset.setStatus(AssetStatus.Available);
 	}
@@ -77,11 +79,6 @@ public class RunnableMaintenaceRequest implements Runnable {
 			fWarehouse.addTool(repairTool);
 			fStatistics.releaseTool(repairTool);
 		}
-	}
-	
-	private synchronized void notifyAllMaintenance(){
-
-		notifyAll();
 	}
 
 	private Vector<RepairTool> takeToolsFromWarehouse(

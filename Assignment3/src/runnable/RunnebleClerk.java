@@ -132,22 +132,21 @@ public class RunnebleClerk implements Runnable {
 				}
 			}
 		}
-		waitForNextShift();
+		fLogger.log(
+				Level.FINE,
+				new StringBuilder().append("Clerk ")
+						.append(fClerkDetails.getName())
+						.append(" finished his shift").toString());
+		synchronized (this) {
+			notifyAll();
+			try {
+				fCyclicBarrierShift.await();
+			} catch (InterruptedException | BrokenBarrierException e) {
+				e.printStackTrace();
+			}
+		}
 
 		fWorkedTime = 0;
-	}
-
-	private synchronized void waitForNextShift() {
-		try {
-			fLogger.log(
-					Level.FINE,
-					new StringBuilder().append("Clerk ")
-							.append(fClerkDetails.getName())
-							.append(" finished his shift").toString());
-			notifyAll();
-			fCyclicBarrierShift.await();
-		} catch (InterruptedException | BrokenBarrierException e) {
-		}
 	}
 
 	private Asset findMatchingAsset(RentalRequest rentalRequest) {
@@ -164,7 +163,13 @@ public class RunnebleClerk implements Runnable {
 				System.out.println(fClerkDetails.getName()
 						+ " is waiting for asset to be available");
 				System.out.println(rentalRequest);
-				waitNow();
+				synchronized (fCustomerClerkMessenger) {
+					try {
+						fCustomerClerkMessenger.wait();
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
 				searchResualt = fAssets.findAssetByTypeAndSize(
 						rentalRequest.getAssetType(), rentalRequest.getSize());
 			}
@@ -172,22 +177,10 @@ public class RunnebleClerk implements Runnable {
 		return matchingAsset;
 	}
 
-	private synchronized void waitNow() {
-		try {
-			wait();
-		} catch (InterruptedException e) {
-			System.out.println("New shift started");
-		}
-	}
-
 	private void notifyCustomerGroup() {
 		synchronized (fCustomerClerkMessenger) {
 			fCustomerClerkMessenger.notify();
 		}
-	}
-
-	private synchronized void notifyNow() {
-		notifyAll();
 	}
 
 	private Asset checkAsset(Asset asset) {

@@ -60,10 +60,14 @@ public class RunnableCustomerGroupManager implements Runnable {
 			fStatistics.addRentalRequest(rentalRequest);
 
 			while (rentalRequest.getStatus() != RequestStatus.Fulfilled) {
-				System.out.println("Group is waiting for asset");
-				waitNow();
+				synchronized (fCustomerClerkMessenger) {
+					try {
+						fCustomerClerkMessenger.wait();
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
 			}
-			System.out.println("Group is done waiting for asset");
 
 			// Customer stay in asset
 			rentalRequest.setRentalRequestStatus(RequestStatus.InProgress);
@@ -74,26 +78,16 @@ public class RunnableCustomerGroupManager implements Runnable {
 			fManagment.submitDamageReport(rentalRequest
 					.releaseAsset(damagePercentage));
 
+			synchronized (fCustomerClerkMessenger) {
+				fCustomerClerkMessenger.notifyAll();
+			}
+
 			// Customer done staying in asset
 			rentalRequest.setRentalRequestStatus(RequestStatus.Complete);
-
-			System.out.println("Request left "
-					+ (fCustomerGroupDetails.getNumberOfRentalRequests() - i));
 
 			i++;
 			rentalRequest = fCustomerGroupDetails.getRentalRequest(i);
 		}
-	}
-
-	private void waitNow() {
-		synchronized (fCustomerClerkMessenger) {
-			try {
-				fCustomerClerkMessenger.wait();
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
-
 	}
 
 	private double simulateStayInAsset(RentalRequest rentalRequest) {

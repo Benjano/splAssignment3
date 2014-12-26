@@ -144,23 +144,6 @@ public class ManagmentImpl implements Managment {
 		ArrayList<Thread> clerks = createRunnableClerks(numberOfRentalRequests,
 				cyclicBarrierShift, messenger);
 
-		// new Thread(new Runnable() {
-		//
-		// @Override
-		// public void run() {
-		// while (true) {
-		// try {
-		// Thread.sleep(1000);
-		// } catch (InterruptedException e) {
-		// // TODO Auto-generated catch block
-		// e.printStackTrace();
-		// }
-		// System.out.println("********"
-		// + numberOfRentalRequests.get());
-		// }
-		// }
-		// }).start();
-
 		while (numberOfRentalRequests.get() > 0) {
 			waitForClerksToFinishShift(cyclicBarrierShift);
 			ArrayList<Thread> maintenance = createRunnableMentenance();
@@ -175,11 +158,13 @@ public class ManagmentImpl implements Managment {
 	private ArrayList<Thread> createRunnableMentenance() {
 		ArrayList<Thread> maintenance = new ArrayList<Thread>();
 		for (DamageReport damageReport : fDamageReports) {
-			Thread thread = new Thread(new RunnableMaintenaceRequest(
-					fRepairToolInformations, fRepairMaterialInformations,
-					damageReport.getAsset(), fWarehouse, fStatistics));
-			thread.start();
-			maintenance.add(thread);
+			if (damageReport.getAsset().isDamaged()) {
+				Thread thread = new Thread(new RunnableMaintenaceRequest(
+						fRepairToolInformations, fRepairMaterialInformations,
+						damageReport.getAsset(), fWarehouse, fStatistics));
+				thread.start();
+				maintenance.add(thread);
+			}
 		}
 		return maintenance;
 	}
