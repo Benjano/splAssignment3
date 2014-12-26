@@ -1,6 +1,5 @@
 package implement;
 
-import java.util.logging.Logger;
 
 import interfaces.RepairMaterialInformation;
 

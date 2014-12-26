@@ -12,6 +12,7 @@ public class ClerkDetailsImpl implements ClerkDetails {
 		this.fLocation = location;
 	}
 
+	@Override
 	public String getName() {
 		return fName;
 	}
