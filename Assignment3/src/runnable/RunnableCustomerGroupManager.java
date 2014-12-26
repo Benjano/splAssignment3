@@ -92,6 +92,10 @@ public class RunnableCustomerGroupManager implements Runnable {
 			fManagment.submitDamageReport(rentalRequest
 					.releaseAsset(damagePercentage));
 
+			synchronized (fManagment) {
+				fManagment.notifyAll();
+			}
+
 			fLogger.log(
 					Level.FINE,
 					new StringBuilder().append("Group runned by ")

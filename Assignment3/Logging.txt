@@ -1,610 +1,1115 @@
-Dec 26, 2014 11:05:13 PM implement.Driver readXmlAssetsContentRepairDetails
+Dec 27, 2014 12:05:47 AM implement.Driver readXmlAssetsContentRepairDetails
 FINEST: Reading asset content repair detials from "AssetContentsRepairDetails.xml"
-Dec 26, 2014 11:05:13 PM implement.Driver readXmlAssetsContentRepairDetails
+Dec 27, 2014 12:05:48 AM implement.Driver readXmlAssetsContentRepairDetails
 FINEST: Current asset content TV
-Dec 26, 2014 11:05:13 PM implement.Driver readToolsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readToolsInformation
 FINEST: TV needs 2 Hammers
-Dec 26, 2014 11:05:13 PM implement.Driver readToolsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readToolsInformation
 FINEST: TV needs 2 Screw Drivers
-Dec 26, 2014 11:05:13 PM implement.Driver readToolsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readToolsInformation
 FINEST: TV needs 2 Plierss
-Dec 26, 2014 11:05:13 PM implement.Driver readMaterialsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readMaterialsInformation
 FINEST: TV needs 2 Glass Cleaners
-Dec 26, 2014 11:05:13 PM implement.Driver readMaterialsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readMaterialsInformation
 FINEST: TV needs 2 Trash Bags
-Dec 26, 2014 11:05:13 PM implement.Driver readMaterialsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readMaterialsInformation
 FINEST: TV needs 20 Paper Towels
-Dec 26, 2014 11:05:13 PM implement.Driver readXmlAssetsContentRepairDetails
+Dec 27, 2014 12:05:48 AM implement.Driver readXmlAssetsContentRepairDetails
 FINEST: Current asset content Bed
-Dec 26, 2014 11:05:13 PM implement.Driver readToolsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readToolsInformation
 FINEST: Bed needs 3 Hammers
-Dec 26, 2014 11:05:13 PM implement.Driver readToolsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readToolsInformation
 FINEST: Bed needs 2 Screw Drivers
-Dec 26, 2014 11:05:13 PM implement.Driver readToolsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readToolsInformation
 FINEST: Bed needs 3 Plierss
-Dec 26, 2014 11:05:13 PM implement.Driver readToolsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readToolsInformation
 FINEST: Bed needs 2 Jacksaws
-Dec 26, 2014 11:05:13 PM implement.Driver readToolsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readToolsInformation
 FINEST: Bed needs 5 Drills
-Dec 26, 2014 11:05:13 PM implement.Driver readMaterialsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readMaterialsInformation
 FINEST: Bed needs 10 Disinfectants
-Dec 26, 2014 11:05:13 PM implement.Driver readMaterialsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readMaterialsInformation
 FINEST: Bed needs 15 Floor Cleaners
-Dec 26, 2014 11:05:13 PM implement.Driver readMaterialsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readMaterialsInformation
 FINEST: Bed needs 25 Trash Bags
-Dec 26, 2014 11:05:13 PM implement.Driver readMaterialsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readMaterialsInformation
 FINEST: Bed needs 15 Paper Towels
-Dec 26, 2014 11:05:13 PM implement.Driver readXmlAssetsContentRepairDetails
+Dec 27, 2014 12:05:48 AM implement.Driver readXmlAssetsContentRepairDetails
 FINEST: Current asset content Desk
-Dec 26, 2014 11:05:13 PM implement.Driver readToolsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readToolsInformation
 FINEST: Desk needs 3 Hammers
-Dec 26, 2014 11:05:13 PM implement.Driver readToolsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readToolsInformation
 FINEST: Desk needs 2 Screw Drivers
-Dec 26, 2014 11:05:13 PM implement.Driver readToolsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readToolsInformation
 FINEST: Desk needs 3 Plierss
-Dec 26, 2014 11:05:13 PM implement.Driver readToolsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readToolsInformation
 FINEST: Desk needs 2 Jacksaws
-Dec 26, 2014 11:05:13 PM implement.Driver readToolsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readToolsInformation
 FINEST: Desk needs 5 Drills
-Dec 26, 2014 11:05:13 PM implement.Driver readMaterialsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readMaterialsInformation
 FINEST: Desk needs 10 Disinfectants
-Dec 26, 2014 11:05:13 PM implement.Driver readMaterialsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readMaterialsInformation
 FINEST: Desk needs 15 Floor Cleaners
-Dec 26, 2014 11:05:13 PM implement.Driver readMaterialsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readMaterialsInformation
 FINEST: Desk needs 25 Trash Bags
-Dec 26, 2014 11:05:13 PM implement.Driver readMaterialsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readMaterialsInformation
 FINEST: Desk needs 15 Paper Towels
-Dec 26, 2014 11:05:13 PM implement.Driver readXmlAssetsContentRepairDetails
+Dec 27, 2014 12:05:48 AM implement.Driver readXmlAssetsContentRepairDetails
 FINEST: Current asset content Stove
-Dec 26, 2014 11:05:13 PM implement.Driver readToolsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readToolsInformation
 FINEST: Stove needs 1 Hammers
-Dec 26, 2014 11:05:13 PM implement.Driver readToolsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readToolsInformation
 FINEST: Stove needs 1 Drills
-Dec 26, 2014 11:05:13 PM implement.Driver readToolsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readToolsInformation
 FINEST: Stove needs 2 Screw Drivers
-Dec 26, 2014 11:05:13 PM implement.Driver readMaterialsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readMaterialsInformation
 FINEST: Stove needs 10 Nailss
-Dec 26, 2014 11:05:13 PM implement.Driver readMaterialsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readMaterialsInformation
 FINEST: Stove needs 5 Screwss
-Dec 26, 2014 11:05:13 PM implement.Driver readMaterialsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readMaterialsInformation
 FINEST: Stove needs 1 Sand Cloths
-Dec 26, 2014 11:05:13 PM implement.Driver readXmlAssetsContentRepairDetails
+Dec 27, 2014 12:05:48 AM implement.Driver readXmlAssetsContentRepairDetails
 FINEST: Current asset content Computer
-Dec 26, 2014 11:05:13 PM implement.Driver readToolsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readToolsInformation
 FINEST: Computer needs 1 Hammers
-Dec 26, 2014 11:05:13 PM implement.Driver readToolsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readToolsInformation
 FINEST: Computer needs 2 Jacksaws
-Dec 26, 2014 11:05:13 PM implement.Driver readMaterialsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readMaterialsInformation
 FINEST: Computer needs 10 Nailss
-Dec 26, 2014 11:05:13 PM implement.Driver readMaterialsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readMaterialsInformation
 FINEST: Computer needs 5 Screwss
-Dec 26, 2014 11:05:13 PM implement.Driver readXmlAssetsContentRepairDetails
+Dec 27, 2014 12:05:48 AM implement.Driver readXmlAssetsContentRepairDetails
 FINEST: Current asset content Fridge
-Dec 26, 2014 11:05:13 PM implement.Driver readToolsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readToolsInformation
 FINEST: Fridge needs 1 Hammers
-Dec 26, 2014 11:05:13 PM implement.Driver readToolsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readToolsInformation
 FINEST: Fridge needs 2 Screw Drivers
-Dec 26, 2014 11:05:13 PM implement.Driver readMaterialsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readMaterialsInformation
 FINEST: Fridge needs 10 Nailss
-Dec 26, 2014 11:05:13 PM implement.Driver readMaterialsInformation
+Dec 27, 2014 12:05:48 AM implement.Driver readMaterialsInformation
 FINEST: Fridge needs 5 Screwss
-Dec 26, 2014 11:05:13 PM implement.Driver readXmlAssets
+Dec 27, 2014 12:05:48 AM implement.Driver readXmlAssets
 FINEST: Reading asset content repair detials from "Assets.xml"
-Dec 26, 2014 11:05:13 PM implement.AssetImpl addAssetContent
+Dec 27, 2014 12:05:48 AM implement.AssetImpl addAssetContent
 FINE: Asset content TV is added to Asset Asset 1
-Dec 26, 2014 11:05:13 PM implement.Driver readAssetContent
+Dec 27, 2014 12:05:48 AM implement.Driver readAssetContent
 FINEST: Adding asset content TV repair cost multiplier 5.0
-Dec 26, 2014 11:05:13 PM implement.AssetImpl addAssetContent
+Dec 27, 2014 12:05:48 AM implement.AssetImpl addAssetContent
 FINE: Asset content Bed is added to Asset Asset 1
-Dec 26, 2014 11:05:13 PM implement.Driver readAssetContent
+Dec 27, 2014 12:05:48 AM implement.Driver readAssetContent
 FINEST: Adding asset content Bed repair cost multiplier 8.0
-Dec 26, 2014 11:05:13 PM implement.AssetImpl addAssetContent
+Dec 27, 2014 12:05:48 AM implement.AssetImpl addAssetContent
 FINE: Asset content Fridge is added to Asset Asset 1
-Dec 26, 2014 11:05:13 PM implement.Driver readAssetContent
+Dec 27, 2014 12:05:48 AM implement.Driver readAssetContent
 FINEST: Adding asset content Fridge repair cost multiplier 3.0
-Dec 26, 2014 11:05:13 PM implement.AssetImpl addAssetContent
+Dec 27, 2014 12:05:48 AM implement.AssetImpl addAssetContent
 FINE: Asset content Desk is added to Asset Asset 1
-Dec 26, 2014 11:05:13 PM implement.Driver readAssetContent
+Dec 27, 2014 12:05:48 AM implement.Driver readAssetContent
 FINEST: Adding asset content Desk repair cost multiplier 4.0
-Dec 26, 2014 11:05:13 PM implement.AssetImpl addAssetContent
+Dec 27, 2014 12:05:48 AM implement.AssetImpl addAssetContent
 FINE: Asset content Stove is added to Asset Asset 1
-Dec 26, 2014 11:05:13 PM implement.Driver readAssetContent
+Dec 27, 2014 12:05:48 AM implement.Driver readAssetContent
 FINEST: Adding asset content Stove repair cost multiplier 3.5
-Dec 26, 2014 11:05:13 PM implement.AssetsImpl addAsset
+Dec 27, 2014 12:05:48 AM implement.AssetsImpl addAsset
 FINE: New asset added to assets : Asset 1
-Dec 26, 2014 11:05:13 PM implement.AssetImpl addAssetContent
+Dec 27, 2014 12:05:48 AM implement.AssetImpl addAssetContent
 FINE: Asset content TV is added to Asset Asset 2
-Dec 26, 2014 11:05:13 PM implement.Driver readAssetContent
+Dec 27, 2014 12:05:48 AM implement.Driver readAssetContent
 FINEST: Adding asset content TV repair cost multiplier 2.5
-Dec 26, 2014 11:05:13 PM implement.AssetImpl addAssetContent
+Dec 27, 2014 12:05:48 AM implement.AssetImpl addAssetContent
 FINE: Asset content Fridge is added to Asset Asset 2
-Dec 26, 2014 11:05:13 PM implement.Driver readAssetContent
+Dec 27, 2014 12:05:48 AM implement.Driver readAssetContent
 FINEST: Adding asset content Fridge repair cost multiplier 2.0
-Dec 26, 2014 11:05:13 PM implement.AssetImpl addAssetContent
+Dec 27, 2014 12:05:48 AM implement.AssetImpl addAssetContent
 FINE: Asset content Desk is added to Asset Asset 2
-Dec 26, 2014 11:05:13 PM implement.Driver readAssetContent
+Dec 27, 2014 12:05:48 AM implement.Driver readAssetContent
 FINEST: Adding asset content Desk repair cost multiplier 1.5
-Dec 26, 2014 11:05:13 PM implement.AssetsImpl addAsset
+Dec 27, 2014 12:05:48 AM implement.AssetsImpl addAsset
 FINE: New asset added to assets : Asset 2
-Dec 26, 2014 11:05:13 PM implement.AssetImpl addAssetContent
+Dec 27, 2014 12:05:48 AM implement.AssetImpl addAssetContent
 FINE: Asset content TV is added to Asset Asset 3
-Dec 26, 2014 11:05:13 PM implement.Driver readAssetContent
+Dec 27, 2014 12:05:48 AM implement.Driver readAssetContent
 FINEST: Adding asset content TV repair cost multiplier 1.0
-Dec 26, 2014 11:05:13 PM implement.AssetImpl addAssetContent
+Dec 27, 2014 12:05:48 AM implement.AssetImpl addAssetContent
 FINE: Asset content Bed is added to Asset Asset 3
-Dec 26, 2014 11:05:13 PM implement.Driver readAssetContent
+Dec 27, 2014 12:05:48 AM implement.Driver readAssetContent
 FINEST: Adding asset content Bed repair cost multiplier 2.0
-Dec 26, 2014 11:05:13 PM implement.AssetsImpl addAsset
+Dec 27, 2014 12:05:48 AM implement.AssetsImpl addAsset
 FINE: New asset added to assets : Asset 3
-Dec 26, 2014 11:05:13 PM implement.AssetImpl addAssetContent
+Dec 27, 2014 12:05:48 AM implement.AssetImpl addAssetContent
 FINE: Asset content TV is added to Asset Asset 4
-Dec 26, 2014 11:05:13 PM implement.Driver readAssetContent
+Dec 27, 2014 12:05:48 AM implement.Driver readAssetContent
 FINEST: Adding asset content TV repair cost multiplier 5.0
-Dec 26, 2014 11:05:13 PM implement.AssetImpl addAssetContent
+Dec 27, 2014 12:05:48 AM implement.AssetImpl addAssetContent
 FINE: Asset content Bed is added to Asset Asset 4
-Dec 26, 2014 11:05:13 PM implement.Driver readAssetContent
+Dec 27, 2014 12:05:48 AM implement.Driver readAssetContent
 FINEST: Adding asset content Bed repair cost multiplier 1.0
-Dec 26, 2014 11:05:13 PM implement.AssetImpl addAssetContent
+Dec 27, 2014 12:05:48 AM implement.AssetImpl addAssetContent
 FINE: Asset content Fridge is added to Asset Asset 4
-Dec 26, 2014 11:05:13 PM implement.Driver readAssetContent
+Dec 27, 2014 12:05:48 AM implement.Driver readAssetContent
 FINEST: Adding asset content Fridge repair cost multiplier 1.5
-Dec 26, 2014 11:05:13 PM implement.AssetImpl addAssetContent
+Dec 27, 2014 12:05:48 AM implement.AssetImpl addAssetContent
 FINE: Asset content Desk is added to Asset Asset 4
-Dec 26, 2014 11:05:13 PM implement.Driver readAssetContent
+Dec 27, 2014 12:05:48 AM implement.Driver readAssetContent
 FINEST: Adding asset content Desk repair cost multiplier 2.5
-Dec 26, 2014 11:05:13 PM implement.AssetImpl addAssetContent
+Dec 27, 2014 12:05:48 AM implement.AssetImpl addAssetContent
 FINE: Asset content Stove is added to Asset Asset 4
-Dec 26, 2014 11:05:13 PM implement.Driver readAssetContent
+Dec 27, 2014 12:05:48 AM implement.Driver readAssetContent
 FINEST: Adding asset content Stove repair cost multiplier 3.75
-Dec 26, 2014 11:05:13 PM implement.AssetsImpl addAsset
+Dec 27, 2014 12:05:48 AM implement.AssetsImpl addAsset
 FINE: New asset added to assets : Asset 4
-Dec 26, 2014 11:05:13 PM implement.AssetImpl addAssetContent
+Dec 27, 2014 12:05:48 AM implement.AssetImpl addAssetContent
 FINE: Asset content TV is added to Asset Asset 5
-Dec 26, 2014 11:05:13 PM implement.Driver readAssetContent
+Dec 27, 2014 12:05:48 AM implement.Driver readAssetContent
 FINEST: Adding asset content TV repair cost multiplier 2.5
-Dec 26, 2014 11:05:13 PM implement.AssetImpl addAssetContent
+Dec 27, 2014 12:05:48 AM implement.AssetImpl addAssetContent
 FINE: Asset content Bed is added to Asset Asset 5
-Dec 26, 2014 11:05:13 PM implement.Driver readAssetContent
+Dec 27, 2014 12:05:48 AM implement.Driver readAssetContent
 FINEST: Adding asset content Bed repair cost multiplier 1.65
-Dec 26, 2014 11:05:13 PM implement.AssetImpl addAssetContent
+Dec 27, 2014 12:05:48 AM implement.AssetImpl addAssetContent
 FINE: Asset content Fridge is added to Asset Asset 5
-Dec 26, 2014 11:05:13 PM implement.Driver readAssetContent
+Dec 27, 2014 12:05:48 AM implement.Driver readAssetContent
 FINEST: Adding asset content Fridge repair cost multiplier 1.25
-Dec 26, 2014 11:05:13 PM implement.AssetImpl addAssetContent
+Dec 27, 2014 12:05:48 AM implement.AssetImpl addAssetContent
 FINE: Asset content Desk is added to Asset Asset 5
-Dec 26, 2014 11:05:13 PM implement.Driver readAssetContent
+Dec 27, 2014 12:05:48 AM implement.Driver readAssetContent
 FINEST: Adding asset content Desk repair cost multiplier 5.5
-Dec 26, 2014 11:05:13 PM implement.AssetImpl addAssetContent
+Dec 27, 2014 12:05:48 AM implement.AssetImpl addAssetContent
 FINE: Asset content Stove is added to Asset Asset 5
-Dec 26, 2014 11:05:13 PM implement.Driver readAssetContent
+Dec 27, 2014 12:05:48 AM implement.Driver readAssetContent
 FINEST: Adding asset content Stove repair cost multiplier 4.75
-Dec 26, 2014 11:05:13 PM implement.AssetsImpl addAsset
+Dec 27, 2014 12:05:48 AM implement.AssetsImpl addAsset
 FINE: New asset added to assets : Asset 5
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addCustomer
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addCustomer
 FINE: New customerCustomer name: Customer 1
 Vandalism Type: Arbitrary
 MinDamage: 10.0
 MaxDamage: 20.0 is added to the customer group running by Group 1
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addCustomer
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addCustomer
 FINE: New customerCustomer name: Customer 2
 Vandalism Type: Fixed
 MinDamage: 1.0
 MaxDamage: 9.0 is added to the customer group running by Group 1
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addCustomer
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addCustomer
 FINE: New customerCustomer name: Customer 3
 Vandalism Type: Fixed
 MinDamage: 1.0
 MaxDamage: 9.0 is added to the customer group running by Group 1
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addRentalRequest
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addRentalRequest
 FINE: New rental requestRental Request: 
 Id: 1, Asset Type: Apartment, Size: 3, Duration Of Stay: 5, Status: Incomplete is added to the customer group running by Group 1
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addRentalRequest
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addRentalRequest
 FINE: New rental requestRental Request: 
 Id: 2, Asset Type: Hut, Size: 3, Duration Of Stay: 3, Status: Incomplete is added to the customer group running by Group 1
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addCustomer
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addCustomer
 FINE: New customerCustomer name: Customer 1
 Vandalism Type: Fixed
 MinDamage: 1.0
 MaxDamage: 5.0 is added to the customer group running by Group 2
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addCustomer
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addCustomer
 FINE: New customerCustomer name: Customer 2
 Vandalism Type: None
 MinDamage: 0.0
 MaxDamage: 0.0 is added to the customer group running by Group 2
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addCustomer
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addCustomer
 FINE: New customerCustomer name: Customer 3
 Vandalism Type: None
 MinDamage: 0.0
 MaxDamage: 0.0 is added to the customer group running by Group 2
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addCustomer
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addCustomer
 FINE: New customerCustomer name: Customer 4
 Vandalism Type: None
 MinDamage: 0.0
 MaxDamage: 0.0 is added to the customer group running by Group 2
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addCustomer
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addCustomer
 FINE: New customerCustomer name: Customer 5
 Vandalism Type: None
 MinDamage: 0.0
 MaxDamage: 0.0 is added to the customer group running by Group 2
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addRentalRequest
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addRentalRequest
 FINE: New rental requestRental Request: 
 Id: 3, Asset Type: Cottage, Size: 5, Duration Of Stay: 2, Status: Incomplete is added to the customer group running by Group 2
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addRentalRequest
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addRentalRequest
 FINE: New rental requestRental Request: 
 Id: 4, Asset Type: Cottage, Size: 5, Duration Of Stay: 2, Status: Incomplete is added to the customer group running by Group 2
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addRentalRequest
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addRentalRequest
 FINE: New rental requestRental Request: 
 Id: 5, Asset Type: Cottage, Size: 5, Duration Of Stay: 1, Status: Incomplete is added to the customer group running by Group 2
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addRentalRequest
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addRentalRequest
 FINE: New rental requestRental Request: 
 Id: 6, Asset Type: Cottage, Size: 5, Duration Of Stay: 3, Status: Incomplete is added to the customer group running by Group 2
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addRentalRequest
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addRentalRequest
 FINE: New rental requestRental Request: 
 Id: 7, Asset Type: Cottage, Size: 5, Duration Of Stay: 2, Status: Incomplete is added to the customer group running by Group 2
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addRentalRequest
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addRentalRequest
 FINE: New rental requestRental Request: 
 Id: 8, Asset Type: Cottage, Size: 5, Duration Of Stay: 2, Status: Incomplete is added to the customer group running by Group 2
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addRentalRequest
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addRentalRequest
 FINE: New rental requestRental Request: 
 Id: 9, Asset Type: Cottage, Size: 5, Duration Of Stay: 2, Status: Incomplete is added to the customer group running by Group 2
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addCustomer
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addCustomer
 FINE: New customerCustomer name: Customer 1
 Vandalism Type: Arbitrary
 MinDamage: 5.0
 MaxDamage: 8.0 is added to the customer group running by Group 3
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addCustomer
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addCustomer
 FINE: New customerCustomer name: Customer 2
 Vandalism Type: Arbitrary
 MinDamage: 5.0
 MaxDamage: 8.0 is added to the customer group running by Group 3
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addCustomer
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addCustomer
 FINE: New customerCustomer name: Customer 3
 Vandalism Type: Arbitrary
 MinDamage: 5.0
 MaxDamage: 7.0 is added to the customer group running by Group 3
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addCustomer
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addCustomer
 FINE: New customerCustomer name: Customer 4
 Vandalism Type: Arbitrary
 MinDamage: 5.0
 MaxDamage: 7.0 is added to the customer group running by Group 3
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addRentalRequest
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addRentalRequest
 FINE: New rental requestRental Request: 
 Id: 10, Asset Type: House, Size: 4, Duration Of Stay: 2, Status: Incomplete is added to the customer group running by Group 3
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addRentalRequest
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addRentalRequest
 FINE: New rental requestRental Request: 
 Id: 11, Asset Type: Loft, Size: 4, Duration Of Stay: 2, Status: Incomplete is added to the customer group running by Group 3
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addCustomer
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addCustomer
 FINE: New customerCustomer name: Customer 1
 Vandalism Type: Arbitrary
 MinDamage: 15.0
 MaxDamage: 25.0 is added to the customer group running by Group 4
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addCustomer
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addCustomer
 FINE: New customerCustomer name: Customer 2
 Vandalism Type: Fixed
 MinDamage: 0.0
 MaxDamage: 20.0 is added to the customer group running by Group 4
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addRentalRequest
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addRentalRequest
 FINE: New rental requestRental Request: 
 Id: 12, Asset Type: Apartment, Size: 2, Duration Of Stay: 4, Status: Incomplete is added to the customer group running by Group 4
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addRentalRequest
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addRentalRequest
 FINE: New rental requestRental Request: 
 Id: 13, Asset Type: Apartment, Size: 2, Duration Of Stay: 2, Status: Incomplete is added to the customer group running by Group 4
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addCustomer
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addCustomer
 FINE: New customerCustomer name: Customer 1
 Vandalism Type: Arbitrary
 MinDamage: 2.0
 MaxDamage: 7.0 is added to the customer group running by Group 5
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addCustomer
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addCustomer
 FINE: New customerCustomer name: Customer 2
 Vandalism Type: Arbitrary
 MinDamage: 2.0
 MaxDamage: 7.0 is added to the customer group running by Group 5
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addCustomer
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addCustomer
 FINE: New customerCustomer name: Customer 3
 Vandalism Type: Fixed
 MinDamage: 10.0
 MaxDamage: 20.0 is added to the customer group running by Group 5
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addCustomer
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addCustomer
 FINE: New customerCustomer name: Customer 4
 Vandalism Type: None
 MinDamage: 0.0
 MaxDamage: 0.0 is added to the customer group running by Group 5
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addCustomer
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addCustomer
 FINE: New customerCustomer name: Customer 5
 Vandalism Type: None
 MinDamage: 0.0
 MaxDamage: 0.0 is added to the customer group running by Group 5
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addRentalRequest
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addRentalRequest
 FINE: New rental requestRental Request: 
 Id: 14, Asset Type: House, Size: 5, Duration Of Stay: 1, Status: Incomplete is added to the customer group running by Group 5
-Dec 26, 2014 11:05:13 PM implement.CustomerGroupDetailsImpl addRentalRequest
+Dec 27, 2014 12:05:48 AM implement.CustomerGroupDetailsImpl addRentalRequest
 FINE: New rental requestRental Request: 
 Id: 15, Asset Type: Loft, Size: 5, Duration Of Stay: 3, Status: Incomplete is added to the customer group running by Group 5
-Dec 26, 2014 11:05:13 PM implement.ManagmentImpl start
+Dec 27, 2014 12:05:48 AM implement.ManagmentImpl start
 FINE: Simulation Started
-Dec 26, 2014 11:05:13 PM implement.ManagmentImpl start
+Dec 27, 2014 12:05:48 AM implement.ManagmentImpl start
 FINE: Rental requests queue size is : 5
-Dec 26, 2014 11:05:13 PM runnable.RunnableCustomerGroupManager run
+Dec 27, 2014 12:05:48 AM runnable.RunnableCustomerGroupManager run
 FINE: Group runned by Group 5 is waiting for request to be filled
-Dec 26, 2014 11:05:13 PM runnable.RunnableCustomerGroupManager run
-FINE: Group runned by Group 4 is waiting for request to be filled
-Dec 26, 2014 11:05:13 PM runnable.RunnableCustomerGroupManager run
-FINE: Group runned by Group 3 is waiting for request to be filled
-Dec 26, 2014 11:05:13 PM runnable.RunnableCustomerGroupManager run
-FINE: Group runned by Group 1 is waiting for request to be filled
-Dec 26, 2014 11:05:13 PM runnable.RunnableCustomerGroupManager run
+Dec 27, 2014 12:05:48 AM runnable.RunnableCustomerGroupManager run
 FINE: Group runned by Group 2 is waiting for request to be filled
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
+Dec 27, 2014 12:05:48 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 1 is waiting for request to be filled
+Dec 27, 2014 12:05:48 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 4 is waiting for request to be filled
+Dec 27, 2014 12:05:48 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 3 is waiting for request to be filled
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
 FINE: Clerk Leonidas I is waiting for other clerks to start
-Dec 26, 2014 11:05:13 PM implement.ManagmentImpl start
+Dec 27, 2014 12:05:48 AM implement.ManagmentImpl start
 FINE: All clerks are starting a new shift
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
-FINE: Clerk Paula Die is waiting for other clerks to start
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
-FINE: Clerk Wolfgang Eisenkott is waiting for other clerks to start
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
-FINE: Clerk Paula Bitton is waiting for other clerks to start
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
-FINE: Clerk Ken Harush is waiting for other clerks to start
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
-FINE: Clerk Wolfgang Eisenkott is trying to take a new rental request from queue
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
-FINE: Clerk Paula Die is trying to take a new rental request from queue
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
 FINE: Clerk Leonidas I is trying to take a new rental request from queue
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
-FINE: Clerk Wolfgang Eisenkott took rental request id: 14
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
-FINE: Clerk Ken Harush is trying to take a new rental request from queue
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
-FINE: Clerk Paula Bitton is trying to take a new rental request from queue
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
-FINE: Clerk Leonidas I took rental request id: 3
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Die is waiting for other clerks to start
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
+FINE: Clerk Wolfgang Eisenkott is waiting for other clerks to start
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Die is trying to take a new rental request from queue
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Bitton is waiting for other clerks to start
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
+FINE: Clerk Ken Harush is waiting for other clerks to start
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
 FINE: Clerk Paula Die took rental request id: 1
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
-FINE: Clerk Paula Bitton took rental request id: 12
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
-FINE: Clerk Ken Harush took rental request id: 10
-Dec 26, 2014 11:05:13 PM implement.AssetsImpl findAssetByTypeAndSize
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
+FINE: Clerk Wolfgang Eisenkott is trying to take a new rental request from queue
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
+FINE: Clerk Leonidas I took rental request id: 14
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
+FINE: Clerk Ken Harush is trying to take a new rental request from queue
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Bitton is trying to take a new rental request from queue
+Dec 27, 2014 12:05:48 AM implement.AssetsImpl findAssetByTypeAndSize
 FINE: For search: type = House size >= 5 found 1 matching assets 
-Dec 26, 2014 11:05:13 PM implement.AssetsImpl findAssetByTypeAndSize
-FINE: For search: type = Apartment size >= 2 found 1 matching assets 
-Dec 26, 2014 11:05:13 PM implement.AssetsImpl findAssetByTypeAndSize
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
+FINE: Clerk Wolfgang Eisenkott took rental request id: 10
+Dec 27, 2014 12:05:48 AM implement.AssetsImpl findAssetByTypeAndSize
 FINE: For search: type = Apartment size >= 3 found 1 matching assets 
-Dec 26, 2014 11:05:13 PM implement.AssetsImpl findAssetByTypeAndSize
+Dec 27, 2014 12:05:48 AM implement.AssetImpl setStatus
+FINE: Asset Asset 4 status changed to Booked
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Bitton took rental request id: 3
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
+FINE: Clerk Ken Harush took rental request id: 12
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
+FINE: Clerk Leonidas I took found matching asset: Asset 4
+Dec 27, 2014 12:05:48 AM implement.AssetImpl setStatus
+FINE: Asset Asset 1 status changed to Booked
+Dec 27, 2014 12:05:48 AM implement.AssetsImpl findAssetByTypeAndSize
+FINE: For search: type = House size >= 4 found 0 matching assets 
+Dec 27, 2014 12:05:48 AM implement.Location calculateDistance
+FINE: Calculating the distance between Location (20.0,15.0) to Location (3.0,3.0) which is 20.808652046684813
+Dec 27, 2014 12:05:48 AM implement.AssetsImpl findAssetByTypeAndSize
+FINE: For search: type = Apartment size >= 2 found 0 matching assets 
+Dec 27, 2014 12:05:48 AM implement.AssetsImpl findAssetByTypeAndSize
 FINE: For search: type = Cottage size >= 5 found 1 matching assets 
-Dec 26, 2014 11:05:13 PM implement.AssetImpl setStatus
-FINE: Asset Asset 1 status changed to Booked
-Dec 26, 2014 11:05:13 PM implement.AssetImpl setStatus
-FINE: Asset Asset 4 status changed to Booked
-Dec 26, 2014 11:05:13 PM implement.AssetsImpl findAssetByTypeAndSize
-FINE: For search: type = House size >= 4 found 1 matching assets 
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
-FINE: Clerk Paula Bitton took found matching asset: Asset 1
-Dec 26, 2014 11:05:13 PM implement.AssetImpl setStatus
-FINE: Asset Asset 5 status changed to Booked
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk findMatchingAsset
-FINE: Clerk Paula Die is waiting for to be available
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
-FINE: Clerk Leonidas I took found matching asset: Asset 5
-Dec 26, 2014 11:05:13 PM implement.Location calculateDistance
-FINE: Calculating the distance between Location (20.0,20.0) to Location (3.0,3.0) which is 24.041630560342615
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk findMatchingAsset
-FINE: Clerk Ken Harush is waiting for to be available
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
-FINE: Clerk Wolfgang Eisenkott took found matching asset: Asset 4
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
-FINE: Clerk Paula Bitton is going to sleep for 48 seconds
-Dec 26, 2014 11:05:13 PM implement.Location calculateDistance
-FINE: Calculating the distance between Location (12.0,16.0) to Location (3.0,3.0) which is 15.811388300841896
-Dec 26, 2014 11:05:13 PM implement.Location calculateDistance
-FINE: Calculating the distance between Location (20.0,15.0) to Location (3.0,3.0) which is 20.808652046684813
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
-FINE: Clerk Leonidas I is going to sleep for 31 seconds
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
-FINE: Clerk Wolfgang Eisenkott is going to sleep for 41 seconds
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
-FINE: Clerk Leonidas I woke up from sleeping 
-Dec 26, 2014 11:05:13 PM implement.RentalRequestImpl setFoundAsset
-FINE: Asset set to rental request id:3 Asset name: Asset 5
-Dec 26, 2014 11:05:13 PM runnable.RunnableCustomerGroupManager run
-FINE: Group runned by Group 2 request been filled
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
-FINE: Clerk Leonidas I finished his shift
-Dec 26, 2014 11:05:13 PM implement.AssetImpl setStatus
-FINE: Asset Asset 5 status changed to Occupied
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
-FINE: Clerk Wolfgang Eisenkott woke up from sleeping 
-Dec 26, 2014 11:05:13 PM implement.RentalRequestImpl setFoundAsset
-FINE: Asset set to rental request id:14 Asset name: Asset 4
-Dec 26, 2014 11:05:13 PM runnable.RunnebleClerk run
-FINE: Clerk Wolfgang Eisenkott finished his shift
-Dec 26, 2014 11:05:13 PM runnable.RunnableCustomerGroupManager run
-FINE: Group runned by Group 5 request been filled
-Dec 26, 2014 11:05:13 PM implement.AssetImpl setStatus
-FINE: Asset Asset 4 status changed to Occupied
-Dec 26, 2014 11:05:14 PM runnable.RunnebleClerk run
-FINE: Clerk Paula Bitton woke up from sleeping 
-Dec 26, 2014 11:05:14 PM implement.RentalRequestImpl setFoundAsset
-FINE: Asset set to rental request id:12 Asset name: Asset 1
-Dec 26, 2014 11:05:14 PM runnable.RunnebleClerk run
-FINE: Clerk Paula Bitton finished his shift
-Dec 26, 2014 11:05:14 PM runnable.RunnableCustomerGroupManager run
-FINE: Group runned by Group 4 request been filled
-Dec 26, 2014 11:05:14 PM implement.AssetImpl setStatus
-FINE: Asset Asset 1 status changed to Occupied
-Dec 26, 2014 11:05:14 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content TV from 100.0% to 76.74203873513686%
-Dec 26, 2014 11:05:14 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content Bed from 100.0% to 76.74203873513686%
-Dec 26, 2014 11:05:14 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content Fridge from 100.0% to 76.74203873513686%
-Dec 26, 2014 11:05:14 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content Desk from 100.0% to 76.74203873513686%
-Dec 26, 2014 11:05:14 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content Stove from 100.0% to 76.74203873513686%
-Dec 26, 2014 11:05:14 PM implement.AssetImpl setStatus
-FINE: Asset Asset 4 status changed to Available
-Dec 26, 2014 11:05:14 PM implement.RentalRequestImpl releaseAsset
-FINE: Rental request id:14 is now Complete 
-Dec 26, 2014 11:05:14 PM runnable.RunnableCustomerGroupManager run
-FINE: Group runned by Group 5 realse asset.
-Dec 26, 2014 11:05:14 PM runnable.RunnableCustomerGroupManager run
-FINE: Group runned by Group 5 is waiting for request to be filled
-Dec 26, 2014 11:05:14 PM implement.AssetsImpl findAssetByTypeAndSize
-FINE: For search: type = House size >= 4 found 1 matching assets 
-Dec 26, 2014 11:05:14 PM implement.AssetsImpl findAssetByTypeAndSize
-FINE: For search: type = Apartment size >= 3 found 1 matching assets 
-Dec 26, 2014 11:05:14 PM implement.AssetImpl setStatus
-FINE: Asset Asset 4 status changed to Booked
-Dec 26, 2014 11:05:14 PM runnable.RunnebleClerk findMatchingAsset
-FINE: Clerk Paula Die is waiting for to be available
-Dec 26, 2014 11:05:14 PM runnable.RunnebleClerk run
-FINE: Clerk Ken Harush took found matching asset: Asset 4
-Dec 26, 2014 11:05:14 PM implement.Location calculateDistance
-FINE: Calculating the distance between Location (20.0,15.0) to Location (3.0,3.0) which is 20.808652046684813
-Dec 26, 2014 11:05:14 PM runnable.RunnebleClerk run
-FINE: Clerk Ken Harush is going to sleep for 41 seconds
-Dec 26, 2014 11:05:14 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content TV from 100.0% to 95.0%
-Dec 26, 2014 11:05:14 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content Bed from 100.0% to 95.0%
-Dec 26, 2014 11:05:14 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content Fridge from 100.0% to 95.0%
-Dec 26, 2014 11:05:14 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content Desk from 100.0% to 95.0%
-Dec 26, 2014 11:05:14 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content Stove from 100.0% to 95.0%
-Dec 26, 2014 11:05:14 PM implement.AssetImpl setStatus
-FINE: Asset Asset 5 status changed to Available
-Dec 26, 2014 11:05:14 PM implement.RentalRequestImpl releaseAsset
-FINE: Rental request id:3 is now Complete 
-Dec 26, 2014 11:05:14 PM runnable.RunnableCustomerGroupManager run
-FINE: Group runned by Group 2 realse asset.
-Dec 26, 2014 11:05:14 PM runnable.RunnableCustomerGroupManager run
-FINE: Group runned by Group 2 is waiting for request to be filled
-Dec 26, 2014 11:05:14 PM implement.AssetsImpl findAssetByTypeAndSize
-FINE: For search: type = Apartment size >= 3 found 1 matching assets 
-Dec 26, 2014 11:05:14 PM runnable.RunnebleClerk findMatchingAsset
-FINE: Clerk Paula Die is waiting for to be available
-Dec 26, 2014 11:05:14 PM runnable.RunnebleClerk run
-FINE: Clerk Ken Harush woke up from sleeping 
-Dec 26, 2014 11:05:14 PM implement.RentalRequestImpl setFoundAsset
-FINE: Asset set to rental request id:10 Asset name: Asset 4
-Dec 26, 2014 11:05:14 PM runnable.RunnebleClerk run
-FINE: Clerk Ken Harush finished his shift
-Dec 26, 2014 11:05:14 PM runnable.RunnableCustomerGroupManager run
-FINE: Group runned by Group 3 request been filled
-Dec 26, 2014 11:05:14 PM implement.AssetImpl setStatus
-FINE: Asset Asset 4 status changed to Occupied
-Dec 26, 2014 11:05:14 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content TV from 100.0% to 71.33178164576175%
-Dec 26, 2014 11:05:14 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content Bed from 100.0% to 71.33178164576175%
-Dec 26, 2014 11:05:14 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content Fridge from 100.0% to 71.33178164576175%
-Dec 26, 2014 11:05:14 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content Desk from 100.0% to 71.33178164576175%
-Dec 26, 2014 11:05:14 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content Stove from 100.0% to 71.33178164576175%
-Dec 26, 2014 11:05:14 PM implement.AssetImpl setStatus
-FINE: Asset Asset 1 status changed to Available
-Dec 26, 2014 11:05:14 PM implement.RentalRequestImpl releaseAsset
-FINE: Rental request id:12 is now Complete 
-Dec 26, 2014 11:05:14 PM runnable.RunnableCustomerGroupManager run
-FINE: Group runned by Group 4 realse asset.
-Dec 26, 2014 11:05:14 PM runnable.RunnableCustomerGroupManager run
-FINE: Group runned by Group 4 is waiting for request to be filled
-Dec 26, 2014 11:05:14 PM implement.AssetsImpl findAssetByTypeAndSize
-FINE: For search: type = Apartment size >= 3 found 1 matching assets 
-Dec 26, 2014 11:05:14 PM implement.AssetImpl setStatus
-FINE: Asset Asset 1 status changed to Booked
-Dec 26, 2014 11:05:14 PM runnable.RunnebleClerk run
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
+FINE: Clerk Leonidas I is going to sleep for 41 seconds
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk findMatchingAsset
+FINE: Clerk Wolfgang Eisenkott is waiting for to be available
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
 FINE: Clerk Paula Die took found matching asset: Asset 1
-Dec 26, 2014 11:05:14 PM implement.Location calculateDistance
+Dec 27, 2014 12:05:48 AM implement.AssetImpl setStatus
+FINE: Asset Asset 5 status changed to Booked
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk findMatchingAsset
+FINE: Clerk Ken Harush is waiting for to be available
+Dec 27, 2014 12:05:48 AM implement.Location calculateDistance
 FINE: Calculating the distance between Location (20.0,20.0) to Location (3.0,3.0) which is 24.041630560342615
-Dec 26, 2014 11:05:14 PM runnable.RunnebleClerk run
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Bitton took found matching asset: Asset 5
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
 FINE: Clerk Paula Die is going to sleep for 48 seconds
-Dec 26, 2014 11:05:14 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content TV from 76.74203873513686% to 56.49142467875506%
-Dec 26, 2014 11:05:14 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content Bed from 76.74203873513686% to 56.49142467875506%
-Dec 26, 2014 11:05:14 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content Fridge from 76.74203873513686% to 56.49142467875506%
-Dec 26, 2014 11:05:14 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content Desk from 76.74203873513686% to 56.49142467875506%
-Dec 26, 2014 11:05:14 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content Stove from 76.74203873513686% to 56.49142467875506%
-Dec 26, 2014 11:05:14 PM implement.AssetImpl setStatus
-FINE: Asset Asset 4 status changed to Unavailable
-Dec 26, 2014 11:05:14 PM implement.RentalRequestImpl releaseAsset
-FINE: Rental request id:10 is now Complete 
-Dec 26, 2014 11:05:14 PM runnable.RunnableCustomerGroupManager run
-FINE: Group runned by Group 3 realse asset.
-Dec 26, 2014 11:05:14 PM runnable.RunnableCustomerGroupManager run
-FINE: Group runned by Group 3 is waiting for request to be filled
-Dec 26, 2014 11:05:15 PM runnable.RunnebleClerk run
+Dec 27, 2014 12:05:48 AM implement.Location calculateDistance
+FINE: Calculating the distance between Location (12.0,16.0) to Location (3.0,3.0) which is 15.811388300841896
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Bitton is going to sleep for 31 seconds
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Bitton woke up from sleeping 
+Dec 27, 2014 12:05:48 AM implement.RentalRequestImpl setFoundAsset
+FINE: Asset set to rental request id:3 Asset name: Asset 5
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Bitton finished his shift
+Dec 27, 2014 12:05:48 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 2 request been filled
+Dec 27, 2014 12:05:48 AM implement.AssetImpl setStatus
+FINE: Asset Asset 5 status changed to Occupied
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
+FINE: Clerk Leonidas I woke up from sleeping 
+Dec 27, 2014 12:05:48 AM implement.RentalRequestImpl setFoundAsset
+FINE: Asset set to rental request id:14 Asset name: Asset 4
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
+FINE: Clerk Leonidas I finished his shift
+Dec 27, 2014 12:05:48 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 5 request been filled
+Dec 27, 2014 12:05:48 AM implement.AssetImpl setStatus
+FINE: Asset Asset 4 status changed to Occupied
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
 FINE: Clerk Paula Die woke up from sleeping 
-Dec 26, 2014 11:05:15 PM implement.RentalRequestImpl setFoundAsset
+Dec 27, 2014 12:05:48 AM implement.RentalRequestImpl setFoundAsset
 FINE: Asset set to rental request id:1 Asset name: Asset 1
-Dec 26, 2014 11:05:15 PM runnable.RunnebleClerk run
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
 FINE: Clerk Paula Die finished his shift
-Dec 26, 2014 11:05:15 PM runnable.RunnableCustomerGroupManager run
+Dec 27, 2014 12:05:48 AM runnable.RunnableCustomerGroupManager run
 FINE: Group runned by Group 1 request been filled
-Dec 26, 2014 11:05:15 PM implement.ManagmentImpl start
-FINE: All clerks finished their shift
-Dec 26, 2014 11:05:15 PM implement.AssetImpl setStatus
+Dec 27, 2014 12:05:48 AM implement.AssetImpl setStatus
 FINE: Asset Asset 1 status changed to Occupied
-Dec 26, 2014 11:05:15 PM implement.ManagmentImpl start
-FINE: All assets been fixed
-Dec 26, 2014 11:05:15 PM runnable.RunnableMaintenaceRequest run
-FINE: New maintenance insinuate for asset Asset 4
-Dec 26, 2014 11:05:15 PM implement.ManagmentImpl start
-FINE: All clerks are starting a new shift
-Dec 26, 2014 11:05:15 PM implement.AssetImpl setStatus
-FINE: Asset Asset 4 status changed to Unavailable
-Dec 26, 2014 11:05:15 PM runnable.RunnableMaintenaceRequest run
-FINE: Maintenance for asset Asset 4 started
-Dec 26, 2014 11:05:15 PM implement.AssetContentImpl calculateRepairTime
-FINE: Calculating the repair time for TV which is 217.5428766062247
-Dec 26, 2014 11:05:16 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content TV from 71.33178164576175% to 55.195407976803864%
-Dec 26, 2014 11:05:16 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content Bed from 71.33178164576175% to 55.195407976803864%
-Dec 26, 2014 11:05:16 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content Fridge from 71.33178164576175% to 55.195407976803864%
-Dec 26, 2014 11:05:16 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content Desk from 71.33178164576175% to 55.195407976803864%
-Dec 26, 2014 11:05:16 PM implement.AssetContentImpl damageAssetContent
-FINE: Damageing the asset content Stove from 71.33178164576175% to 55.195407976803864%
-Dec 26, 2014 11:05:16 PM implement.AssetImpl setStatus
-FINE: Asset Asset 1 status changed to Unavailable
-Dec 26, 2014 11:05:16 PM implement.RentalRequestImpl releaseAsset
-FINE: Rental request id:1 is now Complete 
-Dec 26, 2014 11:05:16 PM runnable.RunnableCustomerGroupManager run
-FINE: Group runned by Group 1 realse asset.
-Dec 26, 2014 11:05:16 PM runnable.RunnableCustomerGroupManager run
-FINE: Group runned by Group 1 is waiting for request to be filled
-Dec 26, 2014 11:05:16 PM implement.AssetContentImpl fixAssetContent
-FINE: AssetContent TV health is 100%
-Dec 26, 2014 11:05:16 PM implement.AssetContentImpl calculateRepairTime
-FINE: Calculating the repair time for Bed which is 43.50857532124494
-Dec 26, 2014 11:05:17 PM implement.AssetContentImpl fixAssetContent
-FINE: AssetContent Bed health is 100%
-Dec 26, 2014 11:05:17 PM implement.AssetContentImpl calculateRepairTime
-FINE: Calculating the repair time for Fridge which is 65.26286298186741
-Dec 26, 2014 11:05:17 PM implement.AssetContentImpl fixAssetContent
-FINE: AssetContent Fridge health is 100%
-Dec 26, 2014 11:05:17 PM implement.AssetContentImpl calculateRepairTime
-FINE: Calculating the repair time for Desk which is 108.77143830311235
-Dec 26, 2014 11:05:18 PM implement.AssetContentImpl fixAssetContent
-FINE: AssetContent Desk health is 100%
-Dec 26, 2014 11:05:18 PM implement.AssetContentImpl calculateRepairTime
-FINE: Calculating the repair time for Stove which is 163.15715745466852
-Dec 26, 2014 11:05:19 PM implement.AssetContentImpl fixAssetContent
-FINE: AssetContent Stove health is 100%
-Dec 26, 2014 11:05:19 PM runnable.RunnableMaintenaceRequest run
-FINE: Maintenance for asset Asset 4 is done and returning tools
-Dec 26, 2014 11:05:19 PM implement.AssetImpl setStatus
+Dec 27, 2014 12:05:48 AM implement.RentalRequestImpl releaseAsset
+FINE: Rental request id:14 is now Complete 
+Dec 27, 2014 12:05:48 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content TV from 100.0% to 74.88674787242854%
+Dec 27, 2014 12:05:48 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Bed from 100.0% to 74.88674787242854%
+Dec 27, 2014 12:05:48 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Fridge from 100.0% to 74.88674787242854%
+Dec 27, 2014 12:05:48 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Desk from 100.0% to 74.88674787242854%
+Dec 27, 2014 12:05:48 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Stove from 100.0% to 74.88674787242854%
+Dec 27, 2014 12:05:48 AM implement.AssetImpl setStatus
 FINE: Asset Asset 4 status changed to Available
+Dec 27, 2014 12:05:48 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 5 realse asset.
+Dec 27, 2014 12:05:48 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 5 is waiting for request to be filled
+Dec 27, 2014 12:05:48 AM implement.AssetsImpl findAssetByTypeAndSize
+FINE: For search: type = House size >= 4 found 1 matching assets 
+Dec 27, 2014 12:05:48 AM implement.AssetsImpl findAssetByTypeAndSize
+FINE: For search: type = Apartment size >= 2 found 1 matching assets 
+Dec 27, 2014 12:05:48 AM implement.AssetImpl setStatus
+FINE: Asset Asset 4 status changed to Booked
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk findMatchingAsset
+FINE: Clerk Ken Harush is waiting for to be available
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
+FINE: Clerk Wolfgang Eisenkott took found matching asset: Asset 4
+Dec 27, 2014 12:05:48 AM implement.Location calculateDistance
+FINE: Calculating the distance between Location (20.0,15.0) to Location (3.0,3.0) which is 20.808652046684813
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk run
+FINE: Clerk Wolfgang Eisenkott is going to sleep for 41 seconds
+Dec 27, 2014 12:05:48 AM implement.RentalRequestImpl releaseAsset
+FINE: Rental request id:3 is now Complete 
+Dec 27, 2014 12:05:48 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content TV from 100.0% to 95.0%
+Dec 27, 2014 12:05:48 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Bed from 100.0% to 95.0%
+Dec 27, 2014 12:05:48 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Fridge from 100.0% to 95.0%
+Dec 27, 2014 12:05:48 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Desk from 100.0% to 95.0%
+Dec 27, 2014 12:05:48 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Stove from 100.0% to 95.0%
+Dec 27, 2014 12:05:48 AM implement.AssetImpl setStatus
+FINE: Asset Asset 5 status changed to Available
+Dec 27, 2014 12:05:48 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 2 realse asset.
+Dec 27, 2014 12:05:48 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 2 is waiting for request to be filled
+Dec 27, 2014 12:05:48 AM implement.AssetsImpl findAssetByTypeAndSize
+FINE: For search: type = Apartment size >= 2 found 1 matching assets 
+Dec 27, 2014 12:05:48 AM runnable.RunnebleClerk findMatchingAsset
+FINE: Clerk Ken Harush is waiting for to be available
+Dec 27, 2014 12:05:49 AM runnable.RunnebleClerk run
+FINE: Clerk Wolfgang Eisenkott woke up from sleeping 
+Dec 27, 2014 12:05:49 AM implement.RentalRequestImpl setFoundAsset
+FINE: Asset set to rental request id:10 Asset name: Asset 4
+Dec 27, 2014 12:05:49 AM runnable.RunnebleClerk run
+FINE: Clerk Wolfgang Eisenkott finished his shift
+Dec 27, 2014 12:05:49 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 3 request been filled
+Dec 27, 2014 12:05:49 AM implement.AssetImpl setStatus
+FINE: Asset Asset 4 status changed to Occupied
+Dec 27, 2014 12:05:49 AM implement.RentalRequestImpl releaseAsset
+FINE: Rental request id:10 is now Complete 
+Dec 27, 2014 12:05:49 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content TV from 74.88674787242854% to 56.01432759590075%
+Dec 27, 2014 12:05:49 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Bed from 74.88674787242854% to 56.01432759590075%
+Dec 27, 2014 12:05:49 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Fridge from 74.88674787242854% to 56.01432759590075%
+Dec 27, 2014 12:05:49 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Desk from 74.88674787242854% to 56.01432759590075%
+Dec 27, 2014 12:05:49 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Stove from 74.88674787242854% to 56.01432759590075%
+Dec 27, 2014 12:05:49 AM implement.AssetImpl setStatus
+FINE: Asset Asset 4 status changed to Unavailable
+Dec 27, 2014 12:05:49 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 3 realse asset.
+Dec 27, 2014 12:05:49 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 3 is waiting for request to be filled
+Dec 27, 2014 12:05:49 AM implement.AssetsImpl findAssetByTypeAndSize
+FINE: For search: type = Apartment size >= 2 found 1 matching assets 
+Dec 27, 2014 12:05:49 AM runnable.RunnebleClerk findMatchingAsset
+FINE: Clerk Ken Harush is waiting for to be available
+Dec 27, 2014 12:05:49 AM implement.RentalRequestImpl releaseAsset
+FINE: Rental request id:1 is now Complete 
+Dec 27, 2014 12:05:49 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content TV from 100.0% to 75.61031302168375%
+Dec 27, 2014 12:05:49 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Bed from 100.0% to 75.61031302168375%
+Dec 27, 2014 12:05:49 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Fridge from 100.0% to 75.61031302168375%
+Dec 27, 2014 12:05:49 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Desk from 100.0% to 75.61031302168375%
+Dec 27, 2014 12:05:49 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Stove from 100.0% to 75.61031302168375%
+Dec 27, 2014 12:05:49 AM implement.AssetImpl setStatus
+FINE: Asset Asset 1 status changed to Available
+Dec 27, 2014 12:05:49 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 1 realse asset.
+Dec 27, 2014 12:05:49 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 1 is waiting for request to be filled
+Dec 27, 2014 12:05:49 AM implement.AssetsImpl findAssetByTypeAndSize
+FINE: For search: type = Apartment size >= 2 found 1 matching assets 
+Dec 27, 2014 12:05:49 AM implement.AssetImpl setStatus
+FINE: Asset Asset 1 status changed to Booked
+Dec 27, 2014 12:05:49 AM runnable.RunnebleClerk run
+FINE: Clerk Ken Harush took found matching asset: Asset 1
+Dec 27, 2014 12:05:49 AM implement.Location calculateDistance
+FINE: Calculating the distance between Location (20.0,20.0) to Location (3.0,3.0) which is 24.041630560342615
+Dec 27, 2014 12:05:49 AM runnable.RunnebleClerk run
+FINE: Clerk Ken Harush is going to sleep for 48 seconds
+Dec 27, 2014 12:05:49 AM runnable.RunnebleClerk run
+FINE: Clerk Ken Harush woke up from sleeping 
+Dec 27, 2014 12:05:49 AM implement.RentalRequestImpl setFoundAsset
+FINE: Asset set to rental request id:12 Asset name: Asset 1
+Dec 27, 2014 12:05:49 AM runnable.RunnebleClerk run
+FINE: Clerk Ken Harush finished his shift
+Dec 27, 2014 12:05:49 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 4 request been filled
+Dec 27, 2014 12:05:49 AM implement.ManagmentImpl start
+FINE: All clerks finished their shift
+Dec 27, 2014 12:05:49 AM implement.AssetImpl setStatus
+FINE: Asset Asset 1 status changed to Occupied
+Dec 27, 2014 12:05:50 AM implement.RentalRequestImpl releaseAsset
+FINE: Rental request id:12 is now Complete 
+Dec 27, 2014 12:05:50 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content TV from 75.61031302168375% to 52.15641578541275%
+Dec 27, 2014 12:05:50 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Bed from 75.61031302168375% to 52.15641578541275%
+Dec 27, 2014 12:05:50 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Fridge from 75.61031302168375% to 52.15641578541275%
+Dec 27, 2014 12:05:50 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Desk from 75.61031302168375% to 52.15641578541275%
+Dec 27, 2014 12:05:50 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Stove from 75.61031302168375% to 52.15641578541275%
+Dec 27, 2014 12:05:50 AM implement.AssetImpl setStatus
+FINE: Asset Asset 1 status changed to Unavailable
+Dec 27, 2014 12:05:50 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 4 realse asset.
+Dec 27, 2014 12:05:50 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 4 is waiting for request to be filled
+Dec 27, 2014 12:05:50 AM runnable.RunnableMaintenaceRequest run
+FINE: New maintenance insinuate for asset Asset 4
+Dec 27, 2014 12:05:50 AM runnable.RunnableMaintenaceRequest run
+FINE: New maintenance insinuate for asset Asset 1
+Dec 27, 2014 12:05:50 AM implement.AssetImpl setStatus
+FINE: Asset Asset 4 status changed to Unavailable
+Dec 27, 2014 12:05:50 AM implement.AssetImpl setStatus
+FINE: Asset Asset 1 status changed to Unavailable
+Dec 27, 2014 12:05:50 AM implement.WarehouseImpl takeRepairTool
+WARNING: Could not take tool Drill quantity: 5 from warehouse
+Dec 27, 2014 12:05:50 AM runnable.RunnableMaintenaceRequest run
+FINE: Maintenance for asset Asset 4 started
+Dec 27, 2014 12:05:50 AM runnable.RunnableMaintenaceRequest takeToolsFromWarehouse
+FINE: Maintenance for asset Asset 1 is waiting for tools
+Dec 27, 2014 12:05:50 AM implement.AssetContentImpl calculateRepairTime
+FINE: Calculating the repair time for TV which is 219.92836202049625
+Dec 27, 2014 12:05:52 AM implement.AssetContentImpl fixAssetContent
+FINE: AssetContent TV health is 100%
+Dec 27, 2014 12:05:52 AM implement.AssetContentImpl calculateRepairTime
+FINE: Calculating the repair time for Bed which is 43.98567240409925
+Dec 27, 2014 12:05:52 AM implement.AssetContentImpl fixAssetContent
+FINE: AssetContent Bed health is 100%
+Dec 27, 2014 12:05:52 AM implement.AssetContentImpl calculateRepairTime
+FINE: Calculating the repair time for Fridge which is 65.97850860614886
+Dec 27, 2014 12:05:53 AM implement.AssetContentImpl fixAssetContent
+FINE: AssetContent Fridge health is 100%
+Dec 27, 2014 12:05:53 AM implement.AssetContentImpl calculateRepairTime
+FINE: Calculating the repair time for Desk which is 109.96418101024813
+Dec 27, 2014 12:05:54 AM implement.AssetContentImpl fixAssetContent
+FINE: AssetContent Desk health is 100%
+Dec 27, 2014 12:05:54 AM implement.AssetContentImpl calculateRepairTime
+FINE: Calculating the repair time for Stove which is 164.9462715153722
+Dec 27, 2014 12:05:55 AM implement.AssetContentImpl fixAssetContent
+FINE: AssetContent Stove health is 100%
+Dec 27, 2014 12:05:55 AM runnable.RunnableMaintenaceRequest run
+FINE: Maintenance for asset Asset 4 is done and returning tools
+Dec 27, 2014 12:05:55 AM implement.AssetImpl setStatus
+FINE: Asset Asset 4 status changed to Available
+Dec 27, 2014 12:05:55 AM runnable.RunnableMaintenaceRequest run
+FINE: Maintenance for asset Asset 1 started
+Dec 27, 2014 12:05:55 AM implement.AssetContentImpl calculateRepairTime
+FINE: Calculating the repair time for TV which is 239.21792107293626
+Dec 27, 2014 12:05:57 AM implement.AssetContentImpl fixAssetContent
+FINE: AssetContent TV health is 100%
+Dec 27, 2014 12:05:57 AM implement.AssetContentImpl calculateRepairTime
+FINE: Calculating the repair time for Bed which is 382.748673716698
+Dec 27, 2014 12:06:00 AM implement.AssetContentImpl fixAssetContent
+FINE: AssetContent Bed health is 100%
+Dec 27, 2014 12:06:00 AM implement.AssetContentImpl calculateRepairTime
+FINE: Calculating the repair time for Fridge which is 143.53075264376176
+Dec 27, 2014 12:06:01 AM implement.AssetContentImpl fixAssetContent
+FINE: AssetContent Fridge health is 100%
+Dec 27, 2014 12:06:01 AM implement.AssetContentImpl calculateRepairTime
+FINE: Calculating the repair time for Desk which is 191.374336858349
+Dec 27, 2014 12:06:03 AM implement.AssetContentImpl fixAssetContent
+FINE: AssetContent Desk health is 100%
+Dec 27, 2014 12:06:03 AM implement.AssetContentImpl calculateRepairTime
+FINE: Calculating the repair time for Stove which is 167.45254475105537
+Dec 27, 2014 12:06:04 AM implement.AssetContentImpl fixAssetContent
+FINE: AssetContent Stove health is 100%
+Dec 27, 2014 12:06:04 AM runnable.RunnableMaintenaceRequest run
+FINE: Maintenance for asset Asset 1 is done and returning tools
+Dec 27, 2014 12:06:04 AM implement.AssetImpl setStatus
+FINE: Asset Asset 1 status changed to Available
+Dec 27, 2014 12:06:04 AM implement.ManagmentImpl start
+FINE: All assets been fixed
+Dec 27, 2014 12:06:04 AM implement.ManagmentImpl start
+FINE: All clerks are starting a new shift
+Dec 27, 2014 12:06:04 AM runnable.RunnebleClerk run
+FINE: Clerk Ken Harush is trying to take a new rental request from queue
+Dec 27, 2014 12:06:04 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Bitton is trying to take a new rental request from queue
+Dec 27, 2014 12:06:04 AM runnable.RunnebleClerk run
+FINE: Clerk Leonidas I is trying to take a new rental request from queue
+Dec 27, 2014 12:06:04 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Die is trying to take a new rental request from queue
+Dec 27, 2014 12:06:04 AM runnable.RunnebleClerk run
+FINE: Clerk Wolfgang Eisenkott is trying to take a new rental request from queue
+Dec 27, 2014 12:06:04 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Bitton took rental request id: 4
+Dec 27, 2014 12:06:04 AM runnable.RunnebleClerk run
+FINE: Clerk Ken Harush took rental request id: 15
+Dec 27, 2014 12:06:04 AM runnable.RunnebleClerk run
+FINE: Clerk Wolfgang Eisenkott took rental request id: 13
+Dec 27, 2014 12:06:04 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Die took rental request id: 2
+Dec 27, 2014 12:06:04 AM runnable.RunnebleClerk run
+FINE: Clerk Leonidas I took rental request id: 11
+Dec 27, 2014 12:06:04 AM implement.AssetsImpl findAssetByTypeAndSize
+FINE: For search: type = Apartment size >= 2 found 1 matching assets 
+Dec 27, 2014 12:06:04 AM implement.AssetsImpl findAssetByTypeAndSize
+FINE: For search: type = Loft size >= 5 found 1 matching assets 
+Dec 27, 2014 12:06:04 AM implement.AssetsImpl findAssetByTypeAndSize
+FINE: For search: type = Cottage size >= 5 found 1 matching assets 
+Dec 27, 2014 12:06:04 AM implement.AssetImpl setStatus
+FINE: Asset Asset 1 status changed to Booked
+Dec 27, 2014 12:06:04 AM implement.AssetsImpl findAssetByTypeAndSize
+FINE: For search: type = Loft size >= 4 found 1 matching assets 
+Dec 27, 2014 12:06:04 AM implement.AssetsImpl findAssetByTypeAndSize
+FINE: For search: type = Hut size >= 3 found 1 matching assets 
+Dec 27, 2014 12:06:04 AM runnable.RunnebleClerk run
+FINE: Clerk Wolfgang Eisenkott took found matching asset: Asset 1
+Dec 27, 2014 12:06:04 AM implement.AssetImpl setStatus
+FINE: Asset Asset 5 status changed to Booked
+Dec 27, 2014 12:06:04 AM implement.AssetImpl setStatus
+FINE: Asset Asset 2 status changed to Booked
+Dec 27, 2014 12:06:04 AM implement.Location calculateDistance
+FINE: Calculating the distance between Location (20.0,20.0) to Location (3.0,3.0) which is 24.041630560342615
+Dec 27, 2014 12:06:04 AM implement.AssetImpl setStatus
+FINE: Asset Asset 3 status changed to Booked
+Dec 27, 2014 12:06:04 AM runnable.RunnebleClerk findMatchingAsset
+FINE: Clerk Leonidas I is waiting for to be available
+Dec 27, 2014 12:06:04 AM runnable.RunnebleClerk run
+FINE: Clerk Ken Harush took found matching asset: Asset 2
+Dec 27, 2014 12:06:04 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Bitton took found matching asset: Asset 5
+Dec 27, 2014 12:06:04 AM runnable.RunnebleClerk run
+FINE: Clerk Wolfgang Eisenkott is going to sleep for 48 seconds
+Dec 27, 2014 12:06:04 AM implement.Location calculateDistance
+FINE: Calculating the distance between Location (20.0,25.0) to Location (3.0,3.0) which is 27.80287754891569
+Dec 27, 2014 12:06:04 AM implement.Location calculateDistance
+FINE: Calculating the distance between Location (12.0,16.0) to Location (3.0,3.0) which is 15.811388300841896
+Dec 27, 2014 12:06:04 AM runnable.RunnebleClerk run
+FINE: Clerk Ken Harush is going to sleep for 55 seconds
+Dec 27, 2014 12:06:04 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Bitton is going to sleep for 31 seconds
+Dec 27, 2014 12:06:04 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Die took found matching asset: Asset 3
+Dec 27, 2014 12:06:04 AM implement.Location calculateDistance
+FINE: Calculating the distance between Location (15.0,21.0) to Location (3.0,3.0) which is 21.633307652783937
+Dec 27, 2014 12:06:04 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Die is going to sleep for 43 seconds
+Dec 27, 2014 12:06:04 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Bitton woke up from sleeping 
+Dec 27, 2014 12:06:04 AM implement.RentalRequestImpl setFoundAsset
+FINE: Asset set to rental request id:4 Asset name: Asset 5
+Dec 27, 2014 12:06:04 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Bitton finished his shift
+Dec 27, 2014 12:06:04 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 2 request been filled
+Dec 27, 2014 12:06:04 AM implement.AssetImpl setStatus
+FINE: Asset Asset 5 status changed to Occupied
+Dec 27, 2014 12:06:04 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Die woke up from sleeping 
+Dec 27, 2014 12:06:04 AM implement.RentalRequestImpl setFoundAsset
+FINE: Asset set to rental request id:2 Asset name: Asset 3
+Dec 27, 2014 12:06:04 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Die finished his shift
+Dec 27, 2014 12:06:04 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 1 request been filled
+Dec 27, 2014 12:06:04 AM implement.AssetImpl setStatus
+FINE: Asset Asset 3 status changed to Occupied
+Dec 27, 2014 12:06:05 AM runnable.RunnebleClerk run
+FINE: Clerk Wolfgang Eisenkott woke up from sleeping 
+Dec 27, 2014 12:06:05 AM implement.RentalRequestImpl setFoundAsset
+FINE: Asset set to rental request id:13 Asset name: Asset 1
+Dec 27, 2014 12:06:05 AM runnable.RunnebleClerk run
+FINE: Clerk Wolfgang Eisenkott finished his shift
+Dec 27, 2014 12:06:05 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 4 request been filled
+Dec 27, 2014 12:06:05 AM implement.AssetImpl setStatus
+FINE: Asset Asset 1 status changed to Occupied
+Dec 27, 2014 12:06:05 AM runnable.RunnebleClerk run
+FINE: Clerk Ken Harush woke up from sleeping 
+Dec 27, 2014 12:06:05 AM implement.RentalRequestImpl setFoundAsset
+FINE: Asset set to rental request id:15 Asset name: Asset 2
+Dec 27, 2014 12:06:05 AM runnable.RunnebleClerk run
+FINE: Clerk Ken Harush finished his shift
+Dec 27, 2014 12:06:05 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 5 request been filled
+Dec 27, 2014 12:06:05 AM implement.AssetImpl setStatus
+FINE: Asset Asset 2 status changed to Occupied
+Dec 27, 2014 12:06:05 AM implement.RentalRequestImpl releaseAsset
+FINE: Rental request id:4 is now Complete 
+Dec 27, 2014 12:06:05 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content TV from 95.0% to 90.25%
+Dec 27, 2014 12:06:05 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Bed from 95.0% to 90.25%
+Dec 27, 2014 12:06:05 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Fridge from 95.0% to 90.25%
+Dec 27, 2014 12:06:05 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Desk from 95.0% to 90.25%
+Dec 27, 2014 12:06:05 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Stove from 95.0% to 90.25%
+Dec 27, 2014 12:06:05 AM implement.AssetImpl setStatus
+FINE: Asset Asset 5 status changed to Available
+Dec 27, 2014 12:06:05 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 2 realse asset.
+Dec 27, 2014 12:06:05 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 2 is waiting for request to be filled
+Dec 27, 2014 12:06:05 AM implement.AssetsImpl findAssetByTypeAndSize
+FINE: For search: type = Loft size >= 4 found 1 matching assets 
+Dec 27, 2014 12:06:05 AM runnable.RunnebleClerk findMatchingAsset
+FINE: Clerk Leonidas I is waiting for to be available
+Dec 27, 2014 12:06:05 AM implement.RentalRequestImpl releaseAsset
+FINE: Rental request id:13 is now Complete 
+Dec 27, 2014 12:06:05 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content TV from 100.0% to 68.98055794380215%
+Dec 27, 2014 12:06:05 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Bed from 100.0% to 68.98055794380215%
+Dec 27, 2014 12:06:05 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Fridge from 100.0% to 68.98055794380215%
+Dec 27, 2014 12:06:05 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Desk from 100.0% to 68.98055794380215%
+Dec 27, 2014 12:06:05 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Stove from 100.0% to 68.98055794380215%
+Dec 27, 2014 12:06:05 AM implement.AssetImpl setStatus
+FINE: Asset Asset 1 status changed to Available
+Dec 27, 2014 12:06:05 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 4 realse asset.
+Dec 27, 2014 12:06:05 AM implement.AssetsImpl findAssetByTypeAndSize
+FINE: For search: type = Loft size >= 4 found 1 matching assets 
+Dec 27, 2014 12:06:05 AM runnable.RunnebleClerk findMatchingAsset
+FINE: Clerk Leonidas I is waiting for to be available
+Dec 27, 2014 12:06:05 AM implement.RentalRequestImpl releaseAsset
+FINE: Rental request id:2 is now Complete 
+Dec 27, 2014 12:06:05 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content TV from 100.0% to 75.61031302168375%
+Dec 27, 2014 12:06:05 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Bed from 100.0% to 75.61031302168375%
+Dec 27, 2014 12:06:05 AM implement.AssetImpl setStatus
+FINE: Asset Asset 3 status changed to Available
+Dec 27, 2014 12:06:05 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 1 realse asset.
+Dec 27, 2014 12:06:05 AM implement.AssetsImpl findAssetByTypeAndSize
+FINE: For search: type = Loft size >= 4 found 1 matching assets 
+Dec 27, 2014 12:06:05 AM runnable.RunnebleClerk findMatchingAsset
+FINE: Clerk Leonidas I is waiting for to be available
+Dec 27, 2014 12:06:05 AM implement.RentalRequestImpl releaseAsset
+FINE: Rental request id:15 is now Complete 
+Dec 27, 2014 12:06:05 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content TV from 100.0% to 74.88674787242854%
+Dec 27, 2014 12:06:05 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Fridge from 100.0% to 74.88674787242854%
+Dec 27, 2014 12:06:05 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Desk from 100.0% to 74.88674787242854%
+Dec 27, 2014 12:06:05 AM implement.AssetImpl setStatus
+FINE: Asset Asset 2 status changed to Available
+Dec 27, 2014 12:06:05 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 5 realse asset.
+Dec 27, 2014 12:06:05 AM implement.AssetsImpl findAssetByTypeAndSize
+FINE: For search: type = Loft size >= 4 found 1 matching assets 
+Dec 27, 2014 12:06:05 AM implement.AssetImpl setStatus
+FINE: Asset Asset 2 status changed to Booked
+Dec 27, 2014 12:06:05 AM runnable.RunnebleClerk run
+FINE: Clerk Leonidas I took found matching asset: Asset 2
+Dec 27, 2014 12:06:05 AM implement.Location calculateDistance
+FINE: Calculating the distance between Location (20.0,25.0) to Location (3.0,3.0) which is 27.80287754891569
+Dec 27, 2014 12:06:05 AM runnable.RunnebleClerk run
+FINE: Clerk Leonidas I is going to sleep for 55 seconds
+Dec 27, 2014 12:06:06 AM runnable.RunnebleClerk run
+FINE: Clerk Leonidas I woke up from sleeping 
+Dec 27, 2014 12:06:06 AM implement.RentalRequestImpl setFoundAsset
+FINE: Asset set to rental request id:11 Asset name: Asset 2
+Dec 27, 2014 12:06:06 AM runnable.RunnebleClerk run
+FINE: Clerk Leonidas I finished his shift
+Dec 27, 2014 12:06:06 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 3 request been filled
+Dec 27, 2014 12:06:06 AM implement.ManagmentImpl start
+FINE: All clerks finished their shift
+Dec 27, 2014 12:06:06 AM implement.AssetImpl setStatus
+FINE: Asset Asset 2 status changed to Occupied
+Dec 27, 2014 12:06:06 AM implement.RentalRequestImpl releaseAsset
+FINE: Rental request id:11 is now Complete 
+Dec 27, 2014 12:06:06 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content TV from 74.88674787242854% to 56.01432759590075%
+Dec 27, 2014 12:06:06 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Fridge from 74.88674787242854% to 56.01432759590075%
+Dec 27, 2014 12:06:06 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Desk from 74.88674787242854% to 56.01432759590075%
+Dec 27, 2014 12:06:06 AM implement.AssetImpl setStatus
+FINE: Asset Asset 2 status changed to Unavailable
+Dec 27, 2014 12:06:06 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 3 realse asset.
+Dec 27, 2014 12:06:06 AM runnable.RunnableMaintenaceRequest run
+FINE: New maintenance insinuate for asset Asset 2
+Dec 27, 2014 12:06:06 AM implement.AssetImpl setStatus
+FINE: Asset Asset 2 status changed to Unavailable
+Dec 27, 2014 12:06:06 AM runnable.RunnableMaintenaceRequest run
+FINE: Maintenance for asset Asset 2 started
+Dec 27, 2014 12:06:06 AM implement.AssetContentImpl calculateRepairTime
+FINE: Calculating the repair time for TV which is 109.96418101024813
+Dec 27, 2014 12:06:07 AM implement.AssetContentImpl fixAssetContent
+FINE: AssetContent TV health is 100%
+Dec 27, 2014 12:06:07 AM implement.AssetContentImpl calculateRepairTime
+FINE: Calculating the repair time for Fridge which is 87.9713448081985
+Dec 27, 2014 12:06:08 AM implement.AssetContentImpl fixAssetContent
+FINE: AssetContent Fridge health is 100%
+Dec 27, 2014 12:06:08 AM implement.AssetContentImpl calculateRepairTime
+FINE: Calculating the repair time for Desk which is 65.97850860614886
+Dec 27, 2014 12:06:08 AM implement.AssetContentImpl fixAssetContent
+FINE: AssetContent Desk health is 100%
+Dec 27, 2014 12:06:08 AM runnable.RunnableMaintenaceRequest run
+FINE: Maintenance for asset Asset 2 is done and returning tools
+Dec 27, 2014 12:06:08 AM implement.AssetImpl setStatus
+FINE: Asset Asset 2 status changed to Available
+Dec 27, 2014 12:06:08 AM implement.ManagmentImpl start
+FINE: All assets been fixed
+Dec 27, 2014 12:06:08 AM implement.ManagmentImpl start
+FINE: All clerks are starting a new shift
+Dec 27, 2014 12:06:08 AM runnable.RunnebleClerk run
+FINE: Clerk Leonidas I is trying to take a new rental request from queue
+Dec 27, 2014 12:06:08 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Bitton is trying to take a new rental request from queue
+Dec 27, 2014 12:06:08 AM runnable.RunnebleClerk run
+FINE: Clerk Leonidas I took rental request id: 5
+Dec 27, 2014 12:06:08 AM runnable.RunnebleClerk run
+FINE: Clerk Wolfgang Eisenkott is trying to take a new rental request from queue
+Dec 27, 2014 12:06:08 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Die is trying to take a new rental request from queue
+Dec 27, 2014 12:06:08 AM runnable.RunnebleClerk run
+FINE: Clerk Ken Harush is trying to take a new rental request from queue
+Dec 27, 2014 12:06:08 AM implement.AssetsImpl findAssetByTypeAndSize
+FINE: For search: type = Cottage size >= 5 found 1 matching assets 
+Dec 27, 2014 12:06:08 AM implement.AssetImpl setStatus
+FINE: Asset Asset 5 status changed to Booked
+Dec 27, 2014 12:06:08 AM runnable.RunnebleClerk run
+FINE: Clerk Leonidas I took found matching asset: Asset 5
+Dec 27, 2014 12:06:08 AM implement.Location calculateDistance
+FINE: Calculating the distance between Location (12.0,16.0) to Location (3.0,3.0) which is 15.811388300841896
+Dec 27, 2014 12:06:08 AM runnable.RunnebleClerk run
+FINE: Clerk Leonidas I is going to sleep for 31 seconds
+Dec 27, 2014 12:06:08 AM runnable.RunnebleClerk run
+FINE: Clerk Leonidas I woke up from sleeping 
+Dec 27, 2014 12:06:08 AM implement.RentalRequestImpl setFoundAsset
+FINE: Asset set to rental request id:5 Asset name: Asset 5
+Dec 27, 2014 12:06:08 AM runnable.RunnebleClerk run
+FINE: Clerk Leonidas I finished his shift
+Dec 27, 2014 12:06:08 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 2 request been filled
+Dec 27, 2014 12:06:08 AM implement.AssetImpl setStatus
+FINE: Asset Asset 5 status changed to Occupied
+Dec 27, 2014 12:06:09 AM implement.RentalRequestImpl releaseAsset
+FINE: Rental request id:5 is now Complete 
+Dec 27, 2014 12:06:09 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content TV from 90.25% to 85.7375%
+Dec 27, 2014 12:06:09 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Bed from 90.25% to 85.7375%
+Dec 27, 2014 12:06:09 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Fridge from 90.25% to 85.7375%
+Dec 27, 2014 12:06:09 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Desk from 90.25% to 85.7375%
+Dec 27, 2014 12:06:09 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Stove from 90.25% to 85.7375%
+Dec 27, 2014 12:06:09 AM implement.AssetImpl setStatus
+FINE: Asset Asset 5 status changed to Available
+Dec 27, 2014 12:06:09 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 2 realse asset.
+Dec 27, 2014 12:06:09 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 2 is waiting for request to be filled
+Dec 27, 2014 12:06:09 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Bitton took rental request id: 6
+Dec 27, 2014 12:06:09 AM implement.AssetsImpl findAssetByTypeAndSize
+FINE: For search: type = Cottage size >= 5 found 1 matching assets 
+Dec 27, 2014 12:06:09 AM implement.AssetImpl setStatus
+FINE: Asset Asset 5 status changed to Booked
+Dec 27, 2014 12:06:09 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Bitton took found matching asset: Asset 5
+Dec 27, 2014 12:06:09 AM implement.Location calculateDistance
+FINE: Calculating the distance between Location (12.0,16.0) to Location (3.0,3.0) which is 15.811388300841896
+Dec 27, 2014 12:06:09 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Bitton is going to sleep for 31 seconds
+Dec 27, 2014 12:06:09 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Bitton woke up from sleeping 
+Dec 27, 2014 12:06:09 AM implement.RentalRequestImpl setFoundAsset
+FINE: Asset set to rental request id:6 Asset name: Asset 5
+Dec 27, 2014 12:06:09 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Bitton finished his shift
+Dec 27, 2014 12:06:09 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 2 request been filled
+Dec 27, 2014 12:06:09 AM implement.AssetImpl setStatus
+FINE: Asset Asset 5 status changed to Occupied
+Dec 27, 2014 12:06:09 AM implement.RentalRequestImpl releaseAsset
+FINE: Rental request id:6 is now Complete 
+Dec 27, 2014 12:06:09 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content TV from 85.7375% to 81.450625%
+Dec 27, 2014 12:06:09 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Bed from 85.7375% to 81.450625%
+Dec 27, 2014 12:06:09 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Fridge from 85.7375% to 81.450625%
+Dec 27, 2014 12:06:09 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Desk from 85.7375% to 81.450625%
+Dec 27, 2014 12:06:09 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Stove from 85.7375% to 81.450625%
+Dec 27, 2014 12:06:09 AM implement.AssetImpl setStatus
+FINE: Asset Asset 5 status changed to Available
+Dec 27, 2014 12:06:09 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 2 realse asset.
+Dec 27, 2014 12:06:09 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 2 is waiting for request to be filled
+Dec 27, 2014 12:06:09 AM runnable.RunnebleClerk run
+FINE: Clerk Wolfgang Eisenkott took rental request id: 7
+Dec 27, 2014 12:06:09 AM implement.AssetsImpl findAssetByTypeAndSize
+FINE: For search: type = Cottage size >= 5 found 1 matching assets 
+Dec 27, 2014 12:06:09 AM implement.AssetImpl setStatus
+FINE: Asset Asset 5 status changed to Booked
+Dec 27, 2014 12:06:09 AM runnable.RunnebleClerk run
+FINE: Clerk Wolfgang Eisenkott took found matching asset: Asset 5
+Dec 27, 2014 12:06:09 AM implement.Location calculateDistance
+FINE: Calculating the distance between Location (12.0,16.0) to Location (3.0,3.0) which is 15.811388300841896
+Dec 27, 2014 12:06:09 AM runnable.RunnebleClerk run
+FINE: Clerk Wolfgang Eisenkott is going to sleep for 31 seconds
+Dec 27, 2014 12:06:10 AM runnable.RunnebleClerk run
+FINE: Clerk Wolfgang Eisenkott woke up from sleeping 
+Dec 27, 2014 12:06:10 AM implement.RentalRequestImpl setFoundAsset
+FINE: Asset set to rental request id:7 Asset name: Asset 5
+Dec 27, 2014 12:06:10 AM runnable.RunnebleClerk run
+FINE: Clerk Wolfgang Eisenkott finished his shift
+Dec 27, 2014 12:06:10 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 2 request been filled
+Dec 27, 2014 12:06:10 AM implement.AssetImpl setStatus
+FINE: Asset Asset 5 status changed to Occupied
+Dec 27, 2014 12:06:10 AM implement.RentalRequestImpl releaseAsset
+FINE: Rental request id:7 is now Complete 
+Dec 27, 2014 12:06:10 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content TV from 81.450625% to 77.37809375%
+Dec 27, 2014 12:06:10 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Bed from 81.450625% to 77.37809375%
+Dec 27, 2014 12:06:10 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Fridge from 81.450625% to 77.37809375%
+Dec 27, 2014 12:06:10 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Desk from 81.450625% to 77.37809375%
+Dec 27, 2014 12:06:10 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Stove from 81.450625% to 77.37809375%
+Dec 27, 2014 12:06:10 AM implement.AssetImpl setStatus
+FINE: Asset Asset 5 status changed to Available
+Dec 27, 2014 12:06:10 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 2 realse asset.
+Dec 27, 2014 12:06:10 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 2 is waiting for request to be filled
+Dec 27, 2014 12:06:10 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Die took rental request id: 8
+Dec 27, 2014 12:06:10 AM implement.AssetsImpl findAssetByTypeAndSize
+FINE: For search: type = Cottage size >= 5 found 1 matching assets 
+Dec 27, 2014 12:06:10 AM implement.AssetImpl setStatus
+FINE: Asset Asset 5 status changed to Booked
+Dec 27, 2014 12:06:10 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Die took found matching asset: Asset 5
+Dec 27, 2014 12:06:10 AM implement.Location calculateDistance
+FINE: Calculating the distance between Location (12.0,16.0) to Location (3.0,3.0) which is 15.811388300841896
+Dec 27, 2014 12:06:10 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Die is going to sleep for 31 seconds
+Dec 27, 2014 12:06:10 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Die woke up from sleeping 
+Dec 27, 2014 12:06:10 AM implement.RentalRequestImpl setFoundAsset
+FINE: Asset set to rental request id:8 Asset name: Asset 5
+Dec 27, 2014 12:06:10 AM runnable.RunnebleClerk run
+FINE: Clerk Paula Die finished his shift
+Dec 27, 2014 12:06:10 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 2 request been filled
+Dec 27, 2014 12:06:10 AM implement.AssetImpl setStatus
+FINE: Asset Asset 5 status changed to Occupied
+Dec 27, 2014 12:06:11 AM implement.RentalRequestImpl releaseAsset
+FINE: Rental request id:8 is now Complete 
+Dec 27, 2014 12:06:11 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content TV from 77.37809375% to 73.5091890625%
+Dec 27, 2014 12:06:11 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Bed from 77.37809375% to 73.5091890625%
+Dec 27, 2014 12:06:11 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Fridge from 77.37809375% to 73.5091890625%
+Dec 27, 2014 12:06:11 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Desk from 77.37809375% to 73.5091890625%
+Dec 27, 2014 12:06:11 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Stove from 77.37809375% to 73.5091890625%
+Dec 27, 2014 12:06:11 AM implement.AssetImpl setStatus
+FINE: Asset Asset 5 status changed to Available
+Dec 27, 2014 12:06:11 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 2 realse asset.
+Dec 27, 2014 12:06:11 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 2 is waiting for request to be filled
+Dec 27, 2014 12:06:11 AM runnable.RunnebleClerk run
+FINE: Clerk Ken Harush took rental request id: 9
+Dec 27, 2014 12:06:11 AM implement.AssetsImpl findAssetByTypeAndSize
+FINE: For search: type = Cottage size >= 5 found 1 matching assets 
+Dec 27, 2014 12:06:11 AM implement.AssetImpl setStatus
+FINE: Asset Asset 5 status changed to Booked
+Dec 27, 2014 12:06:11 AM runnable.RunnebleClerk run
+FINE: Clerk Ken Harush took found matching asset: Asset 5
+Dec 27, 2014 12:06:11 AM implement.Location calculateDistance
+FINE: Calculating the distance between Location (12.0,16.0) to Location (3.0,3.0) which is 15.811388300841896
+Dec 27, 2014 12:06:11 AM runnable.RunnebleClerk run
+FINE: Clerk Ken Harush is going to sleep for 31 seconds
+Dec 27, 2014 12:06:11 AM runnable.RunnebleClerk run
+FINE: Clerk Ken Harush woke up from sleeping 
+Dec 27, 2014 12:06:11 AM implement.RentalRequestImpl setFoundAsset
+FINE: Asset set to rental request id:9 Asset name: Asset 5
+Dec 27, 2014 12:06:11 AM runnable.RunnebleClerk run
+FINE: Clerk Ken Harush finished his shift
+Dec 27, 2014 12:06:11 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 2 request been filled
+Dec 27, 2014 12:06:11 AM implement.ManagmentImpl start
+FINE: All clerks finished their shift
+Dec 27, 2014 12:06:11 AM implement.AssetImpl setStatus
+FINE: Asset Asset 5 status changed to Occupied
+Dec 27, 2014 12:06:11 AM implement.RentalRequestImpl releaseAsset
+FINE: Rental request id:9 is now Complete 
+Dec 27, 2014 12:06:11 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content TV from 73.5091890625% to 69.833729609375%
+Dec 27, 2014 12:06:11 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Bed from 73.5091890625% to 69.833729609375%
+Dec 27, 2014 12:06:11 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Fridge from 73.5091890625% to 69.833729609375%
+Dec 27, 2014 12:06:11 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Desk from 73.5091890625% to 69.833729609375%
+Dec 27, 2014 12:06:11 AM implement.AssetContentImpl damageAssetContent
+FINE: Damageing the asset content Stove from 73.5091890625% to 69.833729609375%
+Dec 27, 2014 12:06:11 AM implement.AssetImpl setStatus
+FINE: Asset Asset 5 status changed to Available
+Dec 27, 2014 12:06:11 AM runnable.RunnableCustomerGroupManager run
+FINE: Group runned by Group 2 realse asset.
+Dec 27, 2014 12:06:11 AM implement.ManagmentImpl start
+FINE: All assets been fixed
+Dec 27, 2014 12:06:11 AM implement.ManagmentImpl start
+FINE: Simulation Ended
+Dec 27, 2014 12:06:11 AM implement.ManagmentImpl start
+FINE: Statistic Report
+Money Gained: 12665.0
+Rental request: [Rental Request: 
+Id: 14, Asset Type: House, Size: 5, Duration Of Stay: 1, Status: Complete, Rental Request: 
+Id: 1, Asset Type: Apartment, Size: 3, Duration Of Stay: 5, Status: Complete, Rental Request: 
+Id: 10, Asset Type: House, Size: 4, Duration Of Stay: 2, Status: Complete, Rental Request: 
+Id: 12, Asset Type: Apartment, Size: 2, Duration Of Stay: 4, Status: Complete, Rental Request: 
+Id: 3, Asset Type: Cottage, Size: 5, Duration Of Stay: 2, Status: Complete, Rental Request: 
+Id: 15, Asset Type: Loft, Size: 5, Duration Of Stay: 3, Status: Complete, Rental Request: 
+Id: 4, Asset Type: Cottage, Size: 5, Duration Of Stay: 2, Status: Complete, Rental Request: 
+Id: 11, Asset Type: Loft, Size: 4, Duration Of Stay: 2, Status: Complete, Rental Request: 
+Id: 2, Asset Type: Hut, Size: 3, Duration Of Stay: 3, Status: Complete, Rental Request: 
+Id: 13, Asset Type: Apartment, Size: 2, Duration Of Stay: 2, Status: Complete, Rental Request: 
+Id: 5, Asset Type: Cottage, Size: 5, Duration Of Stay: 1, Status: Complete, Rental Request: 
+Id: 6, Asset Type: Cottage, Size: 5, Duration Of Stay: 3, Status: Complete, Rental Request: 
+Id: 7, Asset Type: Cottage, Size: 5, Duration Of Stay: 2, Status: Complete, Rental Request: 
+Id: 8, Asset Type: Cottage, Size: 5, Duration Of Stay: 2, Status: Complete, Rental Request: 
+Id: 9, Asset Type: Cottage, Size: 5, Duration Of Stay: 2, Status: Complete]
+Material consumed:{Trash Bag=131, Floor Cleaner=75, Glass Cleaner=6, Screws=25, Sand Cloth=2, Paper Towel=135, Disinfectant=50, Nails=50}
+Tools in use{Jacksaw=0, Drill=0, Screw Driver=0, Pliers=0, Hammer=0}

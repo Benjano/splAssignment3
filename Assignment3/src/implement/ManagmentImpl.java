@@ -44,7 +44,7 @@ public class ManagmentImpl implements Managment {
 	private Map<String, List<RepairMaterialInformation>> fRepairMaterialInformations;
 	private Statistics fStatistics;
 	private Logger fLogger;
-	private AtomicInteger fNumberOfRentalRequests;
+	private AtomicInteger fNumberOfRentalRequests, fCurrentRentalHandled;
 	private int fNumberOfMaintenancePersons;
 
 	public ManagmentImpl(int numberOfRentalRequests, int numberOfMententance) {
@@ -58,6 +58,7 @@ public class ManagmentImpl implements Managment {
 		this.fStatistics = new StatisticsImpl();
 		this.fNumberOfRentalRequests = new AtomicInteger(numberOfRentalRequests);
 		this.fNumberOfMaintenancePersons = numberOfMententance;
+		this.fCurrentRentalHandled = new AtomicInteger(0);
 		this.fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
 
@@ -118,6 +119,10 @@ public class ManagmentImpl implements Managment {
 
 	@Override
 	public synchronized void submitDamageReport(DamageReport damageReport) {
+		fCurrentRentalHandled.incrementAndGet();
+		damageReport.getAsset().damageAssetContent(
+				damageReport.getDamagePercentage());
+
 		for (DamageReport damageReportiter : fDamageReports) {
 			if (damageReportiter.getAsset().equals(damageReport.getAsset())) {
 				return;
@@ -168,6 +173,8 @@ public class ManagmentImpl implements Managment {
 		clerkLatch.countDown();
 		while (fNumberOfRentalRequests.get() > 0) {
 
+			int oldRequest = fNumberOfRentalRequests.get();
+
 			fLogger.log(
 					Level.FINE,
 					new StringBuilder().append(
@@ -183,6 +190,16 @@ public class ManagmentImpl implements Managment {
 					Level.FINE,
 					new StringBuilder().append(
 							"All clerks finished their shift").toString());
+			int requestHandled = oldRequest - fNumberOfRentalRequests.get();
+			while (fCurrentRentalHandled.get() != requestHandled)
+				synchronized (this) {
+					try {
+						wait();
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+			fCurrentRentalHandled.set(0);
 
 			// Repair all damaged assets and wait for maintenance guys to finish
 			repairDamagedAssets(messengerMentenance);
@@ -197,6 +214,7 @@ public class ManagmentImpl implements Managment {
 		}
 
 		fLogger.log(Level.FINE, "Simulation Ended");
+		fLogger.log(Level.FINE, fStatistics.toString());
 
 	}
 
@@ -259,10 +277,10 @@ public class ManagmentImpl implements Managment {
 			Messenger messengerClerkMentenance) {
 
 		for (ClerkDetails clerkDetails : fClerksDetails) {
-			Thread thread =new Thread(new RunnebleClerk(clerkDetails, fRentalRequests,
-					numberOfRentalRequests, fAssets, clerkLatch,
-					cyclicBarrierShift, messengerClerkCustomerGroup,
-					messengerClerkMentenance));
+			Thread thread = new Thread(new RunnebleClerk(clerkDetails,
+					fRentalRequests, numberOfRentalRequests, fAssets,
+					clerkLatch, cyclicBarrierShift,
+					messengerClerkCustomerGroup, messengerClerkMentenance));
 			thread.setName(clerkDetails.getName());
 			thread.start();
 		}

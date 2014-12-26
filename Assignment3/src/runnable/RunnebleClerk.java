@@ -66,103 +66,103 @@ public class RunnebleClerk implements Runnable {
 			e1.printStackTrace();
 		}
 
-		while (fWorkedTime < 8 & fNumberOfRentalRequests.get() > 0) {
-			RentalRequest rentalRequest = null;
-			try {
-				fLogger.log(
-						Level.FINE,
-						new StringBuilder()
-								.append("Clerk ")
-								.append(fClerkDetails.getName())
-								.append(" is trying to take a new rental request from queue")
-								.toString());
-				rentalRequest = fRentalRequest.take();
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-			if (rentalRequest != null && rentalRequest.getID() != null) {
-				fLogger.log(
-						Level.FINE,
-						new StringBuilder().append("Clerk ")
-								.append(fClerkDetails.getName())
-								.append(" took rental request id: ")
-								.append(rentalRequest.getID()).toString());
-
-				Asset matchingAsset = findMatchingAsset(rentalRequest);
-				fLogger.log(
-						Level.FINE,
-						new StringBuilder().append("Clerk ")
-								.append(fClerkDetails.getName())
-								.append(" took found matching asset: ")
-								.append(matchingAsset.getName()).toString());
-
-				int distanceInSeconds = (int) (matchingAsset.getLocation()
-						.calculateDistance(fClerkDetails.getLocation()) * 2);
-				fWorkedTime += distanceInSeconds;
-				fLogger.log(
-						Level.FINE,
-						new StringBuilder().append("Clerk ")
-								.append(fClerkDetails.getName())
-								.append(" is going to sleep for ")
-								.append(distanceInSeconds).append(" seconds")
-								.toString());
+		while (fNumberOfRentalRequests.get() > 0) {
+			while (fWorkedTime < 8 & fNumberOfRentalRequests.get() > 0) {
+				RentalRequest rentalRequest = null;
 				try {
-					Thread.sleep((long) (distanceInSeconds * Timing.SECOND));
+					fLogger.log(
+							Level.FINE,
+							new StringBuilder()
+									.append("Clerk ")
+									.append(fClerkDetails.getName())
+									.append(" is trying to take a new rental request from queue")
+									.toString());
+					rentalRequest = fRentalRequest.take();
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
+				if (rentalRequest != null && rentalRequest.getID() != null) {
+					fLogger.log(
+							Level.FINE,
+							new StringBuilder().append("Clerk ")
+									.append(fClerkDetails.getName())
+									.append(" took rental request id: ")
+									.append(rentalRequest.getID()).toString());
 
-				fLogger.log(
-						Level.FINE,
-						new StringBuilder().append("Clerk ")
-								.append(fClerkDetails.getName())
-								.append(" woke up from sleeping ").toString());
+					Asset matchingAsset = findMatchingAsset(rentalRequest);
+					fLogger.log(
+							Level.FINE,
+							new StringBuilder().append("Clerk ")
+									.append(fClerkDetails.getName())
+									.append(" took found matching asset: ")
+									.append(matchingAsset.getName()).toString());
 
-				rentalRequest.setFoundAsset(matchingAsset);
-				rentalRequest.setRentalRequestStatus(RequestStatus.Fulfilled);
-
-				synchronized (rentalRequest) {
-					rentalRequest.notifyAll();
-				}
-
-			}
-			if (fNumberOfRentalRequests.get() == 0) {
-				try {
-					synchronized (fRentalRequest) {
-						fRentalRequest.put(new RentalRequestImpl());
+					int distanceInSeconds = (int) (matchingAsset.getLocation()
+							.calculateDistance(fClerkDetails.getLocation()) * 2);
+					fWorkedTime += distanceInSeconds;
+					fLogger.log(
+							Level.FINE,
+							new StringBuilder().append("Clerk ")
+									.append(fClerkDetails.getName())
+									.append(" is going to sleep for ")
+									.append(distanceInSeconds)
+									.append(" seconds").toString());
+					try {
+						Thread.sleep((long) (distanceInSeconds * Timing.SECOND));
+					} catch (InterruptedException e) {
+						e.printStackTrace();
 					}
+
+					fLogger.log(Level.FINE, new StringBuilder()
+							.append("Clerk ").append(fClerkDetails.getName())
+							.append(" woke up from sleeping ").toString());
+
+					rentalRequest.setFoundAsset(matchingAsset);
+					rentalRequest
+							.setRentalRequestStatus(RequestStatus.Fulfilled);
+
+					synchronized (rentalRequest) {
+						rentalRequest.notifyAll();
+					}
+
+				}
+				if (fNumberOfRentalRequests.get() == 0) {
+					try {
+						synchronized (fRentalRequest) {
+							fRentalRequest.put(new RentalRequestImpl());
+						}
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+			}
+
+			fLogger.log(
+					Level.FINE,
+					new StringBuilder().append("Clerk ")
+							.append(fClerkDetails.getName())
+							.append(" finished his shift").toString());
+
+			// Wait for other clerks to finish the shift
+			synchronized (this) {
+				try {
+					fCyclicBarrierShift.await();
+				} catch (InterruptedException | BrokenBarrierException e) {
+					e.printStackTrace();
+				}
+			}
+
+			// Wait for mentenance to finish their work
+			synchronized (fClerkMentenanceMessenger) {
+				try {
+					fClerkMentenanceMessenger.wait();
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
 			}
+
+			fWorkedTime = 0;
 		}
-
-		fLogger.log(
-				Level.FINE,
-				new StringBuilder().append("Clerk ")
-						.append(fClerkDetails.getName())
-						.append(" finished his shift").toString());
-
-		// Wait for other clerks to finish the shift
-		synchronized (this) {
-			try {
-				fCyclicBarrierShift.await();
-			} catch (InterruptedException | BrokenBarrierException e) {
-				e.printStackTrace();
-			}
-		}
-
-		// Wait for mentenance to finish their work
-		synchronized (fClerkMentenanceMessenger) {
-			try {
-				fClerkMentenanceMessenger.wait();
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-		}
-
-		fWorkedTime = 0;
-
 	}
 
 	private Asset findMatchingAsset(RentalRequest rentalRequest) {

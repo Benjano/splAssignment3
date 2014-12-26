@@ -72,7 +72,15 @@ public class StatisticsImpl implements Statistics {
 			fRepairMaterials.put(repairMaterial.getName(),
 					repairMaterial.getQuantity());
 		}
+	}
 
+	@Override
+	public String toString() {
+		return new StringBuilder().append("Statistic Report")
+				.append("\nMoney Gained: ").append(fMoneyGained)
+				.append("\nRental request: ").append(fRentalRequests)
+				.append("\nMaterial consumed:").append(fRepairMaterials)
+				.append("\nTools in use").append(fRepairTools).toString();
 	}
 
 }

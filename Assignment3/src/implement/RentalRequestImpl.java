@@ -82,14 +82,7 @@ public class RentalRequestImpl implements RentalRequest {
 	@Override
 	public synchronized DamageReportImpl releaseAsset(double damagePercentage) {
 		if (fStatus == RequestStatus.InProgress) {
-			this.fAssetFound.damageAssetContent(damagePercentage);
 			fStatus = RequestStatus.Complete;
-
-			if (fAssetFound.isDamaged()) {
-				fAssetFound.setStatus(AssetStatus.Unavailable);
-			} else
-				fAssetFound.setStatus(AssetStatus.Available);
-
 			fLogger.log(Level.FINE,
 					new StringBuilder().append("Rental request id:")
 							.append(fId).append(" is now Complete ").toString());

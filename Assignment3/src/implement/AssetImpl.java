@@ -119,6 +119,10 @@ public class AssetImpl implements Asset {
 			for (AssetContent assetContent : fAssetContent) {
 				assetContent.damageAssetContent(damagePrecentage);
 			}
+			if (isDamaged()) {
+				setStatus(AssetStatus.Unavailable);
+			} else
+				setStatus(AssetStatus.Available);
 		}
 	}
 
@@ -139,6 +143,5 @@ public class AssetImpl implements Asset {
 
 		return builder.toString();
 	}
-	
 
 }

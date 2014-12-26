@@ -87,8 +87,8 @@ public class RunnableMaintenaceRequest implements Runnable {
 						.append(fAsset.getName())
 						.append(" is done and returning tools").toString());
 
-		synchronized (this) {
-			notifyAll();
+		synchronized (RunnableMaintenaceRequest.class) {
+			RunnableMaintenaceRequest.class.notifyAll();
 		}
 
 		fAsset.setStatus(AssetStatus.Available);
@@ -115,7 +115,7 @@ public class RunnableMaintenaceRequest implements Runnable {
 			if (repairTool == null) {
 				try {
 					returnTools(repairTools);
-					synchronized (this) {
+					synchronized (RunnableMaintenaceRequest.class) {
 						fLogger.log(
 								Level.FINE,
 								new StringBuilder()
@@ -123,7 +123,7 @@ public class RunnableMaintenaceRequest implements Runnable {
 										.append(fAsset.getName())
 										.append(" is waiting for tools")
 										.toString());
-						wait();
+						RunnableMaintenaceRequest.class.wait();
 					}
 					return takeToolsFromWarehouse(neededTools);
 				} catch (InterruptedException e) {
