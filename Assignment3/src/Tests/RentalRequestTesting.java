@@ -10,19 +10,18 @@ import consts.AssetStatus;
 import consts.RequestStatus;
 import implement.AssetImpl;
 import implement.Location;
-import implement.RentalRequestImpl;
 import interfaces.Asset;
-import interfaces.RentalRequest;
+import interfaces.DamageReport;
 
 public class RentalRequestTesting {
 
-	private RentalRequest rentalRequest;
+	private RentalRequestTest rentalRequest;
 	private final double DELTA = 0.001;
 	private Asset asset;
 
 	@Before
 	public void setUp() throws Exception {
-		rentalRequest = new RentalRequestImpl("1", "Hut", 5, 5);
+		rentalRequest = new RentalRequestTest("1", "Hut", 5, 5);
 		asset = new AssetImpl("Aviv's House", "Appartment",
 				new Location(10, 15), 100, 2);
 	}
@@ -34,41 +33,43 @@ public class RentalRequestTesting {
 
 	@Test
 	public void getDurationOfStay() {
-		assertEquals("blabla", 5, rentalRequest.getDurationOfStay());
+		assertEquals("The duration is wrong", 5,
+				rentalRequest.getDurationOfStay());
 	}
 
 	@Test
 	public void getAssetType() {
-		assertEquals("blabla", "Hut", rentalRequest.getAssetType());
+		assertEquals("The type is wrong", "Hut", rentalRequest.getAssetType());
 	}
 
 	@Test
 	public void getSize() {
-		assertEquals("blabla", 5, rentalRequest.getSize());
+		assertEquals("The size is wrong", 5, rentalRequest.getSize());
 
 	}
 
 	@Test
 	public void getCostPerNight() {
-		assertEquals("blabla", 0, rentalRequest.getCostPerNight(), DELTA);
+		assertEquals("The cost per night is wrong", 0,
+				rentalRequest.getCostPerNight(), DELTA);
 	}
 
 	@Test
 	public void getID() {
-		assertEquals("blabla", 5, rentalRequest.getSize());
+		assertEquals("The id is wrong", 5, rentalRequest.getSize());
 
 	}
 
 	@Test
 	public void getStatus() {
-		assertEquals("blabla", RequestStatus.Incomplete,
+		assertEquals("The status is wrong", RequestStatus.Incomplete,
 				rentalRequest.getStatus());
 	}
 
 	@Test
 	public void setRentalRequestStatus() {
 		rentalRequest.setRentalRequestStatus(RequestStatus.InProgress);
-		assertEquals("blabla", RequestStatus.InProgress,
+		assertEquals("Set rental status is wrong", RequestStatus.InProgress,
 				rentalRequest.getStatus());
 	}
 
@@ -76,16 +77,32 @@ public class RentalRequestTesting {
 	public void assetOcupied() {
 		rentalRequest.setFoundAsset(asset);
 		rentalRequest.assetOcupied();
-		assertEquals("blabla", AssetStatus.Occupied, asset.getStatus());
+		assertEquals("Asset was not ocupied", AssetStatus.Occupied,
+				asset.getStatus());
 
 	}
 
-	// @Test
-	// public void setFoundAsset(){
-	// }
+	@Test
+	public void setFoundAsset() {
+		rentalRequest.setFoundAsset(asset);
+		Asset asset2 = new AssetImpl("Asset 2", "House", new Location(1, 1),
+				100, 3);
+		rentalRequest.setFoundAsset(asset2);
 
-	// @Test
-	// public void releaseAsset(){
-	// }
+		assertEquals("Found asset is wrong", rentalRequest.getAsset(), asset);
+
+	}
+
+	@Test
+	public void releaseAsset() {
+		rentalRequest.setFoundAsset(asset);
+		rentalRequest.setRentalRequestStatus(RequestStatus.InProgress);
+		DamageReport damageReport = rentalRequest.releaseAsset(0.5);
+
+		assertEquals("Rental was not complete", rentalRequest.getStatus(),
+				RequestStatus.Complete);
+		assertEquals("Damage report created wrong", damageReport.getAsset(),
+				asset);
+	}
 
 }

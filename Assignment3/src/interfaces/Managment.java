@@ -68,6 +68,9 @@ public interface Managment {
 	 * @param rentalRequest
 	 */
 	void submitRentalRequest(RentalRequest rentalRequest);
-	
+
+	/**
+	 * Start the simulation
+	 */
 	void start();
 }

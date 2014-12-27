@@ -13,7 +13,7 @@ public class RentalRequestImpl implements RentalRequest {
 	private String fId, fAssetType;
 	private int fSize, fDurationOfStay;
 	private RequestStatus fStatus;
-	private Asset fAssetFound;
+	protected Asset fAssetFound;
 	private Logger fLogger;
 
 	public RentalRequestImpl() {

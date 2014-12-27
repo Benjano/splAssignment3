@@ -38,21 +38,15 @@ public class CustomerTesting {
 	public void testCalculateDamagePercentage() {
 		double customer1DamagePercentage = customer1.getDamagePercentage();
 		assertTrue("Damage percentage is out of bounds",
-				customer1DamagePercentage >= 0.2);
+				customer1DamagePercentage >= 20);
 		assertTrue("Damage percentage is out of bounds",
-				customer1DamagePercentage <= 0.5);
-
-		assertEquals("Customer name: Aviv damage percentage is wrong",
-				customer2.getDamagePercentage(), (20d + 50d) / 2d / 100d, DELTA);
-
-		assertEquals("Customer name: David damage percentage is wrong",
-				customer3.getDamagePercentage(), 0.005, DELTA);
+				customer1DamagePercentage <= 50);
 
 		assertEquals("Damage percentage is wrong",
-				customer2.getDamagePercentage(), (20d + 50d) / 2d / 100d, DELTA);
+				customer2.getDamagePercentage(), (20d + 50d) / 2d, DELTA);
 
 		assertEquals("Damage percentage is wrong",
-				customer3.getDamagePercentage(), 0.005, DELTA);
+				customer3.getDamagePercentage(), 0.5, DELTA);
 
 	}
 }

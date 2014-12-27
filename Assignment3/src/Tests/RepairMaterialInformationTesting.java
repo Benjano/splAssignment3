@@ -11,26 +11,27 @@ import org.junit.Test;
 public class RepairMaterialInformationTesting {
 
 	private RepairMaterialInformation RepairMaterialInformation;
-	
+
 	@Before
 	public void setUp() throws Exception {
 		RepairMaterialInformation = new RepairMaterialInformationImpl("Nail", 5);
-		
+
 	}
 
 	@After
 	public void tearDown() throws Exception {
 	}
 
-	
 	@Test
 	public void testGetName() {
-		assertEquals("blabla","Nail", RepairMaterialInformation.getName() );
+		assertEquals("The name is wrong", "Nail",
+				RepairMaterialInformation.getName());
 	}
 
 	@Test
 	public void testGetQuantity() {
-		assertEquals("blabla",5, RepairMaterialInformation.getQuantity() );
+		assertEquals("The quantity is wrong", 5,
+				RepairMaterialInformation.getQuantity());
 	}
-	
+
 }

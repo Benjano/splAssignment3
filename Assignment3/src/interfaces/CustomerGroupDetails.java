@@ -16,8 +16,14 @@ public interface CustomerGroupDetails {
 	 */
 	public void addCustomer(Customer customer);
 
+	/**
+	 * Used for simulating stay in asset
+	 * 
+	 * @param i
+	 * @return customer at i position
+	 */
 	public Customer getCustomer(int i);
-	
+
 	public String getName();
 
 	public RentalRequest getRentalRequest(int i);

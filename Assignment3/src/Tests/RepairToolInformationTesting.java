@@ -22,11 +22,11 @@ public class RepairToolInformationTesting {
 	
 	@Test
 	public void testGetName() {
-		assertEquals("blabla","Hammer", repairToolInformation.getName() );
+		assertEquals("The name is wrong","Hammer", repairToolInformation.getName() );
 	}
 
 	@Test
 	public void testGetQuantity() {
-		assertEquals("blabla",5, repairToolInformation.getQuantity() );
+		assertEquals("The quantity is wrong",5, repairToolInformation.getQuantity() );
 	}
 }

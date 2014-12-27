@@ -9,28 +9,37 @@ public interface RentalRequest {
 	 */
 	public int getDurationOfStay();
 
+	/**
+	 * @return The type of the asset
+	 */
 	public String getAssetType();
 
+	/**
+	 * @return The size of the asset
+	 */
 	public int getSize();
-	
+
+	/**
+	 * @return Cost per night in the asset
+	 */
 	public double getCostPerNight();
 
-	public String getID();
-	
 	/**
-	 * 
+	 * @return The id of the Rental request
+	 */
+	public String getID();
+
+	/**
 	 * @return the status of the asset
 	 */
 	public RequestStatus getStatus();
 
-	
 	/**
 	 * Update the Status of the rental request
 	 * 
 	 * @param status
 	 */
 	public void setRentalRequestStatus(RequestStatus status);
-
 
 	/**
 	 * Set the asset of the request to the found asset by the clerk. (can happen
@@ -59,7 +68,5 @@ public interface RentalRequest {
 	 * Ocupy the asset
 	 */
 	public void assetOcupied();
-
-
 
 }

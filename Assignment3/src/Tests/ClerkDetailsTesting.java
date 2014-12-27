@@ -11,7 +11,7 @@ import org.junit.Test;
 
 public class ClerkDetailsTesting {
 	ClerkDetails clerkDetails;
-	
+
 	@Before
 	public void setUp() throws Exception {
 		clerkDetails = new ClerkDetailsImpl("Avi", new Location(1.5, 1.7));
@@ -23,12 +23,13 @@ public class ClerkDetailsTesting {
 
 	@Test
 	public void testGetName() {
-		assertEquals("blabla",  "Avi", clerkDetails.getName() );
+		assertEquals("The name is wrong", "Avi", clerkDetails.getName());
 	}
-	
+
 	@Test
 	public void testGetLocatin() {
 		Location location2 = new Location(1.5, 1.7);
-		assertEquals("blabla",  location2, clerkDetails.getLocation() );
+		assertEquals("The location is wrong", location2,
+				clerkDetails.getLocation());
 	}
 }
