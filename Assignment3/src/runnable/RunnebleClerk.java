@@ -163,6 +163,12 @@ public class RunnebleClerk implements Runnable {
 
 			fWorkedTime = 0;
 		}
+
+		fLogger.log(
+				Level.FINE,
+				new StringBuilder().append("Clerk ")
+						.append(fClerkDetails.getName()).append(" is done ")
+						.toString());
 	}
 
 	private Asset findMatchingAsset(RentalRequest rentalRequest) {

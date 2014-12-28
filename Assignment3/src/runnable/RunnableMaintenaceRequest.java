@@ -72,8 +72,7 @@ public class RunnableMaintenaceRequest implements Runnable {
 
 		for (AssetContent assetContent : damagedContent) {
 			try {
-				Thread.sleep((long) assetContent.calculateRepairTime()
-						* Timing.SECOND);
+				Thread.sleep((long) assetContent.calculateRepairTime());
 				assetContent.fixAssetContent();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
@@ -96,6 +95,9 @@ public class RunnableMaintenaceRequest implements Runnable {
 		synchronized (fMessengerMentenance) {
 			fMessengerMentenance.notifyAll();
 		}
+		fLogger.log(Level.FINE,
+				new StringBuilder().append("New maintenance for asset ")
+						.append(fAsset.getName()).append(" is done").toString());
 	}
 
 	// return the tools to the warehouse

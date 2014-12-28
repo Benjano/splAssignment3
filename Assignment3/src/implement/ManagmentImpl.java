@@ -207,9 +207,15 @@ public class ManagmentImpl implements Managment {
 					new StringBuilder().append("All assets been fixed")
 							.toString());
 
+			fLogger.log(
+					Level.FINE,
+					new StringBuilder().append("Rental request left ")
+							.append(fNumberOfRentalRequests.get()).toString());
+
 			synchronized (messengerShift) {
 				messengerShift.notifyAll();
 			}
+
 		}
 
 		fLogger.log(Level.FINE, "Simulation Ended");

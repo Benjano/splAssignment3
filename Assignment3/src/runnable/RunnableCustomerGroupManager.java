@@ -110,6 +110,12 @@ public class RunnableCustomerGroupManager implements Runnable {
 			i++;
 			rentalRequest = fCustomerGroupDetails.getRentalRequest(i);
 		}
+		
+		fLogger.log(
+				Level.FINE,
+				new StringBuilder()
+						.append("Customer group ")
+						.append(fCustomerGroupDetails.getName()).append(" is done").toString());
 	}
 
 	private double simulateStayInAsset(RentalRequest rentalRequest) {

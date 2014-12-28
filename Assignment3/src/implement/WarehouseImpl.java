@@ -45,7 +45,11 @@ public class WarehouseImpl implements Warehouse {
 	}
 
 	@Override
-	public RepairTool takeRepairTool(String name, int quantity) {
+	public synchronized RepairTool takeRepairTool(String name, int quantity) {
+		if (name.equals("Drill")) {
+			int a = 0;
+			int b = a;
+		}
 		if (fRepairTools.get(name).Acquire(quantity)) {
 			return new RepairToolImpl(name, quantity);
 		} else {

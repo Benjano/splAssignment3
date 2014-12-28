@@ -37,6 +37,7 @@
         <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
             <src path="src"/>
             <classpath refid="Assignment3.classpath"/>
+        	<compilerarg line="-proc:none"/>
         </javac>
     </target>
     <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
@@ -107,6 +108,7 @@
               	        		        <arg value="${arg3}"/>
               	        		 
               	        </java>
+              		
               	    </target>
     <target name="LocationTesting">
         <mkdir dir="${junit.output.dir}"/>
