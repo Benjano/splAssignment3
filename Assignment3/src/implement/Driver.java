@@ -30,14 +30,24 @@ public class Driver {
 		Logger logger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 		DocumentBuilderFactory builderFactory = DocumentBuilderFactory
 				.newInstance();
-		Managment managment = createManagment("InitialData.xml", logger,
+//		Managment managment = createManagment("InitialData.xml", logger,
+//				builderFactory);
+//
+//		readXmlInitialData("InitialData.xml", logger, builderFactory, managment);
+//		readXmlAssetsContentRepairDetails("AssetContentsRepairDetails.xml",
+//				logger, builderFactory, managment);
+//		readXmlAssets("Assets.xml", logger, builderFactory, managment);
+//		readXmlCustomerGroup("CustomersGroups.xml", logger, builderFactory,
+//				managment);
+		
+		Managment managment = createManagment(args[0], logger,
 				builderFactory);
 
-		readXmlInitialData("InitialData.xml", logger, builderFactory, managment);
-		readXmlAssetsContentRepairDetails("AssetContentsRepairDetails.xml",
+		readXmlInitialData(args[0], logger, builderFactory, managment);
+		readXmlAssetsContentRepairDetails(args[1],
 				logger, builderFactory, managment);
-		readXmlAssets("Assets.xml", logger, builderFactory, managment);
-		readXmlCustomerGroup("CustomersGroups.xml", logger, builderFactory,
+		readXmlAssets(args[2], logger, builderFactory, managment);
+		readXmlCustomerGroup(args[3], logger, builderFactory,
 				managment);
 
 		System.out.println("Driver Working");

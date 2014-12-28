@@ -1,169 +1,39 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- WARNING: Eclipse auto-generated file.
-              Any modifications will be overwritten.
-              To include a user specific buildfile here, simply create one in the same
-              directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. --><project basedir="." default="build" name="Assignment3">
-    <property environment="env"/>
-    <property name="junit.output.dir" value="junit"/>
-    <property name="debuglevel" value="source,lines,vars"/>
-    <property name="target" value="1.7"/>
-    <property name="source" value="1.7"/>
-    <path id="JUnit 4.libraryclasspath">
-        <pathelement location="../../../../../Applications/eclipse/plugins/org.junit_4.11.0.v201303080030/junit.jar"/>
-        <pathelement location="../../../../../Applications/eclipse/plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
-    </path>
-    <path id="Assignment3.classpath">
-        <pathelement location="bin"/>
-        <path refid="JUnit 4.libraryclasspath"/>
-    </path>
-    <target name="init">
-        <mkdir dir="bin"/>
-        <copy includeemptydirs="false" todir="bin">
-            <fileset dir="src">
-                <exclude name="**/*.launch"/>
-                <exclude name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="clean">
-        <delete dir="bin"/>
-    </target>
-    <target depends="clean" name="cleanall"/>
-    <target depends="build-subprojects,build-project" name="build"/>
-    <target name="build-subprojects"/>
-    <target depends="init" name="build-project">
-        <echo message="${ant.project.name}: ${ant.file}"/>
-        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
-            <src path="src"/>
-            <classpath refid="Assignment3.classpath"/>
-        </javac>
-    </target>
-    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
-    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
-        <copy todir="${ant.library.dir}">
-            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
-        </copy>
-        <unzip dest="${ant.library.dir}">
-            <patternset includes="jdtCompilerAdapter.jar"/>
-            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
-        </unzip>
-    </target>
-    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
-        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
-        <antcall target="build"/>
-    </target>
-    <target name="AssetContentTesting">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="Tests.AssetContentTesting" todir="${junit.output.dir}"/>
-            <classpath refid="Assignment3.classpath"/>
-        </junit>
-    </target>
-    <target name="AssetsTesting">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="Tests.AssetsTesting" todir="${junit.output.dir}"/>
-            <classpath refid="Assignment3.classpath"/>
-        </junit>
-    </target>
-    <target name="AssetTesting">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="Tests.AssetTesting" todir="${junit.output.dir}"/>
-            <classpath refid="Assignment3.classpath"/>
-        </junit>
-    </target>
-    <target name="CustomerTesting">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="Tests.CustomerTesting" todir="${junit.output.dir}"/>
-            <classpath refid="Assignment3.classpath"/>
-        </junit>
-    </target>
-    <target name="Driver">
-        <java classname="implement.Driver" failonerror="true" fork="yes">
-            <classpath refid="Assignment3.classpath"/>
-        </java>
-    </target>
-    <target name="LocationTesting">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="Tests.LocationTesting" todir="${junit.output.dir}"/>
-            <classpath refid="Assignment3.classpath"/>
-        </junit>
-    </target>
-    <target name="Main (1)">
-        <java classname="Ass3.Main" failonerror="true" fork="yes">
-            <classpath refid="Assignment3.classpath"/>
-        </java>
-    </target>
-    <target name="Main (9)">
-        <java classname="assignment3.Main" failonerror="true" fork="yes">
-            <classpath refid="Assignment3.classpath"/>
-        </java>
-    </target>
-    <target name="SuperSnowflake">
-        <java classname="SuperSnowflake" failonerror="true" fork="yes">
-            <classpath refid="Assignment3.classpath"/>
-        </java>
-    </target>
-    <target name="Tests">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="Tests.AssetContentTesting" todir="${junit.output.dir}"/>
-            <test name="Tests.AssetTesting" todir="${junit.output.dir}"/>
-            <test name="Tests.AssetsTesting" todir="${junit.output.dir}"/>
-            <test name="Tests.ClerkDetailsTesting" todir="${junit.output.dir}"/>
-            <test name="Tests.CustomerGroupDetailsTesting" todir="${junit.output.dir}"/>
-            <test name="Tests.CustomerTesting" todir="${junit.output.dir}"/>
-            <test name="Tests.DamageReportTesting" todir="${junit.output.dir}"/>
-            <test name="Tests.LocationTesting" todir="${junit.output.dir}"/>
-            <test name="Tests.RentalRequestTesting" todir="${junit.output.dir}"/>
-            <test name="Tests.RepairMaterialInformationTesting" todir="${junit.output.dir}"/>
-            <test name="Tests.RepairMaterialTesting" todir="${junit.output.dir}"/>
-            <test name="Tests.RepairToolInformationTesting" todir="${junit.output.dir}"/>
-            <test name="Tests.RepairToolTesting" todir="${junit.output.dir}"/>
-            <test name="Tests.WarehouseTesting" todir="${junit.output.dir}"/>
-            <classpath refid="Assignment3.classpath"/>
-        </junit>
-    </target>
-    <target name="TestWarehouse">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="Tests.TestWarehouse" todir="${junit.output.dir}"/>
-            <classpath refid="Assignment3.classpath"/>
-        </junit>
-    </target>
-    <target name="TestWarehouseTest">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="Tests.TestWarehouseTest" todir="${junit.output.dir}"/>
-            <classpath refid="Assignment3.classpath"/>
-        </junit>
-    </target>
-    <target name="WarehouseTesting">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <test name="Tests.WarehouseTesting" todir="${junit.output.dir}"/>
-            <classpath refid="Assignment3.classpath"/>
-        </junit>
-    </target>
-    <target name="junitreport">
-        <junitreport todir="${junit.output.dir}">
-            <fileset dir="${junit.output.dir}">
-                <include name="TEST-*.xml"/>
-            </fileset>
-            <report format="frames" todir="${junit.output.dir}"/>
-        </junitreport>
-    </target>
+<project name="Assignment3" basedir="." default="main">
+
+<property name="src.dir"     value="src"/>
+<property name="classes.dir" value="classes"/>
+<property name="jar.dir"     value="jar"/>
+<property name="main-class"  value="Board"/>
+
+<target name="clean">
+    <delete dir="${classes.dir}"/>
+    <delete dir="${jar.dir}"/>
+</target>
+
+<target name="compile">
+    <mkdir dir="build/classes"/>
+    <javac srcdir="src" destdir="build/classes"/>
+</target>
+
+<target name="jar" depends="compile">
+    <mkdir dir="build/jar"/>
+    <jar destfile="build/jar/Assignment3.jar" basedir="build/classes">
+        <manifest>
+            <attribute name="Main-Class" value="implement/Driver"/>
+        </manifest>
+    </jar>
+</target>
+
+<target name="run" depends="jar">
+
+	<java jar="build/jar/Assignment3.jar" fork="true">
+	        <arg value="${arg0}"/>
+	        <arg value="${arg1}"/>
+	        <arg value="${arg2}"/>
+	        <arg value="${arg3}"/>
+	    </java>
+</target>
+
+<target name="main" depends="run"/>
+
 </project>
