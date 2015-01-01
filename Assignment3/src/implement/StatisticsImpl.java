@@ -33,7 +33,7 @@ public class StatisticsImpl implements Statistics {
 	@Override
 	public synchronized void addIncome(double fCostPerNight) {
 		fMoneyGained += fCostPerNight;
-		fLogger.log(Level.FINE, new StringBuilder()
+		fLogger.log(Level.INFO, new StringBuilder()
 				.append("Statistics money: ").append(fMoneyGained).append("$")
 				.toString());
 	}
@@ -42,7 +42,7 @@ public class StatisticsImpl implements Statistics {
 	public synchronized void addRentalRequest(RentalRequest rentalRequest) {
 		fRentalRequests.add(rentalRequest);
 		fLogger.log(
-				Level.FINE,
+				Level.INFO,
 				new StringBuilder()
 						.append("Statistics new rental request added")
 						.append(rentalRequest.getID()).toString());
@@ -59,7 +59,7 @@ public class StatisticsImpl implements Statistics {
 			fRepairTools.put(repairTool.getName(), repairTool.getQuantity());
 		}
 		fLogger.log(
-				Level.FINE,
+				Level.INFO,
 				new StringBuilder()
 						.append("Statistics added ")
 						.append(repairTool)
@@ -76,7 +76,7 @@ public class StatisticsImpl implements Statistics {
 							- repairTool.getQuantity());
 		}
 		fLogger.log(
-				Level.FINE,
+				Level.INFO,
 				new StringBuilder()
 						.append("Statistics release ")
 						.append(repairTool)
@@ -95,7 +95,7 @@ public class StatisticsImpl implements Statistics {
 					repairMaterial.getQuantity());
 		}
 		fLogger.log(
-				Level.FINE,
+				Level.INFO,
 				new StringBuilder().append("Statistics material consumed: ")
 						.append(repairMaterial)
 						.append(". Current material consumed: ")

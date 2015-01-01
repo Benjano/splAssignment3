@@ -1,5 +1,5 @@
 package consts;
 
 public enum  RequestStatus {
-	Incomplete, Fulfilled, InProgress, Complete
+	INCOMPLETE, FULFILLED, IN_PROGRESS, COMPLETE
 }

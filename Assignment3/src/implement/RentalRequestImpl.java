@@ -16,9 +16,7 @@ public class RentalRequestImpl implements RentalRequest {
 	protected Asset fAssetFound;
 	private Logger fLogger;
 
-	public RentalRequestImpl() {
-		this.fId = null;
-	}
+
 
 	/**
 	 * @param fId
@@ -33,7 +31,7 @@ public class RentalRequestImpl implements RentalRequest {
 		this.fAssetType = type;
 		this.fSize = size;
 		this.fDurationOfStay = durationOfStay;
-		this.fStatus = RequestStatus.Incomplete;
+		this.fStatus = RequestStatus.INCOMPLETE;
 		this.fAssetFound = null;
 		this.fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 	}
@@ -65,7 +63,7 @@ public class RentalRequestImpl implements RentalRequest {
 		if (fAssetFound == null) {
 			this.fAssetFound = asset;
 			fLogger.log(
-					Level.FINE,
+					Level.INFO,
 					new StringBuilder()
 							.append("Asset set to rental request id:")
 							.append(fId).append(" Asset name: ")
@@ -81,9 +79,9 @@ public class RentalRequestImpl implements RentalRequest {
 
 	@Override
 	public synchronized DamageReportImpl releaseAsset(double damagePercentage) {
-		if (fStatus == RequestStatus.InProgress) {
-			fStatus = RequestStatus.Complete;
-			fLogger.log(Level.FINE,
+		if (fStatus == RequestStatus.IN_PROGRESS) {
+			fStatus = RequestStatus.COMPLETE;
+			fLogger.log(Level.INFO,
 					new StringBuilder().append("Rental request id:")
 							.append(fId).append(" is now Complete ").toString());
 
@@ -99,7 +97,7 @@ public class RentalRequestImpl implements RentalRequest {
 
 	@Override
 	public void assetOcupied() {
-		this.fAssetFound.setStatus(AssetStatus.Occupied);
+		this.fAssetFound.setStatus(AssetStatus.OCCUPIED);
 	}
 
 	@Override

@@ -30,7 +30,7 @@ public class CustomerGroupDetailsImpl implements CustomerGroupDetails {
 	public void addRentalRequest(RentalRequest request) {
 		fRentalRequests.add(request);
 		fLogger.log(
-				Level.FINE,
+				Level.INFO,
 				new StringBuilder().append("New rental request")
 						.append(request)
 						.append(" is added to the customer group running by ")
@@ -40,7 +40,7 @@ public class CustomerGroupDetailsImpl implements CustomerGroupDetails {
 	@Override
 	public void addCustomer(Customer customer) {
 		fCustomers.add(customer);
-		fLogger.log(Level.FINE,
+		fLogger.log(Level.INFO,
 				new StringBuilder().append("New customer").append(customer)
 						.append(" is added to the customer group running by ")
 						.append(fGroupManagerName).toString());

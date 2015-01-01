@@ -35,12 +35,12 @@ public class AssetsImpl implements Assets {
 		List<Asset> result = new Vector<Asset>();
 		for (Asset asset : fAssets) {
 			if (asset.getType().equals(type) & asset.getSize() >= size
-					& asset.getStatus() != AssetStatus.Booked) {
+					& asset.getStatus() != AssetStatus.BOOKED) {
 				result.add(asset);
 			}
 		}
 		Collections.sort(result, fCompareAsset);
-		fLogger.log(Level.FINE,
+		fLogger.log(Level.INFO,
 				new StringBuilder().append("For search: type = ").append(type)
 						.append(" size >= ").append(size).append(" found ")
 						.append(result.size()).append(" matching assets ")
@@ -51,7 +51,7 @@ public class AssetsImpl implements Assets {
 	@Override
 	public void addAsset(Asset asset) {
 		fAssets.add(asset);
-		fLogger.log(Level.FINE,
+		fLogger.log(Level.INFO,
 				new StringBuilder().append("New asset added to assets : ")
 						.append(asset.getName()).toString());
 	}

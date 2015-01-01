@@ -47,14 +47,14 @@ public class AssetContentImpl implements AssetContent {
 			} else {
 				fHealth.set(newHealth);
 			}
-			fLogger.log(Level.FINE,
+			fLogger.log(Level.INFO,
 					new StringBuilder().append("Damageing the asset content ")
 							.append(fName).append(" from ").append(oldHealth)
 							.append("% to ").append(newHealth).append("%")
 							.toString());
 		} else {
 			fLogger.log(
-					Level.WARNING,
+					Level.INFO,
 					new StringBuilder().append(
 							"Cannot damage the asset by nagative number")
 							.toString());
@@ -64,14 +64,14 @@ public class AssetContentImpl implements AssetContent {
 	@Override
 	public void fixAssetContent() {
 		fHealth.set(100d);
-		fLogger.log(Level.FINE, new StringBuilder().append("AssetContent ")
+		fLogger.log(Level.INFO, new StringBuilder().append("AssetContent ")
 				.append(fName).append(" health is 100%").toString());
 	}
 
 	@Override
 	public double calculateRepairTime() {
 		double result = (100 - fHealth.get()) * fRepairCostMultiplier;
-		fLogger.log(Level.FINE, "Calculating the repair time for " + fName
+		fLogger.log(Level.INFO, "Calculating the repair time for " + fName
 				+ " which is " + result);
 		return result;
 	}

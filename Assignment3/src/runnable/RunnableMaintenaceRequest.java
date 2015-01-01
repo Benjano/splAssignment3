@@ -52,11 +52,11 @@ public class RunnableMaintenaceRequest implements Runnable {
 	@Override
 	public void run() {
 		fLogger.log(
-				Level.FINE,
+				Level.INFO,
 				new StringBuilder()
 						.append("New maintenance insinuate for asset ")
 						.append(fAsset.getName()).toString());
-		fAsset.setStatus(AssetStatus.Unavailable);
+		fAsset.setStatus(AssetStatus.UNAVAILABLE);
 		List<AssetContent> damagedContent = fAsset.getDamagedAssetContent();
 
 		Map<String, Integer> neededTools = getNeededToolsInformation(damagedContent);
@@ -66,7 +66,7 @@ public class RunnableMaintenaceRequest implements Runnable {
 		takeMaterialsFromWarehouse(neededMaterials);
 
 		fLogger.log(
-				Level.FINE,
+				Level.INFO,
 				new StringBuilder().append("Maintenance for asset ")
 						.append(fAsset.getName()).append(" started").toString());
 
@@ -81,7 +81,7 @@ public class RunnableMaintenaceRequest implements Runnable {
 
 		returnTools(repairTools);
 		fLogger.log(
-				Level.FINE,
+				Level.INFO,
 				new StringBuilder().append("Maintenance for asset ")
 						.append(fAsset.getName())
 						.append(" is done and returning tools").toString());
@@ -90,12 +90,12 @@ public class RunnableMaintenaceRequest implements Runnable {
 			RunnableMaintenaceRequest.class.notifyAll();
 		}
 
-		fAsset.setStatus(AssetStatus.Available);
+		fAsset.setStatus(AssetStatus.AVAILABLE);
 
 		synchronized (fMessengerMentenance) {
 			fMessengerMentenance.notifyAll();
 		}
-		fLogger.log(Level.FINE,
+		fLogger.log(Level.INFO,
 				new StringBuilder().append("New maintenance for asset ")
 						.append(fAsset.getName()).append(" is done").toString());
 	}
@@ -119,7 +119,7 @@ public class RunnableMaintenaceRequest implements Runnable {
 					returnTools(repairTools);
 					synchronized (RunnableMaintenaceRequest.class) {
 						fLogger.log(
-								Level.FINE,
+								Level.INFO,
 								new StringBuilder()
 										.append("Maintenance for asset ")
 										.append(fAsset.getName())

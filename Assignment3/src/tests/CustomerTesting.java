@@ -1,4 +1,4 @@
-package Tests;
+package tests;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -19,9 +19,9 @@ public class CustomerTesting {
 
 	@Before
 	public void setUp() throws Exception {
-		customer1 = new CustomerImpl("Nir", VandalismType.Arbitrary, 20, 50);
-		customer2 = new CustomerImpl("Aviv", VandalismType.Fixed, 20, 50);
-		customer3 = new CustomerImpl("David", VandalismType.None, 20, 50);
+		customer1 = new CustomerImpl("Nir", VandalismType.ARBITRARY, 20, 50);
+		customer2 = new CustomerImpl("Aviv", VandalismType.FIXED, 20, 50);
+		customer3 = new CustomerImpl("David", VandalismType.NONE, 20, 50);
 	}
 
 	@After
@@ -31,7 +31,7 @@ public class CustomerTesting {
 	@Test
 	public void testGetVandalismType() {
 		assertEquals("Customer " + customer1.getVandalismType(),
-				VandalismType.Arbitrary, customer1.getVandalismType());
+				VandalismType.ARBITRARY, customer1.getVandalismType());
 	}
 
 	@Test

@@ -147,12 +147,12 @@ public class ManagmentImpl implements Managment {
 	@Override
 	public void start() {
 
-		fLogger.log(Level.FINE, "Simulation Started");
+		fLogger.log(Level.INFO, "Simulation Started");
 
 		fRentalRequests = new ArrayBlockingQueue<RentalRequest>(
 				fCustomerGroupDetails.size());
 
-		fLogger.log(Level.FINE,
+		fLogger.log(Level.INFO,
 				new StringBuilder().append("Rental requests queue size is : ")
 						.append(fCustomerGroupDetails.size()).toString());
 
@@ -175,7 +175,7 @@ public class ManagmentImpl implements Managment {
 			int oldRequest = fNumberOfRentalRequests.get();
 
 			fLogger.log(
-					Level.FINE,
+					Level.INFO,
 					new StringBuilder().append(
 							"All clerks are starting a new shift").toString());
 
@@ -186,7 +186,7 @@ public class ManagmentImpl implements Managment {
 			}
 
 			fLogger.log(
-					Level.FINE,
+					Level.INFO,
 					new StringBuilder().append(
 							"All clerks finished their shift").toString());
 			int requestHandled = oldRequest - fNumberOfRentalRequests.get();
@@ -203,12 +203,12 @@ public class ManagmentImpl implements Managment {
 			// Repair all damaged assets and wait for maintenance guys to finish
 			repairDamagedAssets(messengerMentenance);
 
-			fLogger.log(Level.FINE,
+			fLogger.log(Level.INFO,
 					new StringBuilder().append("All assets been fixed")
 							.toString());
 
 			fLogger.log(
-					Level.FINE,
+					Level.INFO,
 					new StringBuilder().append("Rental request left ")
 							.append(fNumberOfRentalRequests.get()).toString());
 
@@ -218,8 +218,8 @@ public class ManagmentImpl implements Managment {
 
 		}
 
-		fLogger.log(Level.FINE, "Simulation Ended");
-		fLogger.log(Level.FINE, fStatistics.toString());
+		fLogger.log(Level.INFO, "Simulation Ended");
+		fLogger.log(Level.INFO, fStatistics.toString());
 
 	}
 

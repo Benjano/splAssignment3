@@ -26,13 +26,13 @@ public class CustomerImpl implements Customer {
 	// Calculate the damage percentage
 	private void calculateDamagePercentage() {
 		switch (fVandalismType) {
-		case Arbitrary:
+		case ARBITRARY:
 			fDamagePercentage = (Math.random() * (fMaxDamage - fMinDamage) + fMinDamage);
 			break;
-		case Fixed:
+		case FIXED:
 			fDamagePercentage = (fMaxDamage + fMinDamage) / 2 ;
 			break;
-		case None:
+		case NONE:
 			fDamagePercentage = 0.5;
 			break;
 

@@ -79,7 +79,7 @@ public class Driver {
 
 			managment = new ManagmentImpl(totalNumberOfRentalRequests,
 					numberOfMaintenancePersons);
-			logger.log(Level.FINE, "Managment created");
+			logger.log(Level.INFO, "Managment created");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -167,7 +167,7 @@ public class Driver {
 			Logger logger, DocumentBuilderFactory builderFactory,
 			Managment managment) {
 		logger.log(
-				Level.FINEST,
+				Level.INFO,
 				new StringBuilder()
 						.append("Reading asset content repair detials from \"")
 						.append(fileLocation).append("\"").toString());
@@ -187,7 +187,7 @@ public class Driver {
 							.getElementsByTagName("Name").item(0)
 							.getTextContent();
 					logger.log(
-							Level.FINEST,
+							Level.INFO,
 							new StringBuilder()
 									.append("Current asset content ")
 									.append(assetContentName).toString());
@@ -219,7 +219,7 @@ public class Driver {
 				managment.addRepairToolInformation(assetContentName,
 						new RepairToolInformationImpl(name, quantity));
 				logger.log(
-						Level.FINEST,
+						Level.INFO,
 						new StringBuilder().append(assetContentName)
 								.append(" needs ").append(quantity).append(" ")
 								.append(name).append("s").toString());
@@ -241,7 +241,7 @@ public class Driver {
 				managment.addRepairMaterialInformation(assetContentName,
 						new RepairMaterialInformationImpl(name, quantity));
 				logger.log(
-						Level.FINEST,
+						Level.INFO,
 						new StringBuilder().append(assetContentName)
 								.append(" needs ").append(quantity).append(" ")
 								.append(name).append("s").toString());
@@ -253,7 +253,7 @@ public class Driver {
 	public static void readXmlAssets(String fileLocation, Logger logger,
 			DocumentBuilderFactory builderFactory, Managment managment) {
 		logger.log(
-				Level.FINEST,
+				Level.INFO,
 				new StringBuilder()
 						.append("Reading asset content repair detials from \"")
 						.append(fileLocation).append("\"").toString());
@@ -318,7 +318,7 @@ public class Driver {
 						.getTextContent());
 				asset.addAssetContent(name, repairCostMultiplier);
 				logger.log(
-						Level.FINEST,
+						Level.INFO,
 						new StringBuilder().append("Adding asset content ")
 								.append(name)
 								.append(" repair cost multiplier ")
@@ -384,7 +384,7 @@ public class Driver {
 						.item(0).getTextContent();
 				VandalismType vandalismType = VandalismType.valueOf(element
 						.getElementsByTagName("Vandalism").item(0)
-						.getTextContent());
+						.getTextContent().toUpperCase());
 				double minDamage = Double.parseDouble(element
 						.getElementsByTagName("MinimumDamage").item(0)
 						.getTextContent());

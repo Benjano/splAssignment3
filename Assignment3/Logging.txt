@@ -1,0 +1,1884 @@
+Jan 01, 2015 10:37:23 AM implement.Driver createManagment
+INFO: Managment created
+Jan 01, 2015 10:37:24 AM implement.Driver readXmlAssetsContentRepairDetails
+INFO: Reading asset content repair detials from "AssetContentsRepairDetails.xml"
+Jan 01, 2015 10:37:24 AM implement.Driver readXmlAssetsContentRepairDetails
+INFO: Current asset content TV
+Jan 01, 2015 10:37:24 AM implement.Driver readToolsInformation
+INFO: TV needs 2 Hammers
+Jan 01, 2015 10:37:24 AM implement.Driver readToolsInformation
+INFO: TV needs 2 Screw Drivers
+Jan 01, 2015 10:37:24 AM implement.Driver readToolsInformation
+INFO: TV needs 2 Plierss
+Jan 01, 2015 10:37:24 AM implement.Driver readMaterialsInformation
+INFO: TV needs 2 Glass Cleaners
+Jan 01, 2015 10:37:24 AM implement.Driver readMaterialsInformation
+INFO: TV needs 2 Trash Bags
+Jan 01, 2015 10:37:24 AM implement.Driver readMaterialsInformation
+INFO: TV needs 20 Paper Towels
+Jan 01, 2015 10:37:24 AM implement.Driver readXmlAssetsContentRepairDetails
+INFO: Current asset content Bed
+Jan 01, 2015 10:37:24 AM implement.Driver readToolsInformation
+INFO: Bed needs 3 Hammers
+Jan 01, 2015 10:37:24 AM implement.Driver readToolsInformation
+INFO: Bed needs 2 Screw Drivers
+Jan 01, 2015 10:37:24 AM implement.Driver readToolsInformation
+INFO: Bed needs 3 Plierss
+Jan 01, 2015 10:37:24 AM implement.Driver readToolsInformation
+INFO: Bed needs 2 Jacksaws
+Jan 01, 2015 10:37:24 AM implement.Driver readToolsInformation
+INFO: Bed needs 5 Drills
+Jan 01, 2015 10:37:24 AM implement.Driver readMaterialsInformation
+INFO: Bed needs 10 Disinfectants
+Jan 01, 2015 10:37:24 AM implement.Driver readMaterialsInformation
+INFO: Bed needs 15 Floor Cleaners
+Jan 01, 2015 10:37:24 AM implement.Driver readMaterialsInformation
+INFO: Bed needs 25 Trash Bags
+Jan 01, 2015 10:37:24 AM implement.Driver readMaterialsInformation
+INFO: Bed needs 15 Paper Towels
+Jan 01, 2015 10:37:24 AM implement.Driver readXmlAssetsContentRepairDetails
+INFO: Current asset content Desk
+Jan 01, 2015 10:37:24 AM implement.Driver readToolsInformation
+INFO: Desk needs 3 Hammers
+Jan 01, 2015 10:37:24 AM implement.Driver readToolsInformation
+INFO: Desk needs 2 Screw Drivers
+Jan 01, 2015 10:37:24 AM implement.Driver readToolsInformation
+INFO: Desk needs 3 Plierss
+Jan 01, 2015 10:37:24 AM implement.Driver readToolsInformation
+INFO: Desk needs 2 Jacksaws
+Jan 01, 2015 10:37:24 AM implement.Driver readToolsInformation
+INFO: Desk needs 5 Drills
+Jan 01, 2015 10:37:24 AM implement.Driver readMaterialsInformation
+INFO: Desk needs 10 Disinfectants
+Jan 01, 2015 10:37:24 AM implement.Driver readMaterialsInformation
+INFO: Desk needs 15 Floor Cleaners
+Jan 01, 2015 10:37:24 AM implement.Driver readMaterialsInformation
+INFO: Desk needs 25 Trash Bags
+Jan 01, 2015 10:37:24 AM implement.Driver readMaterialsInformation
+INFO: Desk needs 15 Paper Towels
+Jan 01, 2015 10:37:24 AM implement.Driver readXmlAssetsContentRepairDetails
+INFO: Current asset content Stove
+Jan 01, 2015 10:37:24 AM implement.Driver readToolsInformation
+INFO: Stove needs 1 Hammers
+Jan 01, 2015 10:37:24 AM implement.Driver readToolsInformation
+INFO: Stove needs 1 Drills
+Jan 01, 2015 10:37:24 AM implement.Driver readToolsInformation
+INFO: Stove needs 2 Screw Drivers
+Jan 01, 2015 10:37:24 AM implement.Driver readMaterialsInformation
+INFO: Stove needs 10 Nailss
+Jan 01, 2015 10:37:24 AM implement.Driver readMaterialsInformation
+INFO: Stove needs 5 Screwss
+Jan 01, 2015 10:37:24 AM implement.Driver readMaterialsInformation
+INFO: Stove needs 1 Sand Cloths
+Jan 01, 2015 10:37:24 AM implement.Driver readXmlAssetsContentRepairDetails
+INFO: Current asset content Computer
+Jan 01, 2015 10:37:24 AM implement.Driver readToolsInformation
+INFO: Computer needs 1 Hammers
+Jan 01, 2015 10:37:24 AM implement.Driver readToolsInformation
+INFO: Computer needs 2 Jacksaws
+Jan 01, 2015 10:37:24 AM implement.Driver readMaterialsInformation
+INFO: Computer needs 10 Nailss
+Jan 01, 2015 10:37:24 AM implement.Driver readMaterialsInformation
+INFO: Computer needs 5 Screwss
+Jan 01, 2015 10:37:24 AM implement.Driver readXmlAssetsContentRepairDetails
+INFO: Current asset content Fridge
+Jan 01, 2015 10:37:24 AM implement.Driver readToolsInformation
+INFO: Fridge needs 1 Hammers
+Jan 01, 2015 10:37:24 AM implement.Driver readToolsInformation
+INFO: Fridge needs 2 Screw Drivers
+Jan 01, 2015 10:37:24 AM implement.Driver readMaterialsInformation
+INFO: Fridge needs 10 Nailss
+Jan 01, 2015 10:37:24 AM implement.Driver readMaterialsInformation
+INFO: Fridge needs 5 Screwss
+Jan 01, 2015 10:37:24 AM implement.Driver readXmlAssets
+INFO: Reading asset content repair detials from "Assets.xml"
+Jan 01, 2015 10:37:24 AM implement.AssetImpl addAssetContent
+INFO: Asset content TV is added to Asset Asset 1
+Jan 01, 2015 10:37:24 AM implement.Driver readAssetContent
+INFO: Adding asset content TV repair cost multiplier 5.0
+Jan 01, 2015 10:37:24 AM implement.AssetImpl addAssetContent
+INFO: Asset content Bed is added to Asset Asset 1
+Jan 01, 2015 10:37:24 AM implement.Driver readAssetContent
+INFO: Adding asset content Bed repair cost multiplier 8.0
+Jan 01, 2015 10:37:24 AM implement.AssetImpl addAssetContent
+INFO: Asset content Fridge is added to Asset Asset 1
+Jan 01, 2015 10:37:24 AM implement.Driver readAssetContent
+INFO: Adding asset content Fridge repair cost multiplier 3.0
+Jan 01, 2015 10:37:24 AM implement.AssetImpl addAssetContent
+INFO: Asset content Desk is added to Asset Asset 1
+Jan 01, 2015 10:37:24 AM implement.Driver readAssetContent
+INFO: Adding asset content Desk repair cost multiplier 4.0
+Jan 01, 2015 10:37:24 AM implement.AssetImpl addAssetContent
+INFO: Asset content Stove is added to Asset Asset 1
+Jan 01, 2015 10:37:24 AM implement.Driver readAssetContent
+INFO: Adding asset content Stove repair cost multiplier 3.5
+Jan 01, 2015 10:37:24 AM implement.AssetsImpl addAsset
+INFO: New asset added to assets : Asset 1
+Jan 01, 2015 10:37:24 AM implement.AssetImpl addAssetContent
+INFO: Asset content TV is added to Asset Asset 2
+Jan 01, 2015 10:37:24 AM implement.Driver readAssetContent
+INFO: Adding asset content TV repair cost multiplier 2.5
+Jan 01, 2015 10:37:24 AM implement.AssetImpl addAssetContent
+INFO: Asset content Fridge is added to Asset Asset 2
+Jan 01, 2015 10:37:24 AM implement.Driver readAssetContent
+INFO: Adding asset content Fridge repair cost multiplier 2.0
+Jan 01, 2015 10:37:24 AM implement.AssetImpl addAssetContent
+INFO: Asset content Desk is added to Asset Asset 2
+Jan 01, 2015 10:37:24 AM implement.Driver readAssetContent
+INFO: Adding asset content Desk repair cost multiplier 1.5
+Jan 01, 2015 10:37:24 AM implement.AssetsImpl addAsset
+INFO: New asset added to assets : Asset 2
+Jan 01, 2015 10:37:24 AM implement.AssetImpl addAssetContent
+INFO: Asset content TV is added to Asset Asset 3
+Jan 01, 2015 10:37:24 AM implement.Driver readAssetContent
+INFO: Adding asset content TV repair cost multiplier 1.0
+Jan 01, 2015 10:37:24 AM implement.AssetImpl addAssetContent
+INFO: Asset content Bed is added to Asset Asset 3
+Jan 01, 2015 10:37:24 AM implement.Driver readAssetContent
+INFO: Adding asset content Bed repair cost multiplier 2.0
+Jan 01, 2015 10:37:24 AM implement.AssetsImpl addAsset
+INFO: New asset added to assets : Asset 3
+Jan 01, 2015 10:37:24 AM implement.AssetImpl addAssetContent
+INFO: Asset content TV is added to Asset Asset 4
+Jan 01, 2015 10:37:24 AM implement.Driver readAssetContent
+INFO: Adding asset content TV repair cost multiplier 5.0
+Jan 01, 2015 10:37:24 AM implement.AssetImpl addAssetContent
+INFO: Asset content Bed is added to Asset Asset 4
+Jan 01, 2015 10:37:24 AM implement.Driver readAssetContent
+INFO: Adding asset content Bed repair cost multiplier 1.0
+Jan 01, 2015 10:37:24 AM implement.AssetImpl addAssetContent
+INFO: Asset content Fridge is added to Asset Asset 4
+Jan 01, 2015 10:37:24 AM implement.Driver readAssetContent
+INFO: Adding asset content Fridge repair cost multiplier 1.5
+Jan 01, 2015 10:37:24 AM implement.AssetImpl addAssetContent
+INFO: Asset content Desk is added to Asset Asset 4
+Jan 01, 2015 10:37:24 AM implement.Driver readAssetContent
+INFO: Adding asset content Desk repair cost multiplier 2.5
+Jan 01, 2015 10:37:24 AM implement.AssetImpl addAssetContent
+INFO: Asset content Stove is added to Asset Asset 4
+Jan 01, 2015 10:37:24 AM implement.Driver readAssetContent
+INFO: Adding asset content Stove repair cost multiplier 3.75
+Jan 01, 2015 10:37:24 AM implement.AssetsImpl addAsset
+INFO: New asset added to assets : Asset 4
+Jan 01, 2015 10:37:24 AM implement.AssetImpl addAssetContent
+INFO: Asset content TV is added to Asset Asset 5
+Jan 01, 2015 10:37:24 AM implement.Driver readAssetContent
+INFO: Adding asset content TV repair cost multiplier 2.5
+Jan 01, 2015 10:37:24 AM implement.AssetImpl addAssetContent
+INFO: Asset content Bed is added to Asset Asset 5
+Jan 01, 2015 10:37:24 AM implement.Driver readAssetContent
+INFO: Adding asset content Bed repair cost multiplier 1.65
+Jan 01, 2015 10:37:24 AM implement.AssetImpl addAssetContent
+INFO: Asset content Fridge is added to Asset Asset 5
+Jan 01, 2015 10:37:24 AM implement.Driver readAssetContent
+INFO: Adding asset content Fridge repair cost multiplier 1.25
+Jan 01, 2015 10:37:24 AM implement.AssetImpl addAssetContent
+INFO: Asset content Desk is added to Asset Asset 5
+Jan 01, 2015 10:37:24 AM implement.Driver readAssetContent
+INFO: Adding asset content Desk repair cost multiplier 5.5
+Jan 01, 2015 10:37:24 AM implement.AssetImpl addAssetContent
+INFO: Asset content Stove is added to Asset Asset 5
+Jan 01, 2015 10:37:24 AM implement.Driver readAssetContent
+INFO: Adding asset content Stove repair cost multiplier 4.75
+Jan 01, 2015 10:37:24 AM implement.AssetsImpl addAsset
+INFO: New asset added to assets : Asset 5
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addCustomer
+INFO: New customerCustomer name: Customer 1
+Vandalism Type: ARBITRARY
+MinDamage: 10.0
+MaxDamage: 20.0 is added to the customer group running by Group 1
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addCustomer
+INFO: New customerCustomer name: Customer 2
+Vandalism Type: FIXED
+MinDamage: 1.0
+MaxDamage: 9.0 is added to the customer group running by Group 1
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addCustomer
+INFO: New customerCustomer name: Customer 3
+Vandalism Type: FIXED
+MinDamage: 1.0
+MaxDamage: 9.0 is added to the customer group running by Group 1
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addRentalRequest
+INFO: New rental requestRental Request: 
+Id: 1, Asset Type: Apartment, Size: 3, Duration Of Stay: 5, Status: INCOMPLETE is added to the customer group running by Group 1
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addRentalRequest
+INFO: New rental requestRental Request: 
+Id: 2, Asset Type: Hut, Size: 3, Duration Of Stay: 3, Status: INCOMPLETE is added to the customer group running by Group 1
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addCustomer
+INFO: New customerCustomer name: Customer 1
+Vandalism Type: FIXED
+MinDamage: 1.0
+MaxDamage: 5.0 is added to the customer group running by Group 2
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addCustomer
+INFO: New customerCustomer name: Customer 2
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is added to the customer group running by Group 2
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addCustomer
+INFO: New customerCustomer name: Customer 3
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is added to the customer group running by Group 2
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addCustomer
+INFO: New customerCustomer name: Customer 4
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is added to the customer group running by Group 2
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addCustomer
+INFO: New customerCustomer name: Customer 5
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is added to the customer group running by Group 2
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addRentalRequest
+INFO: New rental requestRental Request: 
+Id: 3, Asset Type: Cottage, Size: 5, Duration Of Stay: 2, Status: INCOMPLETE is added to the customer group running by Group 2
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addRentalRequest
+INFO: New rental requestRental Request: 
+Id: 4, Asset Type: Cottage, Size: 5, Duration Of Stay: 2, Status: INCOMPLETE is added to the customer group running by Group 2
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addRentalRequest
+INFO: New rental requestRental Request: 
+Id: 5, Asset Type: Cottage, Size: 5, Duration Of Stay: 1, Status: INCOMPLETE is added to the customer group running by Group 2
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addRentalRequest
+INFO: New rental requestRental Request: 
+Id: 6, Asset Type: Cottage, Size: 5, Duration Of Stay: 3, Status: INCOMPLETE is added to the customer group running by Group 2
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addRentalRequest
+INFO: New rental requestRental Request: 
+Id: 7, Asset Type: Cottage, Size: 5, Duration Of Stay: 2, Status: INCOMPLETE is added to the customer group running by Group 2
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addRentalRequest
+INFO: New rental requestRental Request: 
+Id: 8, Asset Type: Cottage, Size: 5, Duration Of Stay: 2, Status: INCOMPLETE is added to the customer group running by Group 2
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addRentalRequest
+INFO: New rental requestRental Request: 
+Id: 9, Asset Type: Cottage, Size: 5, Duration Of Stay: 2, Status: INCOMPLETE is added to the customer group running by Group 2
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addCustomer
+INFO: New customerCustomer name: Customer 1
+Vandalism Type: ARBITRARY
+MinDamage: 5.0
+MaxDamage: 8.0 is added to the customer group running by Group 3
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addCustomer
+INFO: New customerCustomer name: Customer 2
+Vandalism Type: ARBITRARY
+MinDamage: 5.0
+MaxDamage: 8.0 is added to the customer group running by Group 3
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addCustomer
+INFO: New customerCustomer name: Customer 3
+Vandalism Type: ARBITRARY
+MinDamage: 5.0
+MaxDamage: 7.0 is added to the customer group running by Group 3
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addCustomer
+INFO: New customerCustomer name: Customer 4
+Vandalism Type: ARBITRARY
+MinDamage: 5.0
+MaxDamage: 7.0 is added to the customer group running by Group 3
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addRentalRequest
+INFO: New rental requestRental Request: 
+Id: 10, Asset Type: House, Size: 4, Duration Of Stay: 2, Status: INCOMPLETE is added to the customer group running by Group 3
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addRentalRequest
+INFO: New rental requestRental Request: 
+Id: 11, Asset Type: Loft, Size: 4, Duration Of Stay: 2, Status: INCOMPLETE is added to the customer group running by Group 3
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addCustomer
+INFO: New customerCustomer name: Customer 1
+Vandalism Type: ARBITRARY
+MinDamage: 15.0
+MaxDamage: 25.0 is added to the customer group running by Group 4
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addCustomer
+INFO: New customerCustomer name: Customer 2
+Vandalism Type: FIXED
+MinDamage: 0.0
+MaxDamage: 20.0 is added to the customer group running by Group 4
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addRentalRequest
+INFO: New rental requestRental Request: 
+Id: 12, Asset Type: Apartment, Size: 2, Duration Of Stay: 4, Status: INCOMPLETE is added to the customer group running by Group 4
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addRentalRequest
+INFO: New rental requestRental Request: 
+Id: 13, Asset Type: Apartment, Size: 2, Duration Of Stay: 2, Status: INCOMPLETE is added to the customer group running by Group 4
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addCustomer
+INFO: New customerCustomer name: Customer 1
+Vandalism Type: ARBITRARY
+MinDamage: 2.0
+MaxDamage: 7.0 is added to the customer group running by Group 5
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addCustomer
+INFO: New customerCustomer name: Customer 2
+Vandalism Type: ARBITRARY
+MinDamage: 2.0
+MaxDamage: 7.0 is added to the customer group running by Group 5
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addCustomer
+INFO: New customerCustomer name: Customer 3
+Vandalism Type: FIXED
+MinDamage: 10.0
+MaxDamage: 20.0 is added to the customer group running by Group 5
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addCustomer
+INFO: New customerCustomer name: Customer 4
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is added to the customer group running by Group 5
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addCustomer
+INFO: New customerCustomer name: Customer 5
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is added to the customer group running by Group 5
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addRentalRequest
+INFO: New rental requestRental Request: 
+Id: 14, Asset Type: House, Size: 5, Duration Of Stay: 1, Status: INCOMPLETE is added to the customer group running by Group 5
+Jan 01, 2015 10:37:24 AM implement.CustomerGroupDetailsImpl addRentalRequest
+INFO: New rental requestRental Request: 
+Id: 15, Asset Type: Loft, Size: 5, Duration Of Stay: 3, Status: INCOMPLETE is added to the customer group running by Group 5
+Jan 01, 2015 10:37:24 AM implement.ManagmentImpl start
+INFO: Simulation Started
+Jan 01, 2015 10:37:24 AM implement.ManagmentImpl start
+INFO: Rental requests queue size is : 5
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addRentalRequest
+INFO: Statistics new rental request added14
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Ken Harush is waiting for other clerks to start
+Jan 01, 2015 10:37:24 AM implement.ManagmentImpl start
+INFO: All clerks are starting a new shift
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Die is waiting for other clerks to start
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Wolfgang Eisenkott is waiting for other clerks to start
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Bitton is waiting for other clerks to start
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Die is trying to take a new rental request from queue
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Ken Harush is trying to take a new rental request from queue
+Jan 01, 2015 10:37:24 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 5 is waiting for request to be filled
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addRentalRequest
+INFO: Statistics new rental request added1
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Leonidas I is waiting for other clerks to start
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Ken Harush took rental request id: 1
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Die took rental request id: 14
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Bitton is trying to take a new rental request from queue
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Wolfgang Eisenkott is trying to take a new rental request from queue
+Jan 01, 2015 10:37:24 AM implement.AssetsImpl findAssetByTypeAndSize
+INFO: For search: type = House size >= 5 found 1 matching assets 
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Bitton took rental request id: 3
+Jan 01, 2015 10:37:24 AM implement.AssetsImpl findAssetByTypeAndSize
+INFO: For search: type = Apartment size >= 3 found 1 matching assets 
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Leonidas I is trying to take a new rental request from queue
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addRentalRequest
+INFO: Statistics new rental request added12
+Jan 01, 2015 10:37:24 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 1 is waiting for request to be filled
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Leonidas I took rental request id: 12
+Jan 01, 2015 10:37:24 AM implement.AssetImpl setStatus
+INFO: Asset Asset 1 status changed to BOOKED
+Jan 01, 2015 10:37:24 AM implement.AssetsImpl findAssetByTypeAndSize
+INFO: For search: type = Cottage size >= 5 found 1 matching assets 
+Jan 01, 2015 10:37:24 AM implement.AssetImpl setStatus
+INFO: Asset Asset 4 status changed to BOOKED
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Wolfgang Eisenkott took rental request id: 10
+Jan 01, 2015 10:37:24 AM implement.AssetImpl setStatus
+INFO: Asset Asset 5 status changed to BOOKED
+Jan 01, 2015 10:37:24 AM implement.AssetsImpl findAssetByTypeAndSize
+INFO: For search: type = House size >= 4 found 0 matching assets 
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Ken Harush took found matching asset: Asset 1
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk findMatchingAsset
+INFO: Clerk Wolfgang Eisenkott is waiting for to be available
+Jan 01, 2015 10:37:24 AM implement.Location calculateDistance
+INFO: Calculating the distance between Location (20.0,20.0) to Location (3.0,3.0) which is 24.041630560342615
+Jan 01, 2015 10:37:24 AM implement.AssetsImpl findAssetByTypeAndSize
+INFO: For search: type = Apartment size >= 2 found 0 matching assets 
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addRentalRequest
+INFO: Statistics new rental request added10
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk findMatchingAsset
+INFO: Clerk Leonidas I is waiting for to be available
+Jan 01, 2015 10:37:24 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 3 is waiting for request to be filled
+Jan 01, 2015 10:37:24 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 4 is waiting for request to be filled
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addRentalRequest
+INFO: Statistics new rental request added3
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Ken Harush is going to sleep for 48 seconds
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Die took found matching asset: Asset 4
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Bitton took found matching asset: Asset 5
+Jan 01, 2015 10:37:24 AM implement.Location calculateDistance
+INFO: Calculating the distance between Location (20.0,15.0) to Location (3.0,3.0) which is 20.808652046684813
+Jan 01, 2015 10:37:24 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 2 is waiting for request to be filled
+Jan 01, 2015 10:37:24 AM implement.Location calculateDistance
+INFO: Calculating the distance between Location (12.0,16.0) to Location (3.0,3.0) which is 15.811388300841896
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Die is going to sleep for 41 seconds
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Bitton is going to sleep for 31 seconds
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Bitton woke up from sleeping 
+Jan 01, 2015 10:37:24 AM implement.RentalRequestImpl setFoundAsset
+INFO: Asset set to rental request id:3 Asset name: Asset 5
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Bitton finished his shift
+Jan 01, 2015 10:37:24 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 2 request been filled
+Jan 01, 2015 10:37:24 AM implement.AssetImpl setStatus
+INFO: Asset Asset 5 status changed to OCCUPIED
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Die woke up from sleeping 
+Jan 01, 2015 10:37:24 AM implement.RentalRequestImpl setFoundAsset
+INFO: Asset set to rental request id:14 Asset name: Asset 4
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Die finished his shift
+Jan 01, 2015 10:37:24 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 5 request been filled
+Jan 01, 2015 10:37:24 AM implement.AssetImpl setStatus
+INFO: Asset Asset 4 status changed to OCCUPIED
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Ken Harush woke up from sleeping 
+Jan 01, 2015 10:37:24 AM implement.RentalRequestImpl setFoundAsset
+INFO: Asset set to rental request id:1 Asset name: Asset 1
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Ken Harush finished his shift
+Jan 01, 2015 10:37:24 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 1 request been filled
+Jan 01, 2015 10:37:24 AM implement.AssetImpl setStatus
+INFO: Asset Asset 1 status changed to OCCUPIED
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 120.0$
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 240.0$
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 360.0$
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 480.0$
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 600.0$
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 650.0$
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 700.0$
+Jan 01, 2015 10:37:24 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 2
+Vandalism Type: ARBITRARY
+MinDamage: 2.0
+MaxDamage: 7.0 is done
+Jan 01, 2015 10:37:24 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 5
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 750.0$
+Jan 01, 2015 10:37:24 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 4
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 800.0$
+Jan 01, 2015 10:37:24 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 1
+Vandalism Type: ARBITRARY
+MinDamage: 2.0
+MaxDamage: 7.0 is done
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 850.0$
+Jan 01, 2015 10:37:24 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 3
+Vandalism Type: FIXED
+MinDamage: 10.0
+MaxDamage: 20.0 is done
+Jan 01, 2015 10:37:24 AM implement.RentalRequestImpl releaseAsset
+INFO: Rental request id:14 is now Complete 
+Jan 01, 2015 10:37:24 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content TV from 100.0% to 76.63717021968203%
+Jan 01, 2015 10:37:24 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Bed from 100.0% to 76.63717021968203%
+Jan 01, 2015 10:37:24 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Fridge from 100.0% to 76.63717021968203%
+Jan 01, 2015 10:37:24 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Desk from 100.0% to 76.63717021968203%
+Jan 01, 2015 10:37:24 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Stove from 100.0% to 76.63717021968203%
+Jan 01, 2015 10:37:24 AM implement.AssetImpl setStatus
+INFO: Asset Asset 4 status changed to AVAILABLE
+Jan 01, 2015 10:37:24 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 5 realse asset.
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addRentalRequest
+INFO: Statistics new rental request added15
+Jan 01, 2015 10:37:24 AM implement.AssetsImpl findAssetByTypeAndSize
+INFO: For search: type = Apartment size >= 2 found 1 matching assets 
+Jan 01, 2015 10:37:24 AM implement.AssetsImpl findAssetByTypeAndSize
+INFO: For search: type = House size >= 4 found 1 matching assets 
+Jan 01, 2015 10:37:24 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 5 is waiting for request to be filled
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk findMatchingAsset
+INFO: Clerk Leonidas I is waiting for to be available
+Jan 01, 2015 10:37:24 AM implement.AssetImpl setStatus
+INFO: Asset Asset 4 status changed to BOOKED
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Wolfgang Eisenkott took found matching asset: Asset 4
+Jan 01, 2015 10:37:24 AM implement.Location calculateDistance
+INFO: Calculating the distance between Location (20.0,15.0) to Location (3.0,3.0) which is 20.808652046684813
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk run
+INFO: Clerk Wolfgang Eisenkott is going to sleep for 41 seconds
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 950.0$
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 1050.0$
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 1150.0$
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 1270.0$
+Jan 01, 2015 10:37:24 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 4
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 1390.0$
+Jan 01, 2015 10:37:24 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 1
+Vandalism Type: FIXED
+MinDamage: 1.0
+MaxDamage: 5.0 is done
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 1510.0$
+Jan 01, 2015 10:37:24 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 5
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 1630.0$
+Jan 01, 2015 10:37:24 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 2
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 1750.0$
+Jan 01, 2015 10:37:24 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 3
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:24 AM implement.RentalRequestImpl releaseAsset
+INFO: Rental request id:3 is now Complete 
+Jan 01, 2015 10:37:24 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content TV from 100.0% to 95.0%
+Jan 01, 2015 10:37:24 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Bed from 100.0% to 95.0%
+Jan 01, 2015 10:37:24 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Fridge from 100.0% to 95.0%
+Jan 01, 2015 10:37:24 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Desk from 100.0% to 95.0%
+Jan 01, 2015 10:37:24 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Stove from 100.0% to 95.0%
+Jan 01, 2015 10:37:24 AM implement.AssetImpl setStatus
+INFO: Asset Asset 5 status changed to AVAILABLE
+Jan 01, 2015 10:37:24 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 2 realse asset.
+Jan 01, 2015 10:37:24 AM implement.StatisticsImpl addRentalRequest
+INFO: Statistics new rental request added4
+Jan 01, 2015 10:37:24 AM implement.AssetsImpl findAssetByTypeAndSize
+INFO: For search: type = Apartment size >= 2 found 1 matching assets 
+Jan 01, 2015 10:37:24 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 2 is waiting for request to be filled
+Jan 01, 2015 10:37:24 AM runnable.RunnebleClerk findMatchingAsset
+INFO: Clerk Leonidas I is waiting for to be available
+Jan 01, 2015 10:37:25 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 1850.0$
+Jan 01, 2015 10:37:25 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 1950.0$
+Jan 01, 2015 10:37:25 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 2050.0$
+Jan 01, 2015 10:37:25 AM runnable.RunnebleClerk run
+INFO: Clerk Wolfgang Eisenkott woke up from sleeping 
+Jan 01, 2015 10:37:25 AM implement.RentalRequestImpl setFoundAsset
+INFO: Asset set to rental request id:10 Asset name: Asset 4
+Jan 01, 2015 10:37:25 AM runnable.RunnebleClerk run
+INFO: Clerk Wolfgang Eisenkott finished his shift
+Jan 01, 2015 10:37:25 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 3 request been filled
+Jan 01, 2015 10:37:25 AM implement.AssetImpl setStatus
+INFO: Asset Asset 4 status changed to OCCUPIED
+Jan 01, 2015 10:37:25 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 2150.0$
+Jan 01, 2015 10:37:25 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 2250.0$
+Jan 01, 2015 10:37:25 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 2350.0$
+Jan 01, 2015 10:37:25 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 2400.0$
+Jan 01, 2015 10:37:25 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 2450.0$
+Jan 01, 2015 10:37:25 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 2500.0$
+Jan 01, 2015 10:37:25 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 2550.0$
+Jan 01, 2015 10:37:25 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 2650.0$
+Jan 01, 2015 10:37:25 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 2750.0$
+Jan 01, 2015 10:37:25 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 2850.0$
+Jan 01, 2015 10:37:25 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 2900.0$
+Jan 01, 2015 10:37:25 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 2950.0$
+Jan 01, 2015 10:37:25 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 3
+Vandalism Type: ARBITRARY
+MinDamage: 5.0
+MaxDamage: 7.0 is done
+Jan 01, 2015 10:37:25 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 1
+Vandalism Type: ARBITRARY
+MinDamage: 5.0
+MaxDamage: 8.0 is done
+Jan 01, 2015 10:37:25 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 3000.0$
+Jan 01, 2015 10:37:25 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 2
+Vandalism Type: ARBITRARY
+MinDamage: 5.0
+MaxDamage: 8.0 is done
+Jan 01, 2015 10:37:25 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 3050.0$
+Jan 01, 2015 10:37:25 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 4
+Vandalism Type: ARBITRARY
+MinDamage: 5.0
+MaxDamage: 7.0 is done
+Jan 01, 2015 10:37:25 AM implement.RentalRequestImpl releaseAsset
+INFO: Rental request id:10 is now Complete 
+Jan 01, 2015 10:37:25 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content TV from 76.63717021968203% to 58.732960286371465%
+Jan 01, 2015 10:37:25 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Bed from 76.63717021968203% to 58.732960286371465%
+Jan 01, 2015 10:37:25 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Fridge from 76.63717021968203% to 58.732960286371465%
+Jan 01, 2015 10:37:25 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Desk from 76.63717021968203% to 58.732960286371465%
+Jan 01, 2015 10:37:25 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Stove from 76.63717021968203% to 58.732960286371465%
+Jan 01, 2015 10:37:25 AM implement.AssetImpl setStatus
+INFO: Asset Asset 4 status changed to UNAVAILABLE
+Jan 01, 2015 10:37:25 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 3 realse asset.
+Jan 01, 2015 10:37:25 AM implement.StatisticsImpl addRentalRequest
+INFO: Statistics new rental request added11
+Jan 01, 2015 10:37:25 AM implement.AssetsImpl findAssetByTypeAndSize
+INFO: For search: type = Apartment size >= 2 found 1 matching assets 
+Jan 01, 2015 10:37:25 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 3 is waiting for request to be filled
+Jan 01, 2015 10:37:25 AM runnable.RunnebleClerk findMatchingAsset
+INFO: Clerk Leonidas I is waiting for to be available
+Jan 01, 2015 10:37:25 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 3150.0$
+Jan 01, 2015 10:37:25 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 1
+Vandalism Type: ARBITRARY
+MinDamage: 10.0
+MaxDamage: 20.0 is done
+Jan 01, 2015 10:37:25 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 3250.0$
+Jan 01, 2015 10:37:25 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 2
+Vandalism Type: FIXED
+MinDamage: 1.0
+MaxDamage: 9.0 is done
+Jan 01, 2015 10:37:25 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 3350.0$
+Jan 01, 2015 10:37:25 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 3
+Vandalism Type: FIXED
+MinDamage: 1.0
+MaxDamage: 9.0 is done
+Jan 01, 2015 10:37:25 AM implement.RentalRequestImpl releaseAsset
+INFO: Rental request id:1 is now Complete 
+Jan 01, 2015 10:37:25 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content TV from 100.0% to 72.48554809654696%
+Jan 01, 2015 10:37:25 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Bed from 100.0% to 72.48554809654696%
+Jan 01, 2015 10:37:25 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Fridge from 100.0% to 72.48554809654696%
+Jan 01, 2015 10:37:25 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Desk from 100.0% to 72.48554809654696%
+Jan 01, 2015 10:37:25 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Stove from 100.0% to 72.48554809654696%
+Jan 01, 2015 10:37:25 AM implement.AssetImpl setStatus
+INFO: Asset Asset 1 status changed to AVAILABLE
+Jan 01, 2015 10:37:25 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 1 realse asset.
+Jan 01, 2015 10:37:25 AM implement.StatisticsImpl addRentalRequest
+INFO: Statistics new rental request added2
+Jan 01, 2015 10:37:25 AM implement.AssetsImpl findAssetByTypeAndSize
+INFO: For search: type = Apartment size >= 2 found 1 matching assets 
+Jan 01, 2015 10:37:25 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 1 is waiting for request to be filled
+Jan 01, 2015 10:37:25 AM implement.AssetImpl setStatus
+INFO: Asset Asset 1 status changed to BOOKED
+Jan 01, 2015 10:37:25 AM runnable.RunnebleClerk run
+INFO: Clerk Leonidas I took found matching asset: Asset 1
+Jan 01, 2015 10:37:25 AM implement.Location calculateDistance
+INFO: Calculating the distance between Location (20.0,20.0) to Location (3.0,3.0) which is 24.041630560342615
+Jan 01, 2015 10:37:25 AM runnable.RunnebleClerk run
+INFO: Clerk Leonidas I is going to sleep for 48 seconds
+Jan 01, 2015 10:37:26 AM runnable.RunnebleClerk run
+INFO: Clerk Leonidas I woke up from sleeping 
+Jan 01, 2015 10:37:26 AM implement.RentalRequestImpl setFoundAsset
+INFO: Asset set to rental request id:12 Asset name: Asset 1
+Jan 01, 2015 10:37:26 AM runnable.RunnebleClerk run
+INFO: Clerk Leonidas I finished his shift
+Jan 01, 2015 10:37:26 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 4 request been filled
+Jan 01, 2015 10:37:26 AM implement.ManagmentImpl start
+INFO: All clerks finished their shift
+Jan 01, 2015 10:37:26 AM implement.AssetImpl setStatus
+INFO: Asset Asset 1 status changed to OCCUPIED
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 3450.0$
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 3550.0$
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 3650.0$
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 3750.0$
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 3850.0$
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 3950.0$
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 4050.0$
+Jan 01, 2015 10:37:26 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 1
+Vandalism Type: ARBITRARY
+MinDamage: 15.0
+MaxDamage: 25.0 is done
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 4150.0$
+Jan 01, 2015 10:37:26 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 2
+Vandalism Type: FIXED
+MinDamage: 0.0
+MaxDamage: 20.0 is done
+Jan 01, 2015 10:37:26 AM implement.RentalRequestImpl releaseAsset
+INFO: Rental request id:12 is now Complete 
+Jan 01, 2015 10:37:26 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content TV from 72.48554809654696% to 49.21944196268282%
+Jan 01, 2015 10:37:26 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Bed from 72.48554809654696% to 49.21944196268282%
+Jan 01, 2015 10:37:26 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Fridge from 72.48554809654696% to 49.21944196268282%
+Jan 01, 2015 10:37:26 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Desk from 72.48554809654696% to 49.21944196268282%
+Jan 01, 2015 10:37:26 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Stove from 72.48554809654696% to 49.21944196268282%
+Jan 01, 2015 10:37:26 AM implement.AssetImpl setStatus
+INFO: Asset Asset 1 status changed to UNAVAILABLE
+Jan 01, 2015 10:37:26 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 4 realse asset.
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl addRentalRequest
+INFO: Statistics new rental request added13
+Jan 01, 2015 10:37:26 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 4 is waiting for request to be filled
+Jan 01, 2015 10:37:26 AM runnable.RunnableMaintenaceRequest run
+INFO: New maintenance insinuate for asset Asset 4
+Jan 01, 2015 10:37:26 AM runnable.RunnableMaintenaceRequest run
+INFO: New maintenance insinuate for asset Asset 1
+Jan 01, 2015 10:37:26 AM implement.AssetImpl setStatus
+INFO: Asset Asset 4 status changed to UNAVAILABLE
+Jan 01, 2015 10:37:26 AM implement.AssetImpl setStatus
+INFO: Asset Asset 1 status changed to UNAVAILABLE
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl addToolInProcess
+INFO: Statistics added Tool Name: Jacksaw. Quantity: java.util.concurrent.Semaphore@c2909a1[Permits = 2] to tools in process. Current tools in process: {Jacksaw=2}
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl addToolInProcess
+INFO: Statistics added Tool Name: Jacksaw. Quantity: java.util.concurrent.Semaphore@5a372f43[Permits = 2] to tools in process. Current tools in process: {Jacksaw=2}
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl addToolInProcess
+INFO: Statistics added Tool Name: Drill. Quantity: java.util.concurrent.Semaphore@5d0005fa[Permits = 5] to tools in process. Current tools in process: {Jacksaw=2, Drill=5}
+Jan 01, 2015 10:37:26 AM implement.WarehouseImpl takeRepairTool
+WARNING: Could not take tool Drill quantity: 5 from warehouse
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl releaseTool
+INFO: Statistics release Tool Name: Jacksaw. Quantity: java.util.concurrent.Semaphore@5a372f43[Permits = 2] from tools in process. Current tools in process: {Jacksaw=0, Drill=5, Screw Driver=2}
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl addToolInProcess
+INFO: Statistics added Tool Name: Screw Driver. Quantity: java.util.concurrent.Semaphore@2c888fc9[Permits = 2] to tools in process. Current tools in process: {Jacksaw=0, Drill=5, Screw Driver=2}
+Jan 01, 2015 10:37:26 AM runnable.RunnableMaintenaceRequest takeToolsFromWarehouse
+INFO: Maintenance for asset Asset 4 is waiting for tools
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl addToolInProcess
+INFO: Statistics added Tool Name: Pliers. Quantity: java.util.concurrent.Semaphore@3997ebf6[Permits = 3] to tools in process. Current tools in process: {Jacksaw=0, Drill=5, Screw Driver=2, Pliers=3}
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl addToolInProcess
+INFO: Statistics added Tool Name: Hammer. Quantity: java.util.concurrent.Semaphore@25048104[Permits = 3] to tools in process. Current tools in process: {Jacksaw=0, Drill=5, Screw Driver=2, Pliers=3, Hammer=3}
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl consumeMaterial
+INFO: Statistics material consumed: Material Name: Trash Bag. Quantity: java.util.concurrent.Semaphore@4ab24098[Permits = 52]. Current material consumed: {Trash Bag=52}
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl consumeMaterial
+INFO: Statistics material consumed: Material Name: Floor Cleaner. Quantity: java.util.concurrent.Semaphore@7caee177[Permits = 30]. Current material consumed: {Trash Bag=52, Floor Cleaner=30}
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl consumeMaterial
+INFO: Statistics material consumed: Material Name: Glass Cleaner. Quantity: java.util.concurrent.Semaphore@3d548b94[Permits = 2]. Current material consumed: {Trash Bag=52, Floor Cleaner=30, Glass Cleaner=2}
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl consumeMaterial
+INFO: Statistics material consumed: Material Name: Screws. Quantity: java.util.concurrent.Semaphore@7997c100[Permits = 10]. Current material consumed: {Trash Bag=52, Floor Cleaner=30, Glass Cleaner=2, Screws=10}
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl consumeMaterial
+INFO: Statistics material consumed: Material Name: Sand Cloth. Quantity: java.util.concurrent.Semaphore@5a00255d[Permits = 1]. Current material consumed: {Trash Bag=52, Floor Cleaner=30, Glass Cleaner=2, Screws=10, Sand Cloth=1}
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl consumeMaterial
+INFO: Statistics material consumed: Material Name: Disinfectant. Quantity: java.util.concurrent.Semaphore@3f952ad4[Permits = 20]. Current material consumed: {Trash Bag=52, Floor Cleaner=30, Glass Cleaner=2, Screws=10, Sand Cloth=1, Disinfectant=20}
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl consumeMaterial
+INFO: Statistics material consumed: Material Name: Paper Towel. Quantity: java.util.concurrent.Semaphore@5a2ee4e8[Permits = 50]. Current material consumed: {Trash Bag=52, Floor Cleaner=30, Glass Cleaner=2, Screws=10, Sand Cloth=1, Paper Towel=50, Disinfectant=20}
+Jan 01, 2015 10:37:26 AM implement.StatisticsImpl consumeMaterial
+INFO: Statistics material consumed: Material Name: Nails. Quantity: java.util.concurrent.Semaphore@3cb66999[Permits = 20]. Current material consumed: {Trash Bag=52, Floor Cleaner=30, Glass Cleaner=2, Screws=10, Sand Cloth=1, Paper Towel=50, Disinfectant=20, Nails=20}
+Jan 01, 2015 10:37:26 AM runnable.RunnableMaintenaceRequest run
+INFO: Maintenance for asset Asset 1 started
+Jan 01, 2015 10:37:26 AM implement.AssetContentImpl calculateRepairTime
+INFO: Calculating the repair time for TV which is 253.9027901865859
+Jan 01, 2015 10:37:27 AM implement.AssetContentImpl fixAssetContent
+INFO: AssetContent TV health is 100%
+Jan 01, 2015 10:37:27 AM implement.AssetContentImpl calculateRepairTime
+INFO: Calculating the repair time for Bed which is 406.2444642985374
+Jan 01, 2015 10:37:27 AM implement.AssetContentImpl fixAssetContent
+INFO: AssetContent Bed health is 100%
+Jan 01, 2015 10:37:27 AM implement.AssetContentImpl calculateRepairTime
+INFO: Calculating the repair time for Fridge which is 152.34167411195153
+Jan 01, 2015 10:37:27 AM implement.AssetContentImpl fixAssetContent
+INFO: AssetContent Fridge health is 100%
+Jan 01, 2015 10:37:27 AM implement.AssetContentImpl calculateRepairTime
+INFO: Calculating the repair time for Desk which is 203.1222321492687
+Jan 01, 2015 10:37:27 AM implement.AssetContentImpl fixAssetContent
+INFO: AssetContent Desk health is 100%
+Jan 01, 2015 10:37:27 AM implement.AssetContentImpl calculateRepairTime
+INFO: Calculating the repair time for Stove which is 177.73195313061012
+Jan 01, 2015 10:37:28 AM implement.AssetContentImpl fixAssetContent
+INFO: AssetContent Stove health is 100%
+Jan 01, 2015 10:37:28 AM implement.StatisticsImpl releaseTool
+INFO: Statistics release Tool Name: Jacksaw. Quantity: java.util.concurrent.Semaphore@c2909a1[Permits = 2] from tools in process. Current tools in process: {Jacksaw=-2, Drill=5, Screw Driver=2, Pliers=3, Hammer=3}
+Jan 01, 2015 10:37:28 AM implement.StatisticsImpl releaseTool
+INFO: Statistics release Tool Name: Drill. Quantity: java.util.concurrent.Semaphore@5d0005fa[Permits = 5] from tools in process. Current tools in process: {Jacksaw=-2, Drill=0, Screw Driver=2, Pliers=3, Hammer=3}
+Jan 01, 2015 10:37:28 AM implement.StatisticsImpl releaseTool
+INFO: Statistics release Tool Name: Screw Driver. Quantity: java.util.concurrent.Semaphore@2c888fc9[Permits = 2] from tools in process. Current tools in process: {Jacksaw=-2, Drill=0, Screw Driver=0, Pliers=3, Hammer=3}
+Jan 01, 2015 10:37:28 AM implement.StatisticsImpl releaseTool
+INFO: Statistics release Tool Name: Pliers. Quantity: java.util.concurrent.Semaphore@3997ebf6[Permits = 3] from tools in process. Current tools in process: {Jacksaw=-2, Drill=0, Screw Driver=0, Pliers=0, Hammer=3}
+Jan 01, 2015 10:37:28 AM implement.StatisticsImpl releaseTool
+INFO: Statistics release Tool Name: Hammer. Quantity: java.util.concurrent.Semaphore@25048104[Permits = 3] from tools in process. Current tools in process: {Jacksaw=-2, Drill=0, Screw Driver=0, Pliers=0, Hammer=0}
+Jan 01, 2015 10:37:28 AM runnable.RunnableMaintenaceRequest run
+INFO: Maintenance for asset Asset 1 is done and returning tools
+Jan 01, 2015 10:37:28 AM implement.AssetImpl setStatus
+INFO: Asset Asset 1 status changed to AVAILABLE
+Jan 01, 2015 10:37:28 AM implement.StatisticsImpl addToolInProcess
+INFO: Statistics added Tool Name: Jacksaw. Quantity: java.util.concurrent.Semaphore@59887d29[Permits = 2] to tools in process. Current tools in process: {Jacksaw=0, Drill=0, Screw Driver=0, Pliers=0, Hammer=0}
+Jan 01, 2015 10:37:28 AM runnable.RunnableMaintenaceRequest run
+INFO: New maintenance for asset Asset 1 is done
+Jan 01, 2015 10:37:28 AM implement.StatisticsImpl addToolInProcess
+INFO: Statistics added Tool Name: Drill. Quantity: java.util.concurrent.Semaphore@fd13cab[Permits = 5] to tools in process. Current tools in process: {Jacksaw=0, Drill=5, Screw Driver=0, Pliers=0, Hammer=0}
+Jan 01, 2015 10:37:28 AM implement.StatisticsImpl addToolInProcess
+INFO: Statistics added Tool Name: Screw Driver. Quantity: java.util.concurrent.Semaphore@71e606a9[Permits = 2] to tools in process. Current tools in process: {Jacksaw=0, Drill=5, Screw Driver=2, Pliers=0, Hammer=0}
+Jan 01, 2015 10:37:28 AM implement.StatisticsImpl addToolInProcess
+INFO: Statistics added Tool Name: Pliers. Quantity: java.util.concurrent.Semaphore@34bf7baa[Permits = 3] to tools in process. Current tools in process: {Jacksaw=0, Drill=5, Screw Driver=2, Pliers=3, Hammer=0}
+Jan 01, 2015 10:37:28 AM implement.StatisticsImpl addToolInProcess
+INFO: Statistics added Tool Name: Hammer. Quantity: java.util.concurrent.Semaphore@74ff0f4[Permits = 3] to tools in process. Current tools in process: {Jacksaw=0, Drill=5, Screw Driver=2, Pliers=3, Hammer=3}
+Jan 01, 2015 10:37:28 AM implement.StatisticsImpl consumeMaterial
+INFO: Statistics material consumed: Material Name: Trash Bag. Quantity: java.util.concurrent.Semaphore@115426ec[Permits = 52]. Current material consumed: {Trash Bag=104, Floor Cleaner=30, Glass Cleaner=2, Screws=10, Sand Cloth=1, Paper Towel=50, Disinfectant=20, Nails=20}
+Jan 01, 2015 10:37:28 AM implement.StatisticsImpl consumeMaterial
+INFO: Statistics material consumed: Material Name: Floor Cleaner. Quantity: java.util.concurrent.Semaphore@2bc758d7[Permits = 30]. Current material consumed: {Trash Bag=104, Floor Cleaner=60, Glass Cleaner=2, Screws=10, Sand Cloth=1, Paper Towel=50, Disinfectant=20, Nails=20}
+Jan 01, 2015 10:37:28 AM implement.StatisticsImpl consumeMaterial
+INFO: Statistics material consumed: Material Name: Glass Cleaner. Quantity: java.util.concurrent.Semaphore@2c99a1b5[Permits = 2]. Current material consumed: {Trash Bag=104, Floor Cleaner=60, Glass Cleaner=4, Screws=10, Sand Cloth=1, Paper Towel=50, Disinfectant=20, Nails=20}
+Jan 01, 2015 10:37:28 AM implement.StatisticsImpl consumeMaterial
+INFO: Statistics material consumed: Material Name: Screws. Quantity: java.util.concurrent.Semaphore@1a4788f3[Permits = 10]. Current material consumed: {Trash Bag=104, Floor Cleaner=60, Glass Cleaner=4, Screws=20, Sand Cloth=1, Paper Towel=50, Disinfectant=20, Nails=20}
+Jan 01, 2015 10:37:28 AM implement.StatisticsImpl consumeMaterial
+INFO: Statistics material consumed: Material Name: Sand Cloth. Quantity: java.util.concurrent.Semaphore@4e7016ff[Permits = 1]. Current material consumed: {Trash Bag=104, Floor Cleaner=60, Glass Cleaner=4, Screws=20, Sand Cloth=2, Paper Towel=50, Disinfectant=20, Nails=20}
+Jan 01, 2015 10:37:28 AM implement.StatisticsImpl consumeMaterial
+INFO: Statistics material consumed: Material Name: Disinfectant. Quantity: java.util.concurrent.Semaphore@20f5e794[Permits = 20]. Current material consumed: {Trash Bag=104, Floor Cleaner=60, Glass Cleaner=4, Screws=20, Sand Cloth=2, Paper Towel=50, Disinfectant=40, Nails=20}
+Jan 01, 2015 10:37:28 AM implement.StatisticsImpl consumeMaterial
+INFO: Statistics material consumed: Material Name: Paper Towel. Quantity: java.util.concurrent.Semaphore@7036b673[Permits = 50]. Current material consumed: {Trash Bag=104, Floor Cleaner=60, Glass Cleaner=4, Screws=20, Sand Cloth=2, Paper Towel=100, Disinfectant=40, Nails=20}
+Jan 01, 2015 10:37:28 AM implement.StatisticsImpl consumeMaterial
+INFO: Statistics material consumed: Material Name: Nails. Quantity: java.util.concurrent.Semaphore@18047193[Permits = 20]. Current material consumed: {Trash Bag=104, Floor Cleaner=60, Glass Cleaner=4, Screws=20, Sand Cloth=2, Paper Towel=100, Disinfectant=40, Nails=40}
+Jan 01, 2015 10:37:28 AM runnable.RunnableMaintenaceRequest run
+INFO: Maintenance for asset Asset 4 started
+Jan 01, 2015 10:37:28 AM implement.AssetContentImpl calculateRepairTime
+INFO: Calculating the repair time for TV which is 206.3351985681427
+Jan 01, 2015 10:37:28 AM implement.AssetContentImpl fixAssetContent
+INFO: AssetContent TV health is 100%
+Jan 01, 2015 10:37:28 AM implement.AssetContentImpl calculateRepairTime
+INFO: Calculating the repair time for Bed which is 41.267039713628535
+Jan 01, 2015 10:37:28 AM implement.AssetContentImpl fixAssetContent
+INFO: AssetContent Bed health is 100%
+Jan 01, 2015 10:37:28 AM implement.AssetContentImpl calculateRepairTime
+INFO: Calculating the repair time for Fridge which is 61.9005595704428
+Jan 01, 2015 10:37:28 AM implement.AssetContentImpl fixAssetContent
+INFO: AssetContent Fridge health is 100%
+Jan 01, 2015 10:37:28 AM implement.AssetContentImpl calculateRepairTime
+INFO: Calculating the repair time for Desk which is 103.16759928407134
+Jan 01, 2015 10:37:28 AM implement.AssetContentImpl fixAssetContent
+INFO: AssetContent Desk health is 100%
+Jan 01, 2015 10:37:28 AM implement.AssetContentImpl calculateRepairTime
+INFO: Calculating the repair time for Stove which is 154.75139892610702
+Jan 01, 2015 10:37:28 AM implement.AssetContentImpl fixAssetContent
+INFO: AssetContent Stove health is 100%
+Jan 01, 2015 10:37:28 AM implement.StatisticsImpl releaseTool
+INFO: Statistics release Tool Name: Jacksaw. Quantity: java.util.concurrent.Semaphore@59887d29[Permits = 2] from tools in process. Current tools in process: {Jacksaw=-2, Drill=5, Screw Driver=2, Pliers=3, Hammer=3}
+Jan 01, 2015 10:37:28 AM implement.StatisticsImpl releaseTool
+INFO: Statistics release Tool Name: Drill. Quantity: java.util.concurrent.Semaphore@fd13cab[Permits = 5] from tools in process. Current tools in process: {Jacksaw=-2, Drill=0, Screw Driver=2, Pliers=3, Hammer=3}
+Jan 01, 2015 10:37:28 AM implement.StatisticsImpl releaseTool
+INFO: Statistics release Tool Name: Screw Driver. Quantity: java.util.concurrent.Semaphore@71e606a9[Permits = 2] from tools in process. Current tools in process: {Jacksaw=-2, Drill=0, Screw Driver=0, Pliers=3, Hammer=3}
+Jan 01, 2015 10:37:28 AM implement.StatisticsImpl releaseTool
+INFO: Statistics release Tool Name: Pliers. Quantity: java.util.concurrent.Semaphore@34bf7baa[Permits = 3] from tools in process. Current tools in process: {Jacksaw=-2, Drill=0, Screw Driver=0, Pliers=0, Hammer=3}
+Jan 01, 2015 10:37:28 AM implement.StatisticsImpl releaseTool
+INFO: Statistics release Tool Name: Hammer. Quantity: java.util.concurrent.Semaphore@74ff0f4[Permits = 3] from tools in process. Current tools in process: {Jacksaw=-2, Drill=0, Screw Driver=0, Pliers=0, Hammer=0}
+Jan 01, 2015 10:37:28 AM runnable.RunnableMaintenaceRequest run
+INFO: Maintenance for asset Asset 4 is done and returning tools
+Jan 01, 2015 10:37:28 AM implement.AssetImpl setStatus
+INFO: Asset Asset 4 status changed to AVAILABLE
+Jan 01, 2015 10:37:28 AM runnable.RunnableMaintenaceRequest run
+INFO: New maintenance for asset Asset 4 is done
+Jan 01, 2015 10:37:28 AM implement.ManagmentImpl start
+INFO: All assets been fixed
+Jan 01, 2015 10:37:28 AM implement.ManagmentImpl start
+INFO: Rental request left 10
+Jan 01, 2015 10:37:28 AM implement.ManagmentImpl start
+INFO: All clerks are starting a new shift
+Jan 01, 2015 10:37:28 AM runnable.RunnebleClerk run
+INFO: Clerk Wolfgang Eisenkott is trying to take a new rental request from queue
+Jan 01, 2015 10:37:28 AM runnable.RunnebleClerk run
+INFO: Clerk Ken Harush is trying to take a new rental request from queue
+Jan 01, 2015 10:37:28 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Die is trying to take a new rental request from queue
+Jan 01, 2015 10:37:28 AM runnable.RunnebleClerk run
+INFO: Clerk Ken Harush took rental request id: 4
+Jan 01, 2015 10:37:28 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Die took rental request id: 11
+Jan 01, 2015 10:37:28 AM implement.AssetsImpl findAssetByTypeAndSize
+INFO: For search: type = Cottage size >= 5 found 1 matching assets 
+Jan 01, 2015 10:37:28 AM implement.AssetsImpl findAssetByTypeAndSize
+INFO: For search: type = Loft size >= 4 found 1 matching assets 
+Jan 01, 2015 10:37:28 AM implement.AssetImpl setStatus
+INFO: Asset Asset 5 status changed to BOOKED
+Jan 01, 2015 10:37:28 AM implement.AssetImpl setStatus
+INFO: Asset Asset 2 status changed to BOOKED
+Jan 01, 2015 10:37:28 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Bitton is trying to take a new rental request from queue
+Jan 01, 2015 10:37:28 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Die took found matching asset: Asset 2
+Jan 01, 2015 10:37:28 AM runnable.RunnebleClerk run
+INFO: Clerk Wolfgang Eisenkott took rental request id: 15
+Jan 01, 2015 10:37:28 AM implement.Location calculateDistance
+INFO: Calculating the distance between Location (20.0,25.0) to Location (3.0,3.0) which is 27.80287754891569
+Jan 01, 2015 10:37:28 AM implement.AssetsImpl findAssetByTypeAndSize
+INFO: For search: type = Loft size >= 5 found 0 matching assets 
+Jan 01, 2015 10:37:28 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Die is going to sleep for 55 seconds
+Jan 01, 2015 10:37:28 AM runnable.RunnebleClerk run
+INFO: Clerk Leonidas I is trying to take a new rental request from queue
+Jan 01, 2015 10:37:28 AM runnable.RunnebleClerk run
+INFO: Clerk Leonidas I took rental request id: 13
+Jan 01, 2015 10:37:28 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Bitton took rental request id: 2
+Jan 01, 2015 10:37:28 AM runnable.RunnebleClerk run
+INFO: Clerk Ken Harush took found matching asset: Asset 5
+Jan 01, 2015 10:37:28 AM implement.AssetsImpl findAssetByTypeAndSize
+INFO: For search: type = Hut size >= 3 found 1 matching assets 
+Jan 01, 2015 10:37:28 AM implement.Location calculateDistance
+INFO: Calculating the distance between Location (12.0,16.0) to Location (3.0,3.0) which is 15.811388300841896
+Jan 01, 2015 10:37:28 AM implement.AssetsImpl findAssetByTypeAndSize
+INFO: For search: type = Apartment size >= 2 found 1 matching assets 
+Jan 01, 2015 10:37:28 AM runnable.RunnebleClerk findMatchingAsset
+INFO: Clerk Wolfgang Eisenkott is waiting for to be available
+Jan 01, 2015 10:37:28 AM runnable.RunnebleClerk run
+INFO: Clerk Ken Harush is going to sleep for 31 seconds
+Jan 01, 2015 10:37:28 AM implement.AssetImpl setStatus
+INFO: Asset Asset 1 status changed to BOOKED
+Jan 01, 2015 10:37:28 AM runnable.RunnebleClerk run
+INFO: Clerk Leonidas I took found matching asset: Asset 1
+Jan 01, 2015 10:37:28 AM implement.AssetImpl setStatus
+INFO: Asset Asset 3 status changed to BOOKED
+Jan 01, 2015 10:37:28 AM implement.Location calculateDistance
+INFO: Calculating the distance between Location (20.0,20.0) to Location (3.0,3.0) which is 24.041630560342615
+Jan 01, 2015 10:37:28 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Bitton took found matching asset: Asset 3
+Jan 01, 2015 10:37:28 AM runnable.RunnebleClerk run
+INFO: Clerk Leonidas I is going to sleep for 48 seconds
+Jan 01, 2015 10:37:28 AM implement.Location calculateDistance
+INFO: Calculating the distance between Location (15.0,21.0) to Location (3.0,3.0) which is 21.633307652783937
+Jan 01, 2015 10:37:28 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Bitton is going to sleep for 43 seconds
+Jan 01, 2015 10:37:28 AM runnable.RunnebleClerk run
+INFO: Clerk Ken Harush woke up from sleeping 
+Jan 01, 2015 10:37:28 AM implement.RentalRequestImpl setFoundAsset
+INFO: Asset set to rental request id:4 Asset name: Asset 5
+Jan 01, 2015 10:37:28 AM runnable.RunnebleClerk run
+INFO: Clerk Ken Harush finished his shift
+Jan 01, 2015 10:37:28 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 2 request been filled
+Jan 01, 2015 10:37:28 AM implement.AssetImpl setStatus
+INFO: Asset Asset 5 status changed to OCCUPIED
+Jan 01, 2015 10:37:29 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Bitton woke up from sleeping 
+Jan 01, 2015 10:37:29 AM implement.RentalRequestImpl setFoundAsset
+INFO: Asset set to rental request id:2 Asset name: Asset 3
+Jan 01, 2015 10:37:29 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Bitton finished his shift
+Jan 01, 2015 10:37:29 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 1 request been filled
+Jan 01, 2015 10:37:29 AM implement.AssetImpl setStatus
+INFO: Asset Asset 3 status changed to OCCUPIED
+Jan 01, 2015 10:37:29 AM runnable.RunnebleClerk run
+INFO: Clerk Leonidas I woke up from sleeping 
+Jan 01, 2015 10:37:29 AM implement.RentalRequestImpl setFoundAsset
+INFO: Asset set to rental request id:13 Asset name: Asset 1
+Jan 01, 2015 10:37:29 AM runnable.RunnebleClerk run
+INFO: Clerk Leonidas I finished his shift
+Jan 01, 2015 10:37:29 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 4 request been filled
+Jan 01, 2015 10:37:29 AM implement.AssetImpl setStatus
+INFO: Asset Asset 1 status changed to OCCUPIED
+Jan 01, 2015 10:37:29 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Die woke up from sleeping 
+Jan 01, 2015 10:37:29 AM implement.RentalRequestImpl setFoundAsset
+INFO: Asset set to rental request id:11 Asset name: Asset 2
+Jan 01, 2015 10:37:29 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Die finished his shift
+Jan 01, 2015 10:37:29 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 3 request been filled
+Jan 01, 2015 10:37:29 AM implement.AssetImpl setStatus
+INFO: Asset Asset 2 status changed to OCCUPIED
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 4270.0$
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 4390.0$
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 4510.0$
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 4630.0$
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 4750.0$
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 4775.0$
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 4800.0$
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 4825.0$
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 4925.0$
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 5025.0$
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 5055.0$
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 5085.0$
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 5115.0$
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 5145.0$
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 5265.0$
+Jan 01, 2015 10:37:29 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 3
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 5385.0$
+Jan 01, 2015 10:37:29 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 1
+Vandalism Type: FIXED
+MinDamage: 1.0
+MaxDamage: 5.0 is done
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 5505.0$
+Jan 01, 2015 10:37:29 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 2
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 5625.0$
+Jan 01, 2015 10:37:29 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 4
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 5745.0$
+Jan 01, 2015 10:37:29 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 5
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:29 AM implement.RentalRequestImpl releaseAsset
+INFO: Rental request id:4 is now Complete 
+Jan 01, 2015 10:37:29 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content TV from 95.0% to 90.25%
+Jan 01, 2015 10:37:29 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Bed from 95.0% to 90.25%
+Jan 01, 2015 10:37:29 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Fridge from 95.0% to 90.25%
+Jan 01, 2015 10:37:29 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Desk from 95.0% to 90.25%
+Jan 01, 2015 10:37:29 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Stove from 95.0% to 90.25%
+Jan 01, 2015 10:37:29 AM implement.AssetImpl setStatus
+INFO: Asset Asset 5 status changed to AVAILABLE
+Jan 01, 2015 10:37:29 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 2 realse asset.
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addRentalRequest
+INFO: Statistics new rental request added5
+Jan 01, 2015 10:37:29 AM implement.AssetsImpl findAssetByTypeAndSize
+INFO: For search: type = Loft size >= 5 found 1 matching assets 
+Jan 01, 2015 10:37:29 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 2 is waiting for request to be filled
+Jan 01, 2015 10:37:29 AM runnable.RunnebleClerk findMatchingAsset
+INFO: Clerk Wolfgang Eisenkott is waiting for to be available
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 5770.0$
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 5795.0$
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 5820.0$
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 5920.0$
+Jan 01, 2015 10:37:29 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 1
+Vandalism Type: ARBITRARY
+MinDamage: 15.0
+MaxDamage: 25.0 is done
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6020.0$
+Jan 01, 2015 10:37:29 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 2
+Vandalism Type: FIXED
+MinDamage: 0.0
+MaxDamage: 20.0 is done
+Jan 01, 2015 10:37:29 AM implement.RentalRequestImpl releaseAsset
+INFO: Rental request id:13 is now Complete 
+Jan 01, 2015 10:37:29 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content TV from 100.0% to 67.90242090344009%
+Jan 01, 2015 10:37:29 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Bed from 100.0% to 67.90242090344009%
+Jan 01, 2015 10:37:29 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Fridge from 100.0% to 67.90242090344009%
+Jan 01, 2015 10:37:29 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Desk from 100.0% to 67.90242090344009%
+Jan 01, 2015 10:37:29 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Stove from 100.0% to 67.90242090344009%
+Jan 01, 2015 10:37:29 AM implement.AssetImpl setStatus
+INFO: Asset Asset 1 status changed to AVAILABLE
+Jan 01, 2015 10:37:29 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 4 realse asset.
+Jan 01, 2015 10:37:29 AM runnable.RunnableCustomerGroupManager run
+INFO: Customer group Group 4 is done
+Jan 01, 2015 10:37:29 AM implement.AssetsImpl findAssetByTypeAndSize
+INFO: For search: type = Loft size >= 5 found 1 matching assets 
+Jan 01, 2015 10:37:29 AM runnable.RunnebleClerk findMatchingAsset
+INFO: Clerk Wolfgang Eisenkott is waiting for to be available
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6050.0$
+Jan 01, 2015 10:37:29 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 2
+Vandalism Type: ARBITRARY
+MinDamage: 5.0
+MaxDamage: 8.0 is done
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6080.0$
+Jan 01, 2015 10:37:29 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 1
+Vandalism Type: ARBITRARY
+MinDamage: 5.0
+MaxDamage: 8.0 is done
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6110.0$
+Jan 01, 2015 10:37:29 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 3
+Vandalism Type: ARBITRARY
+MinDamage: 5.0
+MaxDamage: 7.0 is done
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6140.0$
+Jan 01, 2015 10:37:29 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 4
+Vandalism Type: ARBITRARY
+MinDamage: 5.0
+MaxDamage: 7.0 is done
+Jan 01, 2015 10:37:29 AM implement.RentalRequestImpl releaseAsset
+INFO: Rental request id:11 is now Complete 
+Jan 01, 2015 10:37:29 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content TV from 100.0% to 76.63769436947139%
+Jan 01, 2015 10:37:29 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Fridge from 100.0% to 76.63769436947139%
+Jan 01, 2015 10:37:29 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Desk from 100.0% to 76.63769436947139%
+Jan 01, 2015 10:37:29 AM implement.AssetImpl setStatus
+INFO: Asset Asset 2 status changed to AVAILABLE
+Jan 01, 2015 10:37:29 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 3 realse asset.
+Jan 01, 2015 10:37:29 AM runnable.RunnableCustomerGroupManager run
+INFO: Customer group Group 3 is done
+Jan 01, 2015 10:37:29 AM implement.AssetsImpl findAssetByTypeAndSize
+INFO: For search: type = Loft size >= 5 found 1 matching assets 
+Jan 01, 2015 10:37:29 AM implement.AssetImpl setStatus
+INFO: Asset Asset 2 status changed to BOOKED
+Jan 01, 2015 10:37:29 AM runnable.RunnebleClerk run
+INFO: Clerk Wolfgang Eisenkott took found matching asset: Asset 2
+Jan 01, 2015 10:37:29 AM implement.Location calculateDistance
+INFO: Calculating the distance between Location (20.0,25.0) to Location (3.0,3.0) which is 27.80287754891569
+Jan 01, 2015 10:37:29 AM runnable.RunnebleClerk run
+INFO: Clerk Wolfgang Eisenkott is going to sleep for 55 seconds
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6165.0$
+Jan 01, 2015 10:37:29 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 1
+Vandalism Type: ARBITRARY
+MinDamage: 10.0
+MaxDamage: 20.0 is done
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6190.0$
+Jan 01, 2015 10:37:29 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 2
+Vandalism Type: FIXED
+MinDamage: 1.0
+MaxDamage: 9.0 is done
+Jan 01, 2015 10:37:29 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6215.0$
+Jan 01, 2015 10:37:29 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 3
+Vandalism Type: FIXED
+MinDamage: 1.0
+MaxDamage: 9.0 is done
+Jan 01, 2015 10:37:29 AM implement.RentalRequestImpl releaseAsset
+INFO: Rental request id:2 is now Complete 
+Jan 01, 2015 10:37:29 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content TV from 100.0% to 72.48554809654696%
+Jan 01, 2015 10:37:29 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Bed from 100.0% to 72.48554809654696%
+Jan 01, 2015 10:37:29 AM implement.AssetImpl setStatus
+INFO: Asset Asset 3 status changed to AVAILABLE
+Jan 01, 2015 10:37:29 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 1 realse asset.
+Jan 01, 2015 10:37:29 AM runnable.RunnableCustomerGroupManager run
+INFO: Customer group Group 1 is done
+Jan 01, 2015 10:37:29 AM runnable.RunnebleClerk run
+INFO: Clerk Wolfgang Eisenkott woke up from sleeping 
+Jan 01, 2015 10:37:29 AM implement.RentalRequestImpl setFoundAsset
+INFO: Asset set to rental request id:15 Asset name: Asset 2
+Jan 01, 2015 10:37:29 AM runnable.RunnebleClerk run
+INFO: Clerk Wolfgang Eisenkott finished his shift
+Jan 01, 2015 10:37:29 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 5 request been filled
+Jan 01, 2015 10:37:29 AM implement.ManagmentImpl start
+INFO: All clerks finished their shift
+Jan 01, 2015 10:37:29 AM implement.AssetImpl setStatus
+INFO: Asset Asset 2 status changed to OCCUPIED
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6245.0$
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6275.0$
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6305.0$
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6335.0$
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6365.0$
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6395.0$
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6425.0$
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6455.0$
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6485.0$
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6515.0$
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6545.0$
+Jan 01, 2015 10:37:30 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 2
+Vandalism Type: ARBITRARY
+MinDamage: 2.0
+MaxDamage: 7.0 is done
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6575.0$
+Jan 01, 2015 10:37:30 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 5
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6605.0$
+Jan 01, 2015 10:37:30 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 4
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6635.0$
+Jan 01, 2015 10:37:30 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 1
+Vandalism Type: ARBITRARY
+MinDamage: 2.0
+MaxDamage: 7.0 is done
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6665.0$
+Jan 01, 2015 10:37:30 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 3
+Vandalism Type: FIXED
+MinDamage: 10.0
+MaxDamage: 20.0 is done
+Jan 01, 2015 10:37:30 AM implement.RentalRequestImpl releaseAsset
+INFO: Rental request id:15 is now Complete 
+Jan 01, 2015 10:37:30 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content TV from 76.63769436947139% to 58.732960286371465%
+Jan 01, 2015 10:37:30 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Fridge from 76.63769436947139% to 58.732960286371465%
+Jan 01, 2015 10:37:30 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Desk from 76.63769436947139% to 58.732960286371465%
+Jan 01, 2015 10:37:30 AM implement.AssetImpl setStatus
+INFO: Asset Asset 2 status changed to UNAVAILABLE
+Jan 01, 2015 10:37:30 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 5 realse asset.
+Jan 01, 2015 10:37:30 AM runnable.RunnableMaintenaceRequest run
+INFO: New maintenance insinuate for asset Asset 2
+Jan 01, 2015 10:37:30 AM runnable.RunnableCustomerGroupManager run
+INFO: Customer group Group 5 is done
+Jan 01, 2015 10:37:30 AM implement.AssetImpl setStatus
+INFO: Asset Asset 2 status changed to UNAVAILABLE
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl addToolInProcess
+INFO: Statistics added Tool Name: Jacksaw. Quantity: java.util.concurrent.Semaphore@7bc012fa[Permits = 2] to tools in process. Current tools in process: {Jacksaw=0, Drill=0, Screw Driver=0, Pliers=0, Hammer=0}
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl addToolInProcess
+INFO: Statistics added Tool Name: Drill. Quantity: java.util.concurrent.Semaphore@7f1e1a8e[Permits = 5] to tools in process. Current tools in process: {Jacksaw=0, Drill=5, Screw Driver=0, Pliers=0, Hammer=0}
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl addToolInProcess
+INFO: Statistics added Tool Name: Screw Driver. Quantity: java.util.concurrent.Semaphore@1161a1d5[Permits = 2] to tools in process. Current tools in process: {Jacksaw=0, Drill=5, Screw Driver=2, Pliers=0, Hammer=0}
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl addToolInProcess
+INFO: Statistics added Tool Name: Pliers. Quantity: java.util.concurrent.Semaphore@20c7afdd[Permits = 3] to tools in process. Current tools in process: {Jacksaw=0, Drill=5, Screw Driver=2, Pliers=3, Hammer=0}
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl addToolInProcess
+INFO: Statistics added Tool Name: Hammer. Quantity: java.util.concurrent.Semaphore@15eae6fb[Permits = 3] to tools in process. Current tools in process: {Jacksaw=0, Drill=5, Screw Driver=2, Pliers=3, Hammer=3}
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl consumeMaterial
+INFO: Statistics material consumed: Material Name: Trash Bag. Quantity: java.util.concurrent.Semaphore@70e273fa[Permits = 27]. Current material consumed: {Trash Bag=131, Floor Cleaner=60, Glass Cleaner=4, Screws=20, Sand Cloth=2, Paper Towel=100, Disinfectant=40, Nails=40}
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl consumeMaterial
+INFO: Statistics material consumed: Material Name: Floor Cleaner. Quantity: java.util.concurrent.Semaphore@232c5bfc[Permits = 15]. Current material consumed: {Trash Bag=131, Floor Cleaner=75, Glass Cleaner=4, Screws=20, Sand Cloth=2, Paper Towel=100, Disinfectant=40, Nails=40}
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl consumeMaterial
+INFO: Statistics material consumed: Material Name: Glass Cleaner. Quantity: java.util.concurrent.Semaphore@354b0f6e[Permits = 2]. Current material consumed: {Trash Bag=131, Floor Cleaner=75, Glass Cleaner=6, Screws=20, Sand Cloth=2, Paper Towel=100, Disinfectant=40, Nails=40}
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl consumeMaterial
+INFO: Statistics material consumed: Material Name: Screws. Quantity: java.util.concurrent.Semaphore@52e21a17[Permits = 5]. Current material consumed: {Trash Bag=131, Floor Cleaner=75, Glass Cleaner=6, Screws=25, Sand Cloth=2, Paper Towel=100, Disinfectant=40, Nails=40}
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl consumeMaterial
+INFO: Statistics material consumed: Material Name: Disinfectant. Quantity: java.util.concurrent.Semaphore@7a1f0683[Permits = 10]. Current material consumed: {Trash Bag=131, Floor Cleaner=75, Glass Cleaner=6, Screws=25, Sand Cloth=2, Paper Towel=100, Disinfectant=50, Nails=40}
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl consumeMaterial
+INFO: Statistics material consumed: Material Name: Paper Towel. Quantity: java.util.concurrent.Semaphore@ae4c118[Permits = 35]. Current material consumed: {Trash Bag=131, Floor Cleaner=75, Glass Cleaner=6, Screws=25, Sand Cloth=2, Paper Towel=135, Disinfectant=50, Nails=40}
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl consumeMaterial
+INFO: Statistics material consumed: Material Name: Nails. Quantity: java.util.concurrent.Semaphore@3041143e[Permits = 10]. Current material consumed: {Trash Bag=131, Floor Cleaner=75, Glass Cleaner=6, Screws=25, Sand Cloth=2, Paper Towel=135, Disinfectant=50, Nails=50}
+Jan 01, 2015 10:37:30 AM runnable.RunnableMaintenaceRequest run
+INFO: Maintenance for asset Asset 2 started
+Jan 01, 2015 10:37:30 AM implement.AssetContentImpl calculateRepairTime
+INFO: Calculating the repair time for TV which is 103.16759928407134
+Jan 01, 2015 10:37:30 AM implement.AssetContentImpl fixAssetContent
+INFO: AssetContent TV health is 100%
+Jan 01, 2015 10:37:30 AM implement.AssetContentImpl calculateRepairTime
+INFO: Calculating the repair time for Fridge which is 82.53407942725707
+Jan 01, 2015 10:37:30 AM implement.AssetContentImpl fixAssetContent
+INFO: AssetContent Fridge health is 100%
+Jan 01, 2015 10:37:30 AM implement.AssetContentImpl calculateRepairTime
+INFO: Calculating the repair time for Desk which is 61.9005595704428
+Jan 01, 2015 10:37:30 AM implement.AssetContentImpl fixAssetContent
+INFO: AssetContent Desk health is 100%
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl releaseTool
+INFO: Statistics release Tool Name: Jacksaw. Quantity: java.util.concurrent.Semaphore@7bc012fa[Permits = 2] from tools in process. Current tools in process: {Jacksaw=-2, Drill=5, Screw Driver=2, Pliers=3, Hammer=3}
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl releaseTool
+INFO: Statistics release Tool Name: Drill. Quantity: java.util.concurrent.Semaphore@7f1e1a8e[Permits = 5] from tools in process. Current tools in process: {Jacksaw=-2, Drill=0, Screw Driver=2, Pliers=3, Hammer=3}
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl releaseTool
+INFO: Statistics release Tool Name: Screw Driver. Quantity: java.util.concurrent.Semaphore@1161a1d5[Permits = 2] from tools in process. Current tools in process: {Jacksaw=-2, Drill=0, Screw Driver=0, Pliers=3, Hammer=3}
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl releaseTool
+INFO: Statistics release Tool Name: Pliers. Quantity: java.util.concurrent.Semaphore@20c7afdd[Permits = 3] from tools in process. Current tools in process: {Jacksaw=-2, Drill=0, Screw Driver=0, Pliers=0, Hammer=3}
+Jan 01, 2015 10:37:30 AM implement.StatisticsImpl releaseTool
+INFO: Statistics release Tool Name: Hammer. Quantity: java.util.concurrent.Semaphore@15eae6fb[Permits = 3] from tools in process. Current tools in process: {Jacksaw=-2, Drill=0, Screw Driver=0, Pliers=0, Hammer=0}
+Jan 01, 2015 10:37:30 AM runnable.RunnableMaintenaceRequest run
+INFO: Maintenance for asset Asset 2 is done and returning tools
+Jan 01, 2015 10:37:30 AM implement.AssetImpl setStatus
+INFO: Asset Asset 2 status changed to AVAILABLE
+Jan 01, 2015 10:37:30 AM runnable.RunnableMaintenaceRequest run
+INFO: New maintenance for asset Asset 2 is done
+Jan 01, 2015 10:37:30 AM implement.ManagmentImpl start
+INFO: All assets been fixed
+Jan 01, 2015 10:37:30 AM implement.ManagmentImpl start
+INFO: Rental request left 5
+Jan 01, 2015 10:37:30 AM implement.ManagmentImpl start
+INFO: All clerks are starting a new shift
+Jan 01, 2015 10:37:30 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Bitton is trying to take a new rental request from queue
+Jan 01, 2015 10:37:30 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Die is trying to take a new rental request from queue
+Jan 01, 2015 10:37:30 AM runnable.RunnebleClerk run
+INFO: Clerk Leonidas I is trying to take a new rental request from queue
+Jan 01, 2015 10:37:30 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Bitton took rental request id: 5
+Jan 01, 2015 10:37:30 AM runnable.RunnebleClerk run
+INFO: Clerk Wolfgang Eisenkott is trying to take a new rental request from queue
+Jan 01, 2015 10:37:30 AM implement.AssetsImpl findAssetByTypeAndSize
+INFO: For search: type = Cottage size >= 5 found 1 matching assets 
+Jan 01, 2015 10:37:30 AM runnable.RunnebleClerk run
+INFO: Clerk Ken Harush is trying to take a new rental request from queue
+Jan 01, 2015 10:37:30 AM implement.AssetImpl setStatus
+INFO: Asset Asset 5 status changed to BOOKED
+Jan 01, 2015 10:37:30 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Bitton took found matching asset: Asset 5
+Jan 01, 2015 10:37:30 AM implement.Location calculateDistance
+INFO: Calculating the distance between Location (12.0,16.0) to Location (3.0,3.0) which is 15.811388300841896
+Jan 01, 2015 10:37:30 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Bitton is going to sleep for 31 seconds
+Jan 01, 2015 10:37:31 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Bitton woke up from sleeping 
+Jan 01, 2015 10:37:31 AM implement.RentalRequestImpl setFoundAsset
+INFO: Asset set to rental request id:5 Asset name: Asset 5
+Jan 01, 2015 10:37:31 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Bitton finished his shift
+Jan 01, 2015 10:37:31 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 2 request been filled
+Jan 01, 2015 10:37:31 AM implement.AssetImpl setStatus
+INFO: Asset Asset 5 status changed to OCCUPIED
+Jan 01, 2015 10:37:31 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6785.0$
+Jan 01, 2015 10:37:31 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 1
+Vandalism Type: FIXED
+MinDamage: 1.0
+MaxDamage: 5.0 is done
+Jan 01, 2015 10:37:31 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 6905.0$
+Jan 01, 2015 10:37:31 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 3
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:31 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 7025.0$
+Jan 01, 2015 10:37:31 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 5
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:31 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 7145.0$
+Jan 01, 2015 10:37:31 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 4
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:31 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 7265.0$
+Jan 01, 2015 10:37:31 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 2
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:31 AM implement.RentalRequestImpl releaseAsset
+INFO: Rental request id:5 is now Complete 
+Jan 01, 2015 10:37:31 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content TV from 90.25% to 85.7375%
+Jan 01, 2015 10:37:31 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Bed from 90.25% to 85.7375%
+Jan 01, 2015 10:37:31 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Fridge from 90.25% to 85.7375%
+Jan 01, 2015 10:37:31 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Desk from 90.25% to 85.7375%
+Jan 01, 2015 10:37:31 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Stove from 90.25% to 85.7375%
+Jan 01, 2015 10:37:31 AM implement.AssetImpl setStatus
+INFO: Asset Asset 5 status changed to AVAILABLE
+Jan 01, 2015 10:37:31 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 2 realse asset.
+Jan 01, 2015 10:37:31 AM implement.StatisticsImpl addRentalRequest
+INFO: Statistics new rental request added6
+Jan 01, 2015 10:37:31 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Die took rental request id: 6
+Jan 01, 2015 10:37:31 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 2 is waiting for request to be filled
+Jan 01, 2015 10:37:31 AM implement.AssetsImpl findAssetByTypeAndSize
+INFO: For search: type = Cottage size >= 5 found 1 matching assets 
+Jan 01, 2015 10:37:31 AM implement.AssetImpl setStatus
+INFO: Asset Asset 5 status changed to BOOKED
+Jan 01, 2015 10:37:31 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Die took found matching asset: Asset 5
+Jan 01, 2015 10:37:31 AM implement.Location calculateDistance
+INFO: Calculating the distance between Location (12.0,16.0) to Location (3.0,3.0) which is 15.811388300841896
+Jan 01, 2015 10:37:31 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Die is going to sleep for 31 seconds
+Jan 01, 2015 10:37:31 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Die woke up from sleeping 
+Jan 01, 2015 10:37:31 AM implement.RentalRequestImpl setFoundAsset
+INFO: Asset set to rental request id:6 Asset name: Asset 5
+Jan 01, 2015 10:37:31 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Die finished his shift
+Jan 01, 2015 10:37:31 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 2 request been filled
+Jan 01, 2015 10:37:31 AM implement.AssetImpl setStatus
+INFO: Asset Asset 5 status changed to OCCUPIED
+Jan 01, 2015 10:37:31 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 7385.0$
+Jan 01, 2015 10:37:31 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 7505.0$
+Jan 01, 2015 10:37:31 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 7625.0$
+Jan 01, 2015 10:37:31 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 7745.0$
+Jan 01, 2015 10:37:31 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 7865.0$
+Jan 01, 2015 10:37:31 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 7985.0$
+Jan 01, 2015 10:37:31 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 8105.0$
+Jan 01, 2015 10:37:31 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 8225.0$
+Jan 01, 2015 10:37:31 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 8345.0$
+Jan 01, 2015 10:37:31 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 8465.0$
+Jan 01, 2015 10:37:32 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 8585.0$
+Jan 01, 2015 10:37:32 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 2
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:32 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 8705.0$
+Jan 01, 2015 10:37:32 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 5
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:32 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 8825.0$
+Jan 01, 2015 10:37:32 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 1
+Vandalism Type: FIXED
+MinDamage: 1.0
+MaxDamage: 5.0 is done
+Jan 01, 2015 10:37:32 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 8945.0$
+Jan 01, 2015 10:37:32 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 4
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:32 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 9065.0$
+Jan 01, 2015 10:37:32 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 3
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:32 AM implement.RentalRequestImpl releaseAsset
+INFO: Rental request id:6 is now Complete 
+Jan 01, 2015 10:37:32 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content TV from 85.7375% to 81.450625%
+Jan 01, 2015 10:37:32 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Bed from 85.7375% to 81.450625%
+Jan 01, 2015 10:37:32 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Fridge from 85.7375% to 81.450625%
+Jan 01, 2015 10:37:32 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Desk from 85.7375% to 81.450625%
+Jan 01, 2015 10:37:32 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Stove from 85.7375% to 81.450625%
+Jan 01, 2015 10:37:32 AM implement.AssetImpl setStatus
+INFO: Asset Asset 5 status changed to AVAILABLE
+Jan 01, 2015 10:37:32 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 2 realse asset.
+Jan 01, 2015 10:37:32 AM implement.StatisticsImpl addRentalRequest
+INFO: Statistics new rental request added7
+Jan 01, 2015 10:37:32 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 2 is waiting for request to be filled
+Jan 01, 2015 10:37:32 AM runnable.RunnebleClerk run
+INFO: Clerk Leonidas I took rental request id: 7
+Jan 01, 2015 10:37:32 AM implement.AssetsImpl findAssetByTypeAndSize
+INFO: For search: type = Cottage size >= 5 found 1 matching assets 
+Jan 01, 2015 10:37:32 AM implement.AssetImpl setStatus
+INFO: Asset Asset 5 status changed to BOOKED
+Jan 01, 2015 10:37:32 AM runnable.RunnebleClerk run
+INFO: Clerk Leonidas I took found matching asset: Asset 5
+Jan 01, 2015 10:37:32 AM implement.Location calculateDistance
+INFO: Calculating the distance between Location (12.0,16.0) to Location (3.0,3.0) which is 15.811388300841896
+Jan 01, 2015 10:37:32 AM runnable.RunnebleClerk run
+INFO: Clerk Leonidas I is going to sleep for 31 seconds
+Jan 01, 2015 10:37:32 AM runnable.RunnebleClerk run
+INFO: Clerk Leonidas I woke up from sleeping 
+Jan 01, 2015 10:37:32 AM implement.RentalRequestImpl setFoundAsset
+INFO: Asset set to rental request id:7 Asset name: Asset 5
+Jan 01, 2015 10:37:32 AM runnable.RunnebleClerk run
+INFO: Clerk Leonidas I finished his shift
+Jan 01, 2015 10:37:32 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 2 request been filled
+Jan 01, 2015 10:37:32 AM implement.AssetImpl setStatus
+INFO: Asset Asset 5 status changed to OCCUPIED
+Jan 01, 2015 10:37:32 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 9185.0$
+Jan 01, 2015 10:37:32 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 9305.0$
+Jan 01, 2015 10:37:32 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 9425.0$
+Jan 01, 2015 10:37:32 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 9545.0$
+Jan 01, 2015 10:37:32 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 9665.0$
+Jan 01, 2015 10:37:32 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 9785.0$
+Jan 01, 2015 10:37:32 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 2
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:32 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 9905.0$
+Jan 01, 2015 10:37:32 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 10025.0$
+Jan 01, 2015 10:37:32 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 1
+Vandalism Type: FIXED
+MinDamage: 1.0
+MaxDamage: 5.0 is done
+Jan 01, 2015 10:37:32 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 4
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:32 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 10145.0$
+Jan 01, 2015 10:37:32 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 3
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:32 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 10265.0$
+Jan 01, 2015 10:37:32 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 5
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:32 AM implement.RentalRequestImpl releaseAsset
+INFO: Rental request id:7 is now Complete 
+Jan 01, 2015 10:37:32 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content TV from 81.450625% to 77.37809375%
+Jan 01, 2015 10:37:32 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Bed from 81.450625% to 77.37809375%
+Jan 01, 2015 10:37:32 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Fridge from 81.450625% to 77.37809375%
+Jan 01, 2015 10:37:32 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Desk from 81.450625% to 77.37809375%
+Jan 01, 2015 10:37:32 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Stove from 81.450625% to 77.37809375%
+Jan 01, 2015 10:37:32 AM implement.AssetImpl setStatus
+INFO: Asset Asset 5 status changed to AVAILABLE
+Jan 01, 2015 10:37:32 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 2 realse asset.
+Jan 01, 2015 10:37:32 AM implement.StatisticsImpl addRentalRequest
+INFO: Statistics new rental request added8
+Jan 01, 2015 10:37:32 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 2 is waiting for request to be filled
+Jan 01, 2015 10:37:32 AM runnable.RunnebleClerk run
+INFO: Clerk Wolfgang Eisenkott took rental request id: 8
+Jan 01, 2015 10:37:32 AM implement.AssetsImpl findAssetByTypeAndSize
+INFO: For search: type = Cottage size >= 5 found 1 matching assets 
+Jan 01, 2015 10:37:32 AM implement.AssetImpl setStatus
+INFO: Asset Asset 5 status changed to BOOKED
+Jan 01, 2015 10:37:32 AM runnable.RunnebleClerk run
+INFO: Clerk Wolfgang Eisenkott took found matching asset: Asset 5
+Jan 01, 2015 10:37:32 AM implement.Location calculateDistance
+INFO: Calculating the distance between Location (12.0,16.0) to Location (3.0,3.0) which is 15.811388300841896
+Jan 01, 2015 10:37:32 AM runnable.RunnebleClerk run
+INFO: Clerk Wolfgang Eisenkott is going to sleep for 31 seconds
+Jan 01, 2015 10:37:33 AM runnable.RunnebleClerk run
+INFO: Clerk Wolfgang Eisenkott woke up from sleeping 
+Jan 01, 2015 10:37:33 AM implement.RentalRequestImpl setFoundAsset
+INFO: Asset set to rental request id:8 Asset name: Asset 5
+Jan 01, 2015 10:37:33 AM runnable.RunnebleClerk run
+INFO: Clerk Wolfgang Eisenkott finished his shift
+Jan 01, 2015 10:37:33 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 2 request been filled
+Jan 01, 2015 10:37:33 AM implement.AssetImpl setStatus
+INFO: Asset Asset 5 status changed to OCCUPIED
+Jan 01, 2015 10:37:33 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 10385.0$
+Jan 01, 2015 10:37:33 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 10505.0$
+Jan 01, 2015 10:37:33 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 10625.0$
+Jan 01, 2015 10:37:33 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 10745.0$
+Jan 01, 2015 10:37:33 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 10865.0$
+Jan 01, 2015 10:37:33 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 10985.0$
+Jan 01, 2015 10:37:33 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 1
+Vandalism Type: FIXED
+MinDamage: 1.0
+MaxDamage: 5.0 is done
+Jan 01, 2015 10:37:33 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 11105.0$
+Jan 01, 2015 10:37:33 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 11225.0$
+Jan 01, 2015 10:37:33 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 2
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:33 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 5
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:33 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 11345.0$
+Jan 01, 2015 10:37:33 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 3
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:33 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 11465.0$
+Jan 01, 2015 10:37:33 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 4
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:33 AM implement.RentalRequestImpl releaseAsset
+INFO: Rental request id:8 is now Complete 
+Jan 01, 2015 10:37:33 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content TV from 77.37809375% to 73.5091890625%
+Jan 01, 2015 10:37:33 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Bed from 77.37809375% to 73.5091890625%
+Jan 01, 2015 10:37:33 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Fridge from 77.37809375% to 73.5091890625%
+Jan 01, 2015 10:37:33 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Desk from 77.37809375% to 73.5091890625%
+Jan 01, 2015 10:37:33 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Stove from 77.37809375% to 73.5091890625%
+Jan 01, 2015 10:37:33 AM implement.AssetImpl setStatus
+INFO: Asset Asset 5 status changed to AVAILABLE
+Jan 01, 2015 10:37:33 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 2 realse asset.
+Jan 01, 2015 10:37:33 AM implement.StatisticsImpl addRentalRequest
+INFO: Statistics new rental request added9
+Jan 01, 2015 10:37:33 AM runnable.RunnebleClerk run
+INFO: Clerk Ken Harush took rental request id: 9
+Jan 01, 2015 10:37:33 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 2 is waiting for request to be filled
+Jan 01, 2015 10:37:33 AM implement.AssetsImpl findAssetByTypeAndSize
+INFO: For search: type = Cottage size >= 5 found 1 matching assets 
+Jan 01, 2015 10:37:33 AM implement.AssetImpl setStatus
+INFO: Asset Asset 5 status changed to BOOKED
+Jan 01, 2015 10:37:33 AM runnable.RunnebleClerk run
+INFO: Clerk Ken Harush took found matching asset: Asset 5
+Jan 01, 2015 10:37:33 AM implement.Location calculateDistance
+INFO: Calculating the distance between Location (12.0,16.0) to Location (3.0,3.0) which is 15.811388300841896
+Jan 01, 2015 10:37:33 AM runnable.RunnebleClerk run
+INFO: Clerk Ken Harush is going to sleep for 31 seconds
+Jan 01, 2015 10:37:33 AM runnable.RunnebleClerk run
+INFO: Clerk Ken Harush woke up from sleeping 
+Jan 01, 2015 10:37:33 AM implement.RentalRequestImpl setFoundAsset
+INFO: Asset set to rental request id:9 Asset name: Asset 5
+Jan 01, 2015 10:37:33 AM runnable.RunnebleClerk run
+INFO: Clerk Ken Harush finished his shift
+Jan 01, 2015 10:37:33 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 2 request been filled
+Jan 01, 2015 10:37:33 AM implement.ManagmentImpl start
+INFO: All clerks finished their shift
+Jan 01, 2015 10:37:33 AM implement.AssetImpl setStatus
+INFO: Asset Asset 5 status changed to OCCUPIED
+Jan 01, 2015 10:37:33 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 11585.0$
+Jan 01, 2015 10:37:33 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 11705.0$
+Jan 01, 2015 10:37:33 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 11825.0$
+Jan 01, 2015 10:37:33 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 11945.0$
+Jan 01, 2015 10:37:33 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 12065.0$
+Jan 01, 2015 10:37:34 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 12185.0$
+Jan 01, 2015 10:37:34 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 5
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:34 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 12305.0$
+Jan 01, 2015 10:37:34 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 2
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:34 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 12425.0$
+Jan 01, 2015 10:37:34 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 1
+Vandalism Type: FIXED
+MinDamage: 1.0
+MaxDamage: 5.0 is done
+Jan 01, 2015 10:37:34 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 12545.0$
+Jan 01, 2015 10:37:34 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 4
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:34 AM implement.StatisticsImpl addIncome
+INFO: Statistics money: 12665.0$
+Jan 01, 2015 10:37:34 AM runnable.CallableSimulateStayInAsset call
+INFO: Customer Customer name: Customer 3
+Vandalism Type: NONE
+MinDamage: 0.0
+MaxDamage: 0.0 is done
+Jan 01, 2015 10:37:34 AM implement.RentalRequestImpl releaseAsset
+INFO: Rental request id:9 is now Complete 
+Jan 01, 2015 10:37:34 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content TV from 73.5091890625% to 69.833729609375%
+Jan 01, 2015 10:37:34 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Bed from 73.5091890625% to 69.833729609375%
+Jan 01, 2015 10:37:34 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Fridge from 73.5091890625% to 69.833729609375%
+Jan 01, 2015 10:37:34 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Desk from 73.5091890625% to 69.833729609375%
+Jan 01, 2015 10:37:34 AM implement.AssetContentImpl damageAssetContent
+INFO: Damageing the asset content Stove from 73.5091890625% to 69.833729609375%
+Jan 01, 2015 10:37:34 AM implement.AssetImpl setStatus
+INFO: Asset Asset 5 status changed to AVAILABLE
+Jan 01, 2015 10:37:34 AM runnable.RunnableCustomerGroupManager run
+INFO: Group runned by Group 2 realse asset.
+Jan 01, 2015 10:37:34 AM implement.ManagmentImpl start
+INFO: All assets been fixed
+Jan 01, 2015 10:37:34 AM runnable.RunnableCustomerGroupManager run
+INFO: Customer group Group 2 is done
+Jan 01, 2015 10:37:34 AM implement.ManagmentImpl start
+INFO: Rental request left 0
+Jan 01, 2015 10:37:34 AM implement.ManagmentImpl start
+INFO: Simulation Ended
+Jan 01, 2015 10:37:34 AM runnable.RunnebleClerk run
+INFO: Clerk Ken Harush is done 
+Jan 01, 2015 10:37:34 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Bitton is done 
+Jan 01, 2015 10:37:34 AM implement.ManagmentImpl start
+INFO: Statistic Report
+Money Gained: 12665.0
+Rental request: [Rental Request: 
+Id: 14, Asset Type: House, Size: 5, Duration Of Stay: 1, Status: COMPLETE, Rental Request: 
+Id: 1, Asset Type: Apartment, Size: 3, Duration Of Stay: 5, Status: COMPLETE, Rental Request: 
+Id: 12, Asset Type: Apartment, Size: 2, Duration Of Stay: 4, Status: COMPLETE, Rental Request: 
+Id: 10, Asset Type: House, Size: 4, Duration Of Stay: 2, Status: COMPLETE, Rental Request: 
+Id: 3, Asset Type: Cottage, Size: 5, Duration Of Stay: 2, Status: COMPLETE, Rental Request: 
+Id: 15, Asset Type: Loft, Size: 5, Duration Of Stay: 3, Status: COMPLETE, Rental Request: 
+Id: 4, Asset Type: Cottage, Size: 5, Duration Of Stay: 2, Status: COMPLETE, Rental Request: 
+Id: 11, Asset Type: Loft, Size: 4, Duration Of Stay: 2, Status: COMPLETE, Rental Request: 
+Id: 2, Asset Type: Hut, Size: 3, Duration Of Stay: 3, Status: COMPLETE, Rental Request: 
+Id: 13, Asset Type: Apartment, Size: 2, Duration Of Stay: 2, Status: COMPLETE, Rental Request: 
+Id: 5, Asset Type: Cottage, Size: 5, Duration Of Stay: 1, Status: COMPLETE, Rental Request: 
+Id: 6, Asset Type: Cottage, Size: 5, Duration Of Stay: 3, Status: COMPLETE, Rental Request: 
+Id: 7, Asset Type: Cottage, Size: 5, Duration Of Stay: 2, Status: COMPLETE, Rental Request: 
+Id: 8, Asset Type: Cottage, Size: 5, Duration Of Stay: 2, Status: COMPLETE, Rental Request: 
+Id: 9, Asset Type: Cottage, Size: 5, Duration Of Stay: 2, Status: COMPLETE]
+Material consumed:{Trash Bag=131, Floor Cleaner=75, Glass Cleaner=6, Screws=25, Sand Cloth=2, Paper Towel=135, Disinfectant=50, Nails=50}
+Tools in use{Jacksaw=-2, Drill=0, Screw Driver=0, Pliers=0, Hammer=0}
+Jan 01, 2015 10:37:34 AM runnable.RunnebleClerk run
+INFO: Clerk Paula Die is done 
+Jan 01, 2015 10:37:34 AM runnable.RunnebleClerk run
+INFO: Clerk Leonidas I is done 
+Jan 01, 2015 10:37:34 AM runnable.RunnebleClerk run
+INFO: Clerk Wolfgang Eisenkott is done 

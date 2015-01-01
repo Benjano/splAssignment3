@@ -1,4 +1,4 @@
-package Tests;
+package tests;
 
 import static org.junit.Assert.assertEquals;
 import implement.Location;
@@ -49,7 +49,7 @@ public class AssetTesting {
 
 	@Test
 	public void testGetStatus() {
-		assertEquals("The status is wrong", AssetStatus.Available,
+		assertEquals("The status is wrong", AssetStatus.AVAILABLE,
 				asset.getStatus());
 	}
 
@@ -60,8 +60,8 @@ public class AssetTesting {
 
 	@Test
 	public void testSetStatus() {
-		asset.setStatus(AssetStatus.Unavailable);
-		assertEquals("The status is wrong", AssetStatus.Unavailable,
+		asset.setStatus(AssetStatus.UNAVAILABLE);
+		assertEquals("The status is wrong", AssetStatus.UNAVAILABLE,
 				asset.getStatus());
 	}
 

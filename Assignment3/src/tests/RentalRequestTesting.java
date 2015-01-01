@@ -1,4 +1,4 @@
-package Tests;
+package tests;
 
 import static org.junit.Assert.*;
 
@@ -62,14 +62,14 @@ public class RentalRequestTesting {
 
 	@Test
 	public void getStatus() {
-		assertEquals("The status is wrong", RequestStatus.Incomplete,
+		assertEquals("The status is wrong", RequestStatus.INCOMPLETE,
 				rentalRequest.getStatus());
 	}
 
 	@Test
 	public void setRentalRequestStatus() {
-		rentalRequest.setRentalRequestStatus(RequestStatus.InProgress);
-		assertEquals("Set rental status is wrong", RequestStatus.InProgress,
+		rentalRequest.setRentalRequestStatus(RequestStatus.IN_PROGRESS);
+		assertEquals("Set rental status is wrong", RequestStatus.IN_PROGRESS,
 				rentalRequest.getStatus());
 	}
 
@@ -77,7 +77,7 @@ public class RentalRequestTesting {
 	public void assetOcupied() {
 		rentalRequest.setFoundAsset(asset);
 		rentalRequest.assetOcupied();
-		assertEquals("Asset was not ocupied", AssetStatus.Occupied,
+		assertEquals("Asset was not ocupied", AssetStatus.OCCUPIED,
 				asset.getStatus());
 
 	}
@@ -96,11 +96,11 @@ public class RentalRequestTesting {
 	@Test
 	public void releaseAsset() {
 		rentalRequest.setFoundAsset(asset);
-		rentalRequest.setRentalRequestStatus(RequestStatus.InProgress);
+		rentalRequest.setRentalRequestStatus(RequestStatus.IN_PROGRESS);
 		DamageReport damageReport = rentalRequest.releaseAsset(0.5);
 
 		assertEquals("Rental was not complete", rentalRequest.getStatus(),
-				RequestStatus.Complete);
+				RequestStatus.COMPLETE);
 		assertEquals("Damage report created wrong", damageReport.getAsset(),
 				asset);
 	}

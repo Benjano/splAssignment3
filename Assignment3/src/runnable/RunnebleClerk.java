@@ -56,7 +56,7 @@ public class RunnebleClerk implements Runnable {
 	public void run() {
 		try {
 			fLogger.log(
-					Level.FINE,
+					Level.INFO,
 					new StringBuilder().append("Clerk ")
 							.append(fClerkDetails.getName())
 							.append(" is waiting for other clerks to start")
@@ -71,7 +71,7 @@ public class RunnebleClerk implements Runnable {
 				RentalRequest rentalRequest = null;
 				try {
 					fLogger.log(
-							Level.FINE,
+							Level.INFO,
 							new StringBuilder()
 									.append("Clerk ")
 									.append(fClerkDetails.getName())
@@ -81,9 +81,9 @@ public class RunnebleClerk implements Runnable {
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
-				if (rentalRequest != null && rentalRequest.getID() != null) {
+				if (rentalRequest != null) {
 					fLogger.log(
-							Level.FINE,
+							Level.INFO,
 							new StringBuilder().append("Clerk ")
 									.append(fClerkDetails.getName())
 									.append(" took rental request id: ")
@@ -91,7 +91,7 @@ public class RunnebleClerk implements Runnable {
 
 					Asset matchingAsset = findMatchingAsset(rentalRequest);
 					fLogger.log(
-							Level.FINE,
+							Level.INFO,
 							new StringBuilder().append("Clerk ")
 									.append(fClerkDetails.getName())
 									.append(" took found matching asset: ")
@@ -101,7 +101,7 @@ public class RunnebleClerk implements Runnable {
 							.calculateDistance(fClerkDetails.getLocation()) * 2);
 					fWorkedTime += distanceInSeconds;
 					fLogger.log(
-							Level.FINE,
+							Level.INFO,
 							new StringBuilder().append("Clerk ")
 									.append(fClerkDetails.getName())
 									.append(" is going to sleep for ")
@@ -113,13 +113,13 @@ public class RunnebleClerk implements Runnable {
 						e.printStackTrace();
 					}
 
-					fLogger.log(Level.FINE, new StringBuilder()
+					fLogger.log(Level.INFO, new StringBuilder()
 							.append("Clerk ").append(fClerkDetails.getName())
 							.append(" woke up from sleeping ").toString());
 
 					rentalRequest.setFoundAsset(matchingAsset);
 					rentalRequest
-							.setRentalRequestStatus(RequestStatus.Fulfilled);
+							.setRentalRequestStatus(RequestStatus.FULFILLED);
 
 					synchronized (rentalRequest) {
 						rentalRequest.notifyAll();
@@ -127,18 +127,14 @@ public class RunnebleClerk implements Runnable {
 
 				}
 				if (fNumberOfRentalRequests.get() == 0) {
-					try {
-						synchronized (fRentalRequest) {
-							fRentalRequest.put(new RentalRequestImpl());
-						}
-					} catch (InterruptedException e) {
-						e.printStackTrace();
+					synchronized (fRentalRequest) {
+						fRentalRequest.notifyAll();
 					}
 				}
 			}
 
 			fLogger.log(
-					Level.FINE,
+					Level.INFO,
 					new StringBuilder().append("Clerk ")
 							.append(fClerkDetails.getName())
 							.append(" finished his shift").toString());
@@ -165,7 +161,7 @@ public class RunnebleClerk implements Runnable {
 		}
 
 		fLogger.log(
-				Level.FINE,
+				Level.INFO,
 				new StringBuilder().append("Clerk ")
 						.append(fClerkDetails.getName()).append(" is done ")
 						.toString());
@@ -183,19 +179,12 @@ public class RunnebleClerk implements Runnable {
 			}
 			if (matchingAsset == null) {
 				fLogger.log(
-						Level.FINE,
+						Level.INFO,
 						new StringBuilder().append("Clerk ")
 								.append(fClerkDetails.getName())
 								.append(" is waiting for to be available")
 								.toString());
 
-				// synchronized (fCustomerClerkMessenger) {
-				// try {
-				// fCustomerClerkMessenger.wait();
-				// } catch (InterruptedException e) {
-				// e.printStackTrace();
-				// }
-				// }
 				synchronized (fCustomerClerkMessenger) {
 					try {
 						fCustomerClerkMessenger.wait();
@@ -211,8 +200,8 @@ public class RunnebleClerk implements Runnable {
 	}
 
 	private Asset checkAsset(Asset asset) {
-		if (asset.getStatus() == AssetStatus.Available) {
-			asset.setStatus(AssetStatus.Booked);
+		if (asset.getStatus() == AssetStatus.AVAILABLE) {
+			asset.setStatus(AssetStatus.BOOKED);
 			fNumberOfRentalRequests.decrementAndGet();
 			return asset;
 		}

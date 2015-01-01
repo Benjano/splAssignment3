@@ -1,4 +1,4 @@
-package Tests;
+package tests;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -24,7 +24,7 @@ public class CustomerGroupDetailsTesting {
 	public void setUp() throws Exception {
 		group1 = new CustomerGroupDetailsImpl("Nir");
 		rentalRequest = new RentalRequestImpl("1", "Hut", 4, 5);
-		customer = new CustomerImpl("Aviv", VandalismType.None, 20, 60);
+		customer = new CustomerImpl("Aviv", VandalismType.NONE, 20, 60);
 	}
 
 	@After
@@ -42,7 +42,7 @@ public class CustomerGroupDetailsTesting {
 	@Test
 	public void testAddCustomer() {
 		group1.addCustomer(customer);
-		Customer customer2 = new CustomerImpl("Aviv", VandalismType.None, 20,
+		Customer customer2 = new CustomerImpl("Aviv", VandalismType.NONE, 20,
 				60);
 		assertEquals(
 				"Customer Group Details Contains a wrong number of rental requests ",
@@ -61,7 +61,7 @@ public class CustomerGroupDetailsTesting {
 	@Test
 	public void testGetCustomer() {
 		group1.addCustomer(customer);
-		Customer customer2 = new CustomerImpl("Aviv", VandalismType.None, 20,
+		Customer customer2 = new CustomerImpl("Aviv", VandalismType.NONE, 20,
 				60);
 		assertEquals(
 				"Customer Group Details Contains a wrong number of rental requests ",

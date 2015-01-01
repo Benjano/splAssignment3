@@ -22,7 +22,7 @@ public class Location {
 		double result = Math.sqrt(Math.pow(fX - other.fX, 2)
 				+ Math.pow(fY - other.fY, 2));
 		fLogger.log(
-				Level.FINE,
+				Level.INFO,
 				new StringBuilder().append("Calculating the distance between ")
 						.append(this).append(" to ").append(other)
 						.append(" which is ").append(result).toString());

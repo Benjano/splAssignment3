@@ -1,4 +1,4 @@
-package Tests;
+package tests;
 
 import implement.AssetImpl;
 import implement.Location;

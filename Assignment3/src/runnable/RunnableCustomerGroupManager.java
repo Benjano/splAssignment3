@@ -58,9 +58,9 @@ public class RunnableCustomerGroupManager implements Runnable {
 			fManagment.submitRentalRequest(rentalRequest);
 			fStatistics.addRentalRequest(rentalRequest);
 
-			while (rentalRequest.getStatus() != RequestStatus.Fulfilled) {
+			while (rentalRequest.getStatus() != RequestStatus.FULFILLED) {
 				fLogger.log(
-						Level.FINE,
+						Level.INFO,
 						new StringBuilder().append("Group runned by ")
 								.append(fCustomerGroupDetails.getName())
 								.append(" is waiting for request to be filled")
@@ -76,13 +76,13 @@ public class RunnableCustomerGroupManager implements Runnable {
 			}
 
 			fLogger.log(
-					Level.FINE,
+					Level.INFO,
 					new StringBuilder().append("Group runned by ")
 							.append(fCustomerGroupDetails.getName())
 							.append(" request been filled").toString());
 
 			// Customer stay in asset
-			rentalRequest.setRentalRequestStatus(RequestStatus.InProgress);
+			rentalRequest.setRentalRequestStatus(RequestStatus.IN_PROGRESS);
 			rentalRequest.assetOcupied();
 
 			double damagePercentage = simulateStayInAsset(rentalRequest);
@@ -95,13 +95,13 @@ public class RunnableCustomerGroupManager implements Runnable {
 			}
 
 			fLogger.log(
-					Level.FINE,
+					Level.INFO,
 					new StringBuilder().append("Group runned by ")
 							.append(fCustomerGroupDetails.getName())
 							.append(" realse asset.").toString());
 
 			// Customer done staying in asset
-			rentalRequest.setRentalRequestStatus(RequestStatus.Complete);
+			rentalRequest.setRentalRequestStatus(RequestStatus.COMPLETE);
 
 			synchronized (fCustomerClerkMessenger) {
 				fCustomerClerkMessenger.notifyAll();
@@ -112,7 +112,7 @@ public class RunnableCustomerGroupManager implements Runnable {
 		}
 		
 		fLogger.log(
-				Level.FINE,
+				Level.INFO,
 				new StringBuilder()
 						.append("Customer group ")
 						.append(fCustomerGroupDetails.getName()).append(" is done").toString());

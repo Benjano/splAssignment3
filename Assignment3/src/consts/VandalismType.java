@@ -1,5 +1,7 @@
 package consts;
 
 public enum  VandalismType {
-	Arbitrary, Fixed, None
+	ARBITRARY, FIXED, NONE
 }
+
+//consts.VandalismType.Arbitrary

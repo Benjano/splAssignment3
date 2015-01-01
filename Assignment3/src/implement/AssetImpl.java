@@ -38,7 +38,7 @@ public class AssetImpl implements Asset {
 		this.fLocation = location;
 		this.fAssetContent = Collections
 				.synchronizedList(new ArrayList<AssetContent>());
-		this.fStatus = AssetStatus.Available;
+		this.fStatus = AssetStatus.AVAILABLE;
 		this.fCostPerNight = costPerNight;
 		this.fSize = size;
 		this.fLogger = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
@@ -86,7 +86,7 @@ public class AssetImpl implements Asset {
 	@Override
 	public void addAssetContent(String name, double repairCostMultiplier) {
 		fAssetContent.add(new AssetContentImpl(name, repairCostMultiplier));
-		fLogger.log(Level.FINE, new StringBuilder().append("Asset content ")
+		fLogger.log(Level.INFO, new StringBuilder().append("Asset content ")
 				.append(name).append(" is added to Asset ").append(fName)
 				.toString());
 	}
@@ -95,7 +95,7 @@ public class AssetImpl implements Asset {
 	public void setStatus(AssetStatus status) {
 		fStatus = status;
 		fLogger.log(
-				Level.FINE,
+				Level.INFO,
 				new StringBuilder().append("Asset ").append(fName)
 						.append(" status changed to ").append(status)
 						.toString());
@@ -119,9 +119,9 @@ public class AssetImpl implements Asset {
 				assetContent.damageAssetContent(damagePrecentage);
 			}
 			if (isDamaged()) {
-				setStatus(AssetStatus.Unavailable);
+				setStatus(AssetStatus.UNAVAILABLE);
 			} else
-				setStatus(AssetStatus.Available);
+				setStatus(AssetStatus.AVAILABLE);
 		}
 	}
 

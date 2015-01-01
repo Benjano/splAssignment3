@@ -40,7 +40,7 @@ public class CallableSimulateStayInAsset implements Callable<Double> {
 			daysLeft--;
 		}
 
-		fLogger.log(Level.FINE,
+		fLogger.log(Level.INFO,
 				new StringBuilder().append("Customer ").append(fCustomer)
 						.append(" is done").toString());
 
